@@ -1,47 +1,193 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inferno Escarlate — Entre no modo Geek">
+  <title>Inferno Escarlate</title>
 
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Meu Blog</title>
-
-<link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
+  <header class="topo">
+    <a href="#inicio" class="logo">Inferno Escarlate</a>
 
-<h1>Meu Blog</h1>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#materias">Matérias</a>
+      <a href="#colunas">Colunas</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-<nav>
+  <main>
 
-<a href="#">Home</a>
+    <section class="hero" id="inicio">
+      <div class="hero-conteudo">
+        <span class="hero-etiqueta">Cultura Geek • Música • Cinema • Games</span>
 
-<a href="#">Blog</a>
+        <h1>Inferno Escarlate</h1>
 
-<a href="#">Sobre</a>
+        <p>Entre no modo Geek</p>
 
-<a href="#">Contato</a>
+        <a href="#materias" class="botao">Explorar matérias</a>
+      </div>
+    </section>
 
-</nav>
+    <section class="secao destaque">
+      <div class="destaque-imagem">
+        <img src="img/materia-bts.jpg" alt="BTS em Copacabana">
+      </div>
 
-</header>
+      <div class="destaque-conteudo">
+        <span class="categoria">Música</span>
 
-<section>
+        <h2>BTS em Copacabana? Confira os rumores</h2>
 
-<h2>Bem-vindo</h2>
+        <p>
+          Entenda os rumores que estão movimentando os fãs e o que já se sabe
+          sobre uma possível apresentação do grupo no Rio de Janeiro.
+        </p>
 
-<p>Meu primeiro site.</p>
+        <a href="posts/materia-bts.html" class="link-materia">Ler matéria</a>
+      </div>
+    </section>
 
-</section>
+    <section class="secao" id="materias">
+      <div class="titulo-secao">
+        <span>Atualizações</span>
+        <h2>Últimas matérias</h2>
+      </div>
 
-<script src="js/script.js"></script>
+      <div class="grade-materias">
 
-</body> 
+        <article class="card-materia">
+          <img src="img/materia-bts.jpg" alt="BTS em Copacabana">
+
+          <div class="card-conteudo">
+            <span class="categoria">Música</span>
+            <h3>BTS em Copacabana? Confira os rumores</h3>
+            <p>Veja o que está por trás dos rumores que tomaram conta das redes.</p>
+            <a href="posts/materia-bts.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia">
+          <img src="img/materia-cauby.jpg" alt="Cauby Pro Rock">
+
+          <div class="card-conteudo">
+            <span class="categoria">Eventos</span>
+            <h3>Niterói apresenta o Cauby Pro Rock</h3>
+            <p>O evento reúne música, cultura e experiências para o público.</p>
+            <a href="posts/materia-cauby.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia">
+          <img src="img/materia-03.jpg" alt="Matéria em destaque">
+
+          <div class="card-conteudo">
+            <span class="categoria">Cultura Geek</span>
+            <h3>Um nome aleatório aqui</h3>
+            <p>Uma nova matéria para explorar tendências, universos e novidades.</p>
+            <a href="posts/materia-03.html">Ler matéria</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="secao" id="categorias">
+      <div class="titulo-secao">
+        <span>Explore</span>
+        <h2>Categorias</h2>
+      </div>
+
+      <div class="categorias">
+        <a href="#">Cinema</a>
+        <a href="#">Séries e TV</a>
+        <a href="#">Games</a>
+        <a href="#">Música</a>
+        <a href="#">Animes</a>
+        <a href="#">Mangás</a>
+        <a href="#">Eventos</a>
+        <a href="#">Festivais</a>
+        <a href="#">Doramas e novelas</a>
+        <a href="#">Livros</a>
+      </div>
+    </section>
+
+    <section class="secao colunas" id="colunas">
+      <div class="titulo-secao">
+        <span>Conteúdo especial</span>
+        <h2>Colunas em destaque</h2>
+      </div>
+
+      <div class="grade-colunas">
+
+        <article class="card-coluna">
+          <img src="img/coluna-cinema.jpg" alt="Cena Escarlate">
+
+          <div class="card-coluna-overlay">
+            <span>Cinema, séries e TV</span>
+            <h3>Cena Escarlate</h3>
+            <p>Análises, críticas e novidades do audiovisual.</p>
+            <a href="#">Ver coluna</a>
+          </div>
+        </article>
+
+        <article class="card-coluna">
+          <img src="img/coluna-games.jpg" alt="Checkpoint">
+
+          <div class="card-coluna-overlay">
+            <span>Games</span>
+            <h3>Checkpoint</h3>
+            <p>Jogos, lançamentos, bastidores e cultura gamer.</p>
+            <a href="#">Ver coluna</a>
+          </div>
+        </article>
+
+        <article class="card-coluna">
+          <img src="img/coluna-musica.jpg" alt="Som no Inferno">
+
+          <div class="card-coluna-overlay">
+            <span>Música e festivais</span>
+            <h3>Som no Inferno</h3>
+            <p>Artistas, shows, festivais e movimentos musicais.</p>
+            <a href="#">Ver coluna</a>
+          </div>
+        </article>
+
+        <article class="card-coluna">
+          <img src="img/coluna-cultura.jpg" alt="Além do Quadro">
+
+          <div class="card-coluna-overlay">
+            <span>Animes, mangás e livros</span>
+            <h3>Além do Quadro</h3>
+            <p>Histórias, universos e narrativas que ultrapassam a tela.</p>
+            <a href="#">Ver coluna</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contato">
+    <div>
+      <h2>Inferno Escarlate</h2>
+      <p>Entre no modo Geek.</p>
+    </div>
+
+    <div>
+      <p>© 2026 Inferno Escarlate. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
