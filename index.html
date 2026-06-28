@@ -7,13 +7,26 @@
   <title>Inferno Escarlate</title>
 
   <link rel="stylesheet" href="css/style.css">
+  <style>
+  .menu-botao {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    .menu-botao {
+      display: block !important;
+    }
+  }
+</style>
 </head>
 
 <body>
 
   <header class="topo">
     <a href="#inicio" class="logo">Inferno Escarlate</a>
-
+<button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">
+  ☰
+</button>
     <nav class="menu">
       <a href="#inicio">Início</a>
       <a href="#materias">Matérias</a>

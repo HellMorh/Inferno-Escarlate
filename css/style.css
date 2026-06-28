@@ -793,4 +793,80 @@ footer h2 {
   .mais-materias .grade-materias {
     grid-template-columns: 1fr;
   }
+
+ 
+
+@media (max-width: 768px) {
+  .topo {
+    position: relative;
+  }
+
+  
+
+
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 18px;
+  }
+
+  /* Menu mobile */
+
+.menu-botao {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--borda);
+  color: var(--branco);
+  padding: 8px 11px;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+  .topo {
+    position: relative;
+    min-height: 72px;
+    padding: 18px 6%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 22px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    background: rgba(5, 5, 5, 0.98);
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    backdrop-filter: blur(14px);
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+}/* Correção final do botão mobile */
+
+.menu-botao {
+  display: none !important;
+}
+
+@media screen and (max-width: 700px) {
+  .menu-botao {
+    display: block !important;
+  }
+}
+
+ 
+
