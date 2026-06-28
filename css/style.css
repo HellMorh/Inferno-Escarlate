@@ -1121,3 +1121,34 @@ footer h2 {
   }
 }
 
+/* Remove a barra horizontal das categorias */
+
+#categorias .categorias {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  overflow: visible !important;
+  padding-bottom: 0 !important;
+}
+
+#categorias .categorias a {
+  min-width: 0 !important;
+  padding: 12px 8px !important;
+  font-size: 0.68rem !important;
+  white-space: normal !important;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  #categorias .categorias {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #categorias .categorias {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+

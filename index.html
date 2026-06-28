@@ -24,23 +24,38 @@
     line-height: 1 !important;
   }
 
+ 
   #categorias .categorias {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    gap: 8px !important;
-    width: 100% !important;
-    overflow-x: auto !important;
-    padding: 0 0 8px !important;
-  }
+  display: grid !important;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
 
-  #categorias .categorias a {
-    flex: 0 0 auto !important;
-    padding: 9px 12px !important;
-    font-size: 0.65rem !important;
-    white-space: nowrap !important;
+#categorias .categorias a {
+  min-width: 0 !important;
+  padding: 12px 6px !important;
+  font-size: 0.65rem !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  #categorias .categorias {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   }
+}
+
+@media (max-width: 600px) {
+  #categorias .categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+
+  
 
   .destaque {
     padding-top: 24px !important;
@@ -117,6 +132,8 @@
        <a href="Categorias/festivais.html">Festivais</a>
         <a href="Categorias/doramas-novelas.html">Doramas e novelas</a>
         <a href="Categorias/livros.html">Livros</a>
+        <a href="Categorias/criticas.html">Críticas</a>
+        <a href="Categorias/hqs.html">HQs</a>
       </div>
     </section>
     <section class="secao destaque">
