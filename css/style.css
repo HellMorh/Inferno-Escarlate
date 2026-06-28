@@ -930,5 +930,194 @@ footer h2 {
   }
 }
 
+/* Cabeçalho da categoria Cinema */
+
+.cabecalho-categoria {
+  position: relative;
+  min-height: 620px;
+  padding: 150px 7% 90px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: var(--preto);
+}
+
+.cinema-banner {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.72) 48%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    linear-gradient(
+      0deg,
+      var(--preto) 0%,
+      transparent 45%
+    ),
+    url("../img/materia-03.jpg") center/cover no-repeat;
+}
+
+.cabecalho-categoria-conteudo {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.cabecalho-categoria h1 {
+  margin: 10px 0 18px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(5rem, 11vw, 9rem);
+  line-height: 0.85;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.cabecalho-categoria p {
+  max-width: 650px;
+  margin-bottom: 30px;
+  color: #c2c2c2;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+@media screen and (max-width: 700px) {
+  .cabecalho-categoria {
+    min-height: 520px;
+    padding: 120px 6% 60px;
+  }
+
+  .cabecalho-categoria h1 {
+    font-size: 4.7rem;
+  }
+
+  .cabecalho-categoria p {
+    font-size: 0.96rem;
+  }
+}
+
+/* Ajuste de espaçamento das categorias */
+
+
+
+
+/* Aproxima destaque, categorias e últimas matérias */
+
+.destaque {
+  padding-bottom: 0px;
+}
+
+
+
+
+#materias {
+  padding-top: 0px;
+}
+
+/* Categorias compactas em uma única fileira */
+
+.destaque {
+  padding-bottom: 20px;
+}
+
+
+
+}
+
+#materias {
+  padding-top: 30px;
+}
+
+
+/* Alinhamento das categorias com a matéria destaque */
+
+
+
+
+.secao-categorias .categorias a {
+  padding: 10px 14px;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+
+.destaque {
+  padding-top: 34px;
+}
+
+/* Categorias alinhadas com o destaque */
+
+.secao-categorias {
+  width: min(1180px, 88%) !important;
+  margin: 0 auto !important;
+  padding: 24px 0 20px !important;
+}
+
+.secao-categorias .titulo-secao {
+  margin: 0 0 18px !important;
+}
+
+.secao-categorias .categorias {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.secao-categorias .categorias a {
+  flex: 0 0 auto;
+  padding: 10px 14px !important;
+  font-size: 0.68rem !important;
+  white-space: nowrap;
+}
+
+.destaque {
+  padding-top: 24px !important;
+}
  
+
+/* Categorias maiores e alinhadas com a matéria */
+
+#categorias {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+  padding: 28px 0 24px;
+}
+
+#categorias .categorias {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+#categorias .categorias a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  #categorias .categorias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #categorias .categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #categorias .categorias a {
+    min-height: 48px;
+    font-size: 0.7rem;
+  }
+}
 

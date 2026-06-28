@@ -8,6 +8,56 @@
 
   <link rel="stylesheet" href="css/style.css">
   <style>
+  #categorias {
+    width: min(1180px, 88%) !important;
+    margin: 0 auto !important;
+    padding: 24px 0 18px !important;
+  }
+
+  #categorias .titulo-secao {
+    margin: 0 0 18px !important;
+  }
+
+  #categorias .titulo-secao h2 {
+    margin: 0 !important;
+    font-size: 3.5rem !important;
+    line-height: 1 !important;
+  }
+
+  #categorias .categorias {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    padding: 0 0 8px !important;
+  }
+
+  #categorias .categorias a {
+    flex: 0 0 auto !important;
+    padding: 9px 12px !important;
+    font-size: 0.65rem !important;
+    white-space: nowrap !important;
+  }
+
+  .destaque {
+    padding-top: 24px !important;
+  }
+
+  @media (max-width: 700px) {
+    #categorias {
+      width: 90% !important;
+      padding-top: 20px !important;
+    }
+
+    #categorias .titulo-secao h2 {
+      font-size: 2.8rem !important;
+    }
+  }
+</style>
+  <style>
   .menu-botao {
     display: none !important;
   }
@@ -49,7 +99,26 @@
         <a href="#materias" class="botao">Explorar matérias</a>
       </div>
     </section>
+<section class="secao secao-categorias" id="categorias">
+      <div class="titulo-secao">
+        <span>Explore</span>
+        <h2>Categorias</h2>
+      </div>
 
+      <div class="categorias">
+        <a href="Categorias/esports.html">Esports</a>
+       <a href="Categorias/cinema.html">Cinema</a>
+        <a href="Categorias/series-tv.html">Séries e TV</a>
+        <a href="Categorias/games.html">Games</a>
+       <a href="Categorias/musica.html">Música</a>
+        <a href="Categorias/animes.html">Animes</a>
+        <a href="Categorias/mangas.html">Mangás</a>
+        <a href="Categorias/eventos.html">Eventos</a>
+       <a href="Categorias/festivais.html">Festivais</a>
+        <a href="Categorias/doramas-novelas.html">Doramas e novelas</a>
+        <a href="Categorias/livros.html">Livros</a>
+      </div>
+    </section>
     <section class="secao destaque">
       <div class="destaque-imagem">
         <img src="img/materia-bts.jpg" alt="BTS em Copacabana">
@@ -113,25 +182,7 @@
       </div>
     </section>
 
-    <section class="secao" id="categorias">
-      <div class="titulo-secao">
-        <span>Explore</span>
-        <h2>Categorias</h2>
-      </div>
-
-      <div class="categorias">
-       <a href="Categorias/cinema.html">Cinema</a>
-        <a href="#">Séries e TV</a>
-        <a href="#">Games</a>
-        <a href="#">Música</a>
-        <a href="#">Animes</a>
-        <a href="#">Mangás</a>
-        <a href="#">Eventos</a>
-        <a href="#">Festivais</a>
-        <a href="#">Doramas e novelas</a>
-        <a href="#">Livros</a>
-      </div>
-    </section>
+    
 
     <section class="secao colunas" id="colunas">
       <div class="titulo-secao">
@@ -148,7 +199,7 @@
             <span>Cinema, séries e TV</span>
             <h3>Cena Escarlate</h3>
             <p>Análises, críticas e novidades do audiovisual.</p>
-            <a href="#">Ver coluna</a>
+            <a href="Colunas/cena-escarlate.html">Ver coluna</a>
           </div>
         </article>
 
@@ -159,7 +210,7 @@
             <span>Games</span>
             <h3>Checkpoint</h3>
             <p>Jogos, lançamentos, bastidores e cultura gamer.</p>
-            <a href="#">Ver coluna</a>
+            <a href="Colunas/som-no-inferno.html">Ver coluna</a>
           </div>
         </article>
 
@@ -170,7 +221,7 @@
             <span>Música e festivais</span>
             <h3>Som no Inferno</h3>
             <p>Artistas, shows, festivais e movimentos musicais.</p>
-            <a href="#">Ver coluna</a>
+            <a href="Colunas/som.html">Ver coluna</a>
           </div>
         </article>
 

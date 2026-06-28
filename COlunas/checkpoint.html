@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Checkpoint: games, esports, lançamentos, análises e cultura gamer."
+  >
+
+  <title>Checkpoint | Inferno Escarlate</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .menu-botao {
+      display: none !important;
+    }
+
+    .pagina-coluna {
+      padding-top: 78px;
+    }
+
+    .cabecalho-coluna {
+      min-height: 650px;
+      padding: 150px 7% 90px;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.96),
+          rgba(0, 0, 0, 0.62),
+          rgba(0, 0, 0, 0.24)
+        ),
+        linear-gradient(
+          0deg,
+          #050505,
+          transparent 48%
+        ),
+        url("../img/coluna-games.jpg") center / cover no-repeat;
+    }
+
+    .cabecalho-coluna-conteudo {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .cabecalho-coluna h1 {
+      margin: 10px 0 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 11vw, 9rem);
+      line-height: 0.85;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .cabecalho-coluna p {
+      max-width: 680px;
+      margin-bottom: 30px;
+      color: #c2c2c2;
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    .descricao-coluna {
+      padding: 34px;
+      background: var(--preto-claro);
+      border: 1px solid var(--borda);
+      color: var(--cinza);
+    }
+
+    .descricao-coluna h2 {
+      margin-bottom: 12px;
+      color: var(--branco);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu-botao {
+        display: block !important;
+      }
+
+      .pagina-coluna {
+        padding-top: 0;
+      }
+
+      .cabecalho-coluna {
+        min-height: 520px;
+        padding: 120px 6% 60px;
+      }
+
+      .cabecalho-coluna h1 {
+        font-size: 4.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="menu">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#materias">Matérias</a>
+      <a href="../index.html#colunas">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../index.html#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pagina-coluna">
+
+    <section class="cabecalho-coluna">
+      <div class="cabecalho-coluna-conteudo">
+
+        <span class="categoria">
+          Coluna
+        </span>
+
+        <h1>Checkpoint</h1>
+
+        <p>
+          Lançamentos, análises, bastidores, campeonatos, esports e tudo o que
+          movimenta o universo dos games.
+        </p>
+
+        <a href="#materias-coluna" class="botao">
+          Explorar matérias
+        </a>
+
+      </div>
+    </section>
+
+    <section class="secao">
+
+      <div class="descricao-coluna">
+        <h2>Sobre a coluna</h2>
+
+        <p>
+          Checkpoint reúne conteúdos sobre videogames, indústria, tecnologia,
+          cultura gamer e cenário competitivo.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="secao" id="materias-coluna">
+
+      <div class="titulo-secao">
+        <span>Conteúdo recente</span>
+        <h2>Matérias da Checkpoint</h2>
+      </div>
+
+      <div class="grade-materias">
+
+        <article class="card-materia">
+          <img
+            src="../img/coluna-games.jpg"
+            alt="Lançamentos de games"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Games</span>
+
+            <h3>
+              Os lançamentos de games mais aguardados do ano
+            </h3>
+
+            <p>
+              Conheça alguns dos títulos que prometem movimentar consoles
+              e computadores.
+            </p>
+
+            <a href="../posts/materia-games.html">
+              Ler matéria
+            </a>
+          </div>
+        </article>
+
+        <article class="card-materia">
+          <img
+            src="../img/coluna-games.jpg"
+            alt="Esports e cenário competitivo"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Esports</span>
+
+            <h3>
+              O cenário competitivo entra em uma nova fase
+            </h3>
+
+            <p>
+              Equipes, campeonatos e jogadores ganham cada vez mais destaque.
+            </p>
+
+            <a href="../Categorias/esports.html">
+              Ver categoria
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contato">
+
+    <div>
+      <h2>Inferno Escarlate</h2>
+      <p>Entre no modo Geek.</p>
+    </div>
+
+    <div>
+      <p>
+        © 2026 Inferno Escarlate. Todos os direitos reservados.
+      </p>
+    </div>
+
+  </footer>
+
+  <script src="../js/script.js"></script>
+
+</body>
+</html>

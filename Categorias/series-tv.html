@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Matérias sobre séries e televisão do Inferno Escarlate."
+  >
+
+  <title>Séries e TV | Inferno Escarlate</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .menu-botao {
+      display: none !important;
+    }
+
+    .pagina-categoria {
+      padding-top: 78px;
+    }
+
+    .cabecalho-categoria {
+      position: relative;
+      min-height: 620px;
+      padding: 150px 7% 90px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.67) 55%,
+          rgba(0, 0, 0, 0.25) 100%
+        ),
+        linear-gradient(
+          0deg,
+          #050505 0%,
+          transparent 48%
+        ),
+        url("../img/coluna-cinema.jpg") center / cover no-repeat;
+    }
+
+    .cabecalho-categoria-conteudo {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .cabecalho-categoria h1 {
+      margin: 10px 0 18px;
+      color: #f5f5f5;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 11vw, 9rem);
+      line-height: 0.85;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .cabecalho-categoria p {
+      max-width: 650px;
+      margin: 0 0 30px;
+      color: #c2c2c2;
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    .categoria-vazia {
+      padding: 34px;
+      background: var(--preto-claro);
+      border: 1px solid var(--borda);
+      color: var(--cinza);
+    }
+
+    .categoria-vazia h3 {
+      margin-bottom: 10px;
+      color: var(--branco);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu-botao {
+        display: block !important;
+      }
+
+      .pagina-categoria {
+        padding-top: 0;
+      }
+
+      .cabecalho-categoria {
+        min-height: 520px;
+        padding: 120px 6% 60px;
+      }
+
+      .cabecalho-categoria h1 {
+        font-size: 4.2rem;
+      }
+
+      .cabecalho-categoria p {
+        font-size: 0.96rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="menu">
+      <a href="../index.html">Início</a>
+      <a href="../index.html#materias">Matérias</a>
+      <a href="../index.html#colunas">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../index.html#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pagina-categoria">
+
+    <section class="cabecalho-categoria">
+      <div class="cabecalho-categoria-conteudo">
+
+        <span class="categoria">
+          Categoria
+        </span>
+
+        <h1>Séries e TV</h1>
+
+        <p>
+          Notícias, estreias, temporadas, críticas, bastidores e novidades
+          das principais séries, programas e produções da televisão.
+        </p>
+
+        <a href="#materias-series" class="botao">
+          Explorar matérias
+        </a>
+
+      </div>
+    </section>
+
+    <section class="secao" id="materias-series">
+
+      <div class="titulo-secao">
+        <span>Conteúdo recente</span>
+        <h2>Matérias de Séries e TV</h2>
+      </div>
+
+      <div class="categoria-vazia">
+        <h3>Novas matérias em breve</h3>
+
+        <p>
+          Esta categoria já está pronta para receber notícias, críticas,
+          listas e conteúdos sobre séries, streaming e televisão.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contato">
+
+    <div>
+      <h2>Inferno Escarlate</h2>
+      <p>Entre no modo Geek.</p>
+    </div>
+
+    <div>
+      <p>
+        © 2026 Inferno Escarlate. Todos os direitos reservados.
+      </p>
+    </div>
+
+  </footer>
+
+  <script src="../js/script.js"></script>
+
+</body>
+</html>
