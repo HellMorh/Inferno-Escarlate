@@ -1585,3 +1585,90 @@ textarea {
     gap: 12px 20px;
   }
 }
+
+/* CORREÇÃO DA MATÉRIA UNIVERSAL */
+
+.pagina-materia > .cabecalho-materia {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+  padding: 80px 0 45px;
+}
+
+.pagina-materia > .imagem-principal-materia {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+}
+
+.pagina-materia > .imagem-principal-materia img {
+  width: 100%;
+  height: min(620px, 65vw);
+  object-fit: cover;
+  object-position: center;
+}
+
+.pagina-materia > .conteudo-materia {
+  width: min(780px, 88%);
+  max-width: none;
+  margin: 0 auto;
+  padding: 65px 0 90px;
+}
+
+.pagina-materia > .conteudo-materia p {
+  width: 100%;
+  margin: 0 0 28px;
+  color: #d0d0d0;
+  font-size: 1.03rem;
+  line-height: 1.9;
+}
+
+.pagina-materia > .conteudo-materia h2 {
+  width: 100%;
+  margin: 55px 0 20px;
+}
+
+.pagina-materia > .conteudo-materia blockquote {
+  width: 100%;
+  margin: 42px 0;
+  padding: 28px 32px;
+
+  background: rgba(165, 0, 26, 0.14);
+  border-left: 4px solid #ed1834;
+
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.pagina-materia > .conteudo-materia .fonte-materia {
+  margin-top: 45px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #777777;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 700px) {
+  .pagina-materia > .cabecalho-materia,
+  .pagina-materia > .imagem-principal-materia,
+  .pagina-materia > .conteudo-materia {
+    width: 90%;
+  }
+
+  .pagina-materia > .cabecalho-materia {
+    padding: 55px 0 35px;
+  }
+
+  .pagina-materia > .imagem-principal-materia img {
+    height: 280px;
+  }
+
+  .pagina-materia > .conteudo-materia {
+    padding: 45px 0 65px;
+  }
+
+  .pagina-materia > .conteudo-materia blockquote {
+    padding: 22px;
+    font-size: 1.05rem;
+  }
+}
