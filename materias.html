@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Todas as matérias publicadas no Inferno Escarlate."
+  >
+
+  <title>Todas as matérias | Inferno Escarlate</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .menu-botao {
+      display: none !important;
+    }
+
+    .pagina-listagem {
+      padding-top: 78px;
+    }
+
+    .cabecalho-listagem {
+      min-height: 460px;
+      padding: 130px 7% 70px;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.97),
+          rgba(0, 0, 0, 0.64),
+          rgba(0, 0, 0, 0.25)
+        ),
+        linear-gradient(
+          0deg,
+          #050505,
+          transparent 48%
+        ),
+        url("img/banner.jpg") center / cover no-repeat;
+    }
+
+    .cabecalho-listagem-conteudo {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .cabecalho-listagem h1 {
+      margin: 10px 0 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4.8rem, 10vw, 8.5rem);
+      line-height: 0.86;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .cabecalho-listagem p {
+      max-width: 680px;
+      color: #c2c2c2;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .filtros-materias {
+      margin-bottom: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filtros-materias button {
+      padding: 11px 16px;
+      background: var(--preto-claro);
+      border: 1px solid var(--borda);
+      color: var(--cinza);
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filtros-materias button:hover,
+    .filtros-materias button.ativo {
+      color: var(--branco);
+      border-color: var(--vermelho-vivo);
+      background: rgba(165, 0, 26, 0.18);
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu-botao {
+        display: block !important;
+      }
+
+      .pagina-listagem {
+        padding-top: 0;
+      }
+
+      .cabecalho-listagem {
+        min-height: 420px;
+        padding: 110px 6% 55px;
+      }
+
+      .cabecalho-listagem h1 {
+        font-size: 4.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a href="index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="materias.html">Matérias</a>
+      <a href="index.html#colunas">Colunas</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pagina-listagem">
+
+    <section class="cabecalho-listagem">
+      <div class="cabecalho-listagem-conteudo">
+
+        <span class="categoria">
+          Arquivo editorial
+        </span>
+
+        <h1>Todas as matérias</h1>
+
+        <p>
+          Notícias, críticas, análises, eventos e conteúdos sobre cinema,
+          séries, games, música, animes e cultura geek.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="secao">
+
+      <div class="titulo-secao">
+        <span>Conteúdo publicado</span>
+        <h2>Explore as matérias</h2>
+      </div>
+
+      <div class="filtros-materias">
+        <button class="ativo" data-filtro="todas">Todas</button>
+        <button data-filtro="cinema">Cinema</button>
+        <button data-filtro="musica">Música</button>
+        <button data-filtro="eventos">Eventos</button>
+        <button data-filtro="games">Games</button>
+        <button data-filtro="animes">Animes</button>
+        <button data-filtro="series">Séries e TV</button>
+      </div>
+
+      <div class="grade-materias">
+
+        <article class="card-materia" data-categoria="musica">
+          <img
+            src="img/materia-bts.jpg"
+            alt="BTS em Copacabana"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Música</span>
+
+            <h3>BTS em Copacabana? Confira os rumores</h3>
+
+            <p>
+              Entenda os rumores sobre uma possível apresentação do grupo
+              no Rio de Janeiro.
+            </p>
+
+            <a href="posts/materia-bts.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia" data-categoria="eventos">
+          <img
+            src="img/materia-cauby.jpg"
+            alt="Cauby Pro Rock"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Eventos</span>
+
+            <h3>Niterói apresenta o Cauby Pro Rock</h3>
+
+            <p>
+              Evento reúne música, cultura e artistas da cena independente.
+            </p>
+
+            <a href="posts/materia-cauby.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia" data-categoria="cinema">
+          <img
+            src="img/materia-03.jpg"
+            alt="Spider-Man Brand New Day"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Cinema</span>
+
+            <h3>
+              Spider-Man: Brand New Day prepara uma nova fase
+            </h3>
+
+            <p>
+              O novo filme apresenta um Peter Parker isolado e dedicado
+              à vida como Homem-Aranha.
+            </p>
+
+            <a href="posts/materia-03.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia" data-categoria="games">
+          <img
+            src="img/coluna-games.jpg"
+            alt="Lançamentos de games"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Games</span>
+
+            <h3>Os lançamentos de games mais aguardados do ano</h3>
+
+            <p>
+              Conheça os títulos que prometem movimentar consoles e computadores.
+            </p>
+
+            <a href="posts/materia-games.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia" data-categoria="animes">
+          <img
+            src="img/coluna-cultura.jpg"
+            alt="Novas temporadas de animes"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Animes</span>
+
+            <h3>Novas temporadas de animes chegam aos streamings</h3>
+
+            <p>
+              Produções conhecidas e novas histórias ganham espaço nos próximos meses.
+            </p>
+
+            <a href="posts/materia-animes.html">Ler matéria</a>
+          </div>
+        </article>
+
+        <article class="card-materia" data-categoria="series">
+          <img
+            src="img/coluna-cinema.jpg"
+            alt="Séries e TV"
+          >
+
+          <div class="card-conteudo">
+            <span class="categoria">Séries e TV</span>
+
+            <h3>As séries que prometem dominar as conversas</h3>
+
+            <p>
+              Estreias e novas temporadas que merecem entrar na sua lista.
+            </p>
+
+            <a href="posts/materia-series.html">Ler matéria</a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contato">
+
+    <div>
+      <h2>Inferno Escarlate</h2>
+      <p>Entre no modo Geek.</p>
+    </div>
+
+    <div>
+      <p>© 2026 Inferno Escarlate. Todos os direitos reservados.</p>
+    </div>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    const botoesFiltro = document.querySelectorAll("[data-filtro]");
+    const materias = document.querySelectorAll("[data-categoria]");
+
+    botoesFiltro.forEach((botao) => {
+      botao.addEventListener("click", () => {
+        const filtro = botao.dataset.filtro;
+
+        botoesFiltro.forEach((item) => {
+          item.classList.remove("ativo");
+        });
+
+        botao.classList.add("ativo");
+
+        materias.forEach((materia) => {
+          const categoria = materia.dataset.categoria;
+          const mostrar = filtro === "todas" || categoria === filtro;
+
+          materia.style.display = mostrar ? "" : "none";
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

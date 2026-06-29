@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Entre em contato com o Inferno Escarlate."
+  >
+
+  <title>Contato | Inferno Escarlate</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .menu-botao {
+      display: none !important;
+    }
+
+    .pagina-contato {
+      padding-top: 78px;
+    }
+
+    .cabecalho-contato {
+      min-height: 480px;
+      padding: 130px 7% 70px;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.97),
+          rgba(0, 0, 0, 0.66),
+          rgba(0, 0, 0, 0.28)
+        ),
+        linear-gradient(
+          0deg,
+          #050505,
+          transparent 48%
+        ),
+        url("img/banner.jpg") center / cover no-repeat;
+    }
+
+    .cabecalho-contato-conteudo {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .cabecalho-contato h1 {
+      margin: 10px 0 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4.8rem, 10vw, 8.5rem);
+      line-height: 0.86;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .cabecalho-contato p {
+      max-width: 680px;
+      color: #c2c2c2;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .estrutura-contato {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .informacoes-contato,
+    .formulario-contato {
+      padding: 34px;
+      background: var(--preto-claro);
+      border: 1px solid var(--borda);
+    }
+
+    .informacoes-contato h2,
+    .formulario-contato h2 {
+      margin-bottom: 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
+
+    .informacoes-contato p {
+      margin-bottom: 24px;
+      color: var(--cinza);
+    }
+
+    .lista-contato {
+      display: grid;
+      gap: 14px;
+    }
+
+    .lista-contato a {
+      padding: 14px 16px;
+      border: 1px solid var(--borda);
+      color: var(--cinza);
+      transition: 0.3s;
+    }
+
+    .lista-contato a:hover {
+      color: var(--branco);
+      border-color: var(--vermelho-vivo);
+    }
+
+    .campo-formulario {
+      margin-bottom: 18px;
+    }
+
+    .campo-formulario label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--cinza);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .campo-formulario input,
+    .campo-formulario textarea {
+      width: 100%;
+      padding: 14px 15px;
+      background: #0a0a0a;
+      border: 1px solid var(--borda);
+      color: var(--branco);
+      font: inherit;
+      outline: none;
+    }
+
+    .campo-formulario input:focus,
+    .campo-formulario textarea:focus {
+      border-color: var(--vermelho-vivo);
+    }
+
+    .campo-formulario textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .botao-enviar {
+      padding: 13px 22px;
+      background: transparent;
+      border: 1px solid var(--vermelho-vivo);
+      color: var(--branco);
+      font: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .botao-enviar:hover {
+      background: var(--vermelho-vivo);
+    }
+
+    .aviso-formulario {
+      margin-top: 16px;
+      color: #777;
+      font-size: 0.78rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      .estrutura-contato {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu-botao {
+        display: block !important;
+      }
+
+      .pagina-contato {
+        padding-top: 0;
+      }
+
+      .cabecalho-contato {
+        min-height: 420px;
+        padding: 110px 6% 55px;
+      }
+
+      .cabecalho-contato h1 {
+        font-size: 4.2rem;
+      }
+
+      .informacoes-contato,
+      .formulario-contato {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a href="index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="materias.html">Matérias</a>
+      <a href="index.html#colunas">Colunas</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pagina-contato">
+
+    <section class="cabecalho-contato">
+      <div class="cabecalho-contato-conteudo">
+
+        <span class="categoria">
+          Fale com a gente
+        </span>
+
+        <h1>Contato</h1>
+
+        <p>
+          Envie sugestões de pauta, propostas, dúvidas, correções ou convites
+          para parcerias e coberturas.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="secao">
+
+      <div class="estrutura-contato">
+
+        <aside class="informacoes-contato">
+          <span class="categoria">Inferno Escarlate</span>
+
+          <h2>Entre no modo Geek</h2>
+
+          <p>
+            Escolha um dos canais abaixo ou preencha o formulário ao lado.
+          </p>
+
+          <div class="lista-contato">
+            <a href="mailto:contato@infernoescarlate.com">
+              contato@infernoescarlate.com
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              TikTok
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              YouTube
+            </a>
+          </div>
+        </aside>
+
+        <form
+          class="formulario-contato"
+          action="https://formsubmit.co/infernoescarlate@gmail.com
+          method="POST"
+        >
+          <h2>Envie uma mensagem</h2>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nova mensagem do site Inferno Escarlate"
+          >
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+          <div class="campo-formulario">
+            <label for="nome">Nome</label>
+
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+            >
+          </div>
+
+          <div class="campo-formulario">
+            <label for="email">E-mail</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+            >
+          </div>
+
+          <div class="campo-formulario">
+            <label for="assunto">Assunto</label>
+
+            <input
+              type="text"
+              id="assunto"
+              name="assunto"
+              required
+            >
+          </div>
+
+          <div class="campo-formulario">
+            <label for="mensagem">Mensagem</label>
+
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="botao-enviar">
+            Enviar mensagem
+          </button>
+
+          <p class="aviso-formulario">
+            Antes de publicar, substitua “SEU-EMAIL-AQUI” pelo e-mail que
+            receberá as mensagens.
+          </p>
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contato">
+    <div>
+      <h2>Inferno Escarlate</h2>
+      <p>Entre no modo Geek.</p>
+    </div>
+
+    <div>
+      <p>© 2026 Inferno Escarlate. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

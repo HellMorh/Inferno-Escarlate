@@ -1152,3 +1152,142 @@ footer h2 {
   }
 }
 
+/* Reduz o espaço antes de Últimas matérias */
+
+#materias {
+  padding-top: 15px !important;
+}
+
+#materias .titulo-secao {
+  margin-bottom: 28px !important;
+}
+
+/* Grade com 3 críticas por linha */
+
+.grade-criticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-critica {
+  overflow: hidden;
+  background: var(--preto-claro);
+  border: 1px solid var(--borda);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-critica:hover {
+  transform: translateY(-8px);
+  border-color: rgba(237, 24, 52, 0.55);
+}
+
+.card-critica img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card-critica:hover img {
+  transform: scale(1.05);
+}
+
+.card-critica-conteudo {
+  padding: 26px;
+}
+
+.card-critica-conteudo h3 {
+  margin: 10px 0 14px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.card-critica-conteudo p {
+  min-height: 90px;
+  margin-bottom: 22px;
+  color: var(--cinza);
+  font-size: 0.92rem;
+}
+
+.nota-card {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.nota-card strong {
+  color: var(--branco);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.nota-card span {
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.card-critica-conteudo > a {
+  display: inline-block;
+  padding: 11px 16px;
+  border: 1px solid var(--vermelho-vivo);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.card-critica-conteudo > a:hover {
+  background: var(--vermelho-vivo);
+}
+
+@media (max-width: 900px) {
+  .grade-criticas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .grade-criticas {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Aproxima Últimas matérias de Críticas de cinema */
+
+#materias {
+  padding-bottom: 35px !important;
+}
+
+.criticas-destaque {
+  padding-top: 20px !important;
+}
+
+.criticas-destaque .titulo-secao {
+  margin-bottom: 28px !important;
+}
+
+/* Aproxima a matéria em destaque de Últimas matérias */
+
+.destaque {
+  padding-bottom: 20px !important;
+}
+
+#materias {
+  padding-top: 20px !important;
+}
+
+/* Aproxima Críticas de cinema de Colunas em destaque */
+
+.criticas-destaque {
+  padding-bottom: 20px !important;
+}
+
+#colunas {
+  padding-top: 20px !important;
+}
+
