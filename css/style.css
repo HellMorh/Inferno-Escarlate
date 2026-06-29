@@ -1291,3 +1291,270 @@ footer h2 {
   padding-top: 20px !important;
 }
 
+/* Rodapé principal */
+
+.rodape-principal {
+  padding: 70px 6% 25px;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(165, 0, 26, 0.1),
+      transparent 40%
+    ),
+    #020202;
+  border-top: 1px solid var(--borda);
+}
+
+.rodape-grade {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 45px;
+}
+
+.rodape-marca h2 {
+  margin-bottom: 14px;
+  color: var(--branco);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.rodape-marca p {
+  max-width: 330px;
+  margin-bottom: 24px;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.rodape-contato {
+  display: inline-block;
+  padding: 11px 16px;
+  border: 1px solid var(--vermelho-vivo);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.rodape-contato:hover {
+  background: var(--vermelho-vivo);
+}
+
+.rodape-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rodape-coluna h3 {
+  margin-bottom: 8px;
+  color: var(--branco);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.rodape-coluna a {
+  color: var(--cinza);
+  font-size: 0.82rem;
+  transition: 0.3s;
+}
+
+.rodape-coluna a:hover {
+  color: var(--vermelho-vivo);
+  transform: translateX(3px);
+}
+
+.rodape-base {
+  width: min(1180px, 100%);
+  margin: 55px auto 0;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  border-top: 1px solid var(--borda);
+  color: #777;
+  font-size: 0.76rem;
+}
+
+.rodape-base div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rodape-base a {
+  color: #777;
+  transition: 0.3s;
+}
+
+.rodape-base a:hover {
+  color: var(--vermelho-vivo);
+}
+
+@media (max-width: 1000px) {
+  .rodape-grade {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rodape-marca {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .rodape-principal {
+    padding: 55px 6% 22px;
+  }
+
+  .rodape-grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 25px;
+  }
+
+  .rodape-marca {
+    grid-column: span 2;
+  }
+
+  .rodape-base {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .rodape-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape-marca {
+    grid-column: auto;
+  }
+}
+
+/* Rodapé base mais limpo */
+
+.rodape-base {
+  width: min(1180px, 100%);
+  margin: 45px auto 0;
+  padding-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--borda);
+  color: #777;
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.rodape-base div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.rodape-base a {
+  color: #777;
+  transition: 0.3s;
+}
+
+.rodape-base a:hover {
+  color: var(--vermelho-vivo);
+}
+
+/* Alinha a base do rodapé embaixo de todas as colunas */
+
+.rodape-grade {
+  align-items: start;
+}
+
+.rodape-base {
+  width: min(1180px, 100%);
+  margin: 45px auto 0;
+  padding-top: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--borda);
+  color: #777;
+  font-size: 0.76rem;
+  text-align: left;
+}
+
+.rodape-base div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+@media (max-width: 700px) {
+  .rodape-base {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rodape-base div {
+    justify-content: flex-start;
+  }
+}
+
+/* Organização final da base do rodapé */
+
+.rodape-base {
+  width: min(1180px, 100%);
+  margin: 45px auto 0;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid var(--borda);
+  color: #777;
+  font-size: 0.76rem;
+}
+
+.rodape-base p {
+  margin: 0;
+  max-width: 430px;
+  line-height: 1.6;
+}
+
+.rodape-base div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.rodape-base a {
+  color: #777;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.rodape-base a:hover {
+  color: var(--vermelho-vivo);
+}
+
+@media (max-width: 700px) {
+  .rodape-base {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .rodape-base div {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
