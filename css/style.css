@@ -1750,3 +1750,89 @@ body .menu-botao {
   display: none !important;
 }
 
+/* Cards da página de colunas */
+
+.grade-materias {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.card-materia {
+  overflow: hidden;
+  background: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: 0.3s ease;
+}
+
+.card-materia:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 23, 61, 0.65);
+}
+
+.card-materia > a {
+  display: block;
+  overflow: hidden;
+}
+
+.card-materia img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-materia:hover img {
+  transform: scale(1.04);
+}
+
+.card-conteudo {
+  padding: 25px;
+}
+
+.card-conteudo .categoria {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--vermelho-vivo);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.card-conteudo h2 {
+  margin: 0 0 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.card-conteudo h2 a {
+  color: #fff;
+}
+
+.card-conteudo p {
+  margin: 0;
+  color: var(--cinza);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.card-conteudo .link-card {
+  margin-top: 20px;
+}
+
+@media (max-width: 750px) {
+  .grade-materias {
+    grid-template-columns: 1fr;
+  }
+
+  .card-materia img {
+    height: 230px;
+  }
+}
+
