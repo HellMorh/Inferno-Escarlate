@@ -1932,3 +1932,83 @@ body .menu-botao {
   }
 }
 
+/* Rodapé com cinco colunas */
+
+.rodape-grade {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  align-items: start;
+  gap: 45px;
+}
+
+.rodape-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.rodape-coluna h3 {
+  margin: 0 0 10px;
+}
+
+.rodape-coluna a {
+  display: block;
+  line-height: 1.5;
+}
+
+.rodape-base {
+  width: min(1180px, 100%);
+  margin: 45px auto 0;
+  padding-top: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rodape-base p {
+  margin: 0;
+}
+
+.rodape-links-legais {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+@media (max-width: 1000px) {
+  .rodape-grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rodape-marca {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .rodape-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .rodape-marca {
+    grid-column: auto;
+  }
+
+  .rodape-base {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rodape-links-legais {
+    flex-wrap: wrap;
+  }
+}
+
