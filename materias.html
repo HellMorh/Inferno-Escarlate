@@ -15,105 +15,7 @@
 
   <title>Todas as matérias | Inferno Escarlate</title>
 
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    .menu-botao {
-      display: none !important;
-    }
-
-    .pagina-listagem {
-      padding-top: 78px;
-    }
-
-    .cabecalho-listagem {
-      min-height: 460px;
-      padding: 130px 7% 70px;
-      display: flex;
-      align-items: flex-end;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.97),
-          rgba(0, 0, 0, 0.64),
-          rgba(0, 0, 0, 0.25)
-        ),
-        linear-gradient(
-          0deg,
-          #050505,
-          transparent 48%
-        ),
-        url("img/banner.jpg") center / cover no-repeat;
-    }
-
-    .cabecalho-listagem-conteudo {
-      width: min(1180px, 100%);
-      margin: 0 auto;
-    }
-
-    .cabecalho-listagem h1 {
-      margin: 10px 0 18px;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(4.8rem, 10vw, 8.5rem);
-      line-height: 0.86;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .cabecalho-listagem p {
-      max-width: 680px;
-      color: #c2c2c2;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-
-    .filtros-materias {
-      margin-bottom: 34px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .filtros-materias button {
-      padding: 11px 16px;
-      background: var(--preto-claro);
-      border: 1px solid var(--borda);
-      color: var(--cinza);
-      font-family: inherit;
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .filtros-materias button:hover,
-    .filtros-materias button.ativo {
-      color: var(--branco);
-      border-color: var(--vermelho-vivo);
-      background: rgba(165, 0, 26, 0.18);
-    }
-
-    @media screen and (max-width: 600px) {
-      .menu-botao {
-        display: block !important;
-      }
-
-      .pagina-listagem {
-        padding-top: 0;
-      }
-
-      .cabecalho-listagem {
-        min-height: 420px;
-        padding: 110px 6% 55px;
-      }
-
-      .cabecalho-listagem h1 {
-        font-size: 4.2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css?v=100">
 </head>
 
 <body>
@@ -168,12 +70,12 @@
 
       <div class="filtros-materias">
         <button class="ativo" data-filtro="todas">Todas</button>
-        <button data-filtro="cinema">Cinema</button>
-        <button data-filtro="musica">Música</button>
-        <button data-filtro="eventos">Eventos</button>
-        <button data-filtro="games">Games</button>
-        <button data-filtro="animes">Animes</button>
-        <button data-filtro="series">Séries e TV</button>
+        <button data-filtro="cinema">cinema</button>
+        <button data-filtro="musica">música</button>
+        <button data-filtro="eventos">eventos</button>
+        <button data-filtro="games">games</button>
+        <button data-filtro="animes">animes</button>
+        <button data-filtro="series">séries e TV</button>
       </div>
 
       <div class="grade-materias">
@@ -185,7 +87,7 @@
           >
 
           <div class="card-conteudo">
-            <span class="categoria">Música</span>
+            <span class="categoria">música</span>
 
             <h3>BTS em Copacabana? Confira os rumores</h3>
 
@@ -254,7 +156,7 @@
               Conheça os títulos que prometem movimentar consoles e computadores.
             </p>
 
-            <a href="posts/materia-games.html">Ler matéria</a>
+            <a href="Categorias/games.html">Ler matéria</a>
           </div>
         </article>
 
@@ -273,7 +175,7 @@
               Produções conhecidas e novas histórias ganham espaço nos próximos meses.
             </p>
 
-            <a href="posts/materia-animes.html">Ler matéria</a>
+            <a href="Categorias/animes.html">Ler matéria</a>
           </div>
         </article>
 
@@ -292,7 +194,7 @@
               Estreias e novas temporadas que merecem entrar na sua lista.
             </p>
 
-            <a href="posts/materia-series.html">Ler matéria</a>
+            <a href="Categorias/series-tv.html">Ler matéria</a>
           </div>
         </article>
 
@@ -401,7 +303,7 @@
   </div>
 
 </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=100"></script>
 
   <script>
     const botoesFiltro = document.querySelectorAll("[data-filtro]");

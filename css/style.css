@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   background:
     radial-gradient(circle at top right, rgba(165, 0, 26, 0.14), transparent 30%),
     var(--preto);
@@ -30,9 +31,14 @@ body {
   line-height: 1.6;
 }
 
+body.menu-aberto {
+  overflow: hidden;
+}
+
 img {
   display: block;
   width: 100%;
+  max-width: 100%;
 }
 
 a {
@@ -40,7 +46,16 @@ a {
   text-decoration: none;
 }
 
-.topo {
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* CABEÇALHO */
+
+.topo,
+.cabecalho {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,16 +67,19 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-  background: rgba(5, 5, 5, 0.82);
+  background: rgba(5, 5, 5, 0.9);
   border-bottom: 1px solid var(--borda);
   backdrop-filter: blur(14px);
 }
 
 .logo {
+  flex-shrink: 0;
+  color: var(--branco);
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
+  line-height: 1;
   letter-spacing: 2px;
-  color: var(--branco);
+  white-space: nowrap;
 }
 
 .logo::first-letter {
@@ -70,41 +88,94 @@ a {
 
 .menu {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 24px;
 }
 
 .menu a {
   color: var(--cinza);
-  font-size: 0.86rem;
-  font-weight: 600;
+  font-size: 0.84rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a.ativo {
   color: var(--vermelho-vivo);
 }
 
+.menu-botao {
+  display: none;
+  padding: 8px 11px;
+  background: transparent;
+  border: 1px solid var(--borda);
+  color: var(--branco);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* HERO DA HOME */
+
 .hero {
-  min-height: 100vh;
-  padding: 120px 8% 70px;
+  position: relative;
+  min-height: 620px;
+  padding: 145px 7% 80px;
   display: flex;
   align-items: center;
+  overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.62) 48%, rgba(0, 0, 0, 0.25) 100%),
-    linear-gradient(0deg, var(--preto) 0%, transparent 28%),
-    url("../img/banner.jpg") center/cover no-repeat;
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.68) 48%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    url("../img/banner.png") center / cover no-repeat;
+}
+
+/* Funciona quando o banner está inserido como <img class="hero-imagem-fundo"> */
+.hero-imagem-fundo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-escurecimento {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.68) 48%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(5, 5, 5, 0.82) 0%,
+      rgba(5, 5, 5, 0.05) 58%
+    );
+  pointer-events: none;
 }
 
 .hero-conteudo {
+  position: relative;
+  z-index: 2;
   max-width: 760px;
 }
 
 .hero-etiqueta,
 .titulo-secao span,
-.categoria {
+.categoria,
+.subtitulo-secao {
   color: var(--vermelho-vivo);
   font-size: 0.74rem;
   font-weight: 700;
@@ -125,44 +196,58 @@ a {
 
 .hero p {
   margin: 22px 0 34px;
-  color: var(--cinza);
+  color: #c7c7c7;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
+/* BOTÕES */
+
 .botao,
 .link-materia,
-.card-materia a,
-.card-coluna a {
+.card-materia .card-conteudo > a,
+.card-coluna-overlay > a,
+.card-critica-conteudo > a,
+.link-card,
+.botao-enviar,
+.rodape-contato {
   display: inline-block;
   padding: 13px 20px;
-  border: 1px solid var(--vermelho-vivo);
   background: transparent;
+  border: 1px solid var(--vermelho-vivo);
   color: var(--branco);
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .botao:hover,
 .link-materia:hover,
-.card-materia a:hover,
-.card-coluna a:hover {
+.card-materia .card-conteudo > a:hover,
+.card-coluna-overlay > a:hover,
+.card-critica-conteudo > a:hover,
+.link-card:hover,
+.botao-enviar:hover,
+.rodape-contato:hover {
   background: var(--vermelho-vivo);
+  color: var(--branco);
   box-shadow: 0 0 28px rgba(237, 24, 52, 0.34);
 }
+
+/* ESTRUTURA GERAL */
 
 .secao {
   width: min(1180px, 88%);
   margin: 0 auto;
-  padding: 110px 0;
+  padding: 90px 0;
 }
 
 .titulo-secao {
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 }
 
 .titulo-secao h2 {
@@ -173,7 +258,66 @@ a {
   letter-spacing: 2px;
 }
 
+/* CATEGORIAS DA HOME */
+
+#categorias,
+.secao-categorias {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+  padding: 28px 0 24px;
+}
+
+#categorias .titulo-secao,
+.secao-categorias .titulo-secao {
+  margin-bottom: 18px;
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+#categorias .categorias,
+.secao-categorias .categorias {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.categorias a {
+  padding: 14px 19px;
+  background: var(--preto-claro);
+  border: 1px solid var(--borda);
+  color: var(--cinza);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+#categorias .categorias a,
+.secao-categorias .categorias a {
+  min-width: 0;
+  padding: 12px 8px;
+  font-size: 0.68rem;
+  white-space: normal;
+}
+
+.categorias a:hover {
+  color: var(--branco);
+  border-color: var(--vermelho-vivo);
+  background: rgba(165, 0, 26, 0.18);
+}
+
+/* DESTAQUE DA HOME */
+
 .destaque {
+  padding-top: 24px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   align-items: stretch;
@@ -192,7 +336,7 @@ a {
   transition: 0.5s;
 }
 
-.destaque:hover img {
+.destaque:hover .destaque-imagem img {
   transform: scale(1.04);
   filter: grayscale(0%);
 }
@@ -222,9 +366,16 @@ a {
   color: var(--cinza);
 }
 
+/* CARDS DE MATÉRIAS */
+
+#materias {
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
 .grade-materias {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -240,10 +391,15 @@ a {
   border-color: rgba(237, 24, 52, 0.55);
 }
 
+.card-materia > a {
+  display: block;
+  overflow: hidden;
+}
+
 .card-materia img {
   height: 260px;
   object-fit: cover;
-  filter: saturate(0.75);
+  filter: saturate(0.8);
   transition: 0.4s;
 }
 
@@ -256,6 +412,7 @@ a {
   padding: 25px;
 }
 
+.card-conteudo h2,
 .card-conteudo h3 {
   margin: 9px 0 12px;
   font-family: "Bebas Neue", sans-serif;
@@ -265,39 +422,90 @@ a {
 }
 
 .card-conteudo p {
-  min-height: 78px;
   margin-bottom: 22px;
   color: var(--cinza);
   font-size: 0.92rem;
 }
 
-.categorias {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+/* CRÍTICAS */
+
+.criticas-destaque {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.categorias a {
-  padding: 14px 19px;
+.grade-criticas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card-critica {
+  overflow: hidden;
   background: var(--preto-claro);
   border: 1px solid var(--borda);
-  color: var(--cinza);
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.3s;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
-.categorias a:hover {
-  color: var(--branco);
-  border-color: var(--vermelho-vivo);
-  background: rgba(165, 0, 26, 0.18);
+.card-critica:hover {
+  transform: translateY(-8px);
+  border-color: rgba(237, 24, 52, 0.55);
+}
+
+.card-critica img {
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.card-critica:hover img {
+  transform: scale(1.05);
+}
+
+.card-critica-conteudo {
+  padding: 26px;
+}
+
+.card-critica-conteudo h3 {
+  margin: 10px 0 14px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.card-critica-conteudo p {
+  margin-bottom: 22px;
+  color: var(--cinza);
+  font-size: 0.92rem;
+}
+
+.nota-card {
+  margin-bottom: 22px;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.nota-card strong {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.nota-card span {
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+/* COLUNAS DA HOME */
+
+#colunas {
+  padding-top: 20px;
 }
 
 .grade-colunas {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -321,7 +529,12 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(0deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.42) 65%, transparent 100%);
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.98) 0%,
+      rgba(0, 0, 0, 0.42) 65%,
+      transparent 100%
+    );
 }
 
 .card-coluna:hover img {
@@ -358,91 +571,185 @@ a {
   color: var(--cinza);
 }
 
-footer {
-  padding: 60px 6%;
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  background: #020202;
-  border-top: 1px solid var(--borda);
-  color: var(--cinza);
-}
+/* PÁGINAS DE LISTAGEM, CONTATO E COLUNAS */
 
-footer h2 {
-  color: var(--branco);
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2.4rem;
-  letter-spacing: 2px;
-}
-
-@media (max-width: 900px) {
-  .topo {
-    position: static;
-    padding: 22px 6%;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .menu {
-    gap: 16px;
-  }
-
-  .hero {
-    min-height: 82vh;
-    padding-top: 80px;
-  }
-
-  .destaque {
-    grid-template-columns: 1fr;
-  }
-
-  .destaque-imagem {
-    min-height: 360px;
-  }
-
-  .destaque-conteudo {
-    padding: 38px;
-  }
-
-  .grade-materias {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .grade-colunas {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 620px) {
-  .hero h1 {
-    font-size: 4.5rem;
-  }
-
-  .secao {
-    width: 90%;
-    padding: 78px 0;
-  }
-
-  .grade-materias {
-    grid-template-columns: 1fr;
-  }
-
-  .card-materia img {
-    height: 230px;
-  }
-
-  .card-coluna {
-    min-height: 420px;
-  }
-
-  footer {
-    flex-direction: column;
-  }
-}/* Página interna das matérias */
-
+.pagina-listagem,
+.pagina-contato,
+.pagina-colunas,
+.pagina-categoria,
 .pagina-materia {
   padding-top: 78px;
 }
+
+.cabecalho-listagem,
+.cabecalho-contato,
+.pagina-topo,
+.cabecalho-categoria {
+  min-height: 480px;
+  padding: 130px 7% 70px;
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96),
+      rgba(0, 0, 0, 0.66),
+      rgba(0, 0, 0, 0.25)
+    ),
+    linear-gradient(
+      0deg,
+      var(--preto),
+      transparent 48%
+    ),
+    url("../img/banner.png") center / cover no-repeat;
+}
+
+.cabecalho-listagem-conteudo,
+.cabecalho-contato-conteudo,
+.pagina-topo-conteudo,
+.cabecalho-categoria-conteudo,
+.cabecalho-categoria > div {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.cabecalho-listagem h1,
+.cabecalho-contato h1,
+.pagina-topo h1,
+.cabecalho-categoria h1 {
+  margin: 10px 0 18px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(4.8rem, 10vw, 8.5rem);
+  line-height: 0.86;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.cabecalho-listagem p,
+.cabecalho-contato p,
+.pagina-topo p,
+.cabecalho-categoria p {
+  max-width: 680px;
+  color: #c2c2c2;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.filtros-materias {
+  margin-bottom: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filtros-materias button {
+  padding: 11px 16px;
+  background: var(--preto-claro);
+  border: 1px solid var(--borda);
+  color: var(--cinza);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filtros-materias button:hover,
+.filtros-materias button.ativo {
+  color: var(--branco);
+  border-color: var(--vermelho-vivo);
+  background: rgba(165, 0, 26, 0.18);
+}
+
+/* CONTATO */
+
+.estrutura-contato {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.informacoes-contato,
+.formulario-contato {
+  padding: 34px;
+  background: var(--preto-claro);
+  border: 1px solid var(--borda);
+}
+
+.informacoes-contato h2,
+.formulario-contato h2 {
+  margin-bottom: 18px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+.informacoes-contato p {
+  margin-bottom: 24px;
+  color: var(--cinza);
+}
+
+.lista-contato {
+  display: grid;
+  gap: 14px;
+}
+
+.lista-contato a {
+  padding: 14px 16px;
+  border: 1px solid var(--borda);
+  color: var(--cinza);
+  overflow-wrap: anywhere;
+  transition: 0.3s;
+}
+
+.lista-contato a:hover {
+  color: var(--branco);
+  border-color: var(--vermelho-vivo);
+}
+
+.campo-formulario {
+  margin-bottom: 18px;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--cinza);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 14px 15px;
+  background: #0a0a0a;
+  border: 1px solid var(--borda);
+  color: var(--branco);
+  outline: none;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  border-color: var(--vermelho-vivo);
+}
+
+.campo-formulario textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.aviso-formulario {
+  margin-top: 16px;
+  color: #777;
+  font-size: 0.78rem;
+}
+
+/* PÁGINAS INTERNAS DE MATÉRIA */
 
 .capa-materia {
   position: relative;
@@ -644,11 +951,7 @@ footer h2 {
 .bloco-lateral {
   padding: 28px;
   background:
-    linear-gradient(
-      145deg,
-      rgba(165, 0, 26, 0.11),
-      transparent 55%
-    ),
+    linear-gradient(145deg, rgba(165, 0, 26, 0.11), transparent 55%),
     var(--preto-claro);
   border: 1px solid var(--borda);
 }
@@ -727,16 +1030,177 @@ footer h2 {
 }
 
 .mais-materias .grade-materias {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* MATÉRIA UNIVERSAL EM FORMATO EDITORIAL */
+
+.cabecalho-materia {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+  padding: 80px 0 45px;
+}
+
+.cabecalho-materia h1 {
+  max-width: 1000px;
+  margin: 0 0 22px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.95;
+}
+
+.cabecalho-materia .resumo {
+  max-width: 760px;
+  margin-bottom: 22px;
+  color: #bdbdbd;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.imagem-principal-materia {
+  width: min(1180px, 88%);
+  margin: 0 auto;
+}
+
+.imagem-principal-materia img {
+  height: min(620px, 65vw);
+  object-fit: cover;
+  border: 1px solid var(--borda);
+}
+
+.fonte-materia {
+  margin-top: 45px;
+  padding-top: 22px;
+  border-top: 1px solid var(--borda);
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* RODAPÉ */
+
+.rodape-principal {
+  padding: 70px 6% 25px;
+  display: block;
+  background:
+    linear-gradient(145deg, rgba(165, 0, 26, 0.1), transparent 40%),
+    #020202;
+  border-top: 1px solid var(--borda);
+  color: var(--cinza);
+}
+
+.rodape-grade {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(4, 1fr);
+  align-items: start;
+  gap: 45px;
+}
+
+.rodape-marca h2 {
+  margin-bottom: 14px;
+  color: var(--branco);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.rodape-marca p {
+  max-width: 330px;
+  margin-bottom: 24px;
+  color: var(--cinza);
+  font-size: 0.9rem;
+}
+
+.rodape-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rodape-coluna h3 {
+  margin-bottom: 8px;
+  color: var(--branco);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.rodape-coluna a {
+  color: var(--cinza);
+  font-size: 0.82rem;
+  transition: 0.3s;
+}
+
+.rodape-coluna a:hover {
+  color: var(--vermelho-vivo);
+  transform: translateX(3px);
+}
+
+.rodape-base {
+  width: min(1180px, 100%);
+  margin: 45px auto 0;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border-top: 1px solid var(--borda);
+  color: #777;
+  font-size: 0.76rem;
+}
+
+.rodape-links-legais,
+.rodape-base > div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.rodape-base a {
+  color: #777;
+  transition: 0.3s;
+}
+
+.rodape-base a:hover {
+  color: var(--vermelho-vivo);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+  .rodape-grade {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rodape-marca {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 900px) {
-  .pagina-materia {
-    padding-top: 0;
+  #categorias .categorias,
+  .secao-categorias .categorias {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .capa-materia {
-    min-height: 650px;
+  .destaque {
+    grid-template-columns: 1fr;
+  }
+
+  .destaque-imagem {
+    min-height: 360px;
+  }
+
+  .grade-materias,
+  .grade-criticas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-colunas {
+    grid-template-columns: 1fr;
   }
 
   .estrutura-materia {
@@ -750,11 +1214,125 @@ footer h2 {
 
   .barra-lateral {
     position: static;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .estrutura-contato {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .topo,
+  .cabecalho {
+    position: fixed;
+    min-height: 72px;
+    padding: 18px 6%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-botao {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 22px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    background: rgba(5, 5, 5, 0.98);
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    backdrop-filter: blur(14px);
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 520px;
+    padding: 125px 6% 60px;
+  }
+
+  .hero-imagem-fundo {
+    object-position: center top;
+  }
+
+  .pagina-listagem,
+  .pagina-contato,
+  .pagina-colunas,
+  .pagina-categoria,
+  .pagina-materia {
+    padding-top: 72px;
+  }
+
+  .cabecalho-listagem,
+  .cabecalho-contato,
+  .pagina-topo,
+  .cabecalho-categoria {
+    min-height: 420px;
+    padding: 110px 6% 55px;
+  }
+
+  .cabecalho-listagem h1,
+  .cabecalho-contato h1,
+  .pagina-topo h1,
+  .cabecalho-categoria h1 {
+    font-size: 4.2rem;
+  }
+
+  .rodape-base {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .rodape-links-legais,
+  .rodape-base > div {
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 620px) {
+  .secao {
+    width: 90%;
+    padding: 70px 0;
+  }
+
+  #categorias,
+  .secao-categorias {
+    width: 90%;
+  }
+
+  #categorias .categorias,
+  .secao-categorias .categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-materias,
+  .grade-criticas,
+  .mais-materias .grade-materias {
+    grid-template-columns: 1fr;
+  }
+
+  .card-materia img,
+  .card-critica img {
+    height: 230px;
+  }
+
+  .card-coluna {
+    min-height: 420px;
+  }
+
   .capa-materia {
     min-height: 590px;
   }
@@ -790,643 +1368,33 @@ footer h2 {
     width: 90%;
   }
 
-  .mais-materias .grade-materias {
-    grid-template-columns: 1fr;
+  .informacoes-contato,
+  .formulario-contato {
+    padding: 25px;
   }
 
- 
-
-@media (max-width: 768px) {
-  .topo {
-    position: relative;
-  }
-
-  
-
-
-  .menu {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: 14px;
-    padding-top: 18px;
-  }
-
-  /* Menu mobile */
-
-.menu-botao {
-  display: none;
-  background: transparent;
-  border: 1px solid var(--borda);
-  color: var(--branco);
-  padding: 8px 11px;
-  font-size: 1.35rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 700px) {
-  .topo {
-    position: relative;
-    min-height: 72px;
-    padding: 18px 6%;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  
-  }
-
-  .menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 22px 6%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    background: rgba(5, 5, 5, 0.98);
-    border-top: 1px solid var(--borda);
-    border-bottom: 1px solid var(--borda);
-    backdrop-filter: blur(14px);
-  }
-
-  .menu.ativo {
-    display: flex;
-  }
-}/* Correção final do botão mobile */
-
-.menu-botao {
-  display: none !important;
-}
-
-@media screen and (max-width: 700px) {
-  .menu-botao {
-    display: block !important;
-  }
-}
-
-/* Página de categoria */
-
-.pagina-categoria {
-  padding-top: 78px;
-}
-
-.cabecalho-categoria {
-  min-height: 480px;
-  padding: 140px 6% 80px;
-  display: flex;
-  align-items: flex-end;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 5, 5, 0.98),
-      rgba(5, 5, 5, 0.65),
-      rgba(5, 5, 5, 0.35)
-    ),
-    linear-gradient(
-      0deg,
-      var(--preto),
-      transparent 45%
-    ),
-    url("../img/materia-03.jpg") center/cover no-repeat;
-}
-
-.cabecalho-categoria > div {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-}
-
-.cabecalho-categoria h1 {
-  margin-top: 8px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(4.5rem, 10vw, 9rem);
-  line-height: 0.9;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.cabecalho-categoria p {
-  max-width: 650px;
-  margin-top: 20px;
-  color: var(--cinza);
-  font-size: 1.08rem;
-}
-
-@media screen and (max-width: 700px) {
-  .pagina-categoria {
-    padding-top: 0;
-  }
-
-  .cabecalho-categoria {
-    min-height: 420px;
-    padding: 100px 6% 55px;
-  }
-
-  .cabecalho-categoria h1 {
-    font-size: 4.5rem;
-  }
-}
-
-/* Cabeçalho da categoria Cinema */
-
-.cabecalho-categoria {
-  position: relative;
-  min-height: 620px;
-  padding: 150px 7% 90px;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  background-color: var(--preto);
-}
-
-.cinema-banner {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.96) 0%,
-      rgba(0, 0, 0, 0.72) 48%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    linear-gradient(
-      0deg,
-      var(--preto) 0%,
-      transparent 45%
-    ),
-    url("../img/materia-03.jpg") center/cover no-repeat;
-}
-
-.cabecalho-categoria-conteudo {
-  position: relative;
-  z-index: 2;
-  width: min(1180px, 100%);
-  margin: 0 auto;
-}
-
-.cabecalho-categoria h1 {
-  margin: 10px 0 18px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(5rem, 11vw, 9rem);
-  line-height: 0.85;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.cabecalho-categoria p {
-  max-width: 650px;
-  margin-bottom: 30px;
-  color: #c2c2c2;
-  font-size: 1.1rem;
-  line-height: 1.75;
-}
-
-@media screen and (max-width: 700px) {
-  .cabecalho-categoria {
-    min-height: 520px;
-    padding: 120px 6% 60px;
-  }
-
-  .cabecalho-categoria h1 {
-    font-size: 4.7rem;
-  }
-
-  .cabecalho-categoria p {
-    font-size: 0.96rem;
-  }
-}
-
-/* Ajuste de espaçamento das categorias */
-
-
-
-
-/* Aproxima destaque, categorias e últimas matérias */
-
-.destaque {
-  padding-bottom: 0px;
-}
-
-
-
-
-#materias {
-  padding-top: 0px;
-}
-
-/* Categorias compactas em uma única fileira */
-
-.destaque {
-  padding-bottom: 20px;
-}
-
-
-
-}
-
-#materias {
-  padding-top: 30px;
-}
-
-
-/* Alinhamento das categorias com a matéria destaque */
-
-
-
-
-.secao-categorias .categorias a {
-  padding: 10px 14px;
-  font-size: 0.68rem;
-  white-space: nowrap;
-}
-
-.destaque {
-  padding-top: 34px;
-}
-
-/* Categorias alinhadas com o destaque */
-
-.secao-categorias {
-  width: min(1180px, 88%) !important;
-  margin: 0 auto !important;
-  padding: 24px 0 20px !important;
-}
-
-.secao-categorias .titulo-secao {
-  margin: 0 0 18px !important;
-}
-
-.secao-categorias .categorias {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  justify-content: flex-start !important;
-  gap: 8px !important;
-  overflow-x: auto;
-  padding-bottom: 6px;
-}
-
-.secao-categorias .categorias a {
-  flex: 0 0 auto;
-  padding: 10px 14px !important;
-  font-size: 0.68rem !important;
-  white-space: nowrap;
-}
-
-.destaque {
-  padding-top: 24px !important;
-}
- 
-
-/* Categorias maiores e alinhadas com a matéria */
-
-#categorias {
-  width: min(1180px, 88%);
-  margin: 0 auto;
-  padding: 28px 0 24px;
-}
-
-#categorias .categorias {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-  width: 100%;
-}
-
-#categorias .categorias a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 12px 10px;
-  text-align: center;
-  font-size: 0.75rem;
-  white-space: nowrap;
-}
-
-@media (max-width: 900px) {
-  #categorias .categorias {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  #categorias .categorias {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #categorias .categorias a {
-    min-height: 48px;
-    font-size: 0.7rem;
-  }
-}
-
-/* Remove a barra horizontal das categorias */
-
-#categorias .categorias {
-  display: grid !important;
-  grid-template-columns: repeat(7, 1fr) !important;
-  gap: 8px !important;
-  width: 100% !important;
-  overflow: visible !important;
-  padding-bottom: 0 !important;
-}
-
-#categorias .categorias a {
-  min-width: 0 !important;
-  padding: 12px 8px !important;
-  font-size: 0.68rem !important;
-  white-space: normal !important;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  #categorias .categorias {
-    grid-template-columns: repeat(4, 1fr) !important;
-  }
-}
-
-@media (max-width: 600px) {
-  #categorias .categorias {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-/* Reduz o espaço antes de Últimas matérias */
-
-#materias {
-  padding-top: 15px !important;
-}
-
-#materias .titulo-secao {
-  margin-bottom: 28px !important;
-}
-
-/* Grade com 3 críticas por linha */
-
-.grade-criticas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.card-critica {
-  overflow: hidden;
-  background: var(--preto-claro);
-  border: 1px solid var(--borda);
-  transition: transform 0.3s, border-color 0.3s;
-}
-
-.card-critica:hover {
-  transform: translateY(-8px);
-  border-color: rgba(237, 24, 52, 0.55);
-}
-
-.card-critica img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  transition: transform 0.4s;
-}
-
-.card-critica:hover img {
-  transform: scale(1.05);
-}
-
-.card-critica-conteudo {
-  padding: 26px;
-}
-
-.card-critica-conteudo h3 {
-  margin: 10px 0 14px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.card-critica-conteudo p {
-  min-height: 90px;
-  margin-bottom: 22px;
-  color: var(--cinza);
-  font-size: 0.92rem;
-}
-
-.nota-card {
-  margin-bottom: 22px;
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-}
-
-.nota-card strong {
-  color: var(--branco);
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.nota-card span {
-  color: var(--cinza);
-  font-size: 0.9rem;
-}
-
-.card-critica-conteudo > a {
-  display: inline-block;
-  padding: 11px 16px;
-  border: 1px solid var(--vermelho-vivo);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.card-critica-conteudo > a:hover {
-  background: var(--vermelho-vivo);
-}
-
-@media (max-width: 900px) {
-  .grade-criticas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 620px) {
-  .grade-criticas {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Aproxima Últimas matérias de Críticas de cinema */
-
-#materias {
-  padding-bottom: 35px !important;
-}
-
-.criticas-destaque {
-  padding-top: 20px !important;
-}
-
-.criticas-destaque .titulo-secao {
-  margin-bottom: 28px !important;
-}
-
-/* Aproxima a matéria em destaque de Últimas matérias */
-
-.destaque {
-  padding-bottom: 20px !important;
-}
-
-#materias {
-  padding-top: 20px !important;
-}
-
-/* Aproxima Críticas de cinema de Colunas em destaque */
-
-.criticas-destaque {
-  padding-bottom: 20px !important;
-}
-
-#colunas {
-  padding-top: 20px !important;
-}
-
-/* Rodapé principal */
-
-.rodape-principal {
-  padding: 70px 6% 25px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(165, 0, 26, 0.1),
-      transparent 40%
-    ),
-    #020202;
-  border-top: 1px solid var(--borda);
-}
-
-.rodape-grade {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
-  gap: 45px;
-}
-
-.rodape-marca h2 {
-  margin-bottom: 14px;
-  color: var(--branco);
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 3rem;
-  line-height: 1;
-  letter-spacing: 2px;
-}
-
-.rodape-marca p {
-  max-width: 330px;
-  margin-bottom: 24px;
-  color: var(--cinza);
-  font-size: 0.9rem;
-}
-
-.rodape-contato {
-  display: inline-block;
-  padding: 11px 16px;
-  border: 1px solid var(--vermelho-vivo);
-  font-size: 0.74rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.rodape-contato:hover {
-  background: var(--vermelho-vivo);
-}
-
-.rodape-coluna {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.rodape-coluna h3 {
-  margin-bottom: 8px;
-  color: var(--branco);
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-}
-
-.rodape-coluna a {
-  color: var(--cinza);
-  font-size: 0.82rem;
-  transition: 0.3s;
-}
-
-.rodape-coluna a:hover {
-  color: var(--vermelho-vivo);
-  transform: translateX(3px);
-}
-
-.rodape-base {
-  width: min(1180px, 100%);
-  margin: 55px auto 0;
-  padding-top: 22px;
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  border-top: 1px solid var(--borda);
-  color: #777;
-  font-size: 0.76rem;
-}
-
-.rodape-base div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.rodape-base a {
-  color: #777;
-  transition: 0.3s;
-}
-
-.rodape-base a:hover {
-  color: var(--vermelho-vivo);
-}
-
-@media (max-width: 1000px) {
-  .rodape-grade {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .rodape-marca {
-    grid-column: span 3;
-  }
-}
-
-@media (max-width: 700px) {
-  .rodape-principal {
-    padding: 55px 6% 22px;
-  }
-
-  .rodape-grade {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px 25px;
-  }
-
-  .rodape-marca {
-    grid-column: span 2;
-  }
-
-  .rodape-base {
-    flex-direction: column;
+  .imagem-principal-materia img {
+    height: 280px;
   }
 }
 
 @media (max-width: 480px) {
+  .logo {
+    font-size: 1.65rem;
+  }
+
+  .hero h1 {
+    font-size: 4.5rem;
+  }
+
+  .destaque-conteudo {
+    padding: 28px;
+  }
+
+  .card-coluna-overlay {
+    padding: 26px;
+  }
+
   .rodape-grade {
     grid-template-columns: 1fr;
   }
@@ -1436,503 +1404,26 @@ footer h2 {
   }
 }
 
-/* Rodapé base mais limpo */
 
-.rodape-base {
-  width: min(1180px, 100%);
-  margin: 45px auto 0;
-  padding-top: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  border-top: 1px solid var(--borda);
-  color: #777;
-  font-size: 0.76rem;
-  text-align: center;
-}
+/* RODAPÉ PADRONIZADO */
 
-.rodape-base div {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 18px;
-}
+.rodape-principal {
+  width: 100%;
+  padding: 70px 6% 25px;
 
-.rodape-base a {
-  color: #777;
-  transition: 0.3s;
-}
+  display: block;
 
-.rodape-base a:hover {
-  color: var(--vermelho-vivo);
-}
-
-/* Alinha a base do rodapé embaixo de todas as colunas */
-
-.rodape-grade {
-  align-items: start;
-}
-
-.rodape-base {
-  width: min(1180px, 100%);
-  margin: 45px auto 0;
-  padding-top: 22px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-top: 1px solid var(--borda);
-  color: #777;
-  font-size: 0.76rem;
-  text-align: left;
-}
-
-.rodape-base div {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
-}
-
-@media (max-width: 700px) {
-  .rodape-base {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .rodape-base div {
-    justify-content: flex-start;
-  }
-}
-
-/* Organização final da base do rodapé */
-
-.rodape-base {
-  width: min(1180px, 100%);
-  margin: 45px auto 0;
-  padding-top: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  border-top: 1px solid var(--borda);
-  color: #777;
-  font-size: 0.76rem;
-}
-
-.rodape-base p {
-  margin: 0;
-  max-width: 430px;
-  line-height: 1.6;
-}
-
-.rodape-base div {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 22px;
-}
-
-.rodape-base a {
-  color: #777;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.rodape-base a:hover {
-  color: var(--vermelho-vivo);
-}
-
-@media (max-width: 700px) {
-  .rodape-base {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .rodape-base div {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-}
-
-/* Página de colunas */
-
-.pagina-topo {
-  padding: 150px 6% 70px;
   background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.95),
-      rgba(0, 0, 0, 0.6)
-    ),
     linear-gradient(
       135deg,
-      rgba(170, 0, 25, 0.18),
-      transparent
-    );
-  border-bottom: 1px solid var(--borda);
+      rgba(165, 0, 26, 0.08),
+      transparent 38%
+    ),
+    #020202;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a8a8a8;
 }
-
-.pagina-topo-conteudo {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-}
-
-.pagina-topo h1 {
-  margin: 8px 0 12px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(3.5rem, 8vw, 6rem);
-  line-height: 0.95;
-  letter-spacing: 2px;
-}
-
-.pagina-topo p {
-  max-width: 650px;
-  color: var(--cinza);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.subtitulo-secao {
-  color: var(--vermelho-vivo);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.link-card {
-  display: inline-block;
-  margin-top: 15px;
-  color: var(--vermelho-vivo);
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.link-card:hover {
-  color: var(--branco);
-}
-
-/* Correção da página de colunas */
-
-.pagina-topo {
-  min-height: auto;
-  padding: 90px 6% 45px;
-}
-
-.pagina-topo-conteudo {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-}
-
-.pagina-topo h1 {
-  margin: 6px 0 10px;
-  font-size: clamp(3.5rem, 7vw, 5.5rem);
-}
-
-.pagina-topo p {
-  margin: 0;
-  max-width: 680px;
-}
-
-.pagina-topo + .secao {
-  padding-top: 45px;
-}
-
-.pagina-topo + .secao .titulo-secao {
-  margin-bottom: 30px;
-}
-
-/* FORÇAR CORREÇÃO DA PÁGINA COLUNAS */
-
-body .pagina-topo {
-  min-height: 0 !important;
-  height: auto !important;
-  padding-top: 60px !important;
-  padding-bottom: 40px !important;
-  display: block !important;
-}
-
-body .pagina-topo-conteudo {
-  padding: 0 !important;
-  margin: 0 auto !important;
-}
-
-body .pagina-topo h1 {
-  margin-top: 5px !important;
-  margin-bottom: 12px !important;
-}
-
-body .pagina-topo + .secao {
-  padding-top: 40px !important;
-  min-height: 0 !important;
-}
-
-/* CORREÇÃO DO CABEÇALHO */
-
-body .cabecalho {
-  width: 100%;
-  min-height: 78px;
-  padding: 0 6% !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 35px;
-
-  background:
-    linear-gradient(
-      90deg,
-      #030303 0%,
-      #080000 60%,
-      #160004 100%
-    );
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-body .logo {
-  display: block;
-  flex-shrink: 0;
-
-  margin: 0 !important;
-
-  color: #ffffff;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: 1.5px;
-  white-space: nowrap;
-}
-
-body .menu {
-  position: static !important;
-
-  width: auto !important;
-  height: auto !important;
-  margin: 0 0 0 auto !important;
-  padding: 0 !important;
-
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 30px;
-
-  background: transparent !important;
-  transform: none !important;
-}
-
-body .menu a {
-  display: inline-block;
-  margin: 0 !important;
-  padding: 28px 0 !important;
-
-  color: #bdbdbd;
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  white-space: nowrap;
-}
-
-body .menu a:hover,
-body .menu a.ativo {
-  color: #ff173d;
-}
-
-body .menu-botao {
-  display: none !important;
-}
-
-/* Cards da página de colunas */
-
-.grade-materias {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-.card-materia {
-  overflow: hidden;
-  background: #080808;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  transition: 0.3s ease;
-}
-
-.card-materia:hover {
-  transform: translateY(-5px);
-  border-color: rgba(255, 23, 61, 0.65);
-}
-
-.card-materia > a {
-  display: block;
-  overflow: hidden;
-}
-
-.card-materia img {
-  width: 100%;
-  height: 280px;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.card-materia:hover img {
-  transform: scale(1.04);
-}
-
-.card-conteudo {
-  padding: 25px;
-}
-
-.card-conteudo .categoria {
-  display: inline-block;
-  margin-bottom: 10px;
-  color: var(--vermelho-vivo);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-.card-conteudo h2 {
-  margin: 0 0 12px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2.2rem;
-  line-height: 1;
-  letter-spacing: 1px;
-}
-
-.card-conteudo h2 a {
-  color: #fff;
-}
-
-.card-conteudo p {
-  margin: 0;
-  color: var(--cinza);
-  font-size: 0.9rem;
-  line-height: 1.65;
-}
-
-.card-conteudo .link-card {
-  margin-top: 20px;
-}
-
-@media (max-width: 750px) {
-  .grade-materias {
-    grid-template-columns: 1fr;
-  }
-
-  .card-materia img {
-    height: 230px;
-  }
-}
-
-/* Ajustes das páginas internas de colunas */
-
-#materias-coluna {
-  padding-top: 60px !important;
-  padding-bottom: 80px !important;
-}
-
-#materias-coluna .titulo-secao {
-  margin-bottom: 30px;
-}
-
-#materias-coluna .grade-materias {
-  align-items: stretch;
-}
-
-#materias-coluna .card-materia {
-  height: auto !important;
-  min-height: 0 !important;
-  display: flex;
-  flex-direction: column;
-}
-
-#materias-coluna .card-materia > img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-
-#materias-coluna .card-conteudo {
-  flex: 1;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#materias-coluna .card-conteudo h3 {
-  margin: 8px 0 12px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: clamp(1.8rem, 3vw, 2.25rem);
-  line-height: 1.05;
-}
-
-#materias-coluna .card-conteudo p {
-  margin: 0 0 22px;
-  line-height: 1.6;
-}
-
-#materias-coluna .card-conteudo > a {
-  margin-top: auto;
-  padding: 14px 20px;
-  border: 1px solid var(--vermelho-vivo);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-#materias-coluna .card-conteudo > a:hover {
-  background: var(--vermelho-vivo);
-}
-
-.descricao-coluna {
-  width: 100%;
-  padding: 30px;
-  background: #080808;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.descricao-coluna h2 {
-  margin: 0 0 10px;
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 2rem;
-}
-
-.descricao-coluna p {
-  max-width: 850px;
-  margin: 0;
-  color: var(--cinza);
-  line-height: 1.7;
-}
-
-@media (max-width: 750px) {
-  #materias-coluna .card-materia > img {
-    height: 220px;
-  }
-
-  #materias-coluna {
-    padding-top: 45px !important;
-    padding-bottom: 55px !important;
-  }
-}
-
-/* Rodapé com cinco colunas */
 
 .rodape-grade {
   width: min(1180px, 100%);
@@ -1944,6 +1435,48 @@ body .menu-botao {
   gap: 45px;
 }
 
+.rodape-marca h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.rodape-marca p {
+  max-width: 280px;
+  margin: 0 0 25px;
+
+  color: #a8a8a8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.rodape-contato {
+  display: inline-block;
+
+  padding: 13px 20px;
+
+  border: 1px solid #ed1834;
+
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+
+  transition: 0.3s;
+}
+
+.rodape-contato:hover {
+  background: #ed1834;
+  color: #ffffff;
+}
+
 .rodape-coluna {
   display: flex;
   flex-direction: column;
@@ -1953,11 +1486,31 @@ body .menu-botao {
 
 .rodape-coluna h3 {
   margin: 0 0 10px;
+
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .rodape-coluna a {
   display: block;
-  line-height: 1.5;
+
+  color: #a8a8a8;
+  font-size: 0.82rem;
+  line-height: 1.55;
+
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+.rodape-coluna a:hover {
+  color: #ed1834;
+  transform: translateX(3px);
 }
 
 .rodape-base {
@@ -1970,7 +1523,10 @@ body .menu-botao {
   justify-content: space-between;
   gap: 25px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #777777;
+  font-size: 0.76rem;
 }
 
 .rodape-base p {
@@ -1983,9 +1539,20 @@ body .menu-botao {
   gap: 22px;
 }
 
-@media (max-width: 1000px) {
+.rodape-links-legais a {
+  color: #777777;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+.rodape-links-legais a:hover {
+  color: #ed1834;
+}
+
+@media screen and (max-width: 1000px) {
   .rodape-grade {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
   }
 
   .rodape-marca {
@@ -1993,9 +1560,14 @@ body .menu-botao {
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  .rodape-principal {
+    padding: 55px 6% 22px;
+  }
+
   .rodape-grade {
     grid-template-columns: 1fr;
+    gap: 35px;
   }
 
   .rodape-marca {
@@ -2005,10 +1577,11 @@ body .menu-botao {
   .rodape-base {
     flex-direction: column;
     align-items: flex-start;
+    gap: 14px;
   }
 
   .rodape-links-legais {
     flex-wrap: wrap;
+    gap: 12px 20px;
   }
 }
-

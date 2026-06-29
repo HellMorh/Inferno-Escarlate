@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
 
@@ -15,202 +16,20 @@
 
   <title>Contato | Inferno Escarlate</title>
 
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    .menu-botao {
-      display: none !important;
-    }
-
-    .pagina-contato {
-      padding-top: 78px;
-    }
-
-    .cabecalho-contato {
-      min-height: 480px;
-      padding: 130px 7% 70px;
-      display: flex;
-      align-items: flex-end;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0.97),
-          rgba(0, 0, 0, 0.66),
-          rgba(0, 0, 0, 0.28)
-        ),
-        linear-gradient(
-          0deg,
-          #050505,
-          transparent 48%
-        ),
-        url("img/banner.jpg") center / cover no-repeat;
-    }
-
-    .cabecalho-contato-conteudo {
-      width: min(1180px, 100%);
-      margin: 0 auto;
-    }
-
-    .cabecalho-contato h1 {
-      margin: 10px 0 18px;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(4.8rem, 10vw, 8.5rem);
-      line-height: 0.86;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .cabecalho-contato p {
-      max-width: 680px;
-      color: #c2c2c2;
-      font-size: 1.05rem;
-      line-height: 1.75;
-    }
-
-    .estrutura-contato {
-      display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: 40px;
-      align-items: start;
-    }
-
-    .informacoes-contato,
-    .formulario-contato {
-      padding: 34px;
-      background: var(--preto-claro);
-      border: 1px solid var(--borda);
-    }
-
-    .informacoes-contato h2,
-    .formulario-contato h2 {
-      margin-bottom: 18px;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: 2.8rem;
-      letter-spacing: 1px;
-    }
-
-    .informacoes-contato p {
-      margin-bottom: 24px;
-      color: var(--cinza);
-    }
-
-    .lista-contato {
-      display: grid;
-      gap: 14px;
-    }
-
-    .lista-contato a {
-      padding: 14px 16px;
-      border: 1px solid var(--borda);
-      color: var(--cinza);
-      transition: 0.3s;
-    }
-
-    .lista-contato a:hover {
-      color: var(--branco);
-      border-color: var(--vermelho-vivo);
-    }
-
-    .campo-formulario {
-      margin-bottom: 18px;
-    }
-
-    .campo-formulario label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--cinza);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .campo-formulario input,
-    .campo-formulario textarea {
-      width: 100%;
-      padding: 14px 15px;
-      background: #0a0a0a;
-      border: 1px solid var(--borda);
-      color: var(--branco);
-      font: inherit;
-      outline: none;
-    }
-
-    .campo-formulario input:focus,
-    .campo-formulario textarea:focus {
-      border-color: var(--vermelho-vivo);
-    }
-
-    .campo-formulario textarea {
-      min-height: 180px;
-      resize: vertical;
-    }
-
-    .botao-enviar {
-      padding: 13px 22px;
-      background: transparent;
-      border: 1px solid var(--vermelho-vivo);
-      color: var(--branco);
-      font: inherit;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .botao-enviar:hover {
-      background: var(--vermelho-vivo);
-    }
-
-    .aviso-formulario {
-      margin-top: 16px;
-      color: #777;
-      font-size: 0.78rem;
-    }
-
-    @media screen and (max-width: 800px) {
-      .estrutura-contato {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      .menu-botao {
-        display: block !important;
-      }
-
-      .pagina-contato {
-        padding-top: 0;
-      }
-
-      .cabecalho-contato {
-        min-height: 420px;
-        padding: 110px 6% 55px;
-      }
-
-      .cabecalho-contato h1 {
-        font-size: 4.2rem;
-      }
-
-      .informacoes-contato,
-      .formulario-contato {
-        padding: 25px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css?v=100">
 </head>
 
 <body>
 
   <header class="topo">
+
     <a href="index.html" class="logo">
       Inferno Escarlate
     </a>
 
     <button
       class="menu-botao"
+      type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
     >
@@ -224,11 +43,13 @@
       <a href="index.html#categorias">Categorias</a>
       <a href="contato.html">Contato</a>
     </nav>
+
   </header>
 
   <main class="pagina-contato">
 
     <section class="cabecalho-contato">
+
       <div class="cabecalho-contato-conteudo">
 
         <span class="categoria">
@@ -238,150 +59,157 @@
         <h1>Contato</h1>
 
         <p>
-          Envie sugestões de pauta, propostas, dúvidas, correções ou convites
-          para parcerias e coberturas.
+          Envie sugestões de pauta, propostas, dúvidas, correções ou
+          convites para parcerias e coberturas.
         </p>
 
       </div>
+
     </section>
 
     <section class="secao">
 
- <div class="estrutura-contato">
+      <div class="estrutura-contato">
 
-  <aside class="informacoes-contato">
+        <aside class="informacoes-contato">
 
+          <span class="categoria">
+            Inferno Escarlate
+          </span>
 
-<span class="categoria">
-  Inferno Escarlate
-</span>
+          <h2>Entre no modo Geek</h2>
 
-<h2>Entre no modo Geek</h2>
+          <p>
+            Escolha um dos canais abaixo ou preencha o formulário ao lado.
+          </p>
 
-<p>
-  Escolha um dos canais abaixo ou preencha o formulário ao lado.
-</p>
+          <div class="lista-contato">
 
-<div class="lista-contato">
+            <a href="mailto:infernoescarlate@gmail.com">
+              E-mail: infernoescarlate@gmail.com
+            </a>
 
-  <a href="mailto:infernoescarlate@gmail.com">
-    infernoescarlate@gmail.com
-  </a>
+            <a
+              href="https://www.instagram.com/infernoescarlatebr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram: @infernoescarlatebr
+            </a>
 
-  <a
-    href="https://www.instagram.com/infernoescarlatebr"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Instagram: @infernoescarlatebr
-  </a>
+            <a
+              href="https://www.tiktok.com/@infernoescarlatebr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok: @infernoescarlatebr
+            </a>
 
-  <a
-    href="https://www.tiktok.com/@infernoescarlatebr"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    TikTok: @infernoescarlatebr
-  </a>
+            <a
+              href="https://www.youtube.com/@infernoescarlatebr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube: @infernoescarlatebr
+            </a>
 
-  <a
-    href="https://www.youtube.com/@infernoescarlatebr"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    YouTube: @infernoescarlatebr
-  </a>
+          </div>
 
-</div>
+        </aside>
 
+        <form
+          class="formulario-contato"
+          action="https://formsubmit.co/infernoescarlate@gmail.com"
+          method="POST"
+        >
 
-  </aside>
+          <h2>Envie uma mensagem</h2>
 
-  <form
-    class="formulario-contato"
-    action="https://formsubmit.co/infernoescarlate@gmail.com"
-    method="POST"
-  >
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nova mensagem do site Inferno Escarlate"
+          >
 
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
 
-<h2>Envie uma mensagem</h2>
+          <div class="campo-formulario">
 
-<input
-  type="hidden"
-  name="_subject"
-  value="Nova mensagem do site Inferno Escarlate"
->
+            <label for="nome">
+              Nome
+            </label>
 
-<input
-  type="hidden"
-  name="_captcha"
-  value="false"
->
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              required
+            >
 
-<div class="campo-formulario">
+          </div>
 
-  <label for="nome">Nome</label>
+          <div class="campo-formulario">
 
-  <input
-    type="text"
-    id="nome"
-    name="nome"
-    required
-  >
+            <label for="email">
+              E-mail
+            </label>
 
-</div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            >
 
-<div class="campo-formulario">
+          </div>
 
-  <label for="email">E-mail</label>
+          <div class="campo-formulario">
 
-  <input
-    type="email"
-    id="email"
-    name="email"
-    required
-  >
+            <label for="assunto">
+              Assunto
+            </label>
 
-</div>
+            <input
+              type="text"
+              id="assunto"
+              name="assunto"
+              required
+            >
 
-<div class="campo-formulario">
+          </div>
 
-  <label for="assunto">Assunto</label>
+          <div class="campo-formulario">
 
-  <input
-    type="text"
-    id="assunto"
-    name="assunto"
-    required
-  >
+            <label for="mensagem">
+              Mensagem
+            </label>
 
-</div>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              required
+            ></textarea>
 
-<div class="campo-formulario">
+          </div>
 
-  <label for="mensagem">Mensagem</label>
+          <button
+            type="submit"
+            class="botao-enviar"
+          >
+            Enviar mensagem
+          </button>
 
-  <textarea
-    id="mensagem"
-    name="mensagem"
-    required
-  ></textarea>
+          <p class="aviso-formulario">
+            Responderemos sua mensagem assim que possível.
+          </p>
 
-</div>
-
-<button type="submit" class="botao-enviar">
-  Enviar mensagem
-</button>
-
-<p class="aviso-formulario">
-  Responderemos sua mensagem assim que possível.
-</p>
-
-
-  </form>
-
-</div>
-
+        </form>
 
       </div>
 
@@ -391,105 +219,127 @@
 
   <footer class="rodape-principal">
 
-  <div class="rodape-grade">
+    <div class="rodape-grade">
 
-    <div class="rodape-marca">
-      <h2>Inferno Escarlate</h2>
+      <div class="rodape-marca">
+
+        <h2>Inferno Escarlate</h2>
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+        <a href="contato.html" class="rodape-contato">
+          Entre em contato
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="index.html">Início</a>
+        <a href="materias.html">Matérias</a>
+        <a href="colunas.html">Colunas</a>
+        <a href="index.html#categorias">Categorias</a>
+        <a href="contato.html">Contato</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="Categorias/cinema.html">Cinema</a>
+        <a href="Categorias/series-tv.html">Séries e TV</a>
+        <a href="Categorias/games.html">Games</a>
+        <a href="Categorias/musica.html">Música</a>
+        <a href="Categorias/animes.html">Animes</a>
+        <a href="Categorias/hqs.html">HQs</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="Colunas/cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+        <a href="Colunas/checkpoint.html">
+          Checkpoint
+        </a>
+
+        <a href="Colunas/som.html">
+          Som no Inferno
+        </a>
+
+        <a href="Colunas/quadro.html">
+          Além do Quadro
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="rodape-base">
 
       <p>
-        Notícias, críticas, cultura geek, cinema, música,
-        games, animes e entretenimento.
+        © 2026 Inferno Escarlate. Todos os direitos reservados.
       </p>
 
-      <a href="contato.html" class="rodape-contato">
-        Entre em contato
-      </a>
+      <div class="rodape-links-legais">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+
     </div>
 
-    <div class="rodape-coluna">
-      <h3>Navegação</h3>
+  </footer>
 
-      <a href="index.html">Início</a>
-      <a href="materias.html">Matérias</a>
-      <a href="colunas.html">Colunas</a>
-      <a href="index.html#categorias">Categorias</a>
-      <a href="contato.html">Contato</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Categorias</h3>
-
-      <a href="Categorias/cinema.html">Cinema</a>
-      <a href="Categorias/series-tv.html">Séries e TV</a>
-      <a href="Categorias/games.html">Games</a>
-      <a href="Categorias/musica.html">Música</a>
-      <a href="Categorias/animes.html">Animes</a>
-      <a href="Categorias/hqs.html">HQs</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Colunas</h3>
-
-      <a href="Colunas/cena-escarlate.html">Cena Escarlate</a>
-      <a href="Colunas/checkpoint.html">Checkpoint</a>
-      <a href="Colunas/som.html">Som no Inferno</a>
-      <a href="Colunas/quadro.html">Além do Quadro</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Redes sociais</h3>
-
-      <a
-        href="https://www.instagram.com/infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instagram: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        TikTok: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://www.youtube.com/@infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        YouTube: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://x.com/infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        X / Twitter: @infernoescarlatebr
-      </a>
-    </div>
-
-  </div>
-
-  <div class="rodape-base">
-
-    <p>
-      © 2026 Inferno Escarlate. Todos os direitos reservados.
-    </p>
-
-    <div class="rodape-links-legais">
-      <a href="#">Política de privacidade</a>
-      <a href="#">Termos de uso</a>
-    </div>
-
-  </div>
-
-</footer>
-
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=100"></script>
 
 </body>
+
 </html>

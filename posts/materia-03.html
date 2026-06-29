@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
 
@@ -17,25 +18,34 @@
     Spider-Man: Brand New Day ganha trailer e data de estreia | Inferno Escarlate
   </title>
 
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css?v=100">
 </head>
 
 <body>
 
   <header class="topo">
+
     <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
-<button class="menu-botao" aria-label="Abrir menu">
-  ☰
-</button>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
     <nav class="menu">
       <a href="../index.html">Início</a>
       <a href="../materias.html">Matérias</a>
-      <a href="../index.html#colunas">Colunas</a>
+      <a href="../colunas.html">Colunas</a>
       <a href="../index.html#categorias">Categorias</a>
-     <a href="../contato.html">Contato</a>
+      <a href="../contato.html">Contato</a>
     </nav>
+
   </header>
 
   <main class="pagina-materia">
@@ -52,7 +62,7 @@
       <div class="capa-materia-conteudo">
 
         <a
-          href="../index.html#materias"
+          href="../materias.html"
           class="voltar"
         >
           ← Voltar para matérias
@@ -79,6 +89,7 @@
         </div>
 
       </div>
+
     </section>
 
     <div class="estrutura-materia">
@@ -134,15 +145,18 @@
         </p>
 
         <figure>
+
           <img
             src="../img/materia-03.jpg"
             alt="Imagem do novo filme Spider-Man Brand New Day"
+            loading="lazy"
           >
 
           <figcaption>
             O novo longa apresenta uma fase mais solitária e intensa para
             Peter Parker.
           </figcaption>
+
         </figure>
 
         <h2>Elenco e direção</h2>
@@ -197,30 +211,23 @@
         </div>
 
         <div class="compartilhar">
+
           <span>Compartilhe esta matéria:</span>
 
           <div>
-            <a
-              href="#"
-              aria-label="Compartilhar no Instagram"
-            >
+            <a href="#" aria-label="Compartilhar no Instagram">
               Instagram
             </a>
 
-            <a
-              href="#"
-              aria-label="Compartilhar no X"
-            >
+            <a href="#" aria-label="Compartilhar no X">
               X
             </a>
 
-            <a
-              href="#"
-              aria-label="Compartilhar no WhatsApp"
-            >
+            <a href="#" aria-label="Compartilhar no WhatsApp">
               WhatsApp
             </a>
           </div>
+
         </div>
 
       </article>
@@ -253,6 +260,7 @@
             <img
               src="../img/materia-bts.jpg"
               alt="BTS em Copacabana"
+              loading="lazy"
             >
 
             <span>
@@ -270,6 +278,7 @@
             <img
               src="../img/materia-cauby.jpg"
               alt="Cauby Pro Rock"
+              loading="lazy"
             >
 
             <span>
@@ -286,10 +295,10 @@
           <h3>Categorias</h3>
 
           <div class="categorias-laterais">
-            <a href="../index.html#categorias">Cinema</a>
-            <a href="../index.html#categorias">Séries e TV</a>
-            <a href="../index.html#categorias">Games</a>
-            <a href="../index.html#categorias">Mangás</a>
+            <a href="../Categorias/cinema.html">Cinema</a>
+            <a href="../Categorias/series-tv.html">Séries e TV</a>
+            <a href="../Categorias/games.html">Games</a>
+            <a href="../Categorias/mangas.html">Mangás</a>
           </div>
 
         </div>
@@ -312,6 +321,7 @@
           <img
             src="../img/materia-bts.jpg"
             alt="BTS em Copacabana"
+            loading="lazy"
           >
 
           <div class="card-conteudo">
@@ -333,6 +343,7 @@
             </a>
 
           </div>
+
         </article>
 
         <article class="card-materia">
@@ -340,6 +351,7 @@
           <img
             src="../img/materia-cauby.jpg"
             alt="Cauby Pro Rock"
+            loading="lazy"
           >
 
           <div class="card-conteudo">
@@ -361,29 +373,138 @@
             </a>
 
           </div>
+
         </article>
 
       </div>
+
     </section>
 
   </main>
 
-  <footer id="contato">
+  <footer class="rodape-principal">
 
-    <div>
-      <h2>Inferno Escarlate</h2>
-      <p>Entre no modo Geek.</p>
+    <div class="rodape-grade">
+
+      <div class="rodape-marca">
+
+        <h2>Inferno Escarlate</h2>
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+        <a href="../contato.html" class="rodape-contato">
+          Entre em contato
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/games.html">Games</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+        <a href="../Categorias/hqs.html">HQs</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="../Colunas/cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+        <a href="../Colunas/checkpoint.html">
+          Checkpoint
+        </a>
+
+        <a href="../Colunas/som.html">
+          Som no Inferno
+        </a>
+
+        <a href="../Colunas/quadro.html">
+          Além do Quadro
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
     </div>
 
-    <div>
+    <div class="rodape-base">
+
       <p>
         © 2026 Inferno Escarlate. Todos os direitos reservados.
       </p>
+
+      <div class="rodape-links-legais">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+
     </div>
 
   </footer>
 
-  <script src="../js/script.js"></script>
+  <script src="../js/script.js?v=100"></script>
 
 </body>
+
 </html>

@@ -1,54 +1,32 @@
-
-
-if (botaoMenu && menu) {
-  botaoMenu.addEventListener("click", () => {
-    const menuAberto = menu.classList.toggle("ativo");
-
-    botaoMenu.setAttribute(
-      "aria-expanded",
-      menuAberto ? "true" : "false"
-    );
-
-    botaoMenu.textContent = menuAberto ? "✕" : "☰";
-  });
-
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("ativo");
-      botaoMenu.setAttribute("aria-expanded", "false");
-      botaoMenu.textContent = "☰";
-    });
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const botaoMenu = document.querySelector(".menu-botao");
   const menu = document.querySelector(".menu");
 
-  if (!botaoMenu || !menu) {
-    return;
-  }
+  if (!botaoMenu || !menu) return;
 
-  menu.classList.remove("ativo");
-  botaoMenu.setAttribute("aria-expanded", "false");
-  botaoMenu.textContent = "☰";
+  const fecharMenu = () => {
+    menu.classList.remove("ativo");
+    document.body.classList.remove("menu-aberto");
+    botaoMenu.setAttribute("aria-expanded", "false");
+    botaoMenu.textContent = "☰";
+  };
 
   botaoMenu.addEventListener("click", () => {
     const aberto = menu.classList.toggle("ativo");
-
-    botaoMenu.setAttribute(
-      "aria-expanded",
-      aberto ? "true" : "false"
-    );
-
+    document.body.classList.toggle("menu-aberto", aberto);
+    botaoMenu.setAttribute("aria-expanded", String(aberto));
     botaoMenu.textContent = aberto ? "✕" : "☰";
   });
 
   menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("ativo");
-      botaoMenu.setAttribute("aria-expanded", "false");
-      botaoMenu.textContent = "☰";
-    });
+    link.addEventListener("click", fecharMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") fecharMenu();
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 700) fecharMenu();
   });
 });

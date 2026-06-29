@@ -1,105 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Inferno Escarlate — Entre no modo Geek">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Inferno Escarlate — Entre no modo Geek"
+  >
+
   <title>Inferno Escarlate</title>
 
-  <link rel="stylesheet" href="css/style.css?v=3">
-  <style>
-  #categorias {
-    width: min(1180px, 88%) !important;
-    margin: 0 auto !important;
-    padding: 24px 0 18px !important;
-  }
-
-  #categorias .titulo-secao {
-    margin: 0 0 18px !important;
-  }
-
-  #categorias .titulo-secao h2 {
-    margin: 0 !important;
-    font-size: 3.5rem !important;
-    line-height: 1 !important;
-  }
-
- 
-  #categorias .categorias {
-  display: grid !important;
-  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
-  gap: 8px !important;
-  width: 100% !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-}
-
-#categorias .categorias a {
-  min-width: 0 !important;
-  padding: 12px 6px !important;
-  font-size: 0.65rem !important;
-  white-space: normal !important;
-  text-align: center !important;
-}
-
-@media (max-width: 900px) {
-  #categorias .categorias {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  }
-}
-
-@media (max-width: 600px) {
-  #categorias .categorias {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-}
-
-
-  
-
-  .destaque {
-    padding-top: 24px !important;
-  }
-
-  @media (max-width: 700px) {
-    #categorias {
-      width: 90% !important;
-      padding-top: 20px !important;
-    }
-
-    #categorias .titulo-secao h2 {
-      font-size: 2.8rem !important;
-    }
-  }
-</style>
-  <style>
-  .menu-botao {
-    display: none !important;
-  }
-
-  @media screen and (max-width: 600px) {
-    .menu-botao {
-      display: block !important;
-    }
-  }
-</style>
+  <link
+    rel="stylesheet"
+    href="css/style.css?v=100"
+  >
 </head>
 
 <body>
 
   <header class="topo">
-    <a href="#inicio" class="logo">Inferno Escarlate</a>
-<button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">
-  ☰
-</button>
-<button
-  class="menu-botao"
-  type="button"
-  aria-label="Abrir menu"
-  aria-expanded="false"
->
-  ☰
-</button>
+
+    <a href="#inicio" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
     <nav class="menu">
       <a href="#inicio">Início</a>
       <a href="materias.html">Matérias</a>
@@ -107,22 +46,48 @@
       <a href="#categorias">Categorias</a>
       <a href="contato.html">Contato</a>
     </nav>
+
   </header>
 
   <main>
 
+    <!-- BANNER -->
+
     <section class="hero" id="inicio">
+
+      <img
+        src="img/banner.png"
+        alt=""
+        class="hero-imagem-fundo"
+      >
+
+      <div class="hero-escurecimento"></div>
+
       <div class="hero-conteudo">
-        <span class="hero-etiqueta">Cultura Geek • Cinema • Games</span>
+
+        <span class="hero-etiqueta">
+          Cultura Geek • Cinema • Games
+        </span>
 
         <h1>Inferno Escarlate</h1>
 
         <p>Entre no modo Geek</p>
 
-        <a href="#materias" class="botao">Explorar matérias</a>
+        <a href="#materias" class="botao">
+          Explorar matérias
+        </a>
+
       </div>
+
     </section>
-<section class="secao secao-categorias" id="categorias">
+
+    <!-- CATEGORIAS -->
+
+    <section
+      class="secao secao-categorias"
+      id="categorias"
+    >
+
       <div class="titulo-secao">
         <span>Explore</span>
         <h2>Categorias</h2>
@@ -130,46 +95,68 @@
 
       <div class="categorias">
         <a href="Categorias/esports.html">Esports</a>
-       <a href="Categorias/cinema.html">Cinema</a>
+        <a href="Categorias/cinema.html">Cinema</a>
         <a href="Categorias/series-tv.html">Séries e TV</a>
         <a href="Categorias/games.html">Games</a>
-       <a href="Categorias/musica.html">Música</a>
+        <a href="Categorias/musica.html">Música</a>
         <a href="Categorias/animes.html">Animes</a>
         <a href="Categorias/mangas.html">Mangás</a>
         <a href="Categorias/eventos.html">Eventos</a>
-       <a href="Categorias/festivais.html">Festivais</a>
-        <a href="Categorias/doramas-novelas.html">Doramas e novelas</a>
+        <a href="Categorias/festivais.html">Festivais</a>
+        <a href="Categorias/doramas-novelas.html">
+          Doramas e novelas
+        </a>
         <a href="Categorias/livros.html">Livros</a>
         <a href="Categorias/criticas.html">Críticas</a>
         <a href="Categorias/hqs.html">HQs</a>
       </div>
+
     </section>
+
+    <!-- MATÉRIA EM DESTAQUE -->
+
     <section class="secao destaque">
+
       <div class="destaque-imagem">
+
         <img
-  src="imagem/universal.jpg"
-  alt="Universal Pictures e mercado audiovisual"
->
+          src="img/universal.jpg"
+          alt="Universal Pictures e mercado audiovisual"
+        >
+
       </div>
 
       <div class="destaque-conteudo">
-        <span class="categoria">cinema e televisão</span>
+
+        <span class="categoria">
+          Cinema e televisão
+        </span>
 
         <h2>
-  Dona da Universal Pictures planeja separação em duas empresas
-</h2>
+          Dona da Universal Pictures planeja separação em duas empresas
+        </h2>
 
         <p>
-  A Comcast anunciou um plano de reestruturação envolvendo a NBCUniversal e a Sky, com a criação de duas companhias independentes de capital aberto.
-</p>
+          A Comcast anunciou um plano de reestruturação envolvendo a
+          NBCUniversal e a Sky, com a criação de duas companhias
+          independentes de capital aberto.
+        </p>
 
-        <a href="postagens/universal.html" class="botao">
-  Ler matéria
-</a>
+        <a
+          href="posts/universal.html"
+          class="botao"
+        >
+          Ler matéria
+        </a>
+
       </div>
+
     </section>
 
+    <!-- ÚLTIMAS MATÉRIAS -->
+
     <section class="secao" id="materias">
+
       <div class="titulo-secao">
         <span>Atualizações</span>
         <h2>Últimas matérias</h2>
@@ -178,121 +165,230 @@
       <div class="grade-materias">
 
         <article class="card-materia">
-          <imagem/ src="imagem//materia-bts.jpg" alt="BTS em Copacabana">
+
+          <img
+            src="img/materia-bts.jpg"
+            alt="BTS em Copacabana"
+            loading="lazy"
+          >
 
           <div class="card-conteudo">
-            <span class="categoria">Música</span>
-            <h3>BTS em Copacabana? Confira os rumores</h3>
-            <p>Veja o que está por trás dos rumores que tomaram conta das redes.</p>
-            <a href="posts/materia-bts.html">Ler matéria</a>
+
+            <span class="categoria">
+              Música
+            </span>
+
+            <h3>
+              BTS em Copacabana? Confira os rumores
+            </h3>
+
+            <p>
+              Veja o que está por trás dos rumores que tomaram conta
+              das redes.
+            </p>
+
+            <a href="posts/materia-bts.html">
+              Ler matéria
+            </a>
+
           </div>
+
         </article>
 
         <article class="card-materia">
-          <imagem/ src="imagem//materia-cauby.jpg" alt="Cauby Pro Rock">
+
+          <img
+            src="img/materia-cauby.jpg"
+            alt="Cauby Pro Rock"
+            loading="lazy"
+          >
 
           <div class="card-conteudo">
-            <span class="categoria">Eventos</span>
-            <h3>Niterói apresenta o Cauby Pro Rock</h3>
-            <p>O evento reúne música, cultura e experiências para o público.</p>
-            <a href="posts/materia-cauby.html">Ler matéria</a>
+
+            <span class="categoria">
+              Eventos
+            </span>
+
+            <h3>
+              Niterói apresenta o Cauby Pro Rock
+            </h3>
+
+            <p>
+              O evento reúne música, cultura e experiências para o público.
+            </p>
+
+            <a href="posts/materia-cauby.html">
+              Ler matéria
+            </a>
+
           </div>
+
         </article>
 
         <article class="card-materia">
-          <imagem/ src="imagem//materia-03.jpg" alt="Matéria em destaque">
+
+          <img
+            src="img/materia-03.jpg"
+            alt="Spider-Man Brand New Day"
+            loading="lazy"
+          >
 
           <div class="card-conteudo">
-            <span class="categoria">Cultura Geek</span>
-            <h3>Um nome aleatório aqui</h3>
-            <p>Uma nova matéria para explorar tendências, universos e novidades.</p>
-            <a href="posts/materia-03.html">Ler matéria</a>
+
+            <span class="categoria">
+              Cinema
+            </span>
+
+            <h3>
+              Spider-Man: Brand New Day inicia uma nova fase
+            </h3>
+
+            <p>
+              Uma nova etapa para Peter Parker nos cinemas.
+            </p>
+
+            <a href="posts/materia-03.html">
+              Ler matéria
+            </a>
+
           </div>
+
         </article>
 
       </div>
+
     </section>
-<section class="secao criticas-destaque" id="criticas-cinema">
 
-  <div class="titulo-secao">
-    <span>Análises e opiniões</span>
-    <h2>Críticas de cinema</h2>
-  </div>
+    <!-- CRÍTICAS -->
 
-  <div class="grade-criticas">
+    <section
+      class="secao criticas-destaque"
+      id="criticas-cinema"
+    >
 
-    <article class="card-critica">
-      <imagem/ src="imagem//materia-03.jpg" alt="Crítica de Spider-Man">
-
-      <div class="card-critica-conteudo">
-        <span class="categoria">Crítica de cinema</span>
-
-        <h3>Spider-Man: Brand New Day inicia uma nova fase</h3>
-
-        <p>
-          Uma análise sobre o novo momento de Peter Parker e os caminhos
-          apresentados pelo filme.
-        </p>
-
-        <div class="nota-card">
-          <strong>8.5</strong>
-          <span>/10</span>
-        </div>
-
-        <a href="posts/materia-03.html">Ler crítica</a>
+      <div class="titulo-secao">
+        <span>Análises e opiniões</span>
+        <h2>Críticas de cinema</h2>
       </div>
-    </article>
 
-    <article class="card-critica">
-      <imagem/ src="imagem//coluna-cinema.jpg" alt="Segunda crítica de cinema">
+      <div class="grade-criticas">
 
-      <div class="card-critica-conteudo">
-        <span class="categoria">Crítica de cinema</span>
+        <article class="card-critica">
 
-        <h3>Um filme que transforma tensão em espetáculo</h3>
+          <img
+            src="img/materia-03.jpg"
+            alt="Crítica de Spider-Man"
+            loading="lazy"
+          >
 
-        <p>
-          Direção, fotografia e narrativa se unem em uma experiência
-          visual intensa.
-        </p>
+          <div class="card-critica-conteudo">
 
-        <div class="nota-card">
-          <strong>8.0</strong>
-          <span>/10</span>
-        </div>
+            <span class="categoria">
+              Crítica de cinema
+            </span>
 
-        <a href="#">Ler crítica</a>
+            <h3>
+              Spider-Man: Brand New Day inicia uma nova fase
+            </h3>
+
+            <p>
+              Uma análise sobre o novo momento de Peter Parker e os caminhos
+              apresentados pelo filme.
+            </p>
+
+            <div class="nota-card">
+              <strong>8.5</strong>
+              <span>/10</span>
+            </div>
+
+            <a href="posts/materia-03.html">
+              Ler crítica
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="card-critica">
+
+          <img
+            src="img/coluna-cinema.jpg"
+            alt="Segunda crítica de cinema"
+            loading="lazy"
+          >
+
+          <div class="card-critica-conteudo">
+
+            <span class="categoria">
+              Crítica de cinema
+            </span>
+
+            <h3>
+              Um filme que transforma tensão em espetáculo
+            </h3>
+
+            <p>
+              Direção, fotografia e narrativa se unem em uma experiência
+              visual intensa.
+            </p>
+
+            <div class="nota-card">
+              <strong>8.0</strong>
+              <span>/10</span>
+            </div>
+
+            <a href="#">
+              Ler crítica
+            </a>
+
+          </div>
+
+        </article>
+
+        <article class="card-critica">
+
+          <img
+            src="img/banner.png"
+            alt="Terceira crítica de cinema"
+            loading="lazy"
+          >
+
+          <div class="card-critica-conteudo">
+
+            <span class="categoria">
+              Crítica de cinema
+            </span>
+
+            <h3>
+              Entre sombras e escolhas difíceis
+            </h3>
+
+            <p>
+              Uma produção marcada por conflitos, personagens complexos
+              e atmosfera cinematográfica.
+            </p>
+
+            <div class="nota-card">
+              <strong>7.8</strong>
+              <span>/10</span>
+            </div>
+
+            <a href="#">
+              Ler crítica
+            </a>
+
+          </div>
+
+        </article>
+
       </div>
-    </article>
 
-    <article class="card-critica">
-      <imagem/ src="imagem//banner.jpg" alt="Terceira crítica de cinema">
+    </section>
 
-      <div class="card-critica-conteudo">
-        <span class="categoria">Crítica de cinema</span>
-
-        <h3>Entre sombras e escolhas difíceis</h3>
-
-        <p>
-          Uma produção marcada por conflitos, personagens complexos
-          e atmosfera cinematográfica.
-        </p>
-
-        <div class="nota-card">
-          <strong>7.8</strong>
-          <span>/10</span>
-        </div>
-
-        <a href="#">Ler crítica</a>
-      </div>
-    </article>
-
-  </div>
-
-</section>
-    
+    <!-- COLUNAS -->
 
     <section class="secao colunas" id="colunas">
+
       <div class="titulo-secao">
         <span>Conteúdo especial</span>
         <h2>Colunas em destaque</h2>
@@ -301,149 +397,258 @@
       <div class="grade-colunas">
 
         <article class="card-coluna">
-          <imagem/ src="imagem//coluna-cinema.jpg" alt="Cena Escarlate">
+
+          <img
+            src="img/coluna-cinema.jpg"
+            alt="Cena Escarlate"
+            loading="lazy"
+          >
 
           <div class="card-coluna-overlay">
-            <span>Cinema, séries e TV</span>
+
+            <span>
+              Cinema, séries e TV
+            </span>
+
             <h3>Cena Escarlate</h3>
-            <p>Análises, críticas e novidades do audiovisual.</p>
-            <a href="Colunas/cena-escarlate.html">Ver coluna</a>
+
+            <p>
+              Análises, críticas e novidades do audiovisual.
+            </p>
+
+            <a href="Colunas/cena-escarlate.html">
+              Ver coluna
+            </a>
+
           </div>
+
         </article>
 
         <article class="card-coluna">
-          <imagem/ src="imagem//coluna-games.jpg" alt="Checkpoint">
+
+          <img
+            src="img/coluna-games.jpg"
+            alt="Checkpoint"
+            loading="lazy"
+          >
 
           <div class="card-coluna-overlay">
+
             <span>Games</span>
+
             <h3>Checkpoint</h3>
-            <p>Jogos, lançamentos, bastidores e cultura gamer.</p>
-           <a href="Colunas/checkpoint.html">Ver coluna</a>
+
+            <p>
+              Jogos, lançamentos, bastidores e cultura gamer.
+            </p>
+
+            <a href="Colunas/checkpoint.html">
+              Ver coluna
+            </a>
+
           </div>
+
         </article>
 
         <article class="card-coluna">
-          <imagem/ src="imagem//coluna-musica.jpg" alt="Som no Inferno">
+
+          <img
+            src="img/coluna-musica.jpg"
+            alt="Som no Inferno"
+            loading="lazy"
+          >
 
           <div class="card-coluna-overlay">
-            <span>Música e festivais</span>
+
+            <span>
+              Música e festivais
+            </span>
+
             <h3>Som no Inferno</h3>
-            <p>Artistas, shows, festivais e movimentos musicais.</p>
-            <a href="Colunas/som.html">Ver coluna</a>
+
+            <p>
+              Artistas, shows, festivais e movimentos musicais.
+            </p>
+
+            <a href="Colunas/som.html">
+              Ver coluna
+            </a>
+
           </div>
+
         </article>
 
         <article class="card-coluna">
-          <imagem/ src="imagem//coluna-cultura.jpg" alt="Além do Quadro">
+
+          <img
+            src="img/coluna-cultura.jpg"
+            alt="Além do Quadro"
+            loading="lazy"
+          >
 
           <div class="card-coluna-overlay">
-            <span>Animes, mangás e livros</span>
+
+            <span>
+              Animes, mangás e livros
+            </span>
+
             <h3>Além do Quadro</h3>
-            <p>Histórias, universos e narrativas que ultrapassam a tela.</p>
-            <a href="Colunas/quadro.html">Ver coluna</a>
+
+            <p>
+              Histórias, universos e narrativas que ultrapassam a tela.
+            </p>
+
+            <a href="Colunas/quadro.html">
+              Ver coluna
+            </a>
+
           </div>
+
         </article>
 
       </div>
+
     </section>
 
+  </main>
 
-   <footer class="rodape-principal">
+  <!-- RODAPÉ -->
 
-  <div class="rodape-grade">
+  <footer class="rodape-principal">
 
-    <div class="rodape-marca">
-      <h2>Inferno Escarlate</h2>
+    <div class="rodape-grade">
+
+      <div class="rodape-marca">
+
+        <h2>
+          Inferno Escarlate
+        </h2>
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+        <a
+          href="contato.html"
+          class="rodape-contato"
+        >
+          Entre em contato
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="index.html">Início</a>
+        <a href="materias.html">Matérias</a>
+        <a href="colunas.html">Colunas</a>
+        <a href="index.html#categorias">Categorias</a>
+        <a href="contato.html">Contato</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="Categorias/cinema.html">Cinema</a>
+        <a href="Categorias/series-tv.html">Séries e TV</a>
+        <a href="Categorias/games.html">Games</a>
+        <a href="Categorias/musica.html">Música</a>
+        <a href="Categorias/animes.html">Animes</a>
+        <a href="Categorias/hqs.html">HQs</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="Colunas/cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+        <a href="Colunas/checkpoint.html">
+          Checkpoint
+        </a>
+
+        <a href="Colunas/som.html">
+          Som no Inferno
+        </a>
+
+        <a href="Colunas/quadro.html">
+          Além do Quadro
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="rodape-base">
 
       <p>
-        Notícias, críticas, cultura geek, cinema, música,
-        games, animes e entretenimento.
+        © 2026 Inferno Escarlate. Todos os direitos reservados.
       </p>
 
-      <a href="contato.html" class="rodape-contato">
-        Entre em contato
-      </a>
+      <div class="rodape-links-legais">
+
+        <a href="#">
+          Política de privacidade
+        </a>
+
+        <a href="#">
+          Termos de uso
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="rodape-coluna">
-      <h3>Navegação</h3>
+  </footer>
 
-      <a href="index.html">Início</a>
-      <a href="materias.html">Matérias</a>
-      <a href="colunas.html">Colunas</a>
-      <a href="index.html#categorias">Categorias</a>
-      <a href="contato.html">Contato</a>
-    </div>
+  <script src="js/script.js?v=100"></script>
 
-    <div class="rodape-coluna">
-      <h3>Categorias</h3>
+</body>
 
-      <a href="Categorias/cinema.html">Cinema</a>
-      <a href="Categorias/series-tv.html">Séries e TV</a>
-      <a href="Categorias/games.html">Games</a>
-      <a href="Categorias/musica.html">Música</a>
-      <a href="Categorias/animes.html">Animes</a>
-      <a href="Categorias/hqs.html">HQs</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Colunas</h3>
-
-      <a href="Colunas/cena-escarlate.html">Cena Escarlate</a>
-      <a href="Colunas/checkpoint.html">Checkpoint</a>
-      <a href="Colunas/som.html">Som no Inferno</a>
-      <a href="Colunas/quadro.html">Além do Quadro</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Redes sociais</h3>
-
-      <a
-        href="https://www.instagram.com/infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instagram: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        TikTok: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://www.youtube.com/@infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        YouTube: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://x.com/infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        X / Twitter: @infernoescarlatebr
-      </a>
-    </div>
-
-  </div>
-
-  <div class="rodape-base">
-
-    <p>
-      © 2026 Inferno Escarlate. Todos os direitos reservados.
-    </p>
-
-    <div class="rodape-links-legais">
-      <a href="#">Política de privacidade</a>
-      <a href="#">Termos de uso</a>
-    </div>
-
-  </div>
-
-</footer>
+</html>
