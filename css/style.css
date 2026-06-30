@@ -1902,6 +1902,35 @@ textarea {
     ),
     url("../img/coluna-cultura.jpg") center / cover no-repeat !important;
 }
-```
 
+/* CARDS DE CRÍTICAS INTEIROS CLICÁVEIS */
+
+.card-critica-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-critica-link .card-critica {
+  height: 100%;
+  cursor: pointer;
+}
+
+.card-critica-link .link-card {
+  display: inline-block;
+  padding: 13px 20px;
+  border: 1px solid #ed1834;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: 0.3s;
+}
+
+.card-critica-link:hover .link-card {
+  background: #ed1834;
+  box-shadow: 0 0 28px rgba(237, 24, 52, 0.34);
+}
 
