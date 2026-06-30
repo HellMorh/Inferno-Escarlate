@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
 
@@ -15,18 +17,23 @@
 
   <title>Além do Quadro | Inferno Escarlate</title>
 
-  <link rel="stylesheet" href="../css/style.css?v=100">
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=101"
+  >
 </head>
 
 <body>
 
   <header class="topo">
+
     <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
 
     <button
       class="menu-botao"
+      type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
     >
@@ -35,105 +42,133 @@
 
     <nav class="menu">
       <a href="../index.html">Início</a>
-      <a href="../index.html#materias">Matérias</a>
-      <a href="../index.html#colunas">Colunas</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html">Colunas</a>
       <a href="../index.html#categorias">Categorias</a>
       <a href="../contato.html">Contato</a>
     </nav>
+
   </header>
 
-  <main class="pagina-coluna">
+  <main class="pagina-coluna alem-do-quadro">
 
-    <section class="cabecalho-coluna">
-      <div class="cabecalho-coluna-conteudo">
+    <section class="pagina-topo">
 
-        <span class="categoria">
-          Coluna
+      <div class="pagina-topo-conteudo">
+
+        <span class="subtitulo-secao">
+          Animes, mangás, HQs e livros
         </span>
 
         <h1>Além do Quadro</h1>
 
         <p>
-          Animes, mangás, HQs, livros e histórias que ultrapassam a tela
-          e ganham vida em diferentes formatos.
+          Animes, mangás, HQs, livros e histórias que ultrapassam
+          a tela e ganham vida em diferentes formatos.
         </p>
 
-        <a href="#materias-coluna" class="botao">
+        <a
+          href="#materias-coluna"
+          class="botao"
+        >
           Explorar matérias
         </a>
 
       </div>
-    </section>
-
-    <section class="secao">
-
-      <div class="descricao-coluna">
-        <h2>Sobre a coluna</h2>
-
-        <p>
-          Além do Quadro reúne conteúdos sobre narrativas, personagens,
-          adaptações, universos ficcionais e obras que conectam diferentes
-          formas de contar histórias.
-        </p>
-      </div>
 
     </section>
 
-    <section class="secao" id="materias-coluna">
+    <section class="descricao-coluna">
+
+      <h2>Sobre a coluna</h2>
+
+      <p>
+        Além do Quadro reúne conteúdos sobre animes, mangás, HQs,
+        livros, personagens e universos narrativos que ultrapassam
+        as telas e ganham vida em diferentes formatos.
+      </p>
+
+    </section>
+
+    <section
+      class="secao"
+      id="materias-coluna"
+    >
 
       <div class="titulo-secao">
-        <span>Conteúdo recente</span>
-        <h2>Matérias do Além do Quadro</h2>
+
+        <span>
+          Conteúdo recente
+        </span>
+
+        <h2>
+          Matérias do Além do Quadro
+        </h2>
+
       </div>
 
       <div class="grade-materias">
 
         <article class="card-materia">
+
           <img
             src="../img/coluna-cultura.jpg"
-            alt="Novidades sobre animes"
+            alt="Animes, mangás, HQs e livros"
+            loading="lazy"
           >
 
           <div class="card-conteudo">
-            <span class="categoria">Animes</span>
 
-            <h3>
-              Novas temporadas de animes chegam aos streamings
-            </h3>
-
-            <p>
-              Produções conhecidas e novas histórias ganham espaço
-              nos próximos meses.
-            </p>
-
-            <a href="../Categorias/animes.html">
-              Ler matéria
-            </a>
-          </div>
-        </article>
-
-        <article class="card-materia">
-          <img
-            src="../img/coluna-cultura.jpg"
-            alt="Mangás, HQs e livros"
-          >
-
-          <div class="card-conteudo">
-            <span class="categoria">Mangás e HQs</span>
+            <span class="categoria">
+              Cultura Geek
+            </span>
 
             <h3>
               Histórias que ultrapassam as telas
             </h3>
 
             <p>
-              Mangás, quadrinhos e livros continuam expandindo universos
-              e conquistando novos leitores.
+              Animes, mangás, HQs e livros constroem universos
+              que conquistam públicos de diferentes gerações.
             </p>
 
-            <a href="../Categorias/mangas.html">
+            <a href="../Categorias/animes.html">
               Ver categoria
             </a>
+
           </div>
+
+        </article>
+
+        <article class="card-materia">
+
+          <img
+            src="../img/coluna-cultura.jpg"
+            alt="Universos narrativos da cultura geek"
+            loading="lazy"
+          >
+
+          <div class="card-conteudo">
+
+            <span class="categoria">
+              HQs e mangás
+            </span>
+
+            <h3>
+              Personagens que ganham vida nas páginas
+            </h3>
+
+            <p>
+              Narrativas, ilustrações e personagens ajudam
+              a construir alguns dos maiores universos da cultura pop.
+            </p>
+
+            <a href="../Categorias/hqs.html">
+              Ver categoria
+            </a>
+
+          </div>
+
         </article>
 
       </div>
@@ -142,22 +177,142 @@
 
   </main>
 
-  <footer id="contato">
+  <footer class="rodape-principal">
 
-    <div>
-      <h2>Inferno Escarlate</h2>
-      <p>Entre no modo Geek.</p>
+    <div class="rodape-grade">
+
+      <div class="rodape-marca">
+
+        <h2>
+          Inferno Escarlate
+        </h2>
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
+          Entre em contato
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/games.html">Games</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+        <a href="../Categorias/hqs.html">HQs</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+        <a href="checkpoint.html">
+          Checkpoint
+        </a>
+
+        <a href="som.html">
+          Som no Inferno
+        </a>
+
+        <a href="quadro.html">
+          Além do Quadro
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
     </div>
 
-    <div>
+    <div class="rodape-base">
+
       <p>
         © 2026 Inferno Escarlate. Todos os direitos reservados.
       </p>
+
+      <div class="rodape-links-legais">
+
+        <a href="#">
+          Política de privacidade
+        </a>
+
+        <a href="#">
+          Termos de uso
+        </a>
+
+      </div>
+
     </div>
 
   </footer>
 
-  <script src="../js/script.js?v=100"></script>
+  <script src="../js/script.js?v=101"></script>
 
 </body>
+
 </html>
+```

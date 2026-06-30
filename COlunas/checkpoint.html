@@ -1,5 +1,7 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
 
@@ -15,18 +17,23 @@
 
   <title>Checkpoint | Inferno Escarlate</title>
 
-  <link rel="stylesheet" href="../css/style.css?v=100">
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=101"
+  >
 </head>
 
 <body>
 
   <header class="topo">
+
     <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
 
     <button
       class="menu-botao"
+      type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
     >
@@ -35,27 +42,29 @@
 
     <nav class="menu">
       <a href="../index.html">Início</a>
-      <a href="../index.html#materias">Matérias</a>
-      <a href="../index.html#colunas">Colunas</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html">Colunas</a>
       <a href="../index.html#categorias">Categorias</a>
       <a href="../contato.html">Contato</a>
     </nav>
+
   </header>
 
-  <main class="pagina-coluna">
+  <main class="pagina-coluna checkpoint">
 
-    <section class="cabecalho-coluna">
-      <div class="cabecalho-coluna-conteudo">
+    <section class="pagina-topo">
 
-        <span class="categoria">
-          Coluna
+      <div class="pagina-topo-conteudo">
+
+        <span class="subtitulo-secao">
+          Games e cultura gamer
         </span>
 
         <h1>Checkpoint</h1>
 
         <p>
-          Lançamentos, análises, bastidores, campeonatos, esports e tudo o que
-          movimenta o universo dos games.
+          Lançamentos, análises, bastidores, campeonatos, esports
+          e tudo o que movimenta o universo dos games.
         </p>
 
         <a href="#materias-coluna" class="botao">
@@ -63,18 +72,17 @@
         </a>
 
       </div>
+
     </section>
 
-    <section class="secao">
+    <section class="descricao-coluna">
 
-      <div class="descricao-coluna">
-        <h2>Sobre a coluna</h2>
+      <h2>Sobre a coluna</h2>
 
-        <p>
-          Checkpoint reúne conteúdos sobre videogames, indústria, tecnologia,
-          cultura gamer e cenário competitivo.
-        </p>
-      </div>
+      <p>
+        Checkpoint reúne conteúdos sobre videogames, indústria,
+        tecnologia, cultura gamer e cenário competitivo.
+      </p>
 
     </section>
 
@@ -88,50 +96,65 @@
       <div class="grade-materias">
 
         <article class="card-materia">
+
           <img
             src="../img/coluna-games.jpg"
             alt="Lançamentos de games"
+            loading="lazy"
           >
 
           <div class="card-conteudo">
-            <span class="categoria">Games</span>
+
+            <span class="categoria">
+              Games
+            </span>
 
             <h3>
               Os lançamentos de games mais aguardados do ano
             </h3>
 
             <p>
-              Conheça alguns dos títulos que prometem movimentar consoles
-              e computadores.
+              Conheça alguns dos títulos que prometem movimentar
+              consoles e computadores.
             </p>
 
             <a href="../Categorias/games.html">
               Ler matéria
             </a>
+
           </div>
+
         </article>
 
         <article class="card-materia">
+
           <img
             src="../img/coluna-games.jpg"
             alt="Esports e cenário competitivo"
+            loading="lazy"
           >
 
           <div class="card-conteudo">
-            <span class="categoria">Esports</span>
+
+            <span class="categoria">
+              Esports
+            </span>
 
             <h3>
               O cenário competitivo entra em uma nova fase
             </h3>
 
             <p>
-              Equipes, campeonatos e jogadores ganham cada vez mais destaque.
+              Equipes, campeonatos e jogadores ganham cada vez
+              mais destaque.
             </p>
 
             <a href="../Categorias/esports.html">
               Ver categoria
             </a>
+
           </div>
+
         </article>
 
       </div>
@@ -140,80 +163,142 @@
 
   </main>
 
-  <<footer class="rodape-principal">
+  <footer class="rodape-principal">
 
-  <div class="rodape-grade">
+    <div class="rodape-grade">
 
-    <div class="rodape-marca">
-      <h2>Inferno Escarlate</h2>
+      <div class="rodape-marca">
+
+        <h2>
+          Inferno Escarlate
+        </h2>
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
+          Entre em contato
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/games.html">Games</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+        <a href="../Categorias/hqs.html">HQs</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+        <a href="checkpoint.html">
+          Checkpoint
+        </a>
+
+        <a href="som.html">
+          Som no Inferno
+        </a>
+
+        <a href="quadro.html">
+          Além do Quadro
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="rodape-base">
 
       <p>
-        Notícias, críticas, cultura geek, cinema, música,
-        games, animes e entretenimento.
+        © 2026 Inferno Escarlate. Todos os direitos reservados.
       </p>
 
-      <a href="../contato.html" class="rodape-contato">
-        Entre em contato
-      </a>
+      <div class="rodape-links-legais">
+
+        <a href="#">
+          Política de privacidade
+        </a>
+
+        <a href="#">
+          Termos de uso
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="rodape-coluna">
-      <h3>Navegação</h3>
+  </footer>
 
-      <a href="../index.html">Início</a>
-      <a href="../materias.html">Matérias</a>
-      <a href="../colunas.html">Colunas</a>
-      <a href="../index.html#categorias">Categorias</a>
-      <a href="../contato.html">Contato</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Categorias</h3>
-
-      <a href="../Categorias/cinema.html">Cinema</a>
-      <a href="../Categorias/series-tv.html">Séries e TV</a>
-      <a href="../Categorias/games.html">Games</a>
-      <a href="../Categorias/musica.html">Música</a>
-      <a href="../Categorias/animes.html">Animes</a>
-      <a href="../Categorias/hqs.html">HQs</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Colunas</h3>
-
-      <a href="../Colunas/cena-escarlate.html">Cena Escarlate</a>
-      <a href="../Colunas/checkpoint.html">Checkpoint</a>
-      <a href="../Colunas/som.html">Som no Inferno</a>
-      <a href="../Colunas/quadro.html">Além do Quadro</a>
-    </div>
-
-    <div class="rodape-coluna">
-      <h3>Redes sociais</h3>
-
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">YouTube</a>
-      <a href="#">X / Twitter</a>
-    </div>
-
-  </div>
-
-  <div class="rodape-base">
-
-    <p>
-      © 2026 Inferno Escarlate. Todos os direitos reservados.
-    </p>
-
-    <div>
-      <a href="#">Política de privacidade</a>
-      <a href="#">Termos de uso</a>
-    </div>
-
-  </div>
-
-</footer>
-
-  <script src="../js/script.js?v=100"></script>
+  <script src="../js/script.js?v=101"></script>
 
 </body>
+
 </html>
+```

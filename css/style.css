@@ -1672,3 +1672,236 @@ textarea {
     font-size: 1.05rem;
   }
 }
+
+/* CORREÇÃO DAS PÁGINAS INTERNAS DE COLUNAS */
+
+.pagina-coluna {
+  padding-top: 78px;
+}
+
+/* Topo da coluna */
+
+.pagina-coluna .pagina-topo {
+  min-height: 430px !important;
+  padding: 95px 6% 65px !important;
+
+  display: flex !important;
+  align-items: flex-end !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.72) 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #050505 0%,
+      transparent 55%
+    ),
+    url("../img/coluna-cinema.jpg") center / cover no-repeat !important;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.pagina-coluna .pagina-topo-conteudo {
+  width: min(1180px, 100%) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.pagina-coluna .pagina-topo .subtitulo-secao {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #ed1834;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pagina-coluna .pagina-topo h1 {
+  margin: 0 0 16px !important;
+
+  color: #ffffff !important;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(4rem, 9vw, 7.5rem) !important;
+  line-height: 0.88 !important;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.pagina-coluna .pagina-topo p {
+  max-width: 730px !important;
+  margin: 0 0 28px !important;
+
+  color: #d0d0d0 !important;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pagina-coluna .pagina-topo .botao {
+  margin: 0 !important;
+}
+
+/* Bloco sobre a coluna */
+
+.pagina-coluna .descricao-coluna {
+  width: min(1180px, 88%) !important;
+  margin: 50px auto 0 !important;
+  padding: 32px !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(165, 0, 26, 0.1),
+      transparent 60%
+    ),
+    #0b0b0b;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pagina-coluna .descricao-coluna h2 {
+  margin: 0 0 10px !important;
+
+  color: #ffffff;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.pagina-coluna .descricao-coluna p {
+  max-width: 900px;
+  margin: 0 !important;
+
+  color: #bdbdbd;
+  line-height: 1.7;
+}
+
+/* Matérias da coluna */
+
+.pagina-coluna #materias-coluna {
+  width: min(1180px, 88%) !important;
+  margin: 0 auto !important;
+  padding: 70px 0 90px !important;
+}
+
+.pagina-coluna #materias-coluna .titulo-secao {
+  margin-bottom: 32px !important;
+}
+
+.pagina-coluna #materias-coluna .titulo-secao h2 {
+  margin: 5px 0 0 !important;
+
+  color: #ffffff;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 0.92;
+}
+
+/* Celular */
+
+@media screen and (max-width: 700px) {
+  .pagina-coluna {
+    padding-top: 72px;
+  }
+
+  .pagina-coluna .pagina-topo {
+    min-height: 390px !important;
+    padding: 80px 6% 50px !important;
+  }
+
+  .pagina-coluna .pagina-topo h1 {
+    font-size: 4rem !important;
+  }
+
+  .pagina-coluna .descricao-coluna,
+  .pagina-coluna #materias-coluna {
+    width: 90% !important;
+  }
+
+  .pagina-coluna .descricao-coluna {
+    margin-top: 35px !important;
+    padding: 24px !important;
+  }
+
+  .pagina-coluna #materias-coluna {
+    padding: 50px 0 70px !important;
+  }
+}
+
+/* CORREÇÃO ESPECÍFICA DA COLUNA CHECKPOINT */
+
+.pagina-coluna.checkpoint .pagina-topo {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.72) 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #050505 0%,
+      transparent 55%
+    ),
+    url("../img/coluna-games.jpg") center / cover no-repeat !important;
+}
+
+.pagina-coluna.checkpoint .pagina-topo {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.72) 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #050505 0%,
+      transparent 55%
+    ),
+    url("../img/coluna-games.jpg") center / cover no-repeat !important;
+}
+
+/* CORREÇÃO ESPECÍFICA DA COLUNA SOM NO INFERNO */
+
+.pagina-coluna.som-inferno .pagina-topo {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.72) 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #050505 0%,
+      transparent 55%
+    ),
+    url("../img/coluna-musica.jpg") center / cover no-repeat !important;
+}
+
+```css
+/* CORREÇÃO ESPECÍFICA DA COLUNA ALÉM DO QUADRO */
+
+.pagina-coluna.alem-do-quadro .pagina-topo {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.96) 0%,
+      rgba(0, 0, 0, 0.72) 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #050505 0%,
+      transparent 55%
+    ),
+    url("../img/coluna-cultura.jpg") center / cover no-repeat !important;
+}
+```
+
+
