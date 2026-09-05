@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -10,23 +12,96 @@
 
   <meta
     name="description"
-    content="Matérias de eventos do Inferno Escarlate."
+    content="Matérias sobre eventos no Inferno Escarlate."
   >
 
-  <title>Eventos | Inferno Escarlate</title>
+  <title>
+    Eventos | Inferno Escarlate
+  </title>
 
-  <link rel="stylesheet" href="../css/style.css?v=100">
+  <link rel="stylesheet" href="../css/style.css?v=102">
+
+
+  <style>
+
+    .menu-botao {
+      display: none !important;
+    }
+
+    .pagina-listagem {
+      padding-top: 78px;
+    }
+
+    .cabecalho-listagem {
+      min-height: 430px;
+      padding: 130px 7% 65px;
+
+      display: flex;
+      align-items: flex-end;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.97),
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.25)
+        ),
+        url("../img/banner.png") center / cover no-repeat;
+    }
+
+    .cabecalho-listagem-conteudo {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .cabecalho-listagem h1 {
+      margin: 10px 0 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 10vw, 8rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+
+    .cabecalho-listagem p {
+      max-width: 650px;
+      color: #c2c2c2;
+      line-height: 1.7;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .menu-botao {
+        display: block !important;
+      }
+
+      .pagina-listagem {
+        padding-top: 0;
+      }
+
+      .cabecalho-listagem {
+        min-height: 390px;
+        padding: 110px 6% 50px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
   <header class="topo">
+
     <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
 
     <button
       class="menu-botao"
+      type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
     >
@@ -34,51 +109,120 @@
     </button>
 
     <nav class="menu">
-      <a href="../index.html">Início</a>
-      <a href="../index.html#materias">Matérias</a>
-      <a href="../index.html#colunas">Colunas</a>
-      <a href="../index.html#categorias">Categorias</a>
-      <a href="../contato.html">Contato</a>
+
+      <a href="../index.html">
+        Início
+      </a>
+
+      <a href="../materias.html">
+        Matérias
+      </a>
+
+      <a href="../colunas.html">
+        Colunas
+      </a>
+
+      <a href="../index.html#categorias">
+        Categorias
+      </a>
+
+      <a href="../contato.html">
+        Contato
+      </a>
+
     </nav>
+
   </header>
 
-  <main class="pagina-categoria">
 
-    <section class="cabecalho-categoria">
-      <div class="cabecalho-categoria-conteudo">
+
+  <main class="pagina-listagem">
+
+
+    <section class="cabecalho-listagem">
+
+      <div class="cabecalho-listagem-conteudo">
 
         <span class="categoria">
           Categoria
         </span>
 
-        <h1>Eventos</h1>
+        <h1>
+          Eventos
+        </h1>
 
         <p>
-          Shows, encontros, convenções, festivais e experiências que movimentam
-          a cultura, a música e o universo geek.
+          Festivais, shows, encontros e acontecimentos que movimentam
+          música, entretenimento e cultura.
         </p>
 
-        <a href="#materias-eventos" class="botao">
-          Explorar matérias
-        </a>
-
       </div>
+
     </section>
 
-    <section class="secao" id="materias-eventos">
+
+
+    <section class="secao">
+
 
       <div class="titulo-secao">
-        <span>Conteúdo recente</span>
-        <h2>Matérias de eventos</h2>
+
+        <span>
+          Agenda escarlate
+        </span>
+
+        <h2>
+          Matérias de eventos
+        </h2>
+
       </div>
 
+
+
       <div class="grade-materias">
+
+
+        <!-- ROCK IN RIO -->
+
+        <article class="card-materia">
+
+          <img
+            src="../img/rock-in-rio-foo-fighters.jpg"
+            alt="Foo Fighters no Rock in Rio 2026"
+          >
+
+          <div class="card-conteudo">
+
+            <span class="categoria">
+              Música • Eventos
+            </span>
+
+            <h3>
+              Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?
+            </h3>
+
+            <p>
+              Foo Fighters e outros nomes abrem uma edição marcada por
+              grandes shows e pelo debate sobre a essência do festival.
+            </p>
+
+            <a href="../posts/materia-rock-in-rio-2026.html">
+              Ler matéria
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- CAUBY -->
 
         <article class="card-materia">
 
           <img
             src="../img/materia-cauby.jpg"
-            alt="Cauby Pro Rock em Niterói"
+            alt="Cauby Pro Rock"
           >
 
           <div class="card-conteudo">
@@ -92,8 +236,7 @@
             </h3>
 
             <p>
-              O evento reúne música, cultura e artistas em uma programação
-              dedicada à cena independente.
+              Evento reúne música, cultura e artistas da cena independente.
             </p>
 
             <a href="../posts/materia-cauby.html">
@@ -104,27 +247,142 @@
 
         </article>
 
+
       </div>
+
     </section>
+
 
   </main>
 
-  <footer id="contato">
 
-    <div>
-      <h2>Inferno Escarlate</h2>
-      <p>Entre no modo Geek.</p>
+
+  <footer class="rodape-principal">
+
+
+    <div class="rodape-grade">
+
+
+      <div class="rodape-marca">
+
+        <h2>
+          Inferno Escarlate
+        </h2>
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+        <a href="../contato.html" class="rodape-contato">
+          Entre em contato
+        </a>
+
+      </div>
+
+
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+      </div>
+
+
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="cinema.html">Cinema</a>
+        <a href="series-tv.html">Séries e TV</a>
+        <a href="games.html">Games</a>
+        <a href="musica.html">Música</a>
+        <a href="eventos.html">Eventos</a>
+        <a href="animes.html">Animes</a>
+
+      </div>
+
+
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="../Colunas/cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+        <a href="../Colunas/checkpoint.html">
+          Checkpoint
+        </a>
+
+        <a href="../Colunas/som.html">
+          Som no Inferno
+        </a>
+
+        <a href="../Colunas/quadro.html">
+          Além do Quadro
+        </a>
+
+      </div>
+
+
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+      </div>
+
+
     </div>
 
-    <div>
+
+    <div class="rodape-base">
+
       <p>
         © 2026 Inferno Escarlate. Todos os direitos reservados.
       </p>
+
     </div>
+
 
   </footer>
 
-  <script src="../js/script.js?v=100"></script>
+
+  <script src="../js/script.js?v=102"></script>
+
 
 </body>
 </html>
