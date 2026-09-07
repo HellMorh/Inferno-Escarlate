@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -10,97 +12,692 @@
 
   <meta
     name="description"
-    content="Matérias sobre festivais do Inferno Escarlate."
+    content="Matérias sobre festivais no Inferno Escarlate."
   >
 
-  <title>Festivais | Inferno Escarlate</title>
+  <title>
+    Festivais | Inferno Escarlate
+  </title>
 
-  <link rel="stylesheet" href="../css/style.css?v=100">
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=104"
+  >
+
+
+  <style>
+
+    /* =========================================
+       MENU
+    ========================================== */
+
+    .menu-botao {
+      display: none !important;
+    }
+
+
+    /* =========================================
+       PÁGINA
+    ========================================== */
+
+    .pagina-listagem {
+      padding-top: 78px;
+    }
+
+
+    /* =========================================
+       CABEÇALHO DA CATEGORIA
+    ========================================== */
+
+    .cabecalho-listagem {
+
+      min-height: 480px;
+
+      padding:
+        130px
+        4%
+        70px;
+
+      display: flex;
+      align-items: flex-end;
+
+      position: relative;
+      overflow: hidden;
+
+
+      background:
+
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.82) 26%,
+          rgba(0, 0, 0, 0.48) 52%,
+          rgba(0, 0, 0, 0.18) 78%,
+          rgba(0, 0, 0, 0.08) 100%
+        ),
+
+        linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.58) 22%,
+          rgba(0, 0, 0, 0.18) 48%,
+          rgba(0, 0, 0, 0) 72%
+        ),
+
+        url("../imagem/banner.png")
+        center
+        38%
+        /
+        cover
+        no-repeat;
+
+    }
+
+
+    /* =========================================
+       CONTEÚDO DO CABEÇALHO
+    ========================================== */
+
+    .cabecalho-listagem-conteudo {
+
+      width:
+        min(
+          1200px,
+          100%
+        );
+
+      margin:
+        0 auto;
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+    }
+
+
+    .cabecalho-listagem .categoria {
+
+      display:
+        inline-block;
+
+      margin-bottom:
+        10px;
+
+      color:
+        #ff1738;
+
+      font-size:
+        0.78rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        2px;
+
+      text-transform:
+        uppercase;
+
+    }
+
+
+    .cabecalho-listagem h1 {
+
+      margin:
+        8px
+        0
+        22px;
+
+      font-family:
+        "Bebas Neue",
+        sans-serif;
+
+      font-size:
+        clamp(
+          5.5rem,
+          10vw,
+          9rem
+        );
+
+      line-height:
+        0.88;
+
+      letter-spacing:
+        1px;
+
+      text-transform:
+        uppercase;
+
+      color:
+        #ffffff;
+
+    }
+
+
+    .cabecalho-listagem p {
+
+      max-width:
+        720px;
+
+      margin:
+        0;
+
+      color:
+        #e1e1e1;
+
+      font-size:
+        1.05rem;
+
+      line-height:
+        1.75;
+
+    }
+
+
+    /* =========================================
+       RESPONSIVO
+    ========================================== */
+
+    @media screen and (max-width: 600px) {
+
+      .menu-botao {
+
+        display:
+          block !important;
+
+      }
+
+
+      .pagina-listagem {
+
+        padding-top:
+          0;
+
+      }
+
+
+      .cabecalho-listagem {
+
+        min-height:
+          420px;
+
+        padding:
+          110px
+          6%
+          55px;
+
+
+        background:
+
+          linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.97) 0%,
+            rgba(0, 0, 0, 0.78) 50%,
+            rgba(0, 0, 0, 0.28) 100%
+          ),
+
+          linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.42) 42%,
+            rgba(0, 0, 0, 0) 72%
+          ),
+
+          url("../imagem/banner.png")
+          center
+          /
+          cover
+          no-repeat;
+
+      }
+
+
+      .cabecalho-listagem h1 {
+
+        font-size:
+          clamp(
+            4rem,
+            18vw,
+            6rem
+          );
+
+      }
+
+
+      .cabecalho-listagem p {
+
+        font-size:
+          1rem;
+
+      }
+
+    }
+
+  </style>
+
 </head>
 
-<body>
+
+
+<!--
+  ESSA INFORMAÇÃO É IMPORTANTE.
+
+  O materias.js vai procurar todas as matérias
+  que possuem a categoria "festivais".
+-->
+
+<body data-categoria-pagina="festivais">
+
+
+
+  <!-- =========================================
+       CABEÇALHO DO SITE
+  ========================================== -->
 
   <header class="topo">
-    <a href="../index.html" class="logo">
+
+
+    <a
+      href="../index.html"
+      class="logo"
+    >
       Inferno Escarlate
     </a>
 
+
     <button
       class="menu-botao"
+      type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
     >
       ☰
     </button>
 
+
     <nav class="menu">
-      <a href="../index.html">Início</a>
-      <a href="../index.html#materias">Matérias</a>
-      <a href="../index.html#colunas">Colunas</a>
-      <a href="../index.html#categorias">Categorias</a>
-      <a href="../contato.html">Contato</a>
+
+
+      <a href="../index.html">
+        Início
+      </a>
+
+
+      <a href="../materias.html">
+        Matérias
+      </a>
+
+
+      <a href="../colunas.html">
+        Colunas
+      </a>
+
+
+      <a href="../index.html#categorias">
+        Categorias
+      </a>
+
+
+      <a href="../contato.html">
+        Contato
+      </a>
+
+
     </nav>
+
+
   </header>
 
-  <main class="pagina-categoria">
 
-    <section class="cabecalho-categoria">
-      <div class="cabecalho-categoria-conteudo">
+
+  <!-- =========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
+  <main class="pagina-listagem">
+
+
+
+    <!-- =========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
+
+    <section class="cabecalho-listagem">
+
+
+      <div class="cabecalho-listagem-conteudo">
+
 
         <span class="categoria">
           Categoria
         </span>
 
-        <h1>Festivais</h1>
+
+        <h1>
+          Festivais
+        </h1>
+
 
         <p>
-          Notícias, line-ups, atrações, bastidores e novidades dos principais
-          festivais de música, cinema e cultura pop.
+          Notícias, line-ups, atrações, bastidores e novidades
+          dos principais festivais de música, cinema e cultura pop.
         </p>
 
-        <a href="#materias-festivais" class="botao">
-          Explorar matérias
-        </a>
 
       </div>
+
+
     </section>
 
-    <section class="secao" id="materias-festivais">
+
+
+    <!-- =========================================
+         MATÉRIAS DE FESTIVAIS
+    ========================================== -->
+
+    <section
+      class="secao"
+      id="materias-festivais"
+    >
+
 
       <div class="titulo-secao">
-        <span>Conteúdo recente</span>
-        <h2>Matérias de festivais</h2>
+
+
+        <span>
+          Conteúdo recente
+        </span>
+
+
+        <h2>
+          Matérias de festivais
+        </h2>
+
+
       </div>
 
-      <div class="categoria-vazia">
-        <h3>Novas matérias em breve</h3>
 
-        <p>
-          Esta categoria já está pronta para receber notícias, guias,
-          coberturas e conteúdos sobre festivais.
-        </p>
+
+      <!--
+        NÃO COLOQUE CARDS MANUALMENTE AQUI.
+
+        O materias.js vai inserir automaticamente
+        todas as matérias com categoria "festivais".
+      -->
+
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+      >
       </div>
+
 
     </section>
+
 
   </main>
 
-  <footer id="contato">
 
-    <div>
-      <h2>Inferno Escarlate</h2>
-      <p>Entre no modo Geek.</p>
+
+  <!-- =========================================
+       RODAPÉ
+  ========================================== -->
+
+  <footer class="rodape-principal">
+
+
+
+    <div class="rodape-grade">
+
+
+
+      <!-- MARCA -->
+
+      <div class="rodape-marca">
+
+
+        <h2>
+          Inferno Escarlate
+        </h2>
+
+
+        <p>
+          Notícias, críticas, cultura geek, cinema, música,
+          games, animes e entretenimento.
+        </p>
+
+
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
+          Entre em contato
+        </a>
+
+
+      </div>
+
+
+
+      <!-- NAVEGAÇÃO -->
+
+      <div class="rodape-coluna">
+
+
+        <h3>
+          Navegação
+        </h3>
+
+
+        <a href="../index.html">
+          Início
+        </a>
+
+
+        <a href="../materias.html">
+          Matérias
+        </a>
+
+
+        <a href="../colunas.html">
+          Colunas
+        </a>
+
+
+        <a href="../index.html#categorias">
+          Categorias
+        </a>
+
+
+        <a href="../contato.html">
+          Contato
+        </a>
+
+
+      </div>
+
+
+
+      <!-- CATEGORIAS -->
+
+      <div class="rodape-coluna">
+
+
+        <h3>
+          Categorias
+        </h3>
+
+
+        <a href="cinema.html">
+          Cinema
+        </a>
+
+
+        <a href="series-tv.html">
+          Séries e TV
+        </a>
+
+
+        <a href="games.html">
+          Games
+        </a>
+
+
+        <a href="musica.html">
+          Música
+        </a>
+
+
+        <a href="eventos.html">
+          Eventos
+        </a>
+
+
+        <a href="festivais.html">
+          Festivais
+        </a>
+
+
+        <a href="animes.html">
+          Animes
+        </a>
+
+
+      </div>
+
+
+
+      <!-- COLUNAS -->
+
+      <div class="rodape-coluna">
+
+
+        <h3>
+          Colunas
+        </h3>
+
+
+        <a href="../Colunas/cena-escarlate.html">
+          Cena Escarlate
+        </a>
+
+
+        <a href="../Colunas/checkpoint.html">
+          Checkpoint
+        </a>
+
+
+        <a href="../Colunas/som.html">
+          Som no Inferno
+        </a>
+
+
+        <a href="../Colunas/quadro.html">
+          Além do Quadro
+        </a>
+
+
+      </div>
+
+
+
+      <!-- REDES SOCIAIS -->
+
+      <div class="rodape-coluna">
+
+
+        <h3>
+          Redes sociais
+        </h3>
+
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+
+      </div>
+
+
     </div>
 
-    <div>
+
+
+    <!-- =========================================
+         BASE DO RODAPÉ
+    ========================================== -->
+
+    <div class="rodape-base">
+
+
       <p>
-        © 2026 Inferno Escarlate. Todos os direitos reservados.
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
       </p>
+
+
     </div>
+
 
   </footer>
 
-  <script src="../js/script.js?v=100"></script>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+
+  <!--
+    PRIMEIRO:
+    CATÁLOGO AUTOMÁTICO DAS MATÉRIAS
+  -->
+
+  <script src="../js/materias.js?v=6"></script>
+
+
+  <!--
+    DEPOIS:
+    JAVASCRIPT GERAL DO SITE
+  -->
+
+  <script src="../js/script.js?v=104"></script>
+
 
 </body>
+
 </html>
