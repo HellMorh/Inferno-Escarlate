@@ -19,54 +19,158 @@
     Música | Inferno Escarlate
   </title>
 
-  <link rel="stylesheet" href="../css/style.css?v=102">
-
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=104"
+  >
 
   <style>
+
+    /* =========================================
+       MENU
+    ========================================== */
 
     .menu-botao {
       display: none !important;
     }
 
+
+    /* =========================================
+       PÁGINA
+    ========================================== */
+
     .pagina-listagem {
       padding-top: 78px;
     }
 
+
+    /* =========================================
+       CABEÇALHO DA CATEGORIA
+       MESMO ESTILO DA REFERÊNCIA
+    ========================================== */
+
     .cabecalho-listagem {
-      min-height: 430px;
-      padding: 130px 7% 65px;
+      min-height: 480px;
+
+      padding:
+        130px
+        4%
+        70px;
 
       display: flex;
       align-items: flex-end;
 
+      position: relative;
+      overflow: hidden;
+
       background:
         linear-gradient(
           90deg,
-          rgba(0, 0, 0, 0.97),
-          rgba(0, 0, 0, 0.55),
-          rgba(0, 0, 0, 0.25)
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.82) 26%,
+          rgba(0, 0, 0, 0.48) 52%,
+          rgba(0, 0, 0, 0.18) 78%,
+          rgba(0, 0, 0, 0.08) 100%
         ),
-        url("../img/banner.png") center / cover no-repeat;
+
+        linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.96) 0%,
+          rgba(0, 0, 0, 0.58) 22%,
+          rgba(0, 0, 0, 0.18) 48%,
+          rgba(0, 0, 0, 0) 72%
+        ),
+
+        url("../imagem/banner.png")
+        center
+        38%
+        /
+        cover
+        no-repeat;
     }
+
+
+    /* =========================================
+       CONTEÚDO DO CABEÇALHO
+    ========================================== */
 
     .cabecalho-listagem-conteudo {
-      width: min(1180px, 100%);
+      width: min(1200px, 100%);
       margin: 0 auto;
+
+      position: relative;
+      z-index: 2;
     }
 
-    .cabecalho-listagem h1 {
-      margin: 10px 0 18px;
-      font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(5rem, 10vw, 8rem);
-      line-height: 0.9;
+
+    .cabecalho-listagem .categoria {
+      display: inline-block;
+
+      margin-bottom: 10px;
+
+      color: #ff1738;
+
+      font-size: 0.78rem;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
       text-transform: uppercase;
     }
 
-    .cabecalho-listagem p {
-      max-width: 650px;
-      color: #c2c2c2;
-      line-height: 1.7;
+
+    .cabecalho-listagem h1 {
+      margin:
+        8px
+        0
+        22px;
+
+      font-family:
+        "Bebas Neue",
+        sans-serif;
+
+      font-size:
+        clamp(
+          5.5rem,
+          10vw,
+          9rem
+        );
+
+      line-height: 0.88;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
+
+
+    .cabecalho-listagem p {
+      max-width: 720px;
+
+      margin: 0;
+
+      color: #e1e1e1;
+
+      font-size: 1.05rem;
+
+      line-height: 1.75;
+    }
+
+
+    /* =========================================
+       SEÇÃO DE MATÉRIAS
+    ========================================== */
+
+    .secao {
+      position: relative;
+    }
+
+
+    /* =========================================
+       RESPONSIVO
+    ========================================== */
 
     @media screen and (max-width: 600px) {
 
@@ -74,13 +178,55 @@
         display: block !important;
       }
 
+
       .pagina-listagem {
         padding-top: 0;
       }
 
+
       .cabecalho-listagem {
-        min-height: 390px;
-        padding: 110px 6% 50px;
+        min-height: 420px;
+
+        padding:
+          110px
+          6%
+          55px;
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.97) 0%,
+            rgba(0, 0, 0, 0.78) 50%,
+            rgba(0, 0, 0, 0.28) 100%
+          ),
+
+          linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.42) 42%,
+            rgba(0, 0, 0, 0) 72%
+          ),
+
+          url("../imagem/banner.png")
+          center
+          /
+          cover
+          no-repeat;
+      }
+
+
+      .cabecalho-listagem h1 {
+        font-size:
+          clamp(
+            4rem,
+            18vw,
+            6rem
+          );
+      }
+
+
+      .cabecalho-listagem p {
+        font-size: 1rem;
       }
 
     }
@@ -90,12 +236,19 @@
 </head>
 
 
-<body>
+<body data-categoria-pagina="musica">
 
+
+  <!-- =========================================
+       CABEÇALHO
+  ========================================== -->
 
   <header class="topo">
 
-    <a href="../index.html" class="logo">
+    <a
+      href="../index.html"
+      class="logo"
+    >
       Inferno Escarlate
     </a>
 
@@ -136,8 +289,16 @@
 
 
 
+  <!-- =========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
   <main class="pagina-listagem">
 
+
+    <!-- =========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-listagem">
 
@@ -152,8 +313,8 @@
         </h1>
 
         <p>
-          Artistas, shows, festivais, lançamentos e movimentos que fazem
-          parte do universo musical.
+          Artistas, shows, festivais, lançamentos e movimentos
+          que fazem parte do universo musical.
         </p>
 
       </div>
@@ -162,8 +323,11 @@
 
 
 
-    <section class="secao">
+    <!-- =========================================
+         MATÉRIAS DE MÚSICA
+    ========================================== -->
 
+    <section class="secao">
 
       <div class="titulo-secao">
 
@@ -178,77 +342,15 @@
       </div>
 
 
+      <!--
+        AS MATÉRIAS SÃO CARREGADAS AUTOMATICAMENTE
+        PELO ARQUIVO materias.js
+      -->
 
-      <div class="grade-materias">
-
-
-        <!-- ROCK IN RIO -->
-
-        <article class="card-materia">
-
-          <img
-            src="../img/rock-in-rio-foo-fighters.jpg"
-            alt="Foo Fighters no Rock in Rio 2026"
-          >
-
-          <div class="card-conteudo">
-
-            <span class="categoria">
-              Música • Eventos
-            </span>
-
-            <h3>
-              Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?
-            </h3>
-
-            <p>
-              Foo Fighters e outros nomes reacendem o debate sobre
-              o espaço do rock no festival.
-            </p>
-
-            <a href="../posts/materia-rock-in-rio-2026.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- BTS -->
-
-        <article class="card-materia">
-
-          <img
-            src="../img/materia-bts.jpg"
-            alt="BTS em Copacabana"
-          >
-
-          <div class="card-conteudo">
-
-            <span class="categoria">
-              Música
-            </span>
-
-            <h3>
-              BTS em Copacabana? Confira os rumores
-            </h3>
-
-            <p>
-              Entenda os rumores sobre uma possível apresentação
-              do grupo no Rio de Janeiro.
-            </p>
-
-            <a href="../posts/materia-bts.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
-
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+      >
       </div>
 
     </section>
@@ -258,11 +360,17 @@
 
 
 
+  <!-- =========================================
+       RODAPÉ
+  ========================================== -->
+
   <footer class="rodape-principal">
 
 
     <div class="rodape-grade">
 
+
+      <!-- MARCA -->
 
       <div class="rodape-marca">
 
@@ -275,7 +383,10 @@
           games, animes e entretenimento.
         </p>
 
-        <a href="../contato.html" class="rodape-contato">
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
           Entre em contato
         </a>
 
@@ -283,38 +394,85 @@
 
 
 
+      <!-- NAVEGAÇÃO -->
+
       <div class="rodape-coluna">
 
-        <h3>Navegação</h3>
+        <h3>
+          Navegação
+        </h3>
 
-        <a href="../index.html">Início</a>
-        <a href="../materias.html">Matérias</a>
-        <a href="../colunas.html">Colunas</a>
-        <a href="../index.html#categorias">Categorias</a>
-        <a href="../contato.html">Contato</a>
+        <a href="../index.html">
+          Início
+        </a>
+
+        <a href="../materias.html">
+          Matérias
+        </a>
+
+        <a href="../colunas.html">
+          Colunas
+        </a>
+
+        <a href="../index.html#categorias">
+          Categorias
+        </a>
+
+        <a href="../contato.html">
+          Contato
+        </a>
 
       </div>
 
 
 
+      <!-- CATEGORIAS -->
+
       <div class="rodape-coluna">
 
-        <h3>Categorias</h3>
+        <h3>
+          Categorias
+        </h3>
 
-        <a href="cinema.html">Cinema</a>
-        <a href="series-tv.html">Séries e TV</a>
-        <a href="games.html">Games</a>
-        <a href="musica.html">Música</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="animes.html">Animes</a>
+        <a href="cinema.html">
+          Cinema
+        </a>
+
+        <a href="series-tv.html">
+          Séries e TV
+        </a>
+
+        <a href="games.html">
+          Games
+        </a>
+
+        <a href="musica.html">
+          Música
+        </a>
+
+        <a href="eventos.html">
+          Eventos
+        </a>
+
+        <a href="festivais.html">
+          Festivais
+        </a>
+
+        <a href="animes.html">
+          Animes
+        </a>
 
       </div>
 
 
 
+      <!-- COLUNAS -->
+
       <div class="rodape-coluna">
 
-        <h3>Colunas</h3>
+        <h3>
+          Colunas
+        </h3>
 
         <a href="../Colunas/cena-escarlate.html">
           Cena Escarlate
@@ -336,9 +494,13 @@
 
 
 
+      <!-- REDES SOCIAIS -->
+
       <div class="rodape-coluna">
 
-        <h3>Redes sociais</h3>
+        <h3>
+          Redes sociais
+        </h3>
 
         <a
           href="https://www.instagram.com/infernoescarlatebr"
@@ -364,16 +526,30 @@
           YouTube: @infernoescarlatebr
         </a>
 
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
       </div>
 
 
     </div>
 
 
+
+    <!-- =========================================
+         BASE DO RODAPÉ
+    ========================================== -->
+
     <div class="rodape-base">
 
       <p>
-        © 2026 Inferno Escarlate. Todos os direitos reservados.
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
       </p>
 
     </div>
@@ -382,8 +558,16 @@
   </footer>
 
 
-  <script src="../js/script.js?v=102"></script>
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="../js/materias.js?v=5"></script>
+
+  <script src="../js/script.js?v=104"></script>
 
 
 </body>
+
 </html>

@@ -18,7 +18,7 @@
 
   <link
     rel="stylesheet"
-    href="css/style.css?v=100"
+    href="css/style.css?v=104"
   >
 </head>
 
@@ -56,7 +56,7 @@
     <section class="hero" id="inicio">
 
       <img
-        src="img/banner.png"
+        src="imagem/banner.png"
         alt=""
         class="hero-imagem-fundo"
       >
@@ -113,148 +113,30 @@
 
     </section>
 
-    <!-- MATÉRIA EM DESTAQUE -->
+   <!-- MATÉRIA EM DESTAQUE AUTOMÁTICA -->
 
-    <section class="secao destaque">
-
-      <div class="destaque-imagem">
-
-        <img
-          src="img/universal.jpg"
-          alt="Universal Pictures e mercado audiovisual"
-        >
-
-      </div>
-
-      <div class="destaque-conteudo">
-
-        <span class="categoria">
-          Cinema e televisão
-        </span>
-
-        <h2>
-          Dona da Universal Pictures planeja separação em duas empresas
-        </h2>
-
-        <p>
-          A Comcast anunciou um plano de reestruturação envolvendo a
-          NBCUniversal e a Sky, com a criação de duas companhias
-          independentes de capital aberto.
-        </p>
-
-        <a
-          href="posts/universal.html"
-          class="botao"
-        >
-          Ler matéria
-        </a>
-
-      </div>
-
+    <section
+      class="secao destaque"
+      id="destaque-principal"
+    >
     </section>
 
-    <!-- ÚLTIMAS MATÉRIAS -->
+    <!-- ÚLTIMAS MATÉRIAS AUTOMÁTICAS -->
 
-    <section class="secao" id="materias">
+    <section
+      class="secao"
+      id="materias"
+    >
 
       <div class="titulo-secao">
         <span>Atualizações</span>
         <h2>Últimas matérias</h2>
       </div>
 
-      <div class="grade-materias">
-
-        <article class="card-materia">
-
-          <img
-            src="img/materia-bts.jpg"
-            alt="BTS em Copacabana"
-            loading="lazy"
-          >
-
-          <div class="card-conteudo">
-
-            <span class="categoria">
-              Música
-            </span>
-
-            <h3>
-              BTS em Copacabana? Confira os rumores
-            </h3>
-
-            <p>
-              Veja o que está por trás dos rumores que tomaram conta
-              das redes.
-            </p>
-
-            <a href="posts/materia-bts.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
-        <article class="card-materia">
-
-          <img
-            src="img/materia-cauby.jpg"
-            alt="Cauby Pro Rock"
-            loading="lazy"
-          >
-
-          <div class="card-conteudo">
-
-            <span class="categoria">
-              Eventos
-            </span>
-
-            <h3>
-              Niterói apresenta o Cauby Pro Rock
-            </h3>
-
-            <p>
-              O evento reúne música, cultura e experiências para o público.
-            </p>
-
-            <a href="posts/materia-cauby.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
-        <article class="card-materia">
-
-          <img
-            src="img/materia-03.jpg"
-            alt="Spider-Man Brand New Day"
-            loading="lazy"
-          >
-
-          <div class="card-conteudo">
-
-            <span class="categoria">
-              Cinema
-            </span>
-
-            <h3>
-              Spider-Man: Brand New Day inicia uma nova fase
-            </h3>
-
-            <p>
-              Uma nova etapa para Peter Parker nos cinemas.
-            </p>
-
-            <a href="posts/materia-03.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
+      <div
+        class="grade-materias"
+        id="ultimas-materias"
+      >
       </div>
 
     </section>
@@ -276,7 +158,7 @@
         <article class="card-critica">
 
           <img
-            src="img/materia-03.jpg"
+            src="imagem/materia-03.jpg"
             alt="Crítica de Spider-Man"
             loading="lazy"
           >
@@ -312,7 +194,7 @@
         <article class="card-critica">
 
           <img
-            src="img/coluna-cinema.jpg"
+            src="imagem/coluna-cinema.jpg"
             alt="Segunda crítica de cinema"
             loading="lazy"
           >
@@ -348,7 +230,7 @@
         <article class="card-critica">
 
           <img
-            src="img/banner.png"
+            src="imagem/banner.png"
             alt="Terceira crítica de cinema"
             loading="lazy"
           >
@@ -399,7 +281,7 @@
         <article class="card-coluna">
 
           <img
-            src="img/coluna-cinema.jpg"
+            src="imagem/coluna-cinema.jpg"
             alt="Cena Escarlate"
             loading="lazy"
           >
@@ -427,7 +309,7 @@
         <article class="card-coluna">
 
           <img
-            src="img/coluna-games.jpg"
+            src="imagem/coluna-games.jpg"
             alt="Checkpoint"
             loading="lazy"
           >
@@ -453,7 +335,7 @@
         <article class="card-coluna">
 
           <img
-            src="img/coluna-musica.jpg"
+            src="imagem/coluna-musica.jpg"
             alt="Som no Inferno"
             loading="lazy"
           >
@@ -481,7 +363,7 @@
         <article class="card-coluna">
 
           <img
-            src="img/coluna-cultura.jpg"
+            src="imagem/coluna-cultura.jpg"
             alt="Além do Quadro"
             loading="lazy"
           >
@@ -560,6 +442,8 @@
         <a href="Categorias/musica.html">Música</a>
         <a href="Categorias/animes.html">Animes</a>
         <a href="Categorias/hqs.html">HQs</a>
+        <a href="Categorias/eventos.html">Eventos</a>
+        <a href="Categorias/festivais.html">Festivais</a>
 
       </div>
 
@@ -647,7 +531,8 @@
 
   </footer>
 
-  <script src="js/script.js?v=100"></script>
+  <script src="js/materias.js?v=4"></script>
+  <script src="js/script.js?v=104"></script>
 
 </body>
 
