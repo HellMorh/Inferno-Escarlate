@@ -1,25 +1,21 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://infernoescarlate.com/index.html</loc>
   </url>
-
   <url>
     <loc>https://infernoescarlate.com/materias.html</loc>
   </url>
-
   <url>
     <loc>https://infernoescarlate.com/posts/se-eu-fosse-voce-3.html</loc>
   </url>
-
+  <url>
+    <loc>https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html</loc>
+  </url>
   <url>
     <loc>https://infernoescarlate.com/Categorias/cinema.html</loc>
   </url>
-
   <url>
     <loc>https://infernoescarlate.com/Categorias/criticas.html</loc>
   </url>
-
 </urlset>
