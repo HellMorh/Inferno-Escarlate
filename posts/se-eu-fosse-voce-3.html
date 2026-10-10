@@ -339,6 +339,38 @@
       background: #a91b29;
     }
 
+    /* COMENTÁRIOS — DISQUS */
+
+    .secao-comentarios {
+      width: min(850px, 88%);
+      max-width: none;
+      margin: 0 auto;
+      padding: 48px 0 25px;
+      border-top: 1px solid #333;
+    }
+
+    .secao-comentarios h2 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .secao-comentarios > p {
+      margin: 0 0 35px;
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    #disqus_thread {
+      width: 100%;
+      min-height: 250px;
+    }
+
     /* RESPONSIVIDADE */
 
     @media (max-width: 700px) {
@@ -361,7 +393,8 @@
 
       body main article.pagina-materia .materia-trailer,
       body main article.pagina-materia .materia-corpo,
-      body main article.pagina-materia .materia-navegacao {
+      body main article.pagina-materia .materia-navegacao,
+      .secao-comentarios {
         width: 90%;
       }
 
@@ -384,6 +417,10 @@
 
       .materia-navegacao a {
         text-align: center;
+      }
+
+      .secao-comentarios {
+        padding-top: 35px;
       }
     }
 
@@ -535,6 +572,7 @@
         <!-- FOTOGRAFIA 1 -->
 
         <figure class="materia-foto">
+
           <img
             src="../imagem/se-eu-fosse-voce-3-foto-1.jpg"
             alt="Cena do filme Se Eu Fosse Você 3"
@@ -545,6 +583,7 @@
             Cena do filme Se Eu Fosse Você 3.
             Imagem de divulgação.
           </figcaption>
+
         </figure>
 
         <p>
@@ -598,6 +637,7 @@
         <!-- FOTOGRAFIA 2 -->
 
         <figure class="materia-foto">
+
           <img
             src="../imagem/se-eu-fosse-voce-3-foto-2.jpg"
             alt="Elenco de Se Eu Fosse Você 3"
@@ -608,6 +648,7 @@
             Elenco do filme Se Eu Fosse Você 3.
             Imagem de divulgação.
           </figcaption>
+
         </figure>
 
         <p>
@@ -720,6 +761,48 @@
 
     </article>
 
+    <!-- COMENTÁRIOS — DISQUS -->
+
+    <section
+      class="secao-comentarios"
+      id="comentarios"
+      aria-labelledby="titulo-comentarios"
+    >
+
+      <h2 id="titulo-comentarios">
+        Comentários
+      </h2>
+
+      <p>
+        O que achou da matéria? Participe da conversa!
+      </p>
+
+      <div id="disqus_thread"></div>
+
+      <script>
+        var disqus_config = function () {
+          this.page.url = "https://infernoescarlate.com/posts/se-eu-fosse-voce-3.html";
+          this.page.identifier = "/posts/se-eu-fosse-voce-3.html";
+          this.page.title = "Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia";
+        };
+
+        (function () {
+          var d = document;
+          var s = d.createElement("script");
+
+          s.src = "https://inferno-escarlate.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+
+      <noscript>
+        Ative o JavaScript para visualizar os comentários.
+      </noscript>
+
+    </section>
+
   </main>
 
   <!-- RODAPÉ -->
@@ -729,7 +812,7 @@
     <div class="rodape-grade">
 
       <div class="rodape-marca">
-        <h2>Inferno<br>Escarlate</h2>
+        <h2>Inferno Escarlate</h2>
 
         <p>
           Notícias, críticas, cultura geek, cinema,
@@ -742,15 +825,18 @@
       </div>
 
       <div class="rodape-coluna">
+
         <h3>Navegação</h3>
         <a href="../index.html">Início</a>
         <a href="../materias.html">Matérias</a>
         <a href="../colunas.html">Colunas</a>
         <a href="../index.html#categorias">Categorias</a>
         <a href="../contato.html">Contato</a>
+
       </div>
 
       <div class="rodape-coluna">
+
         <h3>Categorias</h3>
         <a href="../Categorias/cinema.html">Cinema</a>
         <a href="../Categorias/criticas.html">Críticas</a>
@@ -759,25 +845,33 @@
         <a href="../Categorias/musica.html">Música</a>
         <a href="../Categorias/animes.html">Animes</a>
         <a href="../Categorias/hqs.html">HQs</a>
+
       </div>
 
       <div class="rodape-coluna">
+
         <h3>Colunas</h3>
+
         <a href="../Colunas/cena-escarlate.html">
           Cena Escarlate
         </a>
+
         <a href="../Colunas/checkpoint.html">
           Checkpoint
         </a>
+
         <a href="../Colunas/som.html">
           Som no Inferno
         </a>
+
         <a href="../Colunas/quadro.html">
           Além do Quadro
         </a>
+
       </div>
 
       <div class="rodape-coluna">
+
         <h3>Redes sociais</h3>
 
         <a
@@ -811,6 +905,7 @@
         >
           X / Twitter: @infernoescarlatebr
         </a>
+
       </div>
 
     </div>
