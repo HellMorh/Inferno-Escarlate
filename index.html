@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,22 +12,106 @@
 
   <meta
     name="description"
-    content="Inferno Escarlate — Entre no modo Geek"
+    content="Inferno Escarlate — Entre no modo Geek. Notícias, cinema, séries, games, música, animes, cultura pop e críticas."
   >
 
-  <title>Inferno Escarlate</title>
+  <title>Inferno Escarlate | Entre no modo Geek</title>
 
+  <!-- CSS PRINCIPAL DO SITE -->
   <link
     rel="stylesheet"
-    href="css/style.css?v=104"
+    href="css/style.css?v=108"
   >
+
+  <!-- AJUSTES EXCLUSIVOS DA HOME -->
+  <style>
+
+    /* CARD DA NOVA CRÍTICA */
+
+    .card-critica-nacional .link-critica-inteira {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card-critica-nacional .link-critica-inteira img {
+      display: block;
+      width: 100%;
+    }
+
+    .card-critica-nacional .link-critica-inteira h3 {
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .card-critica-nacional .link-critica-inteira:hover h3 {
+      color: var(--vermelho-vivo, #ed1834);
+    }
+
+    .card-critica-nacional .chamada-critica {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 13px 20px;
+      border: 1px solid var(--vermelho-vivo, #ed1834);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: background 0.2s ease;
+    }
+
+    .card-critica-nacional
+    .link-critica-inteira:hover
+    .chamada-critica {
+      background: var(--vermelho-vivo, #ed1834);
+    }
+
+    /* LINKS DOS CARDS AUTOMÁTICOS */
+
+    .link-imagem-materia {
+      display: block;
+      overflow: hidden;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .link-titulo-materia:hover {
+      color: var(--vermelho-vivo, #ed1834);
+    }
+
+    /* IMAGEM DO DESTAQUE CLICÁVEL */
+
+    .destaque-imagem > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .destaque-imagem > a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  </style>
+
 </head>
 
 <body>
 
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+
   <header class="topo">
 
-    <a href="#inicio" class="logo">
+    <a href="index.html" class="logo">
       Inferno Escarlate
     </a>
 
@@ -35,25 +120,53 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
-      <a href="#inicio">Início</a>
-      <a href="materias.html">Matérias</a>
-      <a href="#colunas">Colunas</a>
-      <a href="#categorias">Categorias</a>
-      <a href="contato.html">Contato</a>
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+
+      <a href="index.html">
+        Início
+      </a>
+
+      <a href="materias.html">
+        Matérias
+      </a>
+
+      <a href="#colunas">
+        Colunas
+      </a>
+
+      <a href="#categorias">
+        Categorias
+      </a>
+
+      <a href="contato.html">
+        Contato
+      </a>
+
     </nav>
 
   </header>
 
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
   <main>
 
-    <!-- BANNER -->
+    <!-- BANNER PRINCIPAL -->
 
-    <section class="hero" id="inicio">
+    <section
+      class="hero"
+      id="inicio"
+    >
 
       <img
         src="imagem/banner.png"
@@ -69,11 +182,18 @@
           Cultura Geek • Cinema • Games
         </span>
 
-        <h1>Inferno Escarlate</h1>
+        <h1>
+          Inferno Escarlate
+        </h1>
 
-        <p>Entre no modo Geek</p>
+        <p>
+          Entre no modo Geek
+        </p>
 
-        <a href="#materias" class="botao">
+        <a
+          href="#materias"
+          class="botao"
+        >
           Explorar matérias
         </a>
 
@@ -81,7 +201,9 @@
 
     </section>
 
-    <!-- CATEGORIAS -->
+    <!-- ==========================================
+         CATEGORIAS
+    ========================================== -->
 
     <section
       class="secao secao-categorias"
@@ -89,31 +211,83 @@
     >
 
       <div class="titulo-secao">
-        <span>Explore</span>
-        <h2>Categorias</h2>
+
+        <span>
+          Explore
+        </span>
+
+        <h2>
+          Categorias
+        </h2>
+
       </div>
 
       <div class="categorias">
-        <a href="Categorias/esports.html">Esports</a>
-        <a href="Categorias/cinema.html">Cinema</a>
-        <a href="Categorias/series-tv.html">Séries e TV</a>
-        <a href="Categorias/games.html">Games</a>
-        <a href="Categorias/musica.html">Música</a>
-        <a href="Categorias/animes.html">Animes</a>
-        <a href="Categorias/mangas.html">Mangás</a>
-        <a href="Categorias/eventos.html">Eventos</a>
-        <a href="Categorias/festivais.html">Festivais</a>
+
+        <a href="Categorias/esports.html">
+          Esports
+        </a>
+
+        <a href="Categorias/cinema.html">
+          Cinema
+        </a>
+
+        <a href="Categorias/series-tv.html">
+          Séries e TV
+        </a>
+
+        <a href="Categorias/games.html">
+          Games
+        </a>
+
+        <a href="Categorias/musica.html">
+          Música
+        </a>
+
+        <a href="Categorias/animes.html">
+          Animes
+        </a>
+
+        <a href="Categorias/mangas.html">
+          Mangás
+        </a>
+
+        <a href="Categorias/eventos.html">
+          Eventos
+        </a>
+
+        <a href="Categorias/festivais.html">
+          Festivais
+        </a>
+
         <a href="Categorias/doramas-novelas.html">
           Doramas e novelas
         </a>
-        <a href="Categorias/livros.html">Livros</a>
-        <a href="Categorias/criticas.html">Críticas</a>
-        <a href="Categorias/hqs.html">HQs</a>
+
+        <a href="Categorias/livros.html">
+          Livros
+        </a>
+
+        <a href="Categorias/criticas.html">
+          Críticas
+        </a>
+
+        <a href="Categorias/hqs.html">
+          HQs
+        </a>
+
       </div>
 
     </section>
 
-   <!-- MATÉRIA EM DESTAQUE AUTOMÁTICA -->
+    <!-- ==========================================
+         DESTAQUE PRINCIPAL AUTOMÁTICO
+    ========================================== -->
+
+    <!--
+      O conteúdo desta seção é carregado
+      automaticamente pelo js/materias.js.
+    -->
 
     <section
       class="secao destaque"
@@ -121,7 +295,9 @@
     >
     </section>
 
-    <!-- ÚLTIMAS MATÉRIAS AUTOMÁTICAS -->
+    <!-- ==========================================
+         ÚLTIMAS MATÉRIAS
+    ========================================== -->
 
     <section
       class="secao"
@@ -129,9 +305,24 @@
     >
 
       <div class="titulo-secao">
-        <span>Atualizações</span>
-        <h2>Últimas matérias</h2>
+
+        <span>
+          Atualizações
+        </span>
+
+        <h2>
+          Últimas matérias
+        </h2>
+
       </div>
+
+      <!--
+        O JavaScript exibe as três matérias
+        mais recentes cadastradas no catálogo.
+
+        Se Eu Fosse Você 3 aparece aqui
+        porque está cadastrada no materias.js.
+      -->
 
       <div
         class="grade-materias"
@@ -141,7 +332,9 @@
 
     </section>
 
-    <!-- CRÍTICAS -->
+    <!-- ==========================================
+         CRÍTICAS DE CINEMA
+    ========================================== -->
 
     <section
       class="secao criticas-destaque"
@@ -149,117 +342,158 @@
     >
 
       <div class="titulo-secao">
-        <span>Análises e opiniões</span>
-        <h2>Críticas de cinema</h2>
+
+        <span>
+          Análises e opiniões
+        </span>
+
+        <h2>
+          Críticas de cinema
+        </h2>
+
       </div>
 
       <div class="grade-criticas">
 
+        <!-- PRIMEIRA CRÍTICA -->
+
         <article class="card-critica">
 
-          <img
-            src="imagem/materia-03.jpg"
-            alt="Crítica de Spider-Man"
-            loading="lazy"
-          >
+          <a href="posts/materia-03.html">
+
+            <img
+              src="imagem/materia-03.jpg"
+              alt="Spider-Man Brand New Day"
+              loading="lazy"
+            >
+
+          </a>
 
           <div class="card-critica-conteudo">
 
             <span class="categoria">
-              Crítica de cinema
+              Cinema
             </span>
 
             <h3>
-              Spider-Man: Brand New Day inicia uma nova fase
+
+              <a href="posts/materia-03.html">
+                Spider-Man: Brand New Day inicia uma nova fase
+              </a>
+
             </h3>
 
             <p>
-              Uma análise sobre o novo momento de Peter Parker e os caminhos
+              Uma análise sobre o novo momento
+              de Peter Parker e os caminhos
               apresentados pelo filme.
             </p>
 
             <div class="nota-card">
-              <strong>8.5</strong>
-              <span>/10</span>
+
+              <strong>
+                8.5
+              </strong>
+
+              <span>
+                /10
+              </span>
+
             </div>
 
             <a href="posts/materia-03.html">
-              Ler crítica
+              Ler matéria
             </a>
 
           </div>
 
         </article>
 
+        <!-- SEGUNDA CRÍTICA -->
+
         <article class="card-critica">
 
-          <img
-            src="imagem/coluna-cinema.jpg"
-            alt="Segunda crítica de cinema"
-            loading="lazy"
-          >
+          <a href="Categorias/criticas.html">
+
+            <img
+              src="imagem/coluna-cinema.jpg"
+              alt="Críticas de cinema do Inferno Escarlate"
+              loading="lazy"
+            >
+
+          </a>
 
           <div class="card-critica-conteudo">
 
             <span class="categoria">
-              Crítica de cinema
+              Críticas de cinema
             </span>
 
             <h3>
-              Um filme que transforma tensão em espetáculo
+
+              <a href="Categorias/criticas.html">
+                Explore as críticas de cinema
+              </a>
+
             </h3>
 
             <p>
-              Direção, fotografia e narrativa se unem em uma experiência
-              visual intensa.
+              Análises, opiniões e avaliações
+              sobre produções do cinema
+              nacional e internacional.
             </p>
 
-            <div class="nota-card">
-              <strong>8.0</strong>
-              <span>/10</span>
-            </div>
-
             <a href="Categorias/criticas.html">
-              Ler crítica
+              Ver críticas
             </a>
 
           </div>
 
         </article>
 
-        <article class="card-critica">
+        <!-- ======================================
+             SE EU FOSSE VOCÊ 3
+        ====================================== -->
 
-          <img
-            src="imagem/banner.png"
-            alt="Terceira crítica de cinema"
-            loading="lazy"
+        <article
+          class="card-critica card-critica-nacional"
+        >
+
+          <a
+            class="link-critica-inteira"
+            href="posts/se-eu-fosse-voce-3.html"
+            aria-label="Ler crítica de Se Eu Fosse Você 3"
           >
 
-          <div class="card-critica-conteudo">
+            <img
+              src="imagem/se-eu-fosse-voce-3-capa.jpg"
+              alt="Imagem de divulgação de Se Eu Fosse Você 3"
+              loading="lazy"
+            >
 
-            <span class="categoria">
-              Crítica de cinema
-            </span>
+            <div class="card-critica-conteudo">
 
-            <h3>
-              Entre sombras e escolhas difíceis
-            </h3>
+              <span class="categoria">
+                Cinema nacional • Crítica
+              </span>
 
-            <p>
-              Uma produção marcada por conflitos, personagens complexos
-              e atmosfera cinematográfica.
-            </p>
+              <h3>
+                Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia
+              </h3>
 
-            <div class="nota-card">
-              <strong>7.8</strong>
-              <span>/10</span>
+              <p>
+                Cleo Pires e Rafael Infante assumem
+                o protagonismo de uma franquia marcada
+                por Glória Pires e Tony Ramos.
+              </p>
+
+              <span class="chamada-critica">
+                Ler crítica →
+              </span>
+
             </div>
 
-            <a href="Categorias/criticas.html">
-              Ler crítica
-            </a>
-
-          </div>
+          </a>
 
         </article>
 
@@ -267,16 +501,30 @@
 
     </section>
 
-    <!-- COLUNAS -->
+    <!-- ==========================================
+         COLUNAS
+    ========================================== -->
 
-    <section class="secao colunas" id="colunas">
+    <section
+      class="secao colunas"
+      id="colunas"
+    >
 
       <div class="titulo-secao">
-        <span>Conteúdo especial</span>
-        <h2>Colunas em destaque</h2>
+
+        <span>
+          Conteúdo especial
+        </span>
+
+        <h2>
+          Colunas em destaque
+        </h2>
+
       </div>
 
       <div class="grade-colunas">
+
+        <!-- CENA ESCARLATE -->
 
         <article class="card-coluna">
 
@@ -292,10 +540,13 @@
               Cinema, séries e TV
             </span>
 
-            <h3>Cena Escarlate</h3>
+            <h3>
+              Cena Escarlate
+            </h3>
 
             <p>
-              Análises, críticas e novidades do audiovisual.
+              Análises, críticas e novidades
+              do audiovisual.
             </p>
 
             <a href="Colunas/cena-escarlate.html">
@@ -305,6 +556,8 @@
           </div>
 
         </article>
+
+        <!-- CHECKPOINT -->
 
         <article class="card-coluna">
 
@@ -316,12 +569,17 @@
 
           <div class="card-coluna-overlay">
 
-            <span>Games</span>
+            <span>
+              Games
+            </span>
 
-            <h3>Checkpoint</h3>
+            <h3>
+              Checkpoint
+            </h3>
 
             <p>
-              Jogos, lançamentos, bastidores e cultura gamer.
+              Jogos, lançamentos, bastidores
+              e cultura gamer.
             </p>
 
             <a href="Colunas/checkpoint.html">
@@ -331,6 +589,8 @@
           </div>
 
         </article>
+
+        <!-- SOM NO INFERNO -->
 
         <article class="card-coluna">
 
@@ -346,10 +606,13 @@
               Música e festivais
             </span>
 
-            <h3>Som no Inferno</h3>
+            <h3>
+              Som no Inferno
+            </h3>
 
             <p>
-              Artistas, shows, festivais e movimentos musicais.
+              Artistas, shows, festivais
+              e movimentos musicais.
             </p>
 
             <a href="Colunas/som.html">
@@ -359,6 +622,8 @@
           </div>
 
         </article>
+
+        <!-- ALÉM DO QUADRO -->
 
         <article class="card-coluna">
 
@@ -374,10 +639,13 @@
               Animes, mangás e livros
             </span>
 
-            <h3>Além do Quadro</h3>
+            <h3>
+              Além do Quadro
+            </h3>
 
             <p>
-              Histórias, universos e narrativas que ultrapassam a tela.
+              Histórias, universos e narrativas
+              que ultrapassam a tela.
             </p>
 
             <a href="Colunas/quadro.html">
@@ -394,21 +662,27 @@
 
   </main>
 
-  <!-- RODAPÉ -->
+  <!-- ==========================================
+       RODAPÉ ORIGINAL
+  ========================================== -->
 
   <footer class="rodape-principal">
 
     <div class="rodape-grade">
 
+      <!-- MARCA -->
+
       <div class="rodape-marca">
 
         <h2>
-          Inferno Escarlate
+          Inferno<br>
+          Escarlate
         </h2>
 
         <p>
-          Notícias, críticas, cultura geek, cinema, música,
-          games, animes e entretenimento.
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
         </p>
 
         <a
@@ -420,36 +694,89 @@
 
       </div>
 
+      <!-- NAVEGAÇÃO -->
+
       <div class="rodape-coluna">
 
-        <h3>Navegação</h3>
+        <h3>
+          Navegação
+        </h3>
 
-        <a href="index.html">Início</a>
-        <a href="materias.html">Matérias</a>
-        <a href="colunas.html">Colunas</a>
-        <a href="index.html#categorias">Categorias</a>
-        <a href="contato.html">Contato</a>
+        <a href="index.html">
+          Início
+        </a>
+
+        <a href="materias.html">
+          Matérias
+        </a>
+
+        <a href="colunas.html">
+          Colunas
+        </a>
+
+        <a href="index.html#categorias">
+          Categorias
+        </a>
+
+        <a href="contato.html">
+          Contato
+        </a>
 
       </div>
 
+      <!-- CATEGORIAS -->
+
       <div class="rodape-coluna">
 
-        <h3>Categorias</h3>
+        <h3>
+          Categorias
+        </h3>
 
-        <a href="Categorias/cinema.html">Cinema</a>
-        <a href="Categorias/series-tv.html">Séries e TV</a>
-        <a href="Categorias/games.html">Games</a>
-        <a href="Categorias/musica.html">Música</a>
-        <a href="Categorias/animes.html">Animes</a>
-        <a href="Categorias/hqs.html">HQs</a>
-        <a href="Categorias/eventos.html">Eventos</a>
-        <a href="Categorias/festivais.html">Festivais</a>
+        <a href="Categorias/cinema.html">
+          Cinema
+        </a>
+
+        <a href="Categorias/criticas.html">
+          Críticas
+        </a>
+
+        <a href="Categorias/series-tv.html">
+          Séries e TV
+        </a>
+
+        <a href="Categorias/games.html">
+          Games
+        </a>
+
+        <a href="Categorias/musica.html">
+          Música
+        </a>
+
+        <a href="Categorias/animes.html">
+          Animes
+        </a>
+
+        <a href="Categorias/hqs.html">
+          HQs
+        </a>
+
+        <a href="Categorias/eventos.html">
+          Eventos
+        </a>
+
+        <a href="Categorias/festivais.html">
+          Festivais
+        </a>
 
       </div>
 
+      <!-- COLUNAS -->
+
       <div class="rodape-coluna">
 
-        <h3>Colunas</h3>
+        <h3>
+          Colunas
+        </h3>
 
         <a href="Colunas/cena-escarlate.html">
           Cena Escarlate
@@ -469,16 +796,21 @@
 
       </div>
 
+      <!-- REDES SOCIAIS -->
+
       <div class="rodape-coluna">
 
-        <h3>Redes sociais</h3>
+        <h3>
+          Redes sociais
+        </h3>
 
         <a
           href="https://www.instagram.com/infernoescarlatebr"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram: @infernoescarlatebr
+          Instagram:<br>
+          @infernoescarlatebr
         </a>
 
         <a
@@ -494,7 +826,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          YouTube: @infernoescarlatebr
+          YouTube:<br>
+          @infernoescarlatebr
         </a>
 
         <a
@@ -502,17 +835,21 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          X / Twitter: @infernoescarlatebr
+          X / Twitter:<br>
+          @infernoescarlatebr
         </a>
 
       </div>
 
     </div>
 
+    <!-- BASE DO RODAPÉ -->
+
     <div class="rodape-base">
 
       <p>
-        © 2026 Inferno Escarlate. Todos os direitos reservados.
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
       </p>
 
       <div class="rodape-links-legais">
@@ -531,7 +868,14 @@
 
   </footer>
 
-  <script src="js/materias.js?v=4"></script>
+  <!-- ==========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <!-- CATÁLOGO AUTOMÁTICO DAS MATÉRIAS -->
+  <script src="js/materias.js?v=6"></script>
+
+  <!-- MENU RESPONSIVO -->
   <script src="js/script.js?v=104"></script>
 
 </body>

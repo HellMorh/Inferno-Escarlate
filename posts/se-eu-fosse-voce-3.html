@@ -1,0 +1,746 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Crítica de Se Eu Fosse Você 3: Cleo Pires e Rafael Infante assumem o protagonismo da franquia marcada por Glória Pires e Tony Ramos."
+  >
+
+  <meta name="author" content="Inferno Escarlate">
+
+  <title>Se Eu Fosse Você 3 | Inferno Escarlate</title>
+
+  <link rel="stylesheet" href="../css/style.css?v=108">
+
+  <style>
+    /* ESTRUTURA DA MATÉRIA */
+
+    body main article.pagina-materia {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 78px 0 90px;
+    }
+
+    /* CAPA EM LARGURA TOTAL COM DEGRADÊ INFERIOR */
+
+    body main article.pagina-materia .topo-materia {
+      position: relative;
+      width: 100%;
+      max-width: none;
+      min-height: 760px;
+      margin: 0;
+      padding: 100px 6% 75px;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      background-color: #050505;
+
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(5, 5, 5, 0.15) 0%,
+          rgba(5, 5, 5, 0.25) 35%,
+          rgba(5, 5, 5, 0.55) 60%,
+          rgba(5, 5, 5, 0.85) 80%,
+          #050505 100%
+        ),
+        linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.55) 0%,
+          rgba(0, 0, 0, 0.15) 100%
+        ),
+        url("../imagem/se-eu-fosse-voce-3-capa.jpg");
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* CAMINHO DE NAVEGAÇÃO */
+
+    .materia-caminho {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      color: #d5d5d5;
+      font-size: 13px;
+    }
+
+    .materia-caminho a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .materia-caminho a:hover {
+      color: #ed1834;
+    }
+
+    /* CATEGORIA */
+
+    .materia-categoria {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: #ff3048;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    /* TÍTULO EDITORIAL */
+
+    body main article.pagina-materia .materia-titulo {
+      max-width: 1100px;
+      margin: 12px 0 24px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 8vw, 8rem);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.65);
+    }
+
+    /* SUBTÍTULO */
+
+    .materia-subtitulo {
+      max-width: 850px;
+      margin: 0 0 25px;
+      color: #e0e0e0;
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
+      font-weight: 400;
+      line-height: 1.6;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* INFORMAÇÕES */
+
+    .materia-informacoes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      color: #d5d5d5;
+      font-size: 13px;
+    }
+
+    /* CONTEÚDO CENTRALIZADO ABAIXO DA CAPA */
+
+    body main article.pagina-materia .materia-trailer,
+    body main article.pagina-materia .materia-corpo,
+    body main article.pagina-materia .materia-navegacao {
+      width: min(850px, 88%);
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* TRAILER */
+
+    body main article.pagina-materia .materia-trailer {
+      margin-top: 0;
+      margin-bottom: 43px;
+      padding-top: 80px;
+    }
+
+    .materia-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #000;
+      border-radius: 5px;
+    }
+
+    .materia-video iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .materia-legenda {
+      margin-top: 10px;
+      color: #999;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .materia-legenda a {
+      color: #ed1834;
+    }
+
+    /* TEXTO DA CRÍTICA */
+
+    .materia-corpo p {
+      margin: 0 0 25px;
+      color: #dedede;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .materia-corpo h2 {
+      margin: 52px 0 23px;
+      padding-left: 16px;
+      border-left: 4px solid #ed1834;
+      color: #fff;
+      font-size: clamp(24px, 3.5vw, 31px);
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .materia-corpo em {
+      font-style: italic;
+    }
+
+    .materia-corpo strong {
+      color: #fff;
+    }
+
+    /* FOTOGRAFIAS */
+
+    .materia-foto {
+      margin: 38px 0;
+    }
+
+    .materia-foto img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .materia-foto figcaption {
+      margin-top: 10px;
+      color: #999;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* NAVEGAÇÃO FINAL */
+
+    .materia-navegacao {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 58px;
+      padding-top: 28px;
+      border-top: 1px solid #333;
+    }
+
+    .materia-navegacao a {
+      display: inline-block;
+      padding: 13px 20px;
+      background: #c92333;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 3px;
+      transition: background 0.2s ease;
+    }
+
+    .materia-navegacao a:hover {
+      background: #a91b29;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 700px) {
+      body main article.pagina-materia {
+        padding-top: 72px;
+        padding-bottom: 65px;
+      }
+
+      body main article.pagina-materia .topo-materia {
+        min-height: 620px;
+        padding: 100px 6% 55px;
+        margin: 0;
+      }
+
+      body main article.pagina-materia .materia-titulo {
+        font-size: clamp(3.4rem, 12vw, 5rem);
+        line-height: 0.92;
+      }
+
+      body main article.pagina-materia .materia-trailer,
+      body main article.pagina-materia .materia-corpo,
+      body main article.pagina-materia .materia-navegacao {
+        width: 90%;
+      }
+
+      body main article.pagina-materia .materia-trailer {
+        padding-top: 50px;
+      }
+
+      .materia-corpo p {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .materia-corpo h2 {
+        margin-top: 40px;
+      }
+
+      .materia-navegacao {
+        flex-direction: column;
+      }
+
+      .materia-navegacao a {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topo">
+
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Navegação principal"
+    >
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../index.html#colunas">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <article class="pagina-materia">
+
+      <!-- CAPA COM FOTO DE FUNDO -->
+
+      <div class="topo-materia">
+
+        <nav
+          class="materia-caminho"
+          aria-label="Localização da matéria"
+        >
+          <a href="../index.html">Início</a>
+          <span>›</span>
+          <a href="../Categorias/cinema.html">Cinema</a>
+          <span>›</span>
+          <a href="../Categorias/criticas.html">Críticas</a>
+        </nav>
+
+        <a
+          href="../Categorias/cinema.html"
+          class="materia-categoria"
+        >
+          Cinema Nacional • Crítica
+        </a>
+
+        <h1 class="materia-titulo">
+          Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia
+        </h1>
+
+        <p class="materia-subtitulo">
+          Cleo Pires e Rafael Infante assumem o papel
+          de dar uma nova cara ao clássico, em uma
+          produção marcada por Glória Pires e Tony Ramos.
+        </p>
+
+        <div class="materia-informacoes">
+          <span>Inferno Escarlate</span>
+          <span>•</span>
+          <time datetime="2026-10-10">
+            10 de outubro de 2026
+          </time>
+          <span>•</span>
+          <span>Crítica de cinema</span>
+        </div>
+
+      </div>
+
+      <!-- TRAILER -->
+
+      <figure class="materia-trailer">
+
+        <div class="materia-video">
+          <iframe
+            src="https://www.youtube.com/embed/Cmq9gsha7dU"
+            title="Trailer de Se Eu Fosse Você 3"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <figcaption class="materia-legenda">
+          Trailer de Se Eu Fosse Você 3.
+          <a
+            href="https://www.youtube.com/watch?v=Cmq9gsha7dU"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Assistir no YouTube
+          </a>
+        </figcaption>
+
+      </figure>
+
+      <!-- TEXTO INTEGRAL DA CRÍTICA -->
+
+      <div class="materia-corpo">
+
+        <p>
+          O novo filme nacional <em>Se Eu Fosse Você 3</em>
+          chegou aos cinemas nesta quinta-feira (8),
+          apostando em uma segunda geração quando o
+          assunto é protagonismo. Após quase 20 anos,
+          Anita Barbosa retorna à produção, pela
+          primeira vez trabalhando como diretora
+          da franquia, depois de ocupar o espaço
+          de assistente de direção nos dois primeiros
+          filmes. Sua abordagem mostra que inovar nem
+          sempre é a solução para boas continuações.
+        </p>
+
+        <p>
+          Com uma temática comum do dia a dia, Glória
+          Pires e Tony Ramos interpretam Helena e
+          Cláudio, protagonistas dos dois primeiros
+          filmes. Entre as divergências e inconstâncias
+          de um relacionamento, ambos precisam passar
+          pela experiência de trocar de corpos para
+          que, somente assim, possam retomar suas
+          vidas e levar consigo um aprendizado que
+          torne tudo mais simples dali para frente.
+        </p>
+
+        <!-- FOTOGRAFIA 1 -->
+
+        <figure class="materia-foto">
+          <img
+            src="../imagem/se-eu-fosse-voce-3-foto-1.jpg"
+            alt="Cena do filme Se Eu Fosse Você 3"
+            loading="lazy"
+          >
+          <figcaption>
+            Cena do filme Se Eu Fosse Você 3.
+            Imagem de divulgação.
+          </figcaption>
+        </figure>
+
+        <p>
+          Dezessete anos depois, a mesma fórmula
+          é repetida no terceiro filme, que traz
+          novos rostos, mas preserva a premissa.
+          Cleo Pires e Rafael Infante, responsáveis
+          pelos personagens Bia e Aquiles, interpretam
+          uma chef de cozinha renomada, filha do casal
+          protagonista dos filmes anteriores,
+          e um guia turístico.
+        </p>
+
+        <p>
+          Seus corpos são trocados após uma grande
+          dificuldade no relacionamento, mostrando
+          que um raio pode, sim, cair pela terceira
+          vez na mesma família. A trama também aborda
+          como essa troca pode afetar o casal diante
+          de uma nova gravidez, inicialmente desejada
+          apenas pelo personagem de Infante.
+        </p>
+
+        <h2>Qual o diferencial desta vez?</h2>
+
+        <p>
+          A escolha do elenco é uma das apostas mais
+          positivas da produção. Rafael Infante encanta
+          com sua desenvoltura e seu senso de humor
+          nato, conhecido por seus trabalhos no
+          Porta dos Fundos e em outros papéis cômicos.
+        </p>
+
+        <p>
+          Sua liberdade ao caracterizar Bia durante
+          a troca de corpos revela naturalidade nos
+          gestos e nas falas, refletindo positivamente
+          em sua interpretação e construindo um carisma
+          que surge da própria situação apresentada.
+        </p>
+
+        <p>
+          Um exemplo está na cena do quarto, em que
+          a interação de Infante como Bia diante do
+          aumento dos próprios seios provoca um alívio
+          cômico, enquanto Aquiles precisa lidar com
+          questões femininas ainda no corpo de sua
+          parceira.
+        </p>
+
+        <!-- FOTOGRAFIA 2 -->
+
+        <figure class="materia-foto">
+          <img
+            src="../imagem/se-eu-fosse-voce-3-foto-2.jpg"
+            alt="Elenco de Se Eu Fosse Você 3"
+            loading="lazy"
+          >
+          <figcaption>
+            Elenco do filme Se Eu Fosse Você 3.
+            Imagem de divulgação.
+          </figcaption>
+        </figure>
+
+        <p>
+          Cleo não fica para trás, mostrando a rigidez
+          necessária para sustentar a personalidade do
+          personagem. Sua escolha para o elenco também
+          se encaixa na proposta da franquia, visto
+          que ela é filha de Glória Pires tanto na
+          vida real quanto na ficção.
+        </p>
+
+        <p>
+          Ao brincar com situações cotidianas, desde
+          o garçom que finge ser francês para ganhar
+          mais até a vizinha fofoqueira, a produção
+          encontra na identificação com o espectador
+          um de seus principais recursos. É a construção
+          desse cenário comum que gera uma torcida
+          para que tudo dê certo para o casal
+          nessa aventura.
+        </p>
+
+        <p>
+          Mesmo com a tentativa de criar uma identidade
+          própria dentro de uma fórmula já muito bem
+          estabelecida por Tony Ramos e Glória Pires,
+          os melhores momentos continuam sendo suas
+          participações. Isso demonstra o acerto na
+          escolha do elenco quase 20 anos antes.
+        </p>
+
+        <p>
+          A atuação que conversa entre passado e
+          presente representa o entrosamento dos dois,
+          tornando difícil questionar uma relação tão
+          bem estruturada. Também permite refletir
+          sobre como as trocas de corpos afetaram
+          positivamente a construção desses personagens.
+        </p>
+
+        <p>
+          Agora, Helena e Cláudio fazem participações
+          pontuais, já que, durante a trama, aproveitam
+          uma segunda lua de mel, longe da cidade onde
+          se concentra a narrativa principal do filme.
+        </p>
+
+        <h2>Se Eu Fosse Você 3: o filme realmente é bom?</h2>
+
+        <p>
+          <em>Se Eu Fosse Você 3</em> não muda e nem
+          parece ter interesse em mudar sua fórmula.
+          A diretora Anita Barbosa entende que o
+          interesse do público está ligado à nostalgia,
+          mantendo a receita conhecida, mas agora
+          com um olhar mais jovem.
+        </p>
+
+        <p>
+          Reencontrar e abraçar com afeto um universo
+          que construiu uma franquia tão presente na
+          memória do público brasileiro, dando continuidade
+          a ele de forma natural, parece fácil. Mas talvez
+          o maior desafio esteja em criar algo que não
+          pareça uma simples cópia do que já foi feito.
+        </p>
+
+        <p>
+          Com a proposta de resgatar o que fez sucesso
+          nos anos 2000, observar uma produção nacional
+          com tanta presença e carinho por parte do
+          público é algo positivo. O filme também reforça
+          a importância e a relevância do cinema brasileiro
+          diante do crescimento constante de sequências
+          estrangeiras.
+        </p>
+
+        <p>
+          Todavia, entender essa continuação como uma
+          obra de qualidade ímpar seria superestimar
+          uma produção que retorna muito mais como uma
+          aposta em revisitar a própria franquia e
+          recuperar momentos e situações conhecidos
+          do que como uma tentativa de propor algo
+          capaz de conquistar novos espectadores
+          pela inovação.
+        </p>
+
+        <p>
+          <strong>
+            Se Eu Fosse Você 3 está em cartaz nos cinemas.
+          </strong>
+        </p>
+
+      </div>
+
+      <!-- NAVEGAÇÃO FINAL -->
+
+      <div class="materia-navegacao">
+        <a href="../Categorias/criticas.html">
+          ← Mais críticas
+        </a>
+        <a href="../Categorias/cinema.html">
+          Mais sobre cinema →
+        </a>
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- RODAPÉ -->
+
+  <footer class="rodape-principal">
+
+    <div class="rodape-grade">
+
+      <div class="rodape-marca">
+        <h2>
+          Inferno<br>
+          Escarlate
+        </h2>
+        <p>
+          Notícias, críticas, cultura geek, cinema,
+          música, games, animes e entretenimento.
+        </p>
+        <a href="../contato.html" class="rodape-contato">
+          Entre em contato
+        </a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Navegação</h3>
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Categorias</h3>
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/criticas.html">Críticas</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/games.html">Games</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+        <a href="../Categorias/hqs.html">HQs</a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Colunas</h3>
+        <a href="../Colunas/cena-escarlate.html">
+          Cena Escarlate
+        </a>
+        <a href="../Colunas/checkpoint.html">
+          Checkpoint
+        </a>
+        <a href="../Colunas/som.html">
+          Som no Inferno
+        </a>
+        <a href="../Colunas/quadro.html">
+          Além do Quadro
+        </a>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+      </div>
+
+    </div>
+
+    <div class="rodape-base">
+      <p>
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
+      </p>
+
+      <div class="rodape-links-legais">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="../js/script.js?v=104"></script>
+
+</body>
+</html>

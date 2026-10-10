@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -12,262 +12,212 @@
 
   <meta
     name="description"
-    content="Todas as matérias publicadas no Inferno Escarlate."
+    content="Todas as matérias publicadas no Inferno Escarlate. Notícias, críticas, cinema nacional, música, eventos e cultura geek."
   >
 
-  <title>
-    Todas as matérias | Inferno Escarlate
-  </title>
+  <title>Todas as matérias | Inferno Escarlate</title>
 
+  <!-- CSS PRINCIPAL -->
   <link
     rel="stylesheet"
-    href="css/style.css?v=104"
+    href="./css/style.css?v=108"
   >
 
-
+  <!-- ESTILOS EXCLUSIVOS DESTA PÁGINA -->
   <style>
 
-    /* =========================================
-       MENU
-    ========================================== */
-
-    .menu-botao {
-      display: none !important;
-    }
-
-
-    /* =========================================
-       PÁGINA
+    /* ==========================================
+       PÁGINA DE MATÉRIAS
     ========================================== */
 
     .pagina-listagem {
       padding-top: 78px;
     }
 
-
-    /* =========================================
+    /* ==========================================
        CABEÇALHO
     ========================================== */
 
     .cabecalho-listagem {
-
       min-height: 460px;
-
-      padding:
-        130px
-        7%
-        70px;
+      padding: 130px 7% 70px;
 
       display: flex;
-
       align-items: flex-end;
 
       background:
-
         linear-gradient(
           90deg,
           rgba(0, 0, 0, 0.97),
           rgba(0, 0, 0, 0.64),
           rgba(0, 0, 0, 0.25)
         ),
-
         linear-gradient(
           0deg,
           #050505,
           transparent 48%
         ),
-
-        url("imagem/banner.png")
-        center
-        /
-        cover
-        no-repeat;
-
+        url("./imagem/banner.png")
+        center / cover no-repeat;
     }
-
 
     .cabecalho-listagem-conteudo {
-
-      width:
-        min(
-          1180px,
-          100%
-        );
-
-      margin:
-        0 auto;
-
+      width: min(1180px, 100%);
+      margin: 0 auto;
     }
-
 
     .cabecalho-listagem h1 {
+      margin: 10px 0 18px;
 
-      margin:
-        10px
-        0
-        18px;
-
-      font-family:
-        "Bebas Neue",
-        sans-serif;
-
-      font-size:
-        clamp(
-          4.8rem,
-          10vw,
-          8.5rem
-        );
-
-      line-height:
-        0.86;
-
-      letter-spacing:
-        4px;
-
-      text-transform:
-        uppercase;
-
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 10vw, 8.5rem);
+      line-height: 0.9;
+      letter-spacing: 4px;
+      text-transform: uppercase;
     }
-
 
     .cabecalho-listagem p {
-
-      max-width:
-        680px;
-
-      color:
-        #c2c2c2;
-
-      font-size:
-        1.05rem;
-
-      line-height:
-        1.75;
-
+      max-width: 680px;
+      color: #c2c2c2;
+      font-size: 1.05rem;
+      line-height: 1.75;
     }
 
-
-    /* =========================================
+    /* ==========================================
        FILTROS
     ========================================== */
 
     .filtros-materias {
+      margin-bottom: 34px;
 
-      margin-bottom:
-        34px;
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        10px;
-
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-
 
     .filtros-materias button {
+      padding: 11px 16px;
 
-      padding:
-        11px
-        16px;
+      background: var(--preto-claro, #101010);
+      border: 1px solid var(--borda, #333);
+      color: var(--cinza, #a8a8a8);
 
-      background:
-        var(--preto-claro);
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
 
-      border:
-        1px solid
-        var(--borda);
-
-      color:
-        var(--cinza);
-
-      font-family:
-        inherit;
-
-      font-size:
-        0.72rem;
-
-      font-weight:
-        700;
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        1px;
-
-      cursor:
-        pointer;
-
-      transition:
-        0.3s;
-
+      cursor: pointer;
+      transition: 0.3s;
     }
-
 
     .filtros-materias button:hover,
     .filtros-materias button.ativo {
-
-      color:
-        var(--branco);
-
-      border-color:
-        var(--vermelho-vivo);
-
-      background:
-        rgba(
-          165,
-          0,
-          26,
-          0.18
-        );
-
+      color: var(--branco, #fff);
+      border-color: var(--vermelho-vivo, #ed1834);
+      background: rgba(165, 0, 26, 0.18);
     }
 
+    .filtros-materias button:focus-visible {
+      outline: 2px solid var(--vermelho-vivo, #ed1834);
+      outline-offset: 3px;
+    }
 
-    /* =========================================
-       RESPONSIVO
+    /* ==========================================
+       CARDS AUTOMÁTICOS
     ========================================== */
 
-    @media screen and (max-width: 600px) {
+    #todas-materias .card-materia {
+      min-width: 0;
+    }
 
-      .menu-botao {
+    #todas-materias .link-imagem-materia {
+      display: block;
+      overflow: hidden;
+      text-decoration: none;
+    }
 
-        display:
-          block !important;
+    #todas-materias .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
 
-      }
+    #todas-materias .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
 
+    #todas-materias .link-titulo-materia:hover {
+      color: var(--vermelho-vivo, #ed1834);
+    }
+
+    #todas-materias .link-imagem-materia:focus-visible,
+    #todas-materias .link-titulo-materia:focus-visible,
+    #todas-materias .link-ler-materia:focus-visible {
+      outline: 2px solid var(--vermelho-vivo, #ed1834);
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       SEM RESULTADOS
+    ========================================== */
+
+    .mensagem-sem-materias {
+      display: none;
+      padding: 35px 20px;
+      background: var(--preto-claro, #101010);
+      border: 1px solid var(--borda, #333);
+      text-align: center;
+    }
+
+    .mensagem-sem-materias.visivel {
+      display: block;
+    }
+
+    .mensagem-sem-materias h3 {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    .mensagem-sem-materias p {
+      margin: 0;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
 
       .pagina-listagem {
-
-        padding-top:
-          0;
-
+        padding-top: 72px;
       }
-
 
       .cabecalho-listagem {
-
-        min-height:
-          420px;
-
-        padding:
-          110px
-          6%
-          55px;
-
+        min-height: 420px;
+        padding: 85px 6% 55px;
       }
 
-
       .cabecalho-listagem h1 {
+        font-size: clamp(3.2rem, 12vw, 4.2rem);
+      }
 
-        font-size:
-          4.2rem;
+      .cabecalho-listagem p {
+        font-size: 0.95rem;
+      }
 
+      .filtros-materias {
+        gap: 8px;
+      }
+
+      .filtros-materias button {
+        padding: 10px 12px;
+        font-size: 0.68rem;
       }
 
     }
@@ -276,254 +226,266 @@
 
 </head>
 
-
-
 <body>
 
-
-
-  <!-- =========================================
+  <!-- ==========================================
        CABEÇALHO
   ========================================== -->
 
   <header class="topo">
 
-
-    <a
-      href="index.html"
-      class="logo"
-    >
+    <a href="index.html" class="logo">
       Inferno Escarlate
     </a>
-
 
     <button
       class="menu-botao"
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-
-    <nav class="menu">
-
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Navegação principal"
+    >
 
       <a href="index.html">
         Início
       </a>
 
-
-      <a href="materias.html">
+      <a href="materias.html" class="ativo">
         Matérias
       </a>
-
 
       <a href="colunas.html">
         Colunas
       </a>
 
-
       <a href="index.html#categorias">
         Categorias
       </a>
-
 
       <a href="contato.html">
         Contato
       </a>
 
-
     </nav>
-
 
   </header>
 
-
-
-  <!-- =========================================
+  <!-- ==========================================
        CONTEÚDO PRINCIPAL
   ========================================== -->
 
   <main class="pagina-listagem">
 
-
-
-    <!-- =========================================
-         CABEÇALHO DA PÁGINA
-    ========================================== -->
+    <!-- CABEÇALHO DA PÁGINA -->
 
     <section class="cabecalho-listagem">
 
-
       <div class="cabecalho-listagem-conteudo">
 
-
         <span class="categoria">
-
           Arquivo editorial
-
         </span>
 
-
         <h1>
-
           Todas as matérias
-
         </h1>
 
-
         <p>
-
-          Notícias, críticas, análises, eventos e conteúdos
-          sobre cinema, séries, games, música, animes
-          e cultura geek.
-
+          Notícias, críticas, análises, eventos
+          e conteúdos sobre cinema nacional e
+          internacional, séries, games, música,
+          animes e cultura geek.
         </p>
 
-
       </div>
-
 
     </section>
 
-
-
-    <!-- =========================================
-         TODAS AS MATÉRIAS
+    <!-- ==========================================
+         LISTAGEM GERAL
     ========================================== -->
 
-    <section class="secao">
-
+    <section
+      class="secao"
+      id="arquivo-materias"
+    >
 
       <div class="titulo-secao">
 
-
         <span>
-
           Conteúdo publicado
-
         </span>
 
-
         <h2>
-
           Explore as matérias
-
         </h2>
-
 
       </div>
 
-
-
-      <!-- =========================================
+      <!-- ==========================================
            FILTROS
       ========================================== -->
 
-      <div class="filtros-materias">
-
+      <div
+        class="filtros-materias"
+        role="group"
+        aria-label="Filtrar matérias por categoria"
+      >
 
         <button
+          type="button"
           class="ativo"
           data-filtro="todas"
+          aria-pressed="true"
         >
           Todas
         </button>
 
-
-        <button data-filtro="cinema">
+        <button
+          type="button"
+          data-filtro="cinema"
+          aria-pressed="false"
+        >
           Cinema
         </button>
 
+        <button
+          type="button"
+          data-filtro="criticas"
+          aria-pressed="false"
+        >
+          Críticas
+        </button>
 
-        <button data-filtro="musica">
+        <button
+          type="button"
+          data-filtro="musica"
+          aria-pressed="false"
+        >
           Música
         </button>
 
-
-        <button data-filtro="eventos">
+        <button
+          type="button"
+          data-filtro="eventos"
+          aria-pressed="false"
+        >
           Eventos
         </button>
 
-
-        <button data-filtro="festivais">
+        <button
+          type="button"
+          data-filtro="festivais"
+          aria-pressed="false"
+        >
           Festivais
         </button>
 
-
-        <button data-filtro="games">
+        <button
+          type="button"
+          data-filtro="games"
+          aria-pressed="false"
+        >
           Games
         </button>
 
-
-        <button data-filtro="animes">
+        <button
+          type="button"
+          data-filtro="animes"
+          aria-pressed="false"
+        >
           Animes
         </button>
 
-
-        <button data-filtro="series">
+        <button
+          type="button"
+          data-filtro="series"
+          aria-pressed="false"
+        >
           Séries e TV
         </button>
 
-
       </div>
 
-
-
-      <!-- =========================================
-           CARDS AUTOMÁTICOS
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
       ========================================== -->
 
       <!--
-        NÃO ADICIONE AS MATÉRIAS MANUALMENTE AQUI.
+        As publicações são carregadas
+        automaticamente pelo js/materias.js.
 
-        O arquivo js/materias.js vai carregar
-        automaticamente todas as matérias
-        cadastradas no catálogo.
+        Não adicionar matérias manualmente aqui.
+
+        Se Eu Fosse Você 3 deve estar
+        cadastrada com as categorias:
+
+        cinema
+        criticas
       -->
 
       <div
         class="grade-materias"
         id="todas-materias"
+        aria-live="polite"
       >
       </div>
 
+      <!-- ==========================================
+           MENSAGEM SEM RESULTADOS
+      ========================================== -->
+
+      <div
+        class="mensagem-sem-materias"
+        id="sem-materias"
+        role="status"
+      >
+
+        <h3>
+          Nenhuma matéria encontrada
+        </h3>
+
+        <p>
+          Ainda não existem publicações cadastradas
+          nesta categoria. Explore os outros conteúdos
+          do Inferno Escarlate.
+        </p>
+
+      </div>
 
     </section>
 
-
   </main>
 
-
-
-  <!-- =========================================
+  <!-- ==========================================
        RODAPÉ
   ========================================== -->
 
   <footer class="rodape-principal">
 
-
     <div class="rodape-grade">
-
-
 
       <!-- MARCA -->
 
       <div class="rodape-marca">
 
-
         <h2>
           Inferno Escarlate
         </h2>
 
-
         <p>
-          Notícias, críticas, cultura geek, cinema, música,
-          games, animes e entretenimento.
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
         </p>
-
 
         <a
           href="contato.html"
@@ -532,142 +494,105 @@
           Entre em contato
         </a>
 
-
       </div>
-
-
 
       <!-- NAVEGAÇÃO -->
 
       <div class="rodape-coluna">
 
-
-        <h3>
-          Navegação
-        </h3>
-
+        <h3>Navegação</h3>
 
         <a href="index.html">
           Início
         </a>
 
-
         <a href="materias.html">
           Matérias
         </a>
-
 
         <a href="colunas.html">
           Colunas
         </a>
 
-
         <a href="index.html#categorias">
           Categorias
         </a>
-
 
         <a href="contato.html">
           Contato
         </a>
 
-
       </div>
-
-
 
       <!-- CATEGORIAS -->
 
       <div class="rodape-coluna">
 
-
-        <h3>
-          Categorias
-        </h3>
-
+        <h3>Categorias</h3>
 
         <a href="Categorias/cinema.html">
           Cinema
         </a>
 
+        <a href="Categorias/criticas.html">
+          Críticas
+        </a>
 
         <a href="Categorias/series-tv.html">
           Séries e TV
         </a>
 
-
         <a href="Categorias/games.html">
           Games
         </a>
-
 
         <a href="Categorias/musica.html">
           Música
         </a>
 
-
         <a href="Categorias/eventos.html">
           Eventos
         </a>
-
 
         <a href="Categorias/festivais.html">
           Festivais
         </a>
 
-
         <a href="Categorias/animes.html">
           Animes
         </a>
 
-
       </div>
-
-
 
       <!-- COLUNAS -->
 
       <div class="rodape-coluna">
 
-
-        <h3>
-          Colunas
-        </h3>
-
+        <h3>Colunas</h3>
 
         <a href="Colunas/cena-escarlate.html">
           Cena Escarlate
         </a>
 
-
         <a href="Colunas/checkpoint.html">
           Checkpoint
         </a>
-
 
         <a href="Colunas/som.html">
           Som no Inferno
         </a>
 
-
         <a href="Colunas/quadro.html">
           Além do Quadro
         </a>
 
-
       </div>
-
-
 
       <!-- REDES SOCIAIS -->
 
       <div class="rodape-coluna">
 
-
-        <h3>
-          Redes sociais
-        </h3>
-
+        <h3>Redes sociais</h3>
 
         <a
           href="https://www.instagram.com/infernoescarlatebr"
@@ -677,7 +602,6 @@
           Instagram: @infernoescarlatebr
         </a>
 
-
         <a
           href="https://www.tiktok.com/@infernoescarlatebr"
           target="_blank"
@@ -685,7 +609,6 @@
         >
           TikTok: @infernoescarlatebr
         </a>
-
 
         <a
           href="https://www.youtube.com/@infernoescarlatebr"
@@ -695,7 +618,6 @@
           YouTube: @infernoescarlatebr
         </a>
 
-
         <a
           href="https://x.com/infernoescarlatebr"
           target="_blank"
@@ -704,57 +626,107 @@
           X / Twitter: @infernoescarlatebr
         </a>
 
-
       </div>
-
 
     </div>
 
-
-
-    <!-- =========================================
-         BASE DO RODAPÉ
-    ========================================== -->
+    <!-- BASE DO RODAPÉ -->
 
     <div class="rodape-base">
 
-
       <p>
-
         © 2026 Inferno Escarlate.
         Todos os direitos reservados.
-
       </p>
 
+      <div class="rodape-links-legais">
+
+        <a href="#">
+          Política de privacidade
+        </a>
+
+        <a href="#">
+          Termos de uso
+        </a>
+
+      </div>
 
     </div>
 
-
   </footer>
 
-
-
-  <!-- =========================================
+  <!-- ==========================================
        JAVASCRIPT
   ========================================== -->
 
+  <!-- CATÁLOGO DE MATÉRIAS -->
+  <script src="./js/materias.js?v=6"></script>
 
-  <!--
-    PRIMEIRO:
-    carrega o catálogo das matérias
-  -->
+  <!-- MENU RESPONSIVO -->
+  <script src="./js/script.js?v=104"></script>
 
-  <script src="js/materias.js?v=6"></script>
+  <!-- CONTROLE VISUAL DOS FILTROS -->
+  <script>
 
+    document.addEventListener("DOMContentLoaded", () => {
 
-  <!--
-    DEPOIS:
-    carrega o JavaScript geral
-  -->
+      const botoes = document.querySelectorAll(
+        ".filtros-materias [data-filtro]"
+      );
 
-  <script src="js/script.js?v=104"></script>
+      const container = document.querySelector(
+        "#todas-materias"
+      );
 
+      const aviso = document.querySelector(
+        "#sem-materias"
+      );
+
+      if (!container || !aviso) {
+        return;
+      }
+
+      function atualizarEstado() {
+
+        const cards = [
+          ...container.querySelectorAll(".card-materia")
+        ];
+
+        const quantidadeVisiveis = cards.filter((card) => {
+          return getComputedStyle(card).display !== "none";
+        }).length;
+
+        aviso.classList.toggle(
+          "visivel",
+          quantidadeVisiveis === 0
+        );
+
+        botoes.forEach((botao) => {
+
+          const ativo = botao.classList.contains("ativo");
+
+          botao.setAttribute(
+            "aria-pressed",
+            String(ativo)
+          );
+
+        });
+
+      }
+
+      botoes.forEach((botao) => {
+
+        botao.addEventListener("click", () => {
+          atualizarEstado();
+        });
+
+      });
+
+      atualizarEstado();
+
+    });
+
+  </script>
 
 </body>
-
 </html>
