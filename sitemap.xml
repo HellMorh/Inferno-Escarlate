@@ -1,21 +1,120 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- PÁGINAS PRINCIPAIS -->
+
   <url>
     <loc>https://infernoescarlate.com/index.html</loc>
   </url>
+
   <url>
     <loc>https://infernoescarlate.com/materias.html</loc>
   </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/colunas.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/contato.html</loc>
+  </url>
+
+  <!-- MATÉRIAS PUBLICADAS -->
+
   <url>
     <loc>https://infernoescarlate.com/posts/se-eu-fosse-voce-3.html</loc>
   </url>
+
   <url>
     <loc>https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html</loc>
   </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/posts/materia-bts.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/posts/materia-cauby.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/posts/materia-03.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/posts/universal.html</loc>
+  </url>
+
+  <!-- CATEGORIAS -->
+
   <url>
     <loc>https://infernoescarlate.com/Categorias/cinema.html</loc>
   </url>
+
   <url>
     <loc>https://infernoescarlate.com/Categorias/criticas.html</loc>
   </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/series-tv.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/games.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/musica.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/animes.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/mangas.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/eventos.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/festivais.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/doramas-novelas.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/livros.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/esports.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Categorias/hqs.html</loc>
+  </url>
+
+  <!-- COLUNAS -->
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/cena-escarlate.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/checkpoint.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/som.html</loc>
+  </url>
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/quadro.html</loc>
+  </url>
+
 </urlset>
