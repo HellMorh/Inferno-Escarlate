@@ -4,39 +4,123 @@
 
 <head>
   <meta charset="UTF-8">
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
+  <!-- SEO GOOGLE -->
+
+  <title>Matérias, Notícias e Críticas | Inferno Escarlate</title>
+
   <meta
     name="description"
-    content="Todas as matérias publicadas no Inferno Escarlate. Notícias, críticas, cinema nacional, música, eventos e cultura geek."
+    content="Confira todas as matérias do Inferno Escarlate: notícias, críticas e análises sobre cinema, séries, games, música, animes, eventos e cultura geek."
   >
 
-  <title>Todas as matérias | Inferno Escarlate</title>
+  <meta name="author" content="Inferno Escarlate">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/materias.html"
+  >
+
+  <!-- COMPARTILHAMENTO NAS REDES SOCIAIS -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Todas as matérias | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Notícias, críticas e análises sobre cinema, séries, games, música, eventos e cultura geek."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/materias.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Inferno Escarlate — Entre no modo Geek"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- DADOS ESTRUTURADOS -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Todas as matérias | Inferno Escarlate",
+    "description": "Arquivo editorial com matérias, notícias, críticas e análises sobre cinema, séries, games, música, eventos e cultura geek.",
+    "url": "https://infernoescarlate.com/materias.html",
+    "inLanguage": "pt-BR",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Inferno Escarlate",
+      "url": "https://infernoescarlate.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Inferno Escarlate",
+      "url": "https://infernoescarlate.com/"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia",
+          "url": "https://infernoescarlate.com/posts/se-eu-fosse-voce-3.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rock in Rio 2026",
+          "url": "https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html"
+        }
+      ]
+    }
+  }
+  </script>
 
   <!-- CSS PRINCIPAL -->
+
   <link
     rel="stylesheet"
     href="./css/style.css?v=108"
   >
 
   <!-- ESTILOS EXCLUSIVOS DESTA PÁGINA -->
+
   <style>
 
-    /* ==========================================
-       PÁGINA DE MATÉRIAS
-    ========================================== */
+    /* PÁGINA DE MATÉRIAS */
 
     .pagina-listagem {
       padding-top: 78px;
     }
 
-    /* ==========================================
-       CABEÇALHO
-    ========================================== */
+    /* CABEÇALHO */
 
     .cabecalho-listagem {
       min-height: 460px;
@@ -68,7 +152,6 @@
 
     .cabecalho-listagem h1 {
       margin: 10px 0 18px;
-
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(4rem, 10vw, 8.5rem);
       line-height: 0.9;
@@ -83,13 +166,10 @@
       line-height: 1.75;
     }
 
-    /* ==========================================
-       FILTROS
-    ========================================== */
+    /* FILTROS */
 
     .filtros-materias {
       margin-bottom: 34px;
-
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -124,9 +204,7 @@
       outline-offset: 3px;
     }
 
-    /* ==========================================
-       CARDS AUTOMÁTICOS
-    ========================================== */
+    /* CARDS AUTOMÁTICOS */
 
     #todas-materias .card-materia {
       min-width: 0;
@@ -160,13 +238,12 @@
       outline-offset: 3px;
     }
 
-    /* ==========================================
-       SEM RESULTADOS
-    ========================================== */
+    /* SEM RESULTADOS */
 
     .mensagem-sem-materias {
       display: none;
       padding: 35px 20px;
+
       background: var(--preto-claro, #101010);
       border: 1px solid var(--borda, #333);
       text-align: center;
@@ -188,9 +265,7 @@
       line-height: 1.6;
     }
 
-    /* ==========================================
-       RESPONSIVIDADE
-    ========================================== */
+    /* RESPONSIVIDADE */
 
     @media screen and (max-width: 700px) {
 
@@ -228,9 +303,7 @@
 
 <body>
 
-  <!-- ==========================================
-       CABEÇALHO
-  ========================================== -->
+  <!-- CABEÇALHO -->
 
   <header class="topo">
 
@@ -278,9 +351,7 @@
 
   </header>
 
-  <!-- ==========================================
-       CONTEÚDO PRINCIPAL
-  ========================================== -->
+  <!-- CONTEÚDO PRINCIPAL -->
 
   <main class="pagina-listagem">
 
@@ -309,9 +380,7 @@
 
     </section>
 
-    <!-- ==========================================
-         LISTAGEM GERAL
-    ========================================== -->
+    <!-- LISTAGEM GERAL -->
 
     <section
       class="secao"
@@ -330,9 +399,7 @@
 
       </div>
 
-      <!-- ==========================================
-           FILTROS
-      ========================================== -->
+      <!-- FILTROS -->
 
       <div
         class="filtros-materias"
@@ -415,21 +482,15 @@
 
       </div>
 
-      <!-- ==========================================
-           MATÉRIAS AUTOMÁTICAS
-      ========================================== -->
+      <!-- MATÉRIAS AUTOMÁTICAS -->
 
       <!--
         As publicações são carregadas
         automaticamente pelo js/materias.js.
 
-        Não adicionar matérias manualmente aqui.
-
-        Se Eu Fosse Você 3 deve estar
-        cadastrada com as categorias:
-
-        cinema
-        criticas
+        A nova matéria de Se Eu Fosse Você 3
+        deve estar cadastrada com as categorias
+        cinema e criticas.
       -->
 
       <div
@@ -439,9 +500,7 @@
       >
       </div>
 
-      <!-- ==========================================
-           MENSAGEM SEM RESULTADOS
-      ========================================== -->
+      <!-- MENSAGEM SEM RESULTADOS -->
 
       <div
         class="mensagem-sem-materias"
@@ -465,9 +524,7 @@
 
   </main>
 
-  <!-- ==========================================
-       RODAPÉ
-  ========================================== -->
+  <!-- RODAPÉ -->
 
   <footer class="rodape-principal">
 
@@ -655,19 +712,19 @@
 
   </footer>
 
-  <!-- ==========================================
-       JAVASCRIPT
-  ========================================== -->
+  <!-- JAVASCRIPT -->
 
   <!-- CATÁLOGO DE MATÉRIAS -->
+
   <script src="./js/materias.js?v=6"></script>
 
   <!-- MENU RESPONSIVO -->
+
   <script src="./js/script.js?v=104"></script>
 
   <!-- CONTROLE VISUAL DOS FILTROS -->
-  <script>
 
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
 
       const botoes = document.querySelectorAll(
@@ -725,7 +782,6 @@
       atualizarEstado();
 
     });
-
   </script>
 
 </body>
