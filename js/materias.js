@@ -73,6 +73,25 @@ const MATERIAS = [
 ];
 
 /* ==========================================
+   CONFIGURAÇÕES SEO
+========================================== */
+
+const SITE_URL = "https://infernoescarlate.com/";
+
+function urlAbsoluta(caminho) {
+  return new URL(caminho, SITE_URL).href;
+}
+
+function dataFormatada(data) {
+  const apenasData = data.split("T")[0];
+  const partes = apenasData.split("-");
+
+  if (partes.length !== 3) return apenasData;
+
+  return `${partes[2]}/${partes[1]}/${partes[0]}`;
+}
+
+/* ==========================================
    ORDENAÇÃO
 ========================================== */
 
@@ -98,30 +117,38 @@ function criarCardMateria(materia, prefixo = "") {
   const categorias = materia.categorias.join(" ");
   const url = caminhoComPrefixo(prefixo, materia.url);
   const imagem = caminhoComPrefixo(prefixo, materia.imagem);
+  const dataISO = materia.data.split("T")[0];
 
   return `
     <article
       class="card-materia"
       data-categoria="${categorias}"
+      itemscope
+      itemtype="https://schema.org/Article"
     >
+      <meta itemprop="mainEntityOfPage" content="${urlAbsoluta(materia.url)}">
+
       <a
         href="${url}"
         class="link-imagem-materia"
         aria-label="Ler: ${materia.titulo}"
+        itemprop="url"
       >
         <img
           src="${imagem}"
           alt="${materia.alt}"
           loading="lazy"
+          itemprop="image"
         >
       </a>
 
       <div class="card-conteudo">
+
         <span class="categoria">
           ${materia.categoriaTexto}
         </span>
 
-        <h3>
+        <h3 itemprop="headline">
           <a
             href="${url}"
             class="link-titulo-materia"
@@ -130,7 +157,17 @@ function criarCardMateria(materia, prefixo = "") {
           </a>
         </h3>
 
-        <p>${materia.resumo}</p>
+        <p itemprop="description">
+          ${materia.resumo}
+        </p>
+
+        <time
+          datetime="${dataISO}"
+          itemprop="datePublished"
+          style="display:none"
+        >
+          ${dataFormatada(materia.data)}
+        </time>
 
         <a
           href="${url}"
@@ -138,6 +175,7 @@ function criarCardMateria(materia, prefixo = "") {
         >
           Ler matéria
         </a>
+
       </div>
     </article>
   `;
@@ -186,6 +224,7 @@ function renderizarDestaquePrincipal() {
     </div>
 
     <div class="destaque-conteudo">
+
       <span class="categoria">
         ${materia.categoriaTexto}
       </span>
@@ -204,6 +243,7 @@ function renderizarDestaquePrincipal() {
       <a href="${materia.url}" class="botao">
         Ler matéria
       </a>
+
     </div>
   `;
 }
@@ -317,6 +357,62 @@ function ativarFiltros() {
 }
 
 /* ==========================================
+   DADOS ESTRUTURADOS DA LISTAGEM
+========================================== */
+
+function adicionarDadosEstruturados() {
+  const paginaInicial =
+    document.querySelector("#ultimas-materias") !== null;
+
+  const paginaMaterias =
+    document.querySelector("#todas-materias") !== null;
+
+  const paginaCategoria =
+    document.querySelector("#categoria-materias") !== null;
+
+  if (!paginaInicial && !paginaMaterias && !paginaCategoria) {
+    return;
+  }
+
+  let lista = ordenarMaterias(MATERIAS);
+
+  if (paginaInicial) {
+    lista = lista.slice(0, 3);
+  }
+
+  if (paginaCategoria) {
+    const categoria = document.body.dataset.categoriaPagina;
+
+    lista = lista.filter((materia) => {
+      return materia.categorias.includes(categoria);
+    });
+  }
+
+  const dados = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": paginaInicial
+      ? "Últimas matérias do Inferno Escarlate"
+      : paginaCategoria
+        ? "Matérias por categoria do Inferno Escarlate"
+        : "Todas as matérias do Inferno Escarlate",
+    "itemListElement": lista.map((materia, indice) => ({
+      "@type": "ListItem",
+      "position": indice + 1,
+      "url": urlAbsoluta(materia.url),
+      "name": materia.titulo
+    }))
+  };
+
+  const script = document.createElement("script");
+
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(dados);
+
+  document.head.appendChild(script);
+}
+
+/* ==========================================
    INICIALIZAÇÃO
 ========================================== */
 
@@ -325,4 +421,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizarUltimasMaterias();
   renderizarTodasMaterias();
   renderizarPaginaCategoria();
+  adicionarDadosEstruturados();
 });
