@@ -1,0 +1,844 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Rock Scene Girls | Música, Shows e Festivais | Inferno Escarlate</title>
+  <meta name="description" content="Rock Scene Girls é a coluna do Inferno Escarlate dedicada ao rock, álbuns, artistas, shows, festivais e à cena musical.">
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://infernoescarlate.com/Colunas/rock-scene-girls.html">
+
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+  <meta property="og:title" content="Rock Scene Girls | Inferno Escarlate">
+  <meta property="og:description" content="Rock, álbuns, shows, festivais e histórias da cena musical no Rock Scene Girls.">
+  <meta property="og:url" content="https://infernoescarlate.com/Colunas/rock-scene-girls.html">
+  <meta property="og:image" content="https://infernoescarlate.com/imagem/logo-rock-scene-girls.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="../css/style.css?v=108">
+
+  <!-- IDENTIDADE ROCK SCENE GIRLS -->
+  <style>
+    :root {
+      --rock-vermelho: #e4273e;
+      --rock-vermelho-claro: #ff697a;
+      --rock-branco: #f0e9e9;
+      --rock-fundo: #0b090a;
+      --rock-card: #171214;
+      --rock-borda: #39272d;
+    }
+
+    /* NAVEGAÇÃO */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+    /* ESTRUTURA */
+
+    .pagina-rock-scene-girls {
+      min-height: 100vh;
+      background: var(--rock-fundo);
+    }
+
+    /* ==========================================
+       BANNER
+    ========================================== */
+
+    .pagina-rock-scene-girls .pagina-topo {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      min-height: 590px !important;
+      padding: 165px 7% 90px !important;
+
+      overflow: hidden;
+      border: 0 !important;
+      box-shadow: none !important;
+
+      background:
+        radial-gradient(
+          ellipse at 80% 35%,
+          rgba(228, 39, 62, 0.27),
+          transparent 49%
+        ),
+        radial-gradient(
+          ellipse at 35% 95%,
+          rgba(108, 18, 33, 0.25),
+          transparent 55%
+        ),
+        linear-gradient(
+          120deg,
+          #080708 10%,
+          #251015 61%,
+          #0b090a 100%
+        ) !important;
+    }
+
+    /* TIPOGRAFIA DECORATIVA DO BANNER */
+
+    .pagina-rock-scene-girls .pagina-topo::before {
+      content: "ROCK";
+      position: absolute;
+      right: -2%;
+      top: 75px;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(15rem, 34vw, 40rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -8px;
+
+      color: rgba(255, 77, 97, 0.07);
+
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* RETIRA A LINHA/ORNAMENTO GLOBAL */
+
+    .pagina-rock-scene-girls .pagina-topo::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .pagina-rock-scene-girls .pagina-topo-conteudo {
+      position: relative;
+      z-index: 1;
+
+      width: min(1180px, 100%) !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+
+    .pagina-rock-scene-girls .pagina-topo .subtitulo-secao {
+      display: block;
+      margin-bottom: 18px;
+
+      color: var(--rock-vermelho-claro);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .pagina-rock-scene-girls .pagina-topo h1 {
+      max-width: 1050px;
+      margin: 0 0 25px !important;
+
+      color: var(--rock-branco) !important;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 11vw, 9.5rem) !important;
+      font-weight: 400;
+      line-height: 0.9 !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .pagina-rock-scene-girls .pagina-topo-conteudo > p {
+      max-width: 690px !important;
+      margin-bottom: 30px !important;
+
+      color: #cebec2 !important;
+      font-size: 1.06rem;
+      line-height: 1.8;
+    }
+
+    /* BOTÕES */
+
+    .pagina-rock-scene-girls .botao-rock {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+
+      background: var(--rock-vermelho);
+      border: 1px solid var(--rock-vermelho);
+      color: #ffffff;
+
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .pagina-rock-scene-girls .botao-rock:hover {
+      background: transparent;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .pagina-rock-scene-girls .botao-rock:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       SOBRE A COLUNA
+       LOGO E TEXTO ALINHADOS
+    ========================================== */
+
+    .pagina-rock-scene-girls .sobre-coluna {
+      padding-top: 80px;
+      padding-bottom: 75px;
+    }
+
+    /*
+      LINHA 1 — ETIQUETA
+      LINHA 2 — LOGO E CONTEÚDO
+
+      O topo e a base da área da logo
+      acompanham o título e o parágrafo.
+    */
+
+    .pagina-rock-scene-girls .sobre-rock-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 35px;
+      row-gap: 16px;
+
+      align-items: stretch;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .pagina-rock-scene-girls .sobre-etiqueta {
+      grid-column: 2;
+      grid-row: 1;
+
+      display: block;
+      margin: 0 !important;
+
+      color: var(--rock-vermelho-claro);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    /* LOGO */
+
+    .pagina-rock-scene-girls .sobre-rock-logo {
+      grid-column: 1;
+      grid-row: 2;
+
+      position: relative;
+      display: block;
+
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      min-height: 0;
+
+      overflow: hidden;
+      align-self: stretch;
+    }
+
+    .pagina-rock-scene-girls .sobre-rock-logo .logo-rock-scene-girls {
+      position: absolute;
+      inset: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    /* TEXTO */
+
+    .pagina-rock-scene-girls
+    .sobre-rock-layout
+    .descricao-coluna {
+      grid-column: 2;
+      grid-row: 2;
+
+      display: block;
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      text-align: left;
+    }
+
+    .pagina-rock-scene-girls
+    .sobre-rock-layout
+    .descricao-coluna h2 {
+      margin: 0 0 20px !important;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .pagina-rock-scene-girls
+    .sobre-rock-layout
+    .descricao-coluna p {
+      max-width: 800px;
+      margin: 0 !important;
+
+      color: #c2b5b8;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* ==========================================
+       MATÉRIAS
+    ========================================== */
+
+    .pagina-rock-scene-girls .secao-publicacoes {
+      padding-top: 30px;
+      padding-bottom: 110px;
+    }
+
+    .pagina-rock-scene-girls .titulo-secao {
+      margin-bottom: 35px;
+    }
+
+    .pagina-rock-scene-girls .titulo-secao > span {
+      color: var(--rock-vermelho-claro);
+    }
+
+    .grade-rock {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    /* CARD DE MATÉRIA */
+
+    .card-rock {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+
+      background: var(--rock-card);
+      border: 1px solid var(--rock-borda);
+      overflow: hidden;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card-rock:hover {
+      transform: translateY(-5px);
+      border-color: var(--rock-vermelho);
+    }
+
+    .card-rock-imagem {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .card-rock-imagem img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card-rock:hover .card-rock-imagem img {
+      transform: scale(1.04);
+    }
+
+    .card-rock-conteudo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px;
+    }
+
+    .card-rock-categoria {
+      display: block;
+      margin-bottom: 14px;
+
+      color: var(--rock-vermelho-claro);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .card-rock h3 {
+      margin: 0 0 16px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.05rem;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .card-rock h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card-rock h3 a:hover {
+      color: var(--rock-vermelho-claro);
+    }
+
+    .card-rock p {
+      flex: 1;
+      margin: 0 0 25px;
+
+      color: #c1b5b8;
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .card-rock-link {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 7px;
+
+      color: #ffffff;
+      border-bottom: 2px solid var(--rock-vermelho);
+
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .card-rock-link:hover {
+      color: var(--rock-vermelho-claro);
+    }
+
+    /* SEM MATÉRIAS */
+
+    .rock-sem-materias {
+      padding: 40px;
+
+      background: var(--rock-card);
+      border: 1px solid var(--rock-borda);
+    }
+
+    .rock-sem-materias h3 {
+      margin: 0 0 12px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .rock-sem-materias p {
+      margin: 0 0 24px;
+
+      color: #c2b5b8;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .rodape-principal {
+      margin-top: 0;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — TABLET
+    ========================================== */
+
+    @media screen and (max-width: 1000px) {
+      .grade-rock {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pagina-rock-scene-girls .sobre-rock-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        column-gap: 25px;
+      }
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — CELULAR
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+      .pagina-rock-scene-girls .pagina-topo {
+        min-height: 490px !important;
+        padding: 130px 6% 70px !important;
+      }
+
+      .pagina-rock-scene-girls .pagina-topo h1 {
+        font-size: clamp(4rem, 13vw, 6rem) !important;
+      }
+
+      .pagina-rock-scene-girls .pagina-topo::before {
+        top: 150px;
+        right: -5%;
+        font-size: 46vw;
+        letter-spacing: -3px;
+      }
+
+      .pagina-rock-scene-girls .sobre-coluna {
+        padding-top: 60px;
+        padding-bottom: 50px;
+      }
+
+      .pagina-rock-scene-girls .sobre-rock-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 24px;
+      }
+
+      .pagina-rock-scene-girls .sobre-etiqueta {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .pagina-rock-scene-girls .sobre-rock-logo {
+        grid-column: 1;
+        grid-row: 2;
+
+        width: min(260px, 100%);
+        height: 260px;
+        justify-self: start;
+      }
+
+      .pagina-rock-scene-girls
+      .sobre-rock-layout
+      .descricao-coluna {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .pagina-rock-scene-girls .secao-publicacoes {
+        padding-bottom: 75px;
+      }
+
+      .grade-rock {
+        grid-template-columns: 1fr;
+      }
+
+      .rock-sem-materias {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topo">
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html" class="ativo">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+    </nav>
+  </header>
+
+  <!-- CONTEÚDO -->
+
+  <main class="pagina-coluna pagina-rock-scene-girls">
+
+    <!-- BANNER -->
+
+    <section class="pagina-topo">
+      <div class="pagina-topo-conteudo">
+
+        <span class="subtitulo-secao">
+          Rock • Música • Shows • Festivais
+        </span>
+
+        <h1>Rock Scene Girls</h1>
+
+        <p>
+          Um olhar para a música que acontece nos palcos,
+          nos discos e nos bastidores. Acompanhamos
+          artistas, lançamentos, apresentações e festivais,
+          explorando as diferentes cenas que fazem parte
+          da história e do presente do rock.
+        </p>
+
+        <a href="#materias-coluna" class="botao-rock">
+          Explorar matérias ↓
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SOBRE A COLUNA -->
+
+    <section class="secao sobre-coluna">
+
+      <div class="sobre-rock-layout">
+
+        <!-- ETIQUETA EM LINHA INDEPENDENTE -->
+
+        <span class="sobre-etiqueta">
+          Sobre a coluna
+        </span>
+
+        <!-- LOGO -->
+
+        <div class="sobre-rock-logo">
+          <img
+            src="../imagem/logo-rock-scene-girls.png"
+            alt="Logo da coluna Rock Scene Girls"
+            class="logo-rock-scene-girls"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+
+        <div class="descricao-coluna">
+
+          <h2>O rock dentro e fora dos palcos</h2>
+
+          <p>
+            Rock Scene Girls é um espaço para acompanhar
+            a música em suas diferentes fases e expressões.
+            A coluna reúne críticas de álbuns, análises
+            de lançamentos, coberturas de shows e festivais,
+            além de histórias de artistas e bandas que
+            marcaram ou continuam transformando a cena.
+            Entre produções independentes, grandes turnês
+            e movimentos musicais, buscamos observar
+            como o rock se reinventa e encontra novos
+            públicos sem deixar de dialogar com sua história.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MATÉRIAS -->
+
+    <section
+      class="secao secao-publicacoes"
+      id="materias-coluna"
+    >
+
+      <div class="titulo-secao">
+        <span>Música • Rock • Coberturas</span>
+        <h2>Matérias do Rock Scene Girls</h2>
+      </div>
+
+      <!-- ESPAÇO PARA FUTURAS MATÉRIAS -->
+
+      <div class="grade-rock">
+        <!-- Cards serão adicionados aqui. -->
+      </div>
+
+      <!-- AVISO INICIAL -->
+
+      <div class="rock-sem-materias">
+        <h3>Novas matérias em breve</h3>
+
+        <p>
+          O Rock Scene Girls está preparando suas
+          próximas publicações. Enquanto isso,
+          confira outras notícias, críticas e
+          coberturas musicais do Inferno Escarlate.
+        </p>
+
+        <a href="../materias.html" class="botao-rock">
+          Ver todas as matérias →
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+
+  <footer class="rodape-principal">
+    <div class="rodape-grade">
+
+      <!-- MARCA -->
+
+      <div class="rodape-marca">
+        <h2>Inferno Escarlate</h2>
+
+        <p>
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
+        </p>
+
+        <a href="../contato.html" class="rodape-contato">
+          Entre em contato
+        </a>
+      </div>
+
+      <!-- NAVEGAÇÃO -->
+
+      <div class="rodape-coluna">
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+        <a href="../trabalhe-comigo/index.html">Trabalhe comigo</a>
+      </div>
+
+      <!-- CATEGORIAS -->
+
+      <div class="rodape-coluna">
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/criticas.html">Críticas</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+      </div>
+
+      <!-- COLUNAS -->
+
+      <div class="rodape-coluna">
+        <h3>Colunas</h3>
+
+        <a href="arquivo-idol.html">Arquivo Idol</a>
+        <a href="inferno-marfim.html">Inferno Marfim</a>
+        <a href="rock-scene-girls.html">Rock Scene Girls</a>
+        <a href="inferno-sepia.html">Inferno Sépia</a>
+        <a href="inferno-purpura.html">Inferno Púrpura</a>
+        <a href="inferno-turquesa.html">Inferno Turquesa</a>
+        <a href="backstage-da-estagiaria.html">Backstage da Estagiária</a>
+        <a href="arquivo-anime.html">Arquivo Anime</a>
+      </div>
+
+      <!-- REDES SOCIAIS -->
+
+      <div class="rodape-coluna">
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+      </div>
+
+    </div>
+
+    <!-- BASE -->
+
+    <div class="rodape-base">
+      <p>
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
+      </p>
+
+      <div class="rodape-links-legais">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MENU RESPONSIVO -->
+  <script src="../js/script.js?v=104"></script>
+
+</body>
+</html>

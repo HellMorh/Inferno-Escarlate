@@ -1,0 +1,902 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Arquivo Idol | K-pop, Doramas e Cultura Asiática | Inferno Escarlate</title>
+  <meta name="description" content="Arquivo Idol é a coluna do Inferno Escarlate dedicada ao K-pop, doramas, novelas asiáticas, artistas e cultura idol.">
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://infernoescarlate.com/Colunas/arquivo-idol.html">
+
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+  <meta property="og:title" content="Arquivo Idol | Inferno Escarlate">
+  <meta property="og:description" content="K-pop, doramas, novelas asiáticas e cultura idol em uma coluna dedicada ao entretenimento asiático.">
+  <meta property="og:url" content="https://infernoescarlate.com/Colunas/arquivo-idol.html">
+  <meta property="og:image" content="https://infernoescarlate.com/imagem/logo-arquivo-idol.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="../css/style.css?v=108">
+
+  <!-- CSS EXCLUSIVO -->
+  <style>
+    :root {
+      --idol-rosa: #f18ab6;
+      --idol-rosa-claro: #ffd5e7;
+      --idol-vinho: #762342;
+      --idol-fundo: #0c080d;
+      --idol-card: #181019;
+    }
+
+    /* MENU SUPERIOR */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+    /* ESTRUTURA */
+
+    .pagina-arquivo-idol {
+      min-height: 100vh;
+      background: var(--idol-fundo);
+    }
+
+    /* BANNER */
+
+    .pagina-arquivo-idol .pagina-topo {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      min-height: 590px !important;
+      padding: 165px 7% 90px !important;
+
+      overflow: hidden;
+      border: none !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+
+      background:
+        radial-gradient(
+          ellipse at 79% 30%,
+          rgba(241, 138, 182, 0.25),
+          transparent 48%
+        ),
+        radial-gradient(
+          ellipse at 36% 90%,
+          rgba(118, 35, 66, 0.35),
+          transparent 60%
+        ),
+        linear-gradient(
+          115deg,
+          #09070a 9%,
+          #301326 65%,
+          #0a070b 100%
+        ) !important;
+    }
+
+    /* TEXTO DECORATIVO */
+
+    .pagina-arquivo-idol .pagina-topo::before {
+      content: "IDOL";
+      position: absolute;
+      top: 95px;
+      right: -2%;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(12rem, 29vw, 33rem);
+      line-height: 1;
+      letter-spacing: -8px;
+
+      color: rgba(255, 197, 221, 0.065);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .pagina-arquivo-idol .pagina-topo::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .pagina-arquivo-idol .pagina-topo-conteudo {
+      position: relative;
+      z-index: 1;
+
+      width: min(1180px, 100%) !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+
+    .pagina-arquivo-idol .pagina-topo .subtitulo-secao {
+      display: block;
+      margin-bottom: 18px;
+
+      color: var(--idol-rosa);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .pagina-arquivo-idol .pagina-topo h1 {
+      margin: 0 0 25px !important;
+
+      color: var(--idol-rosa-claro) !important;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 12vw, 10rem) !important;
+      font-weight: 400;
+      line-height: 0.86 !important;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .pagina-arquivo-idol .pagina-topo-conteudo > p {
+      max-width: 675px !important;
+      margin-bottom: 30px !important;
+
+      color: #e0c7d5 !important;
+      font-size: 1.06rem;
+      line-height: 1.8;
+    }
+
+    /* BOTÕES */
+
+    .pagina-arquivo-idol .botao-idol {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 23px;
+
+      color: #180911;
+      background: var(--idol-rosa);
+      border: 1px solid var(--idol-rosa);
+
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .pagina-arquivo-idol .botao-idol:hover {
+      color: var(--idol-rosa-claro);
+      background: transparent;
+    }
+
+    /* ==========================================
+       SOBRE A COLUNA
+       ALINHAMENTO PRECISO ENTRE LOGO E TEXTO
+    ========================================== */
+
+    .pagina-arquivo-idol .sobre-coluna {
+      padding-top: 80px;
+      padding-bottom: 75px;
+    }
+
+    /*
+      A seção agora possui DUAS LINHAS:
+
+      Linha 1:
+      - Espaço vazio | SOBRE A COLUNA
+
+      Linha 2:
+      - Logo | Título e parágrafo
+
+      Assim, a altura da logo acompanha
+      exclusivamente o título e o parágrafo.
+    */
+
+    .pagina-arquivo-idol .sobre-idol-layout {
+      display: grid;
+
+      grid-template-columns: 260px minmax(0, 1fr);
+      grid-template-rows: auto auto;
+
+      column-gap: 35px;
+      row-gap: 16px;
+
+      align-items: stretch;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* ETIQUETA ACIMA DO TÍTULO */
+
+    .pagina-arquivo-idol .sobre-etiqueta {
+      grid-column: 2;
+      grid-row: 1;
+
+      display: block;
+      margin: 0 !important;
+
+      color: var(--idol-rosa);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================
+       ÁREA DA LOGO
+    ========================================== */
+
+    .pagina-arquivo-idol .sobre-idol-logo {
+      grid-column: 1;
+      grid-row: 2;
+
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      min-width: 0;
+
+      display: block;
+
+      align-self: stretch;
+      overflow: hidden;
+    }
+
+    /*
+      A IMAGEM PREENCHE A MESMA ALTURA
+      DO BLOCO QUE CONTÉM O TÍTULO E
+      O PARÁGRAFO, SEM DISTORÇÃO.
+    */
+
+    .pagina-arquivo-idol .sobre-idol-logo .logo-arquivo-idol {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+      max-width: none;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    /* ==========================================
+       BLOCO DO TÍTULO E PARÁGRAFO
+    ========================================== */
+
+    .pagina-arquivo-idol
+    .sobre-idol-layout
+    .descricao-coluna {
+      grid-column: 2;
+      grid-row: 2;
+
+      display: block;
+
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      text-align: left;
+      align-self: stretch;
+    }
+
+    /* TÍTULO */
+
+    .pagina-arquivo-idol
+    .sobre-idol-layout
+    .descricao-coluna h2 {
+      margin: 0 0 20px !important;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    /* PARÁGRAFO */
+
+    .pagina-arquivo-idol
+    .sobre-idol-layout
+    .descricao-coluna p {
+      max-width: 800px;
+      margin: 0 !important;
+
+      color: #c3b2be;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* ==========================================
+       PUBLICAÇÕES
+    ========================================== */
+
+    .pagina-arquivo-idol .secao-publicacoes {
+      padding-top: 30px;
+      padding-bottom: 110px;
+    }
+
+    .pagina-arquivo-idol .titulo-secao {
+      margin-bottom: 35px;
+    }
+
+    .pagina-arquivo-idol .titulo-secao > span {
+      color: var(--idol-rosa);
+    }
+
+    .grade-idol {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    /* CARDS */
+
+    .card-idol {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+
+      background: var(--idol-card);
+      border: 1px solid #42263b;
+      overflow: hidden;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card-idol:hover {
+      transform: translateY(-5px);
+      border-color: var(--idol-rosa);
+    }
+
+    .card-idol-imagem {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .card-idol-imagem img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card-idol:hover .card-idol-imagem img {
+      transform: scale(1.04);
+    }
+
+    .card-idol-conteudo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px;
+    }
+
+    .card-idol-categoria {
+      display: block;
+      margin-bottom: 14px;
+
+      color: var(--idol-rosa);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .card-idol h3 {
+      margin: 0 0 16px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.05rem;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .card-idol h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card-idol h3 a:hover {
+      color: var(--idol-rosa);
+    }
+
+    .card-idol p {
+      flex: 1;
+      margin: 0 0 25px;
+
+      color: #c6b8c0;
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .card-idol-link {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 7px;
+
+      color: var(--idol-rosa-claro);
+      border-bottom: 2px solid var(--idol-rosa);
+
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    /* SEM PUBLICAÇÕES */
+
+    .idol-sem-materias {
+      padding: 40px;
+      background: var(--idol-card);
+      border: 1px solid #42263b;
+    }
+
+    .idol-sem-materias h3 {
+      margin: 0 0 12px;
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .idol-sem-materias p {
+      margin: 0 0 24px;
+      color: #c6b8c0;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* RODAPÉ */
+
+    .rodape-principal {
+      margin-top: 0;
+    }
+
+    /* ==========================================
+       TABLET
+    ========================================== */
+
+    @media screen and (max-width: 1000px) {
+
+      .grade-idol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pagina-arquivo-idol .sobre-idol-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        column-gap: 25px;
+      }
+
+    }
+
+    /* ==========================================
+       CELULAR
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .pagina-arquivo-idol .pagina-topo {
+        min-height: 490px !important;
+        padding: 130px 6% 70px !important;
+      }
+
+      .pagina-arquivo-idol .pagina-topo h1 {
+        font-size: clamp(4.6rem, 16vw, 7rem) !important;
+      }
+
+      .pagina-arquivo-idol .pagina-topo::before {
+        top: 140px;
+        right: -5%;
+        font-size: 48vw;
+        letter-spacing: -3px;
+      }
+
+      .pagina-arquivo-idol .sobre-coluna {
+        padding-top: 60px;
+        padding-bottom: 50px;
+      }
+
+      /*
+        No celular, a logo fica acima
+        do texto para evitar aperto.
+      */
+
+      .pagina-arquivo-idol .sobre-idol-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 24px;
+      }
+
+      .pagina-arquivo-idol .sobre-etiqueta {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .pagina-arquivo-idol .sobre-idol-logo {
+        grid-column: 1;
+        grid-row: 2;
+
+        width: 220px;
+        height: 250px;
+
+        justify-self: start;
+      }
+
+      .pagina-arquivo-idol
+      .sobre-idol-layout
+      .descricao-coluna {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .pagina-arquivo-idol .secao-publicacoes {
+        padding-bottom: 75px;
+      }
+
+      .grade-idol {
+        grid-template-columns: 1fr;
+      }
+
+      .idol-sem-materias {
+        padding: 26px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topo">
+
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html" class="ativo">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+    </nav>
+
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+
+  <main class="pagina-coluna pagina-arquivo-idol">
+
+    <!-- BANNER -->
+
+    <section class="pagina-topo">
+
+      <div class="pagina-topo-conteudo">
+
+        <span class="subtitulo-secao">
+          K-pop • Doramas • Cultura Idol
+        </span>
+
+        <h1>Arquivo Idol</h1>
+
+        <p>
+          Da música às telas, um espaço para acompanhar
+          artistas, produções e fenômenos que movimentam
+          o entretenimento asiático. Entre lançamentos,
+          narrativas e fandoms, o Arquivo Idol observa
+          a cultura pop que atravessa fronteiras.
+        </p>
+
+        <a
+          href="#materias-coluna"
+          class="botao-idol"
+        >
+          Explorar matérias ↓
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         SOBRE A COLUNA
+    ========================================== -->
+
+    <section class="secao sobre-coluna">
+
+      <div class="sobre-idol-layout">
+
+        <!-- ETIQUETA INDEPENDENTE -->
+
+        <span class="sobre-etiqueta">
+          Sobre a coluna
+        </span>
+
+        <!-- LOGO -->
+
+        <div class="sobre-idol-logo">
+
+          <img
+            src="../imagem/logo-arquivo-idol.png"
+            alt="Logo da coluna Arquivo Idol"
+            class="logo-arquivo-idol"
+            loading="lazy"
+          >
+
+        </div>
+
+        <!-- TÍTULO E TEXTO -->
+
+        <div class="descricao-coluna">
+
+          <h2>
+            Muito além dos palcos
+          </h2>
+
+          <p>
+            O Arquivo Idol acompanha o universo do
+            entretenimento asiático a partir da música,
+            do audiovisual e dos movimentos culturais
+            que aproximam artistas e públicos.
+            A coluna reúne conteúdos sobre K-pop,
+            K-dramas, novelas asiáticas, trajetórias
+            de idols e produções que ganham espaço
+            dentro e fora de seus países de origem.
+            Entre estreias, performances e fenômenos
+            de audiência, buscamos compreender
+            também as histórias e os contextos
+            por trás dessas produções.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PUBLICAÇÕES -->
+
+    <section
+      class="secao secao-publicacoes"
+      id="materias-coluna"
+    >
+
+      <div class="titulo-secao">
+
+        <span>
+          Música • Séries • Cultura Asiática
+        </span>
+
+        <h2>
+          Matérias do Arquivo Idol
+        </h2>
+
+      </div>
+
+      <!-- FUTUROS CARDS -->
+
+      <div class="grade-idol">
+        <!-- MATÉRIAS SERÃO INSERIDAS AQUI -->
+      </div>
+
+      <!-- AVISO INICIAL -->
+
+      <div class="idol-sem-materias">
+
+        <h3>
+          Novas matérias em breve
+        </h3>
+
+        <p>
+          Estamos preparando os próximos conteúdos
+          do Arquivo Idol. Enquanto isso, acompanhe
+          as publicações do Inferno Escarlate.
+        </p>
+
+        <a
+          href="../materias.html"
+          class="botao-idol"
+        >
+          Ver todas as matérias →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+
+  <footer class="rodape-principal">
+
+    <div class="rodape-grade">
+
+      <div class="rodape-marca">
+
+        <h2>Inferno Escarlate</h2>
+
+        <p>
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
+        </p>
+
+        <a href="../contato.html" class="rodape-contato">
+          Entre em contato
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+        <a href="../trabalhe-comigo/index.html">
+          Trabalhe comigo
+        </a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/criticas.html">Críticas</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="arquivo-idol.html">Arquivo Idol</a>
+        <a href="inferno-marfim.html">Inferno Marfim</a>
+        <a href="rock-scene-girls.html">Rock Scene Girls</a>
+        <a href="inferno-sepia.html">Inferno Sépia</a>
+        <a href="inferno-purpura.html">Inferno Púrpura</a>
+        <a href="inferno-turquesa.html">Inferno Turquesa</a>
+        <a href="backstage-da-estagiaria.html">Backstage da Estagiária</a>
+        <a href="arquivo-anime.html">Arquivo Anime</a>
+
+      </div>
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="rodape-base">
+
+      <p>
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
+      </p>
+
+      <div class="rodape-links-legais">
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- MENU RESPONSIVO -->
+
+  <script src="../js/script.js?v=104"></script>
+
+</body>
+</html>
