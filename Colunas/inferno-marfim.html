@@ -4,11 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
 
@@ -20,11 +16,7 @@
   >
 
   <meta name="author" content="Inferno Escarlate">
-
-  <meta
-    name="robots"
-    content="index, follow, max-image-preview:large"
-  >
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
   <link
     rel="canonical"
@@ -61,10 +53,7 @@
 
   <!-- FONTES -->
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
@@ -77,14 +66,11 @@
     rel="stylesheet"
   >
 
-  <!-- CSS ORIGINAL DO PORTAL -->
+  <!-- CSS PRINCIPAL -->
 
-  <link
-    rel="stylesheet"
-    href="../css/style.css?v=108"
-  >
+  <link rel="stylesheet" href="../css/style.css?v=108">
 
-  <!-- ESTILOS EXCLUSIVOS DO INFERNO MARFIM -->
+  <!-- CSS EXCLUSIVO DO INFERNO MARFIM -->
 
   <style>
 
@@ -95,7 +81,9 @@
       --fundo-marfim: #0a0908;
     }
 
-    /* NAVEGAÇÃO */
+    /* ==========================================
+       NAVEGAÇÃO
+    ========================================== */
 
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
@@ -108,18 +96,22 @@
       color: #ffffff;
     }
 
-    /* ESTRUTURA */
+    /* ==========================================
+       ESTRUTURA
+    ========================================== */
 
     .pagina-inferno-marfim {
       background: var(--fundo-marfim);
       min-height: 100vh;
     }
 
-    /* APRESENTAÇÃO */
+    /* ==========================================
+       BANNER PRINCIPAL
+    ========================================== */
 
     .pagina-inferno-marfim .pagina-topo {
-      min-height: 590px;
-      padding: 165px 7% 90px;
+      min-height: 590px !important;
+      padding: 165px 7% 90px !important;
 
       display: flex;
       align-items: flex-end;
@@ -127,10 +119,8 @@
       position: relative;
       overflow: hidden;
 
-      /* REMOVE BORDAS E LINHAS INFERIORES */
-
-      border: none;
-      border-bottom: 0;
+      border: none !important;
+      border-bottom: none !important;
       box-shadow: none;
 
       background:
@@ -144,10 +134,10 @@
           #080706 12%,
           #32271c 65%,
           #090807 100%
-        );
+        ) !important;
     }
 
-    /* LETRA DECORATIVA DO FUNDO */
+    /* LETRA DECORATIVA DO BANNER */
 
     .pagina-inferno-marfim .pagina-topo::before {
       content: "M";
@@ -161,18 +151,16 @@
       line-height: 1;
 
       color: rgba(228, 202, 162, 0.055);
+
       pointer-events: none;
       user-select: none;
     }
 
-    /*
-      ELEMENTO INFERIOR DESATIVADO.
-      NÃO HÁ MAIS LINHA BEGE NO BANNER.
-    */
+    /* REMOVE LINHA INFERIOR */
 
     .pagina-inferno-marfim .pagina-topo::after {
-      content: none;
-      display: none;
+      content: none !important;
+      display: none !important;
     }
 
     /* CONTEÚDO DO BANNER */
@@ -181,11 +169,12 @@
       position: relative;
       z-index: 1;
 
-      width: min(1180px, 100%);
-      margin: 0 auto;
+      width: min(1180px, 100%) !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
     }
 
-    .pagina-inferno-marfim .subtitulo-secao {
+    .pagina-inferno-marfim .pagina-topo .subtitulo-secao {
       display: block;
       margin-bottom: 18px;
 
@@ -196,24 +185,23 @@
       text-transform: uppercase;
     }
 
-    .pagina-inferno-marfim h1 {
-      margin: 0 0 25px;
+    .pagina-inferno-marfim .pagina-topo h1 {
+      margin: 0 0 25px !important;
 
+      color: var(--marfim-claro) !important;
       font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(5rem, 12vw, 10rem);
+      font-size: clamp(5rem, 12vw, 10rem) !important;
       font-weight: 400;
-      line-height: 0.86;
+      line-height: 0.86 !important;
       letter-spacing: 2px;
       text-transform: uppercase;
-
-      color: var(--marfim-claro);
     }
 
     .pagina-inferno-marfim .pagina-topo-conteudo > p {
-      max-width: 670px;
-      margin-bottom: 30px;
+      max-width: 670px !important;
+      margin-bottom: 30px !important;
 
-      color: #d0c3b3;
+      color: #d0c3b3 !important;
       font-size: 1.06rem;
       line-height: 1.8;
     }
@@ -229,7 +217,6 @@
 
       background: var(--marfim);
       border: 1px solid var(--marfim);
-
       color: #16110d;
 
       font-size: 0.76rem;
@@ -248,22 +235,91 @@
       background: transparent;
     }
 
-    /* SOBRE A COLUNA */
+    /* ==========================================
+       SOBRE A COLUNA
+    ========================================== */
 
     .pagina-inferno-marfim .sobre-coluna {
       padding-top: 80px;
       padding-bottom: 75px;
     }
 
-    .pagina-inferno-marfim .descricao-coluna {
-      max-width: 880px;
-      padding: 0;
-      margin: 0;
-      background: none;
-      border: 0;
+    /* LOGO E TEXTO LADO A LADO */
+
+    .pagina-inferno-marfim .sobre-marfim-layout {
+      display: grid;
+
+      /* LOGO AUMENTADA PARA 250 PX */
+      grid-template-columns: 250px minmax(0, 1fr);
+
+      /* ALINHAMENTO VERTICAL */
+      align-items: center;
+
+      /* DISTÂNCIA ENTRE LOGO E TEXTO */
+      column-gap: 35px;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
     }
 
-    .pagina-inferno-marfim .descricao-coluna .sobre-etiqueta {
+    /* ==========================================
+       LOGO DO INFERNO MARFIM
+    ========================================== */
+
+    .pagina-inferno-marfim .sobre-marfim-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 250px;
+      max-width: 100%;
+    }
+
+    .pagina-inferno-marfim
+    .sobre-marfim-logo
+    .logo-inferno-marfim {
+      display: block;
+
+      width: 250px;
+      max-width: 100%;
+      height: auto;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* ==========================================
+       TEXTO AO LADO DA LOGO
+    ========================================== */
+
+    .pagina-inferno-marfim
+    .sobre-marfim-layout
+    .descricao-coluna {
+      display: block;
+
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      text-align: left;
+    }
+
+    /* SOBRE A COLUNA */
+
+    .pagina-inferno-marfim
+    .descricao-coluna
+    .sobre-etiqueta {
       display: block;
       margin-bottom: 16px;
 
@@ -274,26 +330,36 @@
       text-transform: uppercase;
     }
 
-    .pagina-inferno-marfim .descricao-coluna h2 {
-      margin: 0 0 20px;
+    /* TÍTULO */
 
-      color: #fff;
+    .pagina-inferno-marfim
+    .sobre-marfim-layout
+    .descricao-coluna h2 {
+      margin: 0 0 20px !important;
+
+      color: #ffffff;
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2.6rem, 5vw, 4rem);
       font-weight: 400;
       line-height: 1;
     }
 
-    .pagina-inferno-marfim .descricao-coluna p {
+    /* DESCRIÇÃO */
+
+    .pagina-inferno-marfim
+    .sobre-marfim-layout
+    .descricao-coluna p {
       max-width: 800px;
-      margin: 0;
+      margin: 0 !important;
 
       color: #bfb7ad;
       font-size: 1rem;
       line-height: 1.9;
     }
 
-    /* MATÉRIAS */
+    /* ==========================================
+       PUBLICAÇÕES
+    ========================================== */
 
     .pagina-inferno-marfim .secao-publicacoes {
       padding-top: 30px;
@@ -308,7 +374,7 @@
       color: var(--marfim);
     }
 
-    /* CARDS DAS MATÉRIAS */
+    /* GRADE */
 
     .grade-marfim {
       display: grid;
@@ -316,8 +382,11 @@
       gap: 26px;
     }
 
+    /* CARD */
+
     .card-marfim {
       min-width: 0;
+
       display: flex;
       flex-direction: column;
 
@@ -335,6 +404,8 @@
       border-color: var(--marfim);
     }
 
+    /* IMAGEM */
+
     .card-marfim-imagem {
       display: block;
       aspect-ratio: 16 / 10;
@@ -345,6 +416,7 @@
       display: block;
       width: 100%;
       height: 100%;
+
       object-fit: cover;
 
       transition: transform 0.4s ease;
@@ -353,6 +425,8 @@
     .card-marfim:hover .card-marfim-imagem img {
       transform: scale(1.04);
     }
+
+    /* CONTEÚDO DO CARD */
 
     .card-marfim-conteudo {
       display: flex;
@@ -377,7 +451,7 @@
     .card-marfim h3 {
       margin: 0 0 16px;
 
-      color: #fff;
+      color: #ffffff;
       font-family: "Bebas Neue", sans-serif;
       font-size: 2.05rem;
       font-weight: 400;
@@ -418,7 +492,7 @@
     }
 
     .card-marfim-link:hover {
-      color: #fff;
+      color: #ffffff;
     }
 
     /* RODAPÉ */
@@ -427,7 +501,11 @@
       margin-top: 0;
     }
 
-    /* RESPONSIVIDADE */
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    /* TABLET */
 
     @media screen and (max-width: 1000px) {
 
@@ -435,23 +513,65 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .pagina-inferno-marfim .sobre-marfim-layout {
+        grid-template-columns: 200px minmax(0, 1fr);
+        column-gap: 25px;
+      }
+
+      .pagina-inferno-marfim .sobre-marfim-logo {
+        width: 200px;
+      }
+
+      .pagina-inferno-marfim
+      .sobre-marfim-logo
+      .logo-inferno-marfim {
+        width: 200px;
+      }
+
     }
+
+    /* CELULAR */
 
     @media screen and (max-width: 700px) {
 
+      /* BANNER */
+
       .pagina-inferno-marfim .pagina-topo {
-        min-height: 490px;
-        padding: 130px 6% 70px;
+        min-height: 490px !important;
+        padding: 130px 6% 70px !important;
       }
 
-      .pagina-inferno-marfim h1 {
-        font-size: clamp(4.6rem, 16vw, 7rem);
+      .pagina-inferno-marfim .pagina-topo h1 {
+        font-size: clamp(4.6rem, 16vw, 7rem) !important;
       }
+
+      /* SOBRE A COLUNA */
 
       .pagina-inferno-marfim .sobre-coluna {
         padding-top: 60px;
         padding-bottom: 50px;
       }
+
+      .pagina-inferno-marfim .sobre-marfim-layout {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+      }
+
+      /* LOGO MOBILE */
+
+      .pagina-inferno-marfim .sobre-marfim-logo {
+        width: 180px;
+        justify-content: flex-start;
+      }
+
+      .pagina-inferno-marfim
+      .sobre-marfim-logo
+      .logo-inferno-marfim {
+        width: 180px;
+        margin: 0 !important;
+      }
+
+      /* MATÉRIAS */
 
       .pagina-inferno-marfim .secao-publicacoes {
         padding-bottom: 75px;
@@ -469,7 +589,9 @@
 
 <body>
 
-  <!-- CABEÇALHO DO INFERNO ESCARLATE -->
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
 
   <header class="topo">
 
@@ -524,11 +646,13 @@
 
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
 
   <main class="pagina-coluna pagina-inferno-marfim">
 
-    <!-- APRESENTAÇÃO -->
+    <!-- BANNER -->
 
     <section class="pagina-topo">
 
@@ -559,36 +683,60 @@
 
     </section>
 
-    <!-- SOBRE A COLUNA -->
+    <!-- ==========================================
+         SOBRE A COLUNA
+         LOGO À ESQUERDA + TEXTO À DIREITA
+    ========================================== -->
 
     <section class="secao sobre-coluna">
 
-      <div class="descricao-coluna">
+      <div class="sobre-marfim-layout">
 
-        <span class="sobre-etiqueta">
-          Sobre a coluna
-        </span>
+        <!-- LOGO AUMENTADA -->
 
-        <h2>
-          Entre o riso e o romance
-        </h2>
+        <div class="sobre-marfim-logo">
 
-        <p>
-          O Inferno Marfim reúne críticas, análises e
-          textos sobre comédias, romances e outras
-          produções que exploram o humor e as
-          relações humanas. A coluna acompanha
-          tanto o cinema brasileiro quanto obras
-          internacionais, observando os diferentes
-          caminhos que esses gêneros encontram
-          para representar a vida cotidiana.
-        </p>
+          <img
+            src="../imagem/logo-inferno-marfim.png"
+            alt="Logo do Inferno Marfim"
+            class="logo-inferno-marfim"
+            loading="lazy"
+          >
+
+        </div>
+
+        <!-- TEXTO -->
+
+        <div class="descricao-coluna">
+
+          <span class="sobre-etiqueta">
+            Sobre a coluna
+          </span>
+
+          <h2>
+            Entre o riso e o romance
+          </h2>
+
+          <p>
+            O Inferno Marfim reúne críticas, análises e
+            textos sobre comédias, romances e outras
+            produções que exploram o humor e as
+            relações humanas. A coluna acompanha
+            tanto o cinema brasileiro quanto obras
+            internacionais, observando os diferentes
+            caminhos que esses gêneros encontram
+            para representar a vida cotidiana.
+          </p>
+
+        </div>
 
       </div>
 
     </section>
 
-    <!-- PUBLICAÇÕES -->
+    <!-- ==========================================
+         PUBLICAÇÕES
+    ========================================== -->
 
     <section
       class="secao secao-publicacoes"
@@ -634,10 +782,12 @@
             </span>
 
             <h3>
+
               <a href="../posts/se-eu-fosse-voce-3.html">
                 Se Eu Fosse Você 3 aposta na mesma fórmula
                 e garante nostalgia
               </a>
+
             </h3>
 
             <p>
@@ -664,7 +814,9 @@
 
   </main>
 
-  <!-- RODAPÉ -->
+  <!-- ==========================================
+       RODAPÉ
+  ========================================== -->
 
   <footer class="rodape-principal">
 
@@ -700,9 +852,15 @@
         <h3>Navegação</h3>
 
         <a href="../index.html">Início</a>
+
         <a href="../materias.html">Matérias</a>
+
         <a href="../colunas.html">Colunas</a>
-        <a href="../index.html#categorias">Categorias</a>
+
+        <a href="../index.html#categorias">
+          Categorias
+        </a>
+
         <a href="../contato.html">Contato</a>
 
         <a href="../trabalhe-comigo/index.html">

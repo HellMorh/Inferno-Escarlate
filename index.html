@@ -53,12 +53,9 @@
     content="https://infernoescarlate.com/imagem/banner.png"
   >
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- DADOS ESTRUTURADOS PARA O GOOGLE -->
+  <!-- DADOS ESTRUTURADOS -->
 
   <script type="application/ld+json">
   {
@@ -76,59 +73,13 @@
   }
   </script>
 
-  <!-- CSS PRINCIPAL DO SITE -->
+  <!-- CSS PRINCIPAL -->
 
-  <link
-    rel="stylesheet"
-    href="css/style.css?v=108"
-  >
+  <link rel="stylesheet" href="css/style.css?v=108">
 
   <!-- AJUSTES EXCLUSIVOS DA HOME -->
 
   <style>
-
-    /* CARD DA NOVA CRÍTICA */
-
-    .card-critica-nacional .link-critica-inteira {
-      display: block;
-      width: 100%;
-      height: 100%;
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .card-critica-nacional .link-critica-inteira img {
-      display: block;
-      width: 100%;
-    }
-
-    .card-critica-nacional .link-critica-inteira h3 {
-      color: inherit;
-      transition: color 0.2s ease;
-    }
-
-    .card-critica-nacional .link-critica-inteira:hover h3 {
-      color: var(--vermelho-vivo, #ed1834);
-    }
-
-    .card-critica-nacional .chamada-critica {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 13px 20px;
-      border: 1px solid var(--vermelho-vivo, #ed1834);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      transition: background 0.2s ease;
-    }
-
-    .card-critica-nacional
-    .link-critica-inteira:hover
-    .chamada-critica {
-      background: var(--vermelho-vivo, #ed1834);
-    }
 
     /* LINKS DOS CARDS AUTOMÁTICOS */
 
@@ -160,7 +111,7 @@
       object-fit: cover;
     }
 
-    /* NOVA ABA: TRABALHE COMIGO */
+    /* ABA TRABALHE COMIGO */
 
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
@@ -172,6 +123,319 @@
     .topo .menu a.link-trabalhe-comigo:hover,
     .topo .menu a.link-trabalhe-comigo:focus-visible {
       color: #ffffff;
+    }
+
+    /* ==========================================
+       NOVAS COLUNAS EDITORIAIS
+    ========================================== */
+
+    .secao-colunas-editoriais {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+
+    .secao-colunas-editoriais .titulo-secao {
+      margin-bottom: 35px;
+    }
+
+    /* GRADE COM QUATRO CARDS */
+
+    .grade-colunas-editoriais {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    /* CARD */
+
+    .coluna-editorial {
+      min-width: 0;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      background: #101010;
+      border: 1px solid #272727;
+      overflow: hidden;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .coluna-editorial:hover {
+      transform: translateY(-5px);
+      border-color: var(--cor-coluna, #ed1834);
+    }
+
+    /* CAPA DA COLUNA */
+
+    .coluna-editorial-capa {
+      min-height: 245px;
+      aspect-ratio: 4 / 4.5;
+      padding: 22px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+
+      color: #ffffff;
+      background: var(--fundo-coluna, #222222);
+      text-decoration: none;
+    }
+
+    .coluna-editorial-capa::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 80% 20%,
+          var(--cor-coluna, #ed1834),
+          transparent 60%
+        ),
+        linear-gradient(
+          140deg,
+          transparent,
+          rgba(0, 0, 0, 0.7)
+        );
+
+      opacity: 0.65;
+
+      transition:
+        opacity 0.3s ease,
+        transform 0.5s ease;
+    }
+
+    .coluna-editorial:hover .coluna-editorial-capa::before {
+      opacity: 0.9;
+      transform: scale(1.08);
+    }
+
+    .coluna-editorial-numero {
+      align-self: flex-end;
+
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      opacity: 0.8;
+    }
+
+    .coluna-editorial-titulo {
+      max-width: 100%;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.8rem, 4vw, 4.6rem);
+      font-weight: 400;
+      line-height: 0.93;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      overflow-wrap: break-word;
+    }
+
+    .coluna-editorial-assinatura {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    /* INFORMAÇÕES DO CARD */
+
+    .coluna-editorial-conteudo {
+      padding: 24px;
+
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .coluna-editorial-categoria {
+      display: block;
+      margin-bottom: 14px;
+
+      color: var(--cor-coluna, #ed1834);
+
+      font-size: 0.67rem;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .coluna-editorial-conteudo h3 {
+      margin: 0 0 14px;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.5px;
+    }
+
+    .coluna-editorial-conteudo h3 a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .coluna-editorial-conteudo h3 a:hover {
+      color: var(--cor-coluna, #ed1834);
+    }
+
+    .coluna-editorial-conteudo p {
+      margin: 0 0 25px;
+
+      color: #aeaeae;
+      font-size: 0.86rem;
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .coluna-editorial-link {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 7px;
+
+      color: #ffffff;
+      border-bottom: 2px solid var(--cor-coluna, #ed1834);
+
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition: color 0.2s ease;
+    }
+
+    .coluna-editorial-link:hover {
+      color: var(--cor-coluna, #ed1834);
+    }
+
+    .coluna-editorial a:focus-visible {
+      outline: 2px solid var(--cor-coluna, #ed1834);
+      outline-offset: 4px;
+    }
+
+    /* IDENTIDADES DAS OITO COLUNAS */
+
+    .arquivo-idol {
+      --cor-coluna: #f273ae;
+      --fundo-coluna: #48162f;
+    }
+
+    .inferno-marfim {
+      --cor-coluna: #d9ba88;
+      --fundo-coluna: #50402f;
+    }
+
+    .rock-scene-girls {
+      --cor-coluna: #f04a5d;
+      --fundo-coluna: #3e101b;
+    }
+
+    .inferno-sepia {
+      --cor-coluna: #c39658;
+      --fundo-coluna: #44301c;
+    }
+
+    .inferno-purpura {
+      --cor-coluna: #ac67eb;
+      --fundo-coluna: #29113b;
+    }
+
+    .inferno-turquesa {
+      --cor-coluna: #4bd6cc;
+      --fundo-coluna: #103c3a;
+    }
+
+    .backstage-estagiaria {
+      --cor-coluna: #aab3be;
+      --fundo-coluna: #303640;
+    }
+
+    .arquivo-anime {
+      --cor-coluna: #ff8e61;
+      --fundo-coluna: #512b20;
+    }
+
+    /* LINK PARA TODAS AS COLUNAS */
+
+    .colunas-ver-todas {
+      display: flex;
+      justify-content: center;
+      margin-top: 45px;
+    }
+
+    .colunas-ver-todas a {
+      display: inline-block;
+      padding: 14px 25px;
+
+      color: #ffffff;
+      border: 1px solid #ed1834;
+      text-decoration: none;
+
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .colunas-ver-todas a:hover {
+      background: #ed1834;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media screen and (max-width: 1100px) {
+
+      .grade-colunas-editoriais {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+    }
+
+    @media screen and (max-width: 850px) {
+
+      .grade-colunas-editoriais {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+    }
+
+    @media screen and (max-width: 520px) {
+
+      .grade-colunas-editoriais {
+        grid-template-columns: 1fr;
+      }
+
+      .secao-colunas-editoriais {
+        padding-top: 50px;
+        padding-bottom: 75px;
+      }
+
+      .coluna-editorial-capa {
+        min-height: 260px;
+        aspect-ratio: 16 / 11;
+      }
+
+      .coluna-editorial-titulo {
+        font-size: 4.2rem;
+      }
+
     }
 
   </style>
@@ -225,8 +489,6 @@
       <a href="contato.html">
         Contato
       </a>
-
-      <!-- NOVA PÁGINA -->
 
       <a
         href="trabalhe-comigo/index.html"
@@ -401,8 +663,8 @@
       </div>
 
       <!--
-        O JavaScript exibe as três matérias
-        mais recentes cadastradas no catálogo.
+        O JavaScript exibe as matérias
+        mais recentes do catálogo.
       -->
 
       <div
@@ -414,180 +676,11 @@
     </section>
 
     <!-- ==========================================
-         CRÍTICAS DE CINEMA
+         OITO COLUNAS EDITORIAIS
     ========================================== -->
 
     <section
-      class="secao criticas-destaque"
-      id="criticas-cinema"
-    >
-
-      <div class="titulo-secao">
-
-        <span>
-          Análises e opiniões
-        </span>
-
-        <h2>
-          Críticas de cinema
-        </h2>
-
-      </div>
-
-      <div class="grade-criticas">
-
-        <!-- PRIMEIRA CRÍTICA -->
-
-        <article class="card-critica">
-
-          <a href="posts/materia-03.html">
-
-            <img
-              src="imagem/materia-03.jpg"
-              alt="Spider-Man Brand New Day"
-              loading="lazy"
-            >
-
-          </a>
-
-          <div class="card-critica-conteudo">
-
-            <span class="categoria">
-              Cinema
-            </span>
-
-            <h3>
-
-              <a href="posts/materia-03.html">
-                Spider-Man: Brand New Day inicia uma nova fase
-              </a>
-
-            </h3>
-
-            <p>
-              Uma análise sobre o novo momento
-              de Peter Parker e os caminhos
-              apresentados pelo filme.
-            </p>
-
-            <div class="nota-card">
-
-              <strong>
-                8.5
-              </strong>
-
-              <span>
-                /10
-              </span>
-
-            </div>
-
-            <a href="posts/materia-03.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
-        <!-- SEGUNDA CRÍTICA -->
-
-        <article class="card-critica">
-
-          <a href="Categorias/criticas.html">
-
-            <img
-              src="imagem/coluna-cinema.jpg"
-              alt="Críticas de cinema do Inferno Escarlate"
-              loading="lazy"
-            >
-
-          </a>
-
-          <div class="card-critica-conteudo">
-
-            <span class="categoria">
-              Críticas de cinema
-            </span>
-
-            <h3>
-
-              <a href="Categorias/criticas.html">
-                Explore as críticas de cinema
-              </a>
-
-            </h3>
-
-            <p>
-              Análises, opiniões e avaliações
-              sobre produções do cinema
-              nacional e internacional.
-            </p>
-
-            <a href="Categorias/criticas.html">
-              Ver críticas
-            </a>
-
-          </div>
-
-        </article>
-
-        <!-- ======================================
-             SE EU FOSSE VOCÊ 3
-        ====================================== -->
-
-        <article
-          class="card-critica card-critica-nacional"
-        >
-
-          <a
-            class="link-critica-inteira"
-            href="posts/se-eu-fosse-voce-3.html"
-            aria-label="Ler crítica de Se Eu Fosse Você 3"
-          >
-
-            <img
-              src="imagem/se-eu-fosse-voce-3-capa.jpg"
-              alt="Imagem de divulgação de Se Eu Fosse Você 3"
-              loading="lazy"
-            >
-
-            <div class="card-critica-conteudo">
-
-              <span class="categoria">
-                Cinema nacional • Crítica
-              </span>
-
-              <h3>
-                Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia
-              </h3>
-
-              <p>
-                Cleo Pires e Rafael Infante assumem
-                o protagonismo de uma franquia marcada
-                por Glória Pires e Tony Ramos.
-              </p>
-
-              <span class="chamada-critica">
-                Ler crítica →
-              </span>
-
-            </div>
-
-          </a>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <!-- ==========================================
-         COLUNAS
-    ========================================== -->
-
-    <section
-      class="secao colunas"
+      class="secao secao-colunas-editoriais"
       id="colunas"
     >
 
@@ -603,134 +696,426 @@
 
       </div>
 
-      <div class="grade-colunas">
+      <div class="grade-colunas-editoriais">
 
-        <!-- CENA ESCARLATE -->
+        <!-- 01 — ARQUIVO IDOL -->
 
-        <article class="card-coluna">
+        <article class="coluna-editorial arquivo-idol">
 
-          <img
-            src="imagem/coluna-cinema.jpg"
-            alt="Cena Escarlate"
-            loading="lazy"
+          <a
+            href="Colunas/arquivo-idol.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Arquivo Idol"
           >
 
-          <div class="card-coluna-overlay">
+            <span class="coluna-editorial-numero">
+              01 / 08
+            </span>
 
-            <span>
-              Cinema, séries e TV
+            <span class="coluna-editorial-titulo">
+              Arquivo<br>Idol
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Cultura pop asiática
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              K-pop • Doramas • Cultura asiática
             </span>
 
             <h3>
-              Cena Escarlate
+              <a href="Colunas/arquivo-idol.html">
+                Arquivo Idol
+              </a>
             </h3>
 
             <p>
-              Análises, críticas e novidades
-              do audiovisual.
+              Idols, K-pop, K-dramas, novelas asiáticas
+              e os movimentos que transformam o
+              entretenimento e a cultura pop da Ásia.
             </p>
 
-            <a href="Colunas/cena-escarlate.html">
-              Ver coluna
+            <a
+              href="Colunas/arquivo-idol.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
             </a>
 
           </div>
 
         </article>
 
-        <!-- CHECKPOINT -->
+        <!-- 02 — INFERNO MARFIM -->
 
-        <article class="card-coluna">
+        <article class="coluna-editorial inferno-marfim">
 
-          <img
-            src="imagem/coluna-games.jpg"
-            alt="Checkpoint"
-            loading="lazy"
+          <a
+            href="Colunas/inferno-marfim.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Inferno Marfim"
           >
 
-          <div class="card-coluna-overlay">
+            <span class="coluna-editorial-numero">
+              02 / 08
+            </span>
 
-            <span>
-              Games
+            <span class="coluna-editorial-titulo">
+              Inferno<br>Marfim
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Cinema e entretenimento
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Cinema nacional • Comédia • Romance
             </span>
 
             <h3>
-              Checkpoint
+              <a href="Colunas/inferno-marfim.html">
+                Inferno Marfim
+              </a>
             </h3>
 
             <p>
-              Jogos, lançamentos, bastidores
-              e cultura gamer.
+              Comédias, romances, humor e histórias
+              do cinema que encontram diferentes
+              maneiras de falar sobre as relações humanas.
             </p>
 
-            <a href="Colunas/checkpoint.html">
-              Ver coluna
+            <a
+              href="Colunas/inferno-marfim.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
             </a>
 
           </div>
 
         </article>
 
-        <!-- SOM NO INFERNO -->
+        <!-- 03 — ROCK SCENE GIRLS -->
 
-        <article class="card-coluna">
+        <article class="coluna-editorial rock-scene-girls">
 
-          <img
-            src="imagem/coluna-musica.jpg"
-            alt="Som no Inferno"
-            loading="lazy"
+          <a
+            href="Colunas/rock-scene-girls.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Rock Scene Girls"
           >
 
-          <div class="card-coluna-overlay">
+            <span class="coluna-editorial-numero">
+              03 / 08
+            </span>
 
-            <span>
-              Música e festivais
+            <span class="coluna-editorial-titulo">
+              Rock Scene<br>Girls
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Rock e suas cenas
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Rock • Música • Festivais
             </span>
 
             <h3>
-              Som no Inferno
+              <a href="Colunas/rock-scene-girls.html">
+                Rock Scene Girls
+              </a>
             </h3>
 
             <p>
-              Artistas, shows, festivais
-              e movimentos musicais.
+              Bandas, artistas, discos, shows,
+              festivais e histórias que atravessam
+              diferentes gerações do rock.
             </p>
 
-            <a href="Colunas/som.html">
-              Ver coluna
+            <a
+              href="Colunas/rock-scene-girls.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
             </a>
 
           </div>
 
         </article>
 
-        <!-- ALÉM DO QUADRO -->
+        <!-- 04 — INFERNO SÉPIA -->
 
-        <article class="card-coluna">
+        <article class="coluna-editorial inferno-sepia">
 
-          <img
-            src="imagem/coluna-cultura.jpg"
-            alt="Além do Quadro"
-            loading="lazy"
+          <a
+            href="Colunas/inferno-sepia.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Inferno Sépia"
           >
 
-          <div class="card-coluna-overlay">
+            <span class="coluna-editorial-numero">
+              04 / 08
+            </span>
 
-            <span>
-              Animes, mangás e livros
+            <span class="coluna-editorial-titulo">
+              Inferno<br>Sépia
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Memória audiovisual
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Cinema clássico • Séries • História
             </span>
 
             <h3>
-              Além do Quadro
+              <a href="Colunas/inferno-sepia.html">
+                Inferno Sépia
+              </a>
             </h3>
 
             <p>
-              Histórias, universos e narrativas
-              que ultrapassam a tela.
+              Filmes antigos, séries clássicas,
+              estrelas de outras épocas e produções
+              que marcaram o cinema e a televisão.
             </p>
 
-            <a href="Colunas/quadro.html">
-              Ver coluna
+            <a
+              href="Colunas/inferno-sepia.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- 05 — INFERNO PÚRPURA -->
+
+        <article class="coluna-editorial inferno-purpura">
+
+          <a
+            href="Colunas/inferno-purpura.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Inferno Púrpura"
+          >
+
+            <span class="coluna-editorial-numero">
+              05 / 08
+            </span>
+
+            <span class="coluna-editorial-titulo">
+              Inferno<br>Púrpura
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Horror e terror
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Terror • Horror • Suspense
+            </span>
+
+            <h3>
+              <a href="Colunas/inferno-purpura.html">
+                Inferno Púrpura
+              </a>
+            </h3>
+
+            <p>
+              Terror psicológico, slashers,
+              sobrenatural, horror literário
+              e audiovisual e histórias assustadoras.
+            </p>
+
+            <a
+              href="Colunas/inferno-purpura.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- 06 — INFERNO TURQUESA -->
+
+        <article class="coluna-editorial inferno-turquesa">
+
+          <a
+            href="Colunas/inferno-turquesa.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Inferno Turquesa"
+          >
+
+            <span class="coluna-editorial-numero">
+              06 / 08
+            </span>
+
+            <span class="coluna-editorial-titulo">
+              Inferno<br>Turquesa
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Universo vampírico
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Vampiros • Cinema • Literatura
+            </span>
+
+            <h3>
+              <a href="Colunas/inferno-turquesa.html">
+                Inferno Turquesa
+              </a>
+            </h3>
+
+            <p>
+              Vampiros no cinema, na televisão,
+              na literatura e nos animes.
+              Das lendas às reinvenções do vampirismo.
+            </p>
+
+            <a
+              href="Colunas/inferno-turquesa.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- 07 — BACKSTAGE DA ESTAGIÁRIA -->
+
+        <article class="coluna-editorial backstage-estagiaria">
+
+          <a
+            href="Colunas/backstage-da-estagiaria.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Backstage da Estagiária"
+          >
+
+            <span class="coluna-editorial-numero">
+              07 / 08
+            </span>
+
+            <span class="coluna-editorial-titulo">
+              Backstage<br>da Estagiária
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Cinema e Ciências Sociais
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Cinema cult • Sociedade • Análise
+            </span>
+
+            <h3>
+              <a href="Colunas/backstage-da-estagiaria.html">
+                Backstage da Estagiária
+              </a>
+            </h3>
+
+            <p>
+              Filmes cult, narrativas sociais
+              e análises que aproximam o cinema
+              das Ciências Sociais e da cultura.
+            </p>
+
+            <a
+              href="Colunas/backstage-da-estagiaria.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- 08 — ARQUIVO ANIME -->
+
+        <article class="coluna-editorial arquivo-anime">
+
+          <a
+            href="Colunas/arquivo-anime.html"
+            class="coluna-editorial-capa"
+            aria-label="Acessar Arquivo Anime"
+          >
+
+            <span class="coluna-editorial-numero">
+              08 / 08
+            </span>
+
+            <span class="coluna-editorial-titulo">
+              Arquivo<br>Anime
+            </span>
+
+            <span class="coluna-editorial-assinatura">
+              Animação e mangás
+            </span>
+
+          </a>
+
+          <div class="coluna-editorial-conteudo">
+
+            <span class="coluna-editorial-categoria">
+              Anime • Mangá • Animação japonesa
+            </span>
+
+            <h3>
+              <a href="Colunas/arquivo-anime.html">
+                Arquivo Anime
+              </a>
+            </h3>
+
+            <p>
+              Animes, mangás, estúdios,
+              adaptações, clássicos, lançamentos
+              e os caminhos da animação japonesa.
+            </p>
+
+            <a
+              href="Colunas/arquivo-anime.html"
+              class="coluna-editorial-link"
+            >
+              Ver coluna →
             </a>
 
           </div>
@@ -739,12 +1124,22 @@
 
       </div>
 
+      <!-- LINK PARA A PÁGINA DE COLUNAS -->
+
+      <div class="colunas-ver-todas">
+
+        <a href="colunas.html">
+          Explorar todas as colunas →
+        </a>
+
+      </div>
+
     </section>
 
   </main>
 
   <!-- ==========================================
-       RODAPÉ ORIGINAL
+       RODAPÉ
   ========================================== -->
 
   <footer class="rodape-principal">
@@ -803,8 +1198,6 @@
           Contato
         </a>
 
-        <!-- NOVA PÁGINA -->
-
         <a href="trabalhe-comigo/index.html">
           Trabalhe comigo
         </a>
@@ -857,7 +1250,7 @@
 
       </div>
 
-      <!-- COLUNAS -->
+      <!-- NOVAS COLUNAS -->
 
       <div class="rodape-coluna">
 
@@ -865,20 +1258,36 @@
           Colunas
         </h3>
 
-        <a href="Colunas/cena-escarlate.html">
-          Cena Escarlate
+        <a href="Colunas/arquivo-idol.html">
+          Arquivo Idol
         </a>
 
-        <a href="Colunas/checkpoint.html">
-          Checkpoint
+        <a href="Colunas/inferno-marfim.html">
+          Inferno Marfim
         </a>
 
-        <a href="Colunas/som.html">
-          Som no Inferno
+        <a href="Colunas/rock-scene-girls.html">
+          Rock Scene Girls
         </a>
 
-        <a href="Colunas/quadro.html">
-          Além do Quadro
+        <a href="Colunas/inferno-sepia.html">
+          Inferno Sépia
+        </a>
+
+        <a href="Colunas/inferno-purpura.html">
+          Inferno Púrpura
+        </a>
+
+        <a href="Colunas/inferno-turquesa.html">
+          Inferno Turquesa
+        </a>
+
+        <a href="Colunas/backstage-da-estagiaria.html">
+          Backstage da Estagiária
+        </a>
+
+        <a href="Colunas/arquivo-anime.html">
+          Arquivo Anime
         </a>
 
       </div>

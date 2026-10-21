@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,17 +10,192 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <meta
-    name="description"
-    content="Entre em contato com o Inferno Escarlate."
-  >
+  <!-- SEO -->
 
   <title>Contato | Inferno Escarlate</title>
 
-  <link rel="stylesheet" href="css/style.css?v=100">
+  <meta
+    name="description"
+    content="Entre em contato com o Inferno Escarlate. Envie sugestões de pauta, propostas, dúvidas, correções ou convites para parcerias e coberturas."
+  >
+
+  <meta name="author" content="Inferno Escarlate">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/contato.html"
+  >
+
+  <!-- REDES SOCIAIS -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Contato | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Fale com o Inferno Escarlate, envie sugestões de pautas, propostas e convites para parcerias."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/contato.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- CSS PRINCIPAL -->
+
+  <link
+    rel="stylesheet"
+    href="css/style.css?v=108"
+  >
+
+  <!-- ESTILOS EXCLUSIVOS DA PÁGINA CONTATO -->
+
+  <style>
+
+    /* ==========================================
+       MENU SUPERIOR — TRABALHE COMIGO
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       BOTÃO TRABALHE COMIGO — CONTATO
+    ========================================== */
+
+    .contato-trabalhe-comigo {
+      margin-top: 35px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .contato-trabalhe-comigo .etiqueta-trabalho {
+      display: block;
+      margin-bottom: 12px;
+
+      color: #ed1834;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .contato-trabalhe-comigo h3 {
+      margin: 0 0 12px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .contato-trabalhe-comigo p {
+      margin-bottom: 22px;
+
+      color: #a8a8a8;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .botao-trabalhe-comigo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      padding: 15px 22px;
+
+      background: #ed1834;
+      border: 1px solid #ed1834;
+
+      color: #ffffff;
+      font-family: inherit;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .botao-trabalhe-comigo:hover {
+      background: #a5001a;
+      border-color: #a5001a;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .botao-trabalhe-comigo:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .contato-trabalhe-comigo {
+        margin-top: 30px;
+        padding-top: 25px;
+      }
+
+      .contato-trabalhe-comigo h3 {
+        font-size: 1.8rem;
+      }
+
+      .botao-trabalhe-comigo {
+        width: 100%;
+        padding: 15px 18px;
+        text-align: center;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
+
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
 
   <header class="topo">
 
@@ -32,21 +208,57 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
-      <a href="index.html">Início</a>
-      <a href="materias.html">Matérias</a>
-      <a href="index.html#colunas">Colunas</a>
-      <a href="index.html#categorias">Categorias</a>
-      <a href="contato.html">Contato</a>
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+
+      <a href="index.html">
+        Início
+      </a>
+
+      <a href="materias.html">
+        Matérias
+      </a>
+
+      <a href="colunas.html">
+        Colunas
+      </a>
+
+      <a href="index.html#categorias">
+        Categorias
+      </a>
+
+      <a href="contato.html" class="ativo">
+        Contato
+      </a>
+
+      <!-- NOVA ABA -->
+
+      <a
+        href="trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
     </nav>
 
   </header>
 
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
   <main class="pagina-contato">
+
+    <!-- APRESENTAÇÃO -->
 
     <section class="cabecalho-contato">
 
@@ -59,17 +271,23 @@
         <h1>Contato</h1>
 
         <p>
-          Envie sugestões de pauta, propostas, dúvidas, correções ou
-          convites para parcerias e coberturas.
+          Envie sugestões de pauta, propostas, dúvidas,
+          correções ou convites para parcerias e coberturas.
         </p>
 
       </div>
 
     </section>
 
+    <!-- ==========================================
+         INFORMAÇÕES E FORMULÁRIO
+    ========================================== -->
+
     <section class="secao">
 
       <div class="estrutura-contato">
+
+        <!-- CONTATOS E REDES SOCIAIS -->
 
         <aside class="informacoes-contato">
 
@@ -77,11 +295,16 @@
             Inferno Escarlate
           </span>
 
-          <h2>Entre no modo Geek</h2>
+          <h2>
+            Entre no modo Geek
+          </h2>
 
           <p>
-            Escolha um dos canais abaixo ou preencha o formulário ao lado.
+            Escolha um dos canais abaixo
+            ou preencha o formulário ao lado.
           </p>
+
+          <!-- REDES SOCIAIS -->
 
           <div class="lista-contato">
 
@@ -111,7 +334,42 @@
 
           </div>
 
+          <!-- ======================================
+               NOVO BLOCO — TRABALHE COMIGO
+          ====================================== -->
+
+          <div class="contato-trabalhe-comigo">
+
+            <span class="etiqueta-trabalho">
+              Projetos e colaborações
+            </span>
+
+            <h3>
+              Trabalhe comigo
+            </h3>
+
+            <p>
+              Conheça meu portfólio, minha trajetória
+              e os projetos desenvolvidos em design,
+              fotografia e comunicação visual.
+            </p>
+
+            <a
+              href="trabalhe-comigo/index.html"
+              class="botao-trabalhe-comigo"
+              aria-label="Acessar a página Trabalhe comigo"
+            >
+              Acessar portfólio
+              <span aria-hidden="true">↗</span>
+            </a>
+
+          </div>
+
         </aside>
+
+        <!-- ======================================
+             FORMULÁRIO ORIGINAL
+        ====================================== -->
 
         <form
           class="formulario-contato"
@@ -119,7 +377,9 @@
           method="POST"
         >
 
-          <h2>Envie uma mensagem</h2>
+          <h2>
+            Envie uma mensagem
+          </h2>
 
           <input
             type="hidden"
@@ -132,6 +392,8 @@
             name="_captcha"
             value="false"
           >
+
+          <!-- NOME -->
 
           <div class="campo-formulario">
 
@@ -149,6 +411,8 @@
 
           </div>
 
+          <!-- E-MAIL -->
+
           <div class="campo-formulario">
 
             <label for="email">
@@ -165,6 +429,8 @@
 
           </div>
 
+          <!-- ASSUNTO -->
+
           <div class="campo-formulario">
 
             <label for="assunto">
@@ -180,6 +446,8 @@
 
           </div>
 
+          <!-- MENSAGEM -->
+
           <div class="campo-formulario">
 
             <label for="mensagem">
@@ -193,6 +461,8 @@
             ></textarea>
 
           </div>
+
+          <!-- ENVIAR -->
 
           <button
             type="submit"
@@ -213,75 +483,158 @@
 
   </main>
 
+  <!-- ==========================================
+       RODAPÉ
+  ========================================== -->
+
   <footer class="rodape-principal">
 
     <div class="rodape-grade">
 
+      <!-- MARCA -->
+
       <div class="rodape-marca">
 
-        <h2>Inferno Escarlate</h2>
+        <h2>
+          Inferno Escarlate
+        </h2>
 
         <p>
-          Notícias, críticas, cultura geek, cinema, música,
-          games, animes e entretenimento.
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
         </p>
 
-        <a href="contato.html" class="rodape-contato">
+        <a
+          href="contato.html"
+          class="rodape-contato"
+        >
           Entre em contato
         </a>
 
       </div>
 
-      <div class="rodape-coluna">
-
-        <h3>Navegação</h3>
-
-        <a href="index.html">Início</a>
-        <a href="materias.html">Matérias</a>
-        <a href="colunas.html">Colunas</a>
-        <a href="index.html#categorias">Categorias</a>
-        <a href="contato.html">Contato</a>
-
-      </div>
+      <!-- NAVEGAÇÃO -->
 
       <div class="rodape-coluna">
 
-        <h3>Categorias</h3>
+        <h3>
+          Navegação
+        </h3>
 
-        <a href="Categorias/cinema.html">Cinema</a>
-        <a href="Categorias/series-tv.html">Séries e TV</a>
-        <a href="Categorias/games.html">Games</a>
-        <a href="Categorias/musica.html">Música</a>
-        <a href="Categorias/animes.html">Animes</a>
-        <a href="Categorias/hqs.html">HQs</a>
-
-      </div>
-
-      <div class="rodape-coluna">
-
-        <h3>Colunas</h3>
-
-        <a href="Colunas/cena-escarlate.html">
-          Cena Escarlate
+        <a href="index.html">
+          Início
         </a>
 
-        <a href="Colunas/checkpoint.html">
-          Checkpoint
+        <a href="materias.html">
+          Matérias
         </a>
 
-        <a href="Colunas/som.html">
-          Som no Inferno
+        <a href="colunas.html">
+          Colunas
         </a>
 
-        <a href="Colunas/quadro.html">
-          Além do Quadro
+        <a href="index.html#categorias">
+          Categorias
+        </a>
+
+        <a href="contato.html">
+          Contato
+        </a>
+
+        <a href="trabalhe-comigo/index.html">
+          Trabalhe comigo
         </a>
 
       </div>
 
+      <!-- CATEGORIAS -->
+
       <div class="rodape-coluna">
 
-        <h3>Redes sociais</h3>
+        <h3>
+          Categorias
+        </h3>
+
+        <a href="Categorias/cinema.html">
+          Cinema
+        </a>
+
+        <a href="Categorias/criticas.html">
+          Críticas
+        </a>
+
+        <a href="Categorias/series-tv.html">
+          Séries e TV
+        </a>
+
+        <a href="Categorias/games.html">
+          Games
+        </a>
+
+        <a href="Categorias/musica.html">
+          Música
+        </a>
+
+        <a href="Categorias/animes.html">
+          Animes
+        </a>
+
+        <a href="Categorias/hqs.html">
+          HQs
+        </a>
+
+      </div>
+
+      <!-- NOVAS COLUNAS -->
+
+      <div class="rodape-coluna">
+
+        <h3>
+          Colunas
+        </h3>
+
+        <a href="Colunas/arquivo-idol.html">
+          Arquivo Idol
+        </a>
+
+        <a href="Colunas/inferno-marfim.html">
+          Inferno Marfim
+        </a>
+
+        <a href="Colunas/rock-scene-girls.html">
+          Rock Scene Girls
+        </a>
+
+        <a href="Colunas/inferno-sepia.html">
+          Inferno Sépia
+        </a>
+
+        <a href="Colunas/inferno-purpura.html">
+          Inferno Púrpura
+        </a>
+
+        <a href="Colunas/inferno-turquesa.html">
+          Inferno Turquesa
+        </a>
+
+        <a href="Colunas/backstage-da-estagiaria.html">
+          Backstage da Estagiária
+        </a>
+
+        <a href="Colunas/arquivo-anime.html">
+          Arquivo Anime
+        </a>
+
+      </div>
+
+      <!-- REDES SOCIAIS -->
+
+      <div class="rodape-coluna">
+
+        <h3>
+          Redes sociais
+        </h3>
 
         <a
           href="https://www.instagram.com/infernoescarlatebr"
@@ -319,22 +672,34 @@
 
     </div>
 
+    <!-- BASE DO RODAPÉ -->
+
     <div class="rodape-base">
 
       <p>
-        © 2026 Inferno Escarlate. Todos os direitos reservados.
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
       </p>
 
       <div class="rodape-links-legais">
-        <a href="#">Política de privacidade</a>
-        <a href="#">Termos de uso</a>
+
+        <a href="#">
+          Política de privacidade
+        </a>
+
+        <a href="#">
+          Termos de uso
+        </a>
+
       </div>
 
     </div>
 
   </footer>
 
-  <script src="js/script.js?v=100"></script>
+  <!-- JAVASCRIPT — MENU RESPONSIVO -->
+
+  <script src="js/script.js?v=104"></script>
 
 </body>
 
