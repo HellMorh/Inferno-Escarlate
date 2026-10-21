@@ -1,0 +1,982 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Backstage da Estagiária | Cinema Cult e Análise Cultural | Inferno Escarlate</title>
+
+  <meta
+    name="description"
+    content="Backstage da Estagiária é a coluna do Inferno Escarlate dedicada ao cinema cult, às ciências sociais e às relações entre audiovisual, cultura e sociedade."
+  >
+
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/Colunas/backstage-da-estagiaria.html"
+  >
+
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+  <meta property="og:title" content="Backstage da Estagiária | Inferno Escarlate">
+
+  <meta
+    property="og:description"
+    content="Cinema cult, ciências sociais, cultura e análises das histórias que atravessam nossas telas."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Colunas/backstage-da-estagiaria.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/logo-backstage-da-estagiaria.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL DO PORTAL -->
+  <link rel="stylesheet" href="../css/style.css?v=108">
+
+  <!-- IDENTIDADE VISUAL EXCLUSIVA -->
+  <style>
+    :root {
+      --backstage-azul: #8ea7c1;
+      --backstage-claro: #e0e5ec;
+      --backstage-medio: #506785;
+      --backstage-fundo: #0d1117;
+      --backstage-card: #171e28;
+      --backstage-borda: #334154;
+    }
+
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       ESTRUTURA PRINCIPAL
+    ========================================== */
+
+    .pagina-backstage {
+      background: var(--backstage-fundo);
+      min-height: 100vh;
+    }
+
+    /* ==========================================
+       BANNER
+    ========================================== */
+
+    .pagina-backstage .pagina-topo {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      min-height: 590px !important;
+      padding: 165px 7% 90px !important;
+
+      overflow: hidden;
+
+      border: none !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+
+      background:
+        radial-gradient(
+          ellipse at 80% 35%,
+          rgba(80, 103, 133, 0.32),
+          transparent 51%
+        ),
+        radial-gradient(
+          ellipse at 20% 95%,
+          rgba(38, 52, 71, 0.48),
+          transparent 57%
+        ),
+        linear-gradient(
+          118deg,
+          #090d12 10%,
+          #263447 63%,
+          #0d1117 100%
+        ) !important;
+    }
+
+    /* TIPOGRAFIA DECORATIVA */
+
+    .pagina-backstage .pagina-topo::before {
+      content: "BACKSTAGE";
+
+      position: absolute;
+      top: 110px;
+      right: -3%;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(9rem, 21vw, 25rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -5px;
+
+      color: rgba(224, 229, 236, 0.055);
+
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* REMOVE ELEMENTOS DO BANNER GLOBAL */
+
+    .pagina-backstage .pagina-topo::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    /* CONTEÚDO DO BANNER */
+
+    .pagina-backstage .pagina-topo-conteudo {
+      position: relative;
+      z-index: 1;
+
+      width: min(1180px, 100%) !important;
+
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+
+    .pagina-backstage .pagina-topo .subtitulo-secao {
+      display: block;
+      margin-bottom: 18px;
+
+      color: var(--backstage-azul);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .pagina-backstage .pagina-topo h1 {
+      max-width: 1180px;
+      margin: 0 0 25px !important;
+
+      color: var(--backstage-claro) !important;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4.6rem, 10vw, 9rem) !important;
+      font-weight: 400;
+      line-height: 0.88 !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .pagina-backstage .pagina-topo-conteudo > p {
+      max-width: 690px !important;
+      margin-bottom: 30px !important;
+
+      color: #c4cfdb !important;
+      font-size: 1.06rem;
+      line-height: 1.8;
+    }
+
+    /* ==========================================
+       BOTÕES
+    ========================================== */
+
+    .pagina-backstage .botao-backstage {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 23px;
+
+      background: var(--backstage-azul);
+      border: 1px solid var(--backstage-azul);
+
+      color: #101820;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .pagina-backstage .botao-backstage:hover {
+      background: transparent;
+      color: var(--backstage-claro);
+    }
+
+    .pagina-backstage .botao-backstage:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       SOBRE A COLUNA
+    ========================================== */
+
+    .pagina-backstage .sobre-coluna {
+      padding-top: 80px;
+      padding-bottom: 75px;
+    }
+
+    /*
+      LINHA 1: ETIQUETA SOBRE A COLUNA
+      LINHA 2: LOGO E CONTEÚDO TEXTUAL
+
+      A área da logo acompanha a altura
+      do título e do parágrafo.
+    */
+
+    .pagina-backstage .sobre-backstage-layout {
+      display: grid;
+
+      grid-template-columns: 260px minmax(0, 1fr);
+      grid-template-rows: auto auto;
+
+      column-gap: 35px;
+      row-gap: 16px;
+
+      align-items: stretch;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* ETIQUETA */
+
+    .pagina-backstage .sobre-etiqueta {
+      grid-column: 2;
+      grid-row: 1;
+
+      display: block;
+      margin: 0 !important;
+
+      color: var(--backstage-azul);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================
+       LOGO
+    ========================================== */
+
+    .pagina-backstage .sobre-backstage-logo {
+      grid-column: 1;
+      grid-row: 2;
+
+      position: relative;
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      min-width: 0;
+      min-height: 0;
+
+      align-self: stretch;
+      overflow: hidden;
+    }
+
+    .pagina-backstage
+    .sobre-backstage-logo
+    .logo-backstage {
+      position: absolute;
+      inset: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    /* ==========================================
+       TEXTO
+    ========================================== */
+
+    .pagina-backstage
+    .sobre-backstage-layout
+    .descricao-coluna {
+      grid-column: 2;
+      grid-row: 2;
+
+      display: block;
+
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+
+      text-align: left;
+    }
+
+    .pagina-backstage
+    .sobre-backstage-layout
+    .descricao-coluna h2 {
+      margin: 0 0 20px !important;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .pagina-backstage
+    .sobre-backstage-layout
+    .descricao-coluna p {
+      max-width: 800px;
+      margin: 0 !important;
+
+      color: #bac5d3;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* ==========================================
+       PUBLICAÇÕES
+    ========================================== */
+
+    .pagina-backstage .secao-publicacoes {
+      padding-top: 30px;
+      padding-bottom: 110px;
+    }
+
+    .pagina-backstage .titulo-secao {
+      margin-bottom: 35px;
+    }
+
+    .pagina-backstage .titulo-secao > span {
+      color: var(--backstage-azul);
+    }
+
+    /* GRADE DE MATÉRIAS */
+
+    .grade-backstage {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    /* ==========================================
+       CARD DE MATÉRIA
+    ========================================== */
+
+    .card-backstage {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+
+      background: var(--backstage-card);
+      border: 1px solid var(--backstage-borda);
+
+      overflow: hidden;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card-backstage:hover {
+      transform: translateY(-5px);
+      border-color: var(--backstage-azul);
+    }
+
+    /* IMAGEM */
+
+    .card-backstage-imagem {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .card-backstage-imagem img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card-backstage:hover .card-backstage-imagem img {
+      transform: scale(1.04);
+    }
+
+    /* CONTEÚDO */
+
+    .card-backstage-conteudo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px;
+    }
+
+    .card-backstage-categoria {
+      display: block;
+      margin-bottom: 14px;
+
+      color: var(--backstage-azul);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .card-backstage h3 {
+      margin: 0 0 16px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.05rem;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .card-backstage h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card-backstage h3 a:hover {
+      color: var(--backstage-azul);
+    }
+
+    .card-backstage p {
+      flex: 1;
+      margin: 0 0 25px;
+
+      color: #bac5d3;
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .card-backstage-link {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 7px;
+
+      color: var(--backstage-claro);
+      border-bottom: 2px solid var(--backstage-azul);
+
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .card-backstage-link:hover {
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       SEM PUBLICAÇÕES
+    ========================================== */
+
+    .backstage-sem-materias {
+      padding: 40px;
+
+      background: var(--backstage-card);
+      border: 1px solid var(--backstage-borda);
+    }
+
+    .backstage-sem-materias h3 {
+      margin: 0 0 12px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .backstage-sem-materias p {
+      margin: 0 0 24px;
+
+      color: #bac5d3;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* RODAPÉ */
+
+    .rodape-principal {
+      margin-top: 0;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — TABLET
+    ========================================== */
+
+    @media screen and (max-width: 1000px) {
+
+      .grade-backstage {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pagina-backstage .sobre-backstage-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        column-gap: 25px;
+      }
+
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — CELULAR
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .pagina-backstage .pagina-topo {
+        min-height: 490px !important;
+        padding: 130px 6% 70px !important;
+      }
+
+      .pagina-backstage .pagina-topo h1 {
+        font-size: clamp(3.8rem, 12vw, 6rem) !important;
+        overflow-wrap: break-word;
+      }
+
+      .pagina-backstage .pagina-topo::before {
+        top: 150px;
+        right: -5%;
+        font-size: 35vw;
+        letter-spacing: -3px;
+      }
+
+      .pagina-backstage .sobre-coluna {
+        padding-top: 60px;
+        padding-bottom: 50px;
+      }
+
+      .pagina-backstage .sobre-backstage-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 24px;
+      }
+
+      .pagina-backstage .sobre-etiqueta {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .pagina-backstage .sobre-backstage-logo {
+        grid-column: 1;
+        grid-row: 2;
+
+        width: min(260px, 100%);
+        height: 260px;
+        justify-self: start;
+      }
+
+      .pagina-backstage
+      .sobre-backstage-layout
+      .descricao-coluna {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .pagina-backstage .secao-publicacoes {
+        padding-bottom: 75px;
+      }
+
+      .grade-backstage {
+        grid-template-columns: 1fr;
+      }
+
+      .backstage-sem-materias {
+        padding: 26px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+
+  <header class="topo">
+
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html" class="ativo">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
+    </nav>
+
+  </header>
+
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
+  <main class="pagina-coluna pagina-backstage">
+
+    <!-- BANNER -->
+
+    <section class="pagina-topo">
+
+      <div class="pagina-topo-conteudo">
+
+        <span class="subtitulo-secao">
+          Cinema Cult • Sociedade • Cultura
+        </span>
+
+        <h1>Backstage da Estagiária</h1>
+
+        <p>
+          Para além do que aparece na tela, o Backstage
+          da Estagiária explora as relações entre cinema,
+          sociedade e cultura. Um espaço para analisar
+          narrativas, personagens e produções a partir
+          de seus contextos históricos, políticos e sociais.
+        </p>
+
+        <a
+          href="#materias-coluna"
+          class="botao-backstage"
+        >
+          Explorar matérias ↓
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         SOBRE A COLUNA
+    ========================================== -->
+
+    <section class="secao sobre-coluna">
+
+      <div class="sobre-backstage-layout">
+
+        <!-- ETIQUETA -->
+
+        <span class="sobre-etiqueta">
+          Sobre a coluna
+        </span>
+
+        <!-- LOGO -->
+
+        <div class="sobre-backstage-logo">
+
+          <img
+            src="../imagem/logo-backstage-da-estagiaria.png"
+            alt="Logo da coluna Backstage da Estagiária"
+            class="logo-backstage"
+            loading="lazy"
+          >
+
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+
+        <div class="descricao-coluna">
+
+          <h2>
+            O que existe além da tela
+          </h2>
+
+          <p>
+            O Backstage da Estagiária reúne análises,
+            críticas e reflexões sobre o cinema cult
+            e suas relações com as ciências sociais.
+            A coluna investiga como filmes, séries
+            e outras produções audiovisuais representam
+            questões de identidade, classe, gênero,
+            comportamento e poder. A partir de diferentes
+            perspectivas culturais e históricas, buscamos
+            compreender não apenas o que essas obras
+            contam, mas também os contextos em que
+            foram produzidas, suas contradições
+            e os debates que provocam.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         PUBLICAÇÕES
+    ========================================== -->
+
+    <section
+      class="secao secao-publicacoes"
+      id="materias-coluna"
+    >
+
+      <div class="titulo-secao">
+
+        <span>
+          Cinema • Ciências Sociais • Análise Cultural
+        </span>
+
+        <h2>
+          Matérias do Backstage da Estagiária
+        </h2>
+
+      </div>
+
+      <!-- GRADE PARA FUTURAS MATÉRIAS -->
+
+      <div class="grade-backstage">
+
+        <!--
+          Adicionar aqui os cards das
+          futuras matérias desta coluna.
+        -->
+
+      </div>
+
+      <!-- AVISO INICIAL -->
+
+      <div class="backstage-sem-materias">
+
+        <h3>
+          Novas matérias em breve
+        </h3>
+
+        <p>
+          Estamos preparando as próximas análises
+          do Backstage da Estagiária. Enquanto isso,
+          confira outras críticas, reportagens e
+          publicações do Inferno Escarlate.
+        </p>
+
+        <a
+          href="../materias.html"
+          class="botao-backstage"
+        >
+          Ver todas as matérias →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       RODAPÉ
+  ========================================== -->
+
+  <footer class="rodape-principal">
+
+    <div class="rodape-grade">
+
+      <!-- MARCA -->
+
+      <div class="rodape-marca">
+
+        <h2>Inferno Escarlate</h2>
+
+        <p>
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
+        </p>
+
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
+          Entre em contato
+        </a>
+
+      </div>
+
+      <!-- NAVEGAÇÃO -->
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+        <a href="../trabalhe-comigo/index.html">
+          Trabalhe comigo
+        </a>
+
+      </div>
+
+      <!-- CATEGORIAS -->
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/criticas.html">Críticas</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+
+      </div>
+
+      <!-- COLUNAS -->
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="arquivo-idol.html">Arquivo Idol</a>
+        <a href="inferno-marfim.html">Inferno Marfim</a>
+        <a href="rock-scene-girls.html">Rock Scene Girls</a>
+        <a href="inferno-sepia.html">Inferno Sépia</a>
+        <a href="inferno-purpura.html">Inferno Púrpura</a>
+        <a href="inferno-turquesa.html">Inferno Turquesa</a>
+        <a href="backstage-da-estagiaria.html">Backstage da Estagiária</a>
+        <a href="arquivo-anime.html">Arquivo Anime</a>
+
+      </div>
+
+      <!-- REDES SOCIAIS -->
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- BASE DO RODAPÉ -->
+
+    <div class="rodape-base">
+
+      <p>
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
+      </p>
+
+      <div class="rodape-links-legais">
+
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- MENU RESPONSIVO -->
+  <script src="../js/script.js?v=104"></script>
+
+</body>
+</html>

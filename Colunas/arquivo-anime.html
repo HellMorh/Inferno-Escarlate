@@ -1,0 +1,976 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Arquivo Anime | Animes, Mangás e Cultura Otaku | Inferno Escarlate</title>
+
+  <meta
+    name="description"
+    content="Arquivo Anime é a coluna do Inferno Escarlate dedicada a animes, mangás, adaptações, estúdios de animação e cultura otaku. Confira notícias, críticas e análises."
+  >
+
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/Colunas/arquivo-anime.html"
+  >
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+  <meta property="og:title" content="Arquivo Anime | Inferno Escarlate">
+
+  <meta
+    property="og:description"
+    content="Um espaço dedicado aos universos dos animes, mangás, adaptações e à cultura otaku."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Colunas/arquivo-anime.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/logo-arquivo-anime.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Logo da coluna Arquivo Anime"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="../css/style.css?v=108">
+
+  <!-- CSS EXCLUSIVO DA COLUNA -->
+  <style>
+
+    :root {
+      --anime-azul: #859bff;
+      --anime-lavanda: #e0e7ff;
+      --anime-indigo: #435cc9;
+      --anime-profundo: #242e68;
+      --anime-fundo: #0c1020;
+      --anime-card: #151b32;
+      --anime-borda: #303e71;
+    }
+
+    /* ==========================================
+       NAVEGAÇÃO
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       ESTRUTURA PRINCIPAL
+    ========================================== */
+
+    .pagina-arquivo-anime {
+      min-height: 100vh;
+      background: var(--anime-fundo);
+    }
+
+    /* ==========================================
+       BANNER
+    ========================================== */
+
+    .pagina-arquivo-anime .pagina-topo {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      min-height: 590px !important;
+      padding: 165px 7% 90px !important;
+
+      overflow: hidden;
+      border: none !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+
+      background:
+        radial-gradient(
+          ellipse at 78% 35%,
+          rgba(67, 92, 201, 0.36),
+          transparent 50%
+        ),
+        radial-gradient(
+          ellipse at 23% 95%,
+          rgba(36, 46, 104, 0.55),
+          transparent 59%
+        ),
+        linear-gradient(
+          118deg,
+          #090d1c 8%,
+          #242e68 62%,
+          #0c1020 100%
+        ) !important;
+    }
+
+    /* ORNAMENTO TIPOGRÁFICO */
+
+    .pagina-arquivo-anime .pagina-topo::before {
+      content: "アニメ";
+
+      position: absolute;
+      top: 115px;
+      right: -1%;
+
+      font-family: "Inter", sans-serif;
+      font-size: clamp(8rem, 19vw, 23rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -8px;
+
+      color: rgba(224, 231, 255, 0.065);
+
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* REMOVE ORNAMENTO DO CSS GLOBAL */
+
+    .pagina-arquivo-anime .pagina-topo::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    /* CONTEÚDO DO BANNER */
+
+    .pagina-arquivo-anime .pagina-topo-conteudo {
+      position: relative;
+      z-index: 1;
+
+      width: min(1180px, 100%) !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
+
+    .pagina-arquivo-anime .pagina-topo .subtitulo-secao {
+      display: block;
+      margin-bottom: 18px;
+
+      color: var(--anime-azul);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .pagina-arquivo-anime .pagina-topo h1 {
+      margin: 0 0 25px !important;
+
+      color: var(--anime-lavanda) !important;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5rem, 12vw, 10rem) !important;
+      font-weight: 400;
+      line-height: 0.88 !important;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .pagina-arquivo-anime .pagina-topo-conteudo > p {
+      max-width: 690px !important;
+      margin-bottom: 30px !important;
+
+      color: #cbd3fa !important;
+      font-size: 1.06rem;
+      line-height: 1.8;
+    }
+
+    /* ==========================================
+       BOTÃO PRINCIPAL
+    ========================================== */
+
+    .pagina-arquivo-anime .botao-anime {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 23px;
+
+      background: var(--anime-azul);
+      border: 1px solid var(--anime-azul);
+      color: #0c1020;
+
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .pagina-arquivo-anime .botao-anime:hover {
+      background: transparent;
+      color: var(--anime-lavanda);
+    }
+
+    .pagina-arquivo-anime .botao-anime:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       SOBRE A COLUNA
+    ========================================== */
+
+    .pagina-arquivo-anime .sobre-coluna {
+      padding-top: 80px;
+      padding-bottom: 75px;
+    }
+
+    /*
+      LINHA 1 — ETIQUETA "SOBRE A COLUNA"
+      LINHA 2 — LOGO + TÍTULO E PARÁGRAFO
+
+      O espaço da logo acompanha a altura
+      ocupada pelo conteúdo textual.
+    */
+
+    .pagina-arquivo-anime .sobre-anime-layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      grid-template-rows: auto auto;
+
+      column-gap: 35px;
+      row-gap: 16px;
+      align-items: stretch;
+
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* ETIQUETA */
+
+    .pagina-arquivo-anime .sobre-etiqueta {
+      grid-column: 2;
+      grid-row: 1;
+
+      display: block;
+      margin: 0 !important;
+
+      color: var(--anime-azul);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================
+       LOGO
+    ========================================== */
+
+    .pagina-arquivo-anime .sobre-anime-logo {
+      position: relative;
+
+      grid-column: 1;
+      grid-row: 2;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      min-width: 0;
+      min-height: 0;
+      align-self: stretch;
+      overflow: hidden;
+    }
+
+    .pagina-arquivo-anime
+    .sobre-anime-logo
+    .logo-arquivo-anime {
+      position: absolute;
+      inset: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    /* ==========================================
+       TEXTO
+    ========================================== */
+
+    .pagina-arquivo-anime
+    .sobre-anime-layout
+    .descricao-coluna {
+      grid-column: 2;
+      grid-row: 2;
+
+      display: block;
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+
+      margin: 0 !important;
+      padding: 0 !important;
+
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      text-align: left;
+    }
+
+    .pagina-arquivo-anime
+    .sobre-anime-layout
+    .descricao-coluna h2 {
+      margin: 0 0 20px !important;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .pagina-arquivo-anime
+    .sobre-anime-layout
+    .descricao-coluna p {
+      max-width: 800px;
+      margin: 0 !important;
+
+      color: #c0c9e8;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+    /* ==========================================
+       PUBLICAÇÕES
+    ========================================== */
+
+    .pagina-arquivo-anime .secao-publicacoes {
+      padding-top: 30px;
+      padding-bottom: 110px;
+    }
+
+    .pagina-arquivo-anime .titulo-secao {
+      margin-bottom: 35px;
+    }
+
+    .pagina-arquivo-anime .titulo-secao > span {
+      color: var(--anime-azul);
+    }
+
+    /* GRADE DE MATÉRIAS */
+
+    .grade-anime {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    /* ==========================================
+       CARD DE PUBLICAÇÃO
+    ========================================== */
+
+    .card-anime {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+
+      background: var(--anime-card);
+      border: 1px solid var(--anime-borda);
+      overflow: hidden;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .card-anime:hover {
+      transform: translateY(-5px);
+      border-color: var(--anime-azul);
+    }
+
+    .card-anime-imagem {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+    }
+
+    .card-anime-imagem img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform 0.4s ease;
+    }
+
+    .card-anime:hover .card-anime-imagem img {
+      transform: scale(1.04);
+    }
+
+    .card-anime-conteudo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px;
+    }
+
+    .card-anime-categoria {
+      display: block;
+      margin-bottom: 14px;
+
+      color: var(--anime-azul);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .card-anime h3 {
+      margin: 0 0 16px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.05rem;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .card-anime h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .card-anime h3 a:hover {
+      color: var(--anime-azul);
+    }
+
+    .card-anime p {
+      flex: 1;
+      margin: 0 0 25px;
+
+      color: #c0c9e8;
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .card-anime-link {
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 7px;
+
+      color: var(--anime-lavanda);
+      border-bottom: 2px solid var(--anime-azul);
+
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .card-anime-link:hover {
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       SEM PUBLICAÇÕES
+    ========================================== */
+
+    .anime-sem-materias {
+      padding: 40px;
+
+      background: var(--anime-card);
+      border: 1px solid var(--anime-borda);
+    }
+
+    .anime-sem-materias h3 {
+      margin: 0 0 12px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    .anime-sem-materias p {
+      margin: 0 0 24px;
+
+      color: #c0c9e8;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* RODAPÉ */
+
+    .rodape-principal {
+      margin-top: 0;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — TABLET
+    ========================================== */
+
+    @media screen and (max-width: 1000px) {
+
+      .grade-anime {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pagina-arquivo-anime .sobre-anime-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        column-gap: 25px;
+      }
+
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — CELULAR
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .pagina-arquivo-anime .pagina-topo {
+        min-height: 490px !important;
+        padding: 130px 6% 70px !important;
+      }
+
+      .pagina-arquivo-anime .pagina-topo h1 {
+        font-size: clamp(4rem, 13vw, 6rem) !important;
+        overflow-wrap: break-word;
+      }
+
+      .pagina-arquivo-anime .pagina-topo::before {
+        top: 150px;
+        right: -5%;
+        font-size: 45vw;
+        letter-spacing: -3px;
+      }
+
+      .pagina-arquivo-anime .sobre-coluna {
+        padding-top: 60px;
+        padding-bottom: 50px;
+      }
+
+      .pagina-arquivo-anime .sobre-anime-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 24px;
+      }
+
+      .pagina-arquivo-anime .sobre-etiqueta {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .pagina-arquivo-anime .sobre-anime-logo {
+        grid-column: 1;
+        grid-row: 2;
+
+        width: min(260px, 100%);
+        height: 260px;
+        justify-self: start;
+      }
+
+      .pagina-arquivo-anime
+      .sobre-anime-layout
+      .descricao-coluna {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .pagina-arquivo-anime .secao-publicacoes {
+        padding-bottom: 75px;
+      }
+
+      .grade-anime {
+        grid-template-columns: 1fr;
+      }
+
+      .anime-sem-materias {
+        padding: 26px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+
+  <header class="topo">
+
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html" class="ativo">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
+    </nav>
+
+  </header>
+
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
+  <main class="pagina-coluna pagina-arquivo-anime">
+
+    <!-- BANNER -->
+
+    <section class="pagina-topo">
+
+      <div class="pagina-topo-conteudo">
+
+        <span class="subtitulo-secao">
+          Animes • Mangás • Cultura Otaku
+        </span>
+
+        <h1>Arquivo Anime</h1>
+
+        <p>
+          Dos clássicos que marcaram gerações às produções
+          que movimentam o presente, o Arquivo Anime
+          acompanha o universo da animação japonesa.
+          Um espaço para discutir histórias, adaptações,
+          personagens e os caminhos que aproximam
+          animes e mangás de diferentes públicos.
+        </p>
+
+        <a
+          href="#materias-coluna"
+          class="botao-anime"
+        >
+          Explorar matérias ↓
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         SOBRE A COLUNA
+    ========================================== -->
+
+    <section class="secao sobre-coluna">
+
+      <div class="sobre-anime-layout">
+
+        <!-- ETIQUETA -->
+
+        <span class="sobre-etiqueta">
+          Sobre a coluna
+        </span>
+
+        <!-- LOGO -->
+
+        <div class="sobre-anime-logo">
+
+          <img
+            src="../imagem/logo-arquivo-anime.png"
+            alt="Logo da coluna Arquivo Anime"
+            class="logo-arquivo-anime"
+            loading="lazy"
+          >
+
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+
+        <div class="descricao-coluna">
+
+          <h2>
+            Entre páginas e episódios
+          </h2>
+
+          <p>
+            O Arquivo Anime reúne notícias, críticas
+            e análises sobre animes, mangás e suas
+            adaptações. A coluna acompanha lançamentos,
+            revisita obras importantes e observa o
+            trabalho de estúdios, artistas e criadores
+            que contribuíram para a história da
+            animação japonesa. Mais do que acompanhar
+            tendências, buscamos compreender como
+            diferentes narrativas dialogam com
+            seus públicos, atravessam gerações e
+            conquistam novos espaços na cultura pop.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         PUBLICAÇÕES
+    ========================================== -->
+
+    <section
+      class="secao secao-publicacoes"
+      id="materias-coluna"
+    >
+
+      <div class="titulo-secao">
+
+        <span>
+          Animação • Mangás • Adaptações
+        </span>
+
+        <h2>
+          Matérias do Arquivo Anime
+        </h2>
+
+      </div>
+
+      <!-- GRADE DE FUTURAS MATÉRIAS -->
+
+      <div class="grade-anime">
+
+        <!--
+          Adicionar aqui os cards das
+          futuras matérias da coluna.
+        -->
+
+      </div>
+
+      <!-- AVISO INICIAL -->
+
+      <div class="anime-sem-materias">
+
+        <h3>
+          Novas matérias em breve
+        </h3>
+
+        <p>
+          Estamos preparando as próximas publicações
+          do Arquivo Anime. Enquanto isso, confira
+          outras notícias, críticas e reportagens
+          do Inferno Escarlate.
+        </p>
+
+        <a
+          href="../materias.html"
+          class="botao-anime"
+        >
+          Ver todas as matérias →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       RODAPÉ
+  ========================================== -->
+
+  <footer class="rodape-principal">
+
+    <div class="rodape-grade">
+
+      <!-- MARCA -->
+
+      <div class="rodape-marca">
+
+        <h2>Inferno Escarlate</h2>
+
+        <p>
+          Notícias, críticas, cultura geek,
+          cinema, música, games, animes
+          e entretenimento.
+        </p>
+
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
+          Entre em contato
+        </a>
+
+      </div>
+
+      <!-- NAVEGAÇÃO -->
+
+      <div class="rodape-coluna">
+
+        <h3>Navegação</h3>
+
+        <a href="../index.html">Início</a>
+        <a href="../materias.html">Matérias</a>
+        <a href="../colunas.html">Colunas</a>
+        <a href="../index.html#categorias">Categorias</a>
+        <a href="../contato.html">Contato</a>
+
+        <a href="../trabalhe-comigo/index.html">
+          Trabalhe comigo
+        </a>
+
+      </div>
+
+      <!-- CATEGORIAS -->
+
+      <div class="rodape-coluna">
+
+        <h3>Categorias</h3>
+
+        <a href="../Categorias/cinema.html">Cinema</a>
+        <a href="../Categorias/criticas.html">Críticas</a>
+        <a href="../Categorias/series-tv.html">Séries e TV</a>
+        <a href="../Categorias/musica.html">Música</a>
+        <a href="../Categorias/animes.html">Animes</a>
+
+      </div>
+
+      <!-- COLUNAS -->
+
+      <div class="rodape-coluna">
+
+        <h3>Colunas</h3>
+
+        <a href="arquivo-idol.html">Arquivo Idol</a>
+        <a href="inferno-marfim.html">Inferno Marfim</a>
+        <a href="rock-scene-girls.html">Rock Scene Girls</a>
+        <a href="inferno-sepia.html">Inferno Sépia</a>
+        <a href="inferno-purpura.html">Inferno Púrpura</a>
+        <a href="inferno-turquesa.html">Inferno Turquesa</a>
+        <a href="backstage-da-estagiaria.html">Backstage da Estagiária</a>
+        <a href="arquivo-anime.html">Arquivo Anime</a>
+
+      </div>
+
+      <!-- REDES SOCIAIS -->
+
+      <div class="rodape-coluna">
+
+        <h3>Redes sociais</h3>
+
+        <a
+          href="https://www.instagram.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://www.youtube.com/@infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube: @infernoescarlatebr
+        </a>
+
+        <a
+          href="https://x.com/infernoescarlatebr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X / Twitter: @infernoescarlatebr
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- BASE DO RODAPÉ -->
+
+    <div class="rodape-base">
+
+      <p>
+        © 2026 Inferno Escarlate.
+        Todos os direitos reservados.
+      </p>
+
+      <div class="rodape-links-legais">
+
+        <a href="#">Política de privacidade</a>
+        <a href="#">Termos de uso</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- MENU RESPONSIVO -->
+  <script src="../js/script.js?v=104"></script>
+
+</body>
+</html>
