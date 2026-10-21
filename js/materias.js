@@ -27,39 +27,6 @@ const MATERIAS = [
     destaque: true
   },
   {
-    titulo: "BTS em Copacabana? Confira os rumores",
-    resumo: "Entenda os rumores sobre uma possível apresentação do grupo no Rio de Janeiro.",
-    imagem: "imagem/materia-bts.jpg",
-    alt: "BTS em Copacabana",
-    url: "posts/materia-bts.html",
-    categorias: ["musica"],
-    categoriaTexto: "Música",
-    data: "2026-06-28T12:00:00",
-    destaque: false
-  },
-  {
-    titulo: "Niterói apresenta o Cauby Pro Rock",
-    resumo: "Evento reúne música, cultura e artistas da cena independente.",
-    imagem: "imagem/materia-cauby.jpg",
-    alt: "Cauby Pro Rock",
-    url: "posts/materia-cauby.html",
-    categorias: ["eventos", "musica"],
-    categoriaTexto: "Eventos",
-    data: "2026-06-28T11:00:00",
-    destaque: false
-  },
-  {
-    titulo: "Spider-Man: Brand New Day inicia uma nova fase",
-    resumo: "Uma nova etapa para Peter Parker nos cinemas.",
-    imagem: "imagem/materia-03.jpg",
-    alt: "Spider-Man Brand New Day",
-    url: "posts/materia-03.html",
-    categorias: ["cinema"],
-    categoriaTexto: "Cinema",
-    data: "2026-06-28T10:00:00",
-    destaque: false
-  },
-  {
     titulo: "Dona da Universal Pictures planeja separação em duas empresas",
     resumo: "A Comcast anunciou um plano de reestruturação envolvendo a NBCUniversal e a Sky.",
     imagem: "imagem/universal.jpg",

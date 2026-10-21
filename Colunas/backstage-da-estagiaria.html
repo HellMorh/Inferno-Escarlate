@@ -43,6 +43,11 @@
     content="https://infernoescarlate.com/imagem/logo-backstage-da-estagiaria.png"
   >
 
+  <meta
+    property="og:image:alt"
+    content="Logo da coluna Backstage da Estagiária"
+  >
+
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- FONTES -->
@@ -54,18 +59,39 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL DO PORTAL -->
+  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="../css/style.css?v=108">
 
-  <!-- IDENTIDADE VISUAL EXCLUSIVA -->
+  <!-- IDENTIDADE VISUAL BACKSTAGE -->
   <style>
+
+    /* ==========================================
+       IDENTIDADE CROMÁTICA — MULTICOLORIDA
+    ========================================== */
+
     :root {
-      --backstage-azul: #8ea7c1;
-      --backstage-claro: #e0e5ec;
-      --backstage-medio: #506785;
-      --backstage-fundo: #0d1117;
-      --backstage-card: #171e28;
-      --backstage-borda: #334154;
+      --backstage-vermelho: #f04c69;
+      --backstage-laranja: #f6a84b;
+      --backstage-amarelo: #ffd166;
+      --backstage-verde: #45bd95;
+      --backstage-azul: #518cf1;
+      --backstage-roxo: #a069d7;
+
+      --backstage-claro: #f0edf5;
+      --backstage-fundo: #0d0e16;
+      --backstage-card: #191923;
+      --backstage-borda: #34313f;
+      --backstage-texto: #cac7d3;
+
+      --backstage-gradiente: linear-gradient(
+        90deg,
+        #f04c69 0%,
+        #f6a84b 20%,
+        #ffd166 38%,
+        #45bd95 56%,
+        #518cf1 76%,
+        #a069d7 100%
+      );
     }
 
     /* ==========================================
@@ -88,16 +114,17 @@
     ========================================== */
 
     .pagina-backstage {
-      background: var(--backstage-fundo);
       min-height: 100vh;
+      background: var(--backstage-fundo);
     }
 
     /* ==========================================
-       BANNER
+       BANNER PRINCIPAL
     ========================================== */
 
     .pagina-backstage .pagina-topo {
       position: relative;
+
       display: flex;
       align-items: flex-end;
 
@@ -112,21 +139,33 @@
 
       background:
         radial-gradient(
-          ellipse at 80% 35%,
-          rgba(80, 103, 133, 0.32),
-          transparent 51%
+          ellipse at 83% 22%,
+          rgba(160, 105, 215, 0.40),
+          transparent 42%
         ),
         radial-gradient(
-          ellipse at 20% 95%,
-          rgba(38, 52, 71, 0.48),
-          transparent 57%
+          ellipse at 24% 85%,
+          rgba(240, 76, 105, 0.26),
+          transparent 50%
+        ),
+        radial-gradient(
+          ellipse at 60% 68%,
+          rgba(69, 189, 149, 0.18),
+          transparent 44%
         ),
         linear-gradient(
-          118deg,
-          #090d12 10%,
-          #263447 63%,
-          #0d1117 100%
+          120deg,
+          #0d0e16 4%,
+          #22213b 49%,
+          #151121 100%
         ) !important;
+    }
+
+    /* REMOVE A LISTRA DO BANNER */
+
+    .pagina-backstage .pagina-topo::after {
+      content: none !important;
+      display: none !important;
     }
 
     /* TIPOGRAFIA DECORATIVA */
@@ -144,17 +183,10 @@
       line-height: 1;
       letter-spacing: -5px;
 
-      color: rgba(224, 229, 236, 0.055);
+      color: rgba(255, 255, 255, 0.055);
 
       pointer-events: none;
       user-select: none;
-    }
-
-    /* REMOVE ELEMENTOS DO BANNER GLOBAL */
-
-    .pagina-backstage .pagina-topo::after {
-      content: none !important;
-      display: none !important;
     }
 
     /* CONTEÚDO DO BANNER */
@@ -164,27 +196,31 @@
       z-index: 1;
 
       width: min(1180px, 100%) !important;
-
       margin: 0 auto !important;
       padding: 0 !important;
     }
+
+    /* CATEGORIA SUPERIOR */
 
     .pagina-backstage .pagina-topo .subtitulo-secao {
       display: block;
       margin-bottom: 18px;
 
-      color: var(--backstage-azul);
+      color: var(--backstage-amarelo);
+
       font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
+    /* TÍTULO PRINCIPAL */
+
     .pagina-backstage .pagina-topo h1 {
       max-width: 1180px;
       margin: 0 0 25px !important;
 
-      color: var(--backstage-claro) !important;
+      color: #ffffff !important;
 
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(4.6rem, 10vw, 9rem) !important;
@@ -192,13 +228,18 @@
       line-height: 0.88 !important;
       letter-spacing: 1px;
       text-transform: uppercase;
+
+      overflow-wrap: break-word;
     }
+
+    /* DESCRIÇÃO DO BANNER */
 
     .pagina-backstage .pagina-topo-conteudo > p {
       max-width: 690px !important;
       margin-bottom: 30px !important;
 
-      color: #c4cfdb !important;
+      color: #dad6e3 !important;
+
       font-size: 1.06rem;
       line-height: 1.8;
     }
@@ -212,12 +253,15 @@
       align-items: center;
       justify-content: center;
 
+      position: relative;
+
       padding: 14px 23px;
 
-      background: var(--backstage-azul);
-      border: 1px solid var(--backstage-azul);
+      background: var(--backstage-gradiente);
+      border: 1px solid transparent;
 
-      color: #101820;
+      color: #121019;
+
       font-size: 0.76rem;
       font-weight: 800;
       letter-spacing: 1.2px;
@@ -225,13 +269,14 @@
       text-transform: uppercase;
 
       transition:
-        background 0.2s ease,
-        color 0.2s ease;
+        filter 0.2s ease,
+        transform 0.2s ease;
     }
 
     .pagina-backstage .botao-backstage:hover {
-      background: transparent;
-      color: var(--backstage-claro);
+      filter: brightness(1.15);
+      transform: translateY(-2px);
+      color: #121019;
     }
 
     .pagina-backstage .botao-backstage:focus-visible {
@@ -249,11 +294,8 @@
     }
 
     /*
-      LINHA 1: ETIQUETA SOBRE A COLUNA
-      LINHA 2: LOGO E CONTEÚDO TEXTUAL
-
-      A área da logo acompanha a altura
-      do título e do parágrafo.
+      LINHA 1 — ETIQUETA SOBRE A COLUNA
+      LINHA 2 — LOGO + TÍTULO E PARÁGRAFO
     */
 
     .pagina-backstage .sobre-backstage-layout {
@@ -281,7 +323,8 @@
       display: block;
       margin: 0 !important;
 
-      color: var(--backstage-azul);
+      color: var(--backstage-amarelo);
+
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 2px;
@@ -329,7 +372,7 @@
     }
 
     /* ==========================================
-       TEXTO
+       TÍTULO E TEXTO
     ========================================== */
 
     .pagina-backstage
@@ -354,17 +397,22 @@
       text-align: left;
     }
 
+    /* TÍTULO */
+
     .pagina-backstage
     .sobre-backstage-layout
     .descricao-coluna h2 {
       margin: 0 0 20px !important;
 
       color: #ffffff;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2.6rem, 5vw, 4rem);
       font-weight: 400;
       line-height: 1;
     }
+
+    /* PARÁGRAFO */
 
     .pagina-backstage
     .sobre-backstage-layout
@@ -372,9 +420,17 @@
       max-width: 800px;
       margin: 0 !important;
 
-      color: #bac5d3;
+      color: var(--backstage-texto);
+
       font-size: 1rem;
       line-height: 1.9;
+    }
+
+    /* REMOVE A LISTRA DA SEÇÃO SOBRE */
+
+    .pagina-backstage .sobre-coluna::after {
+      content: none !important;
+      display: none !important;
     }
 
     /* ==========================================
@@ -386,15 +442,54 @@
       padding-bottom: 110px;
     }
 
+    /* ==========================================
+       TÍTULO DAS MATÉRIAS — ESPAÇAMENTO CORRIGIDO
+    ========================================== */
+
     .pagina-backstage .titulo-secao {
       margin-bottom: 35px;
     }
 
+    /*
+      SUBE A FRASE SUPERIOR E CRIA UMA
+      DISTÂNCIA MAIOR DOS ACENTOS DO TÍTULO.
+    */
+
     .pagina-backstage .titulo-secao > span {
-      color: var(--backstage-azul);
+      display: block !important;
+
+      position: relative;
+      top: -8px;
+
+      margin: 0 0 20px !important;
+
+      color: var(--backstage-amarelo);
+
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      line-height: 1.5;
+      text-transform: uppercase;
     }
 
-    /* GRADE DE MATÉRIAS */
+    /* TÍTULO GRANDE DAS MATÉRIAS */
+
+    .pagina-backstage .titulo-secao > h2 {
+      position: relative;
+
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+
+      color: #ffffff;
+
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      line-height: 1.12 !important;
+    }
+
+    /* ==========================================
+       GRADE DE MATÉRIAS
+    ========================================== */
 
     .grade-backstage {
       display: grid;
@@ -409,6 +504,8 @@
     .card-backstage {
       display: flex;
       flex-direction: column;
+
+      position: relative;
       min-width: 0;
 
       background: var(--backstage-card);
@@ -421,24 +518,35 @@
         border-color 0.3s ease;
     }
 
+    /* REMOVE A LISTRA DOS CARDS */
+
+    .card-backstage::before {
+      content: none !important;
+      display: none !important;
+    }
+
     .card-backstage:hover {
       transform: translateY(-5px);
-      border-color: var(--backstage-azul);
+      border-color: var(--backstage-roxo);
     }
 
     /* IMAGEM */
 
     .card-backstage-imagem {
       display: block;
+
       aspect-ratio: 16 / 10;
       overflow: hidden;
     }
 
     .card-backstage-imagem img {
       display: block;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       transition: transform 0.4s ease;
     }
 
@@ -446,12 +554,13 @@
       transform: scale(1.04);
     }
 
-    /* CONTEÚDO */
+    /* CONTEÚDO DO CARD */
 
     .card-backstage-conteudo {
       display: flex;
       flex-direction: column;
       flex: 1;
+
       padding: 27px;
     }
 
@@ -459,7 +568,8 @@
       display: block;
       margin-bottom: 14px;
 
-      color: var(--backstage-azul);
+      color: var(--backstage-amarelo);
+
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1.2px;
@@ -471,6 +581,7 @@
       margin: 0 0 16px;
 
       color: #ffffff;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: 2.05rem;
       font-weight: 400;
@@ -483,14 +594,15 @@
     }
 
     .card-backstage h3 a:hover {
-      color: var(--backstage-azul);
+      color: var(--backstage-amarelo);
     }
 
     .card-backstage p {
       flex: 1;
       margin: 0 0 25px;
 
-      color: #bac5d3;
+      color: var(--backstage-texto);
+
       font-size: 0.88rem;
       line-height: 1.75;
     }
@@ -500,8 +612,8 @@
       margin-top: auto;
       padding-bottom: 7px;
 
-      color: var(--backstage-claro);
-      border-bottom: 2px solid var(--backstage-azul);
+      color: #ffffff;
+      border-bottom: 2px solid var(--backstage-amarelo);
 
       font-size: 0.76rem;
       font-weight: 700;
@@ -511,24 +623,36 @@
     }
 
     .card-backstage-link:hover {
-      color: #ffffff;
+      color: var(--backstage-amarelo);
     }
 
     /* ==========================================
-       SEM PUBLICAÇÕES
+       AVISO SEM PUBLICAÇÕES
     ========================================== */
 
     .backstage-sem-materias {
+      position: relative;
+
       padding: 40px;
 
       background: var(--backstage-card);
       border: 1px solid var(--backstage-borda);
+
+      overflow: hidden;
+    }
+
+    /* REMOVE A LISTRA DO AVISO */
+
+    .backstage-sem-materias::before {
+      content: none !important;
+      display: none !important;
     }
 
     .backstage-sem-materias h3 {
       margin: 0 0 12px;
 
       color: #ffffff;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: 2rem;
       font-weight: 400;
@@ -537,12 +661,15 @@
     .backstage-sem-materias p {
       margin: 0 0 24px;
 
-      color: #bac5d3;
+      color: var(--backstage-texto);
+
       font-size: 0.95rem;
       line-height: 1.8;
     }
 
-    /* RODAPÉ */
+    /* ==========================================
+       RODAPÉ
+    ========================================== */
 
     .rodape-principal {
       margin-top: 0;
@@ -584,6 +711,7 @@
       .pagina-backstage .pagina-topo::before {
         top: 150px;
         right: -5%;
+
         font-size: 35vw;
         letter-spacing: -3px;
       }
@@ -610,6 +738,7 @@
 
         width: min(260px, 100%);
         height: 260px;
+
         justify-self: start;
       }
 
@@ -624,6 +753,11 @@
         padding-bottom: 75px;
       }
 
+      .pagina-backstage .titulo-secao > span {
+        top: -6px;
+        margin-bottom: 18px !important;
+      }
+
       .grade-backstage {
         grid-template-columns: 1fr;
       }
@@ -634,7 +768,28 @@
 
     }
 
+    /* ==========================================
+       ACESSIBILIDADE
+    ========================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .pagina-backstage .botao-backstage,
+      .card-backstage,
+      .card-backstage-imagem img {
+        transition: none;
+      }
+
+      .pagina-backstage .botao-backstage:hover,
+      .card-backstage:hover,
+      .card-backstage:hover .card-backstage-imagem img {
+        transform: none;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
@@ -688,7 +843,9 @@
 
   <main class="pagina-coluna pagina-backstage">
 
-    <!-- BANNER -->
+    <!-- ==========================================
+         BANNER
+    ========================================== -->
 
     <section class="pagina-topo">
 
@@ -733,7 +890,7 @@
           Sobre a coluna
         </span>
 
-        <!-- LOGO -->
+        <!-- LOGO ORIGINAL -->
 
         <div class="sobre-backstage-logo">
 
@@ -796,13 +953,13 @@
 
       </div>
 
-      <!-- GRADE PARA FUTURAS MATÉRIAS -->
+      <!-- GRADE DE FUTURAS MATÉRIAS -->
 
       <div class="grade-backstage">
 
         <!--
-          Adicionar aqui os cards das
-          futuras matérias desta coluna.
+          ADICIONAR AQUI OS CARDS
+          DAS FUTURAS MATÉRIAS DA COLUNA.
         -->
 
       </div>
@@ -888,11 +1045,25 @@
 
         <h3>Categorias</h3>
 
-        <a href="../Categorias/cinema.html">Cinema</a>
-        <a href="../Categorias/criticas.html">Críticas</a>
-        <a href="../Categorias/series-tv.html">Séries e TV</a>
-        <a href="../Categorias/musica.html">Música</a>
-        <a href="../Categorias/animes.html">Animes</a>
+        <a href="../Categorias/cinema.html">
+          Cinema
+        </a>
+
+        <a href="../Categorias/criticas.html">
+          Críticas
+        </a>
+
+        <a href="../Categorias/series-tv.html">
+          Séries e TV
+        </a>
+
+        <a href="../Categorias/musica.html">
+          Música
+        </a>
+
+        <a href="../Categorias/animes.html">
+          Animes
+        </a>
 
       </div>
 
@@ -902,14 +1073,37 @@
 
         <h3>Colunas</h3>
 
-        <a href="arquivo-idol.html">Arquivo Idol</a>
-        <a href="inferno-marfim.html">Inferno Marfim</a>
-        <a href="rock-scene-girls.html">Rock Scene Girls</a>
-        <a href="inferno-sepia.html">Inferno Sépia</a>
-        <a href="inferno-purpura.html">Inferno Púrpura</a>
-        <a href="inferno-turquesa.html">Inferno Turquesa</a>
-        <a href="backstage-da-estagiaria.html">Backstage da Estagiária</a>
-        <a href="arquivo-anime.html">Arquivo Anime</a>
+        <a href="arquivo-idol.html">
+          Arquivo Idol
+        </a>
+
+        <a href="inferno-marfim.html">
+          Inferno Marfim
+        </a>
+
+        <a href="rock-scene-girls.html">
+          Rock Scene Girls
+        </a>
+
+        <a href="inferno-sepia.html">
+          Inferno Sépia
+        </a>
+
+        <a href="inferno-purpura.html">
+          Inferno Púrpura
+        </a>
+
+        <a href="inferno-turquesa.html">
+          Inferno Turquesa
+        </a>
+
+        <a href="backstage-da-estagiaria.html">
+          Backstage da Estagiária
+        </a>
+
+        <a href="arquivo-anime.html">
+          Arquivo Anime
+        </a>
 
       </div>
 
@@ -966,8 +1160,15 @@
 
       <div class="rodape-links-legais">
 
-        <a href="#">Política de privacidade</a>
-        <a href="#">Termos de uso</a>
+        <!-- PÁGINAS LEGAIS AINDA PENDENTES -->
+
+        <a href="#">
+          Política de privacidade
+        </a>
+
+        <a href="#">
+          Termos de uso
+        </a>
 
       </div>
 

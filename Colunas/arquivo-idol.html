@@ -1,46 +1,85 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO -->
   <title>Arquivo Idol | K-pop, Doramas e Cultura Asiática | Inferno Escarlate</title>
-  <meta name="description" content="Arquivo Idol é a coluna do Inferno Escarlate dedicada ao K-pop, doramas, novelas asiáticas, artistas e cultura idol.">
+
+  <meta
+    name="description"
+    content="Arquivo Idol é a coluna do Inferno Escarlate dedicada ao K-pop, doramas, novelas asiáticas, artistas e cultura idol."
+  >
+
   <meta name="author" content="Inferno Escarlate">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://infernoescarlate.com/Colunas/arquivo-idol.html">
+
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/Colunas/arquivo-idol.html"
+  >
 
   <!-- COMPARTILHAMENTO -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
   <meta property="og:title" content="Arquivo Idol | Inferno Escarlate">
-  <meta property="og:description" content="K-pop, doramas, novelas asiáticas e cultura idol em uma coluna dedicada ao entretenimento asiático.">
-  <meta property="og:url" content="https://infernoescarlate.com/Colunas/arquivo-idol.html">
-  <meta property="og:image" content="https://infernoescarlate.com/imagem/logo-arquivo-idol.png">
+
+  <meta
+    property="og:description"
+    content="K-pop, doramas, novelas asiáticas e cultura idol em uma coluna dedicada ao entretenimento asiático."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Colunas/arquivo-idol.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/logo-arquivo-idol.png"
+  >
+
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="../css/style.css?v=108">
 
-  <!-- CSS EXCLUSIVO -->
+  <!-- CSS EXCLUSIVO DO ARQUIVO IDOL -->
   <style>
+
+    /* ==========================================
+       IDENTIDADE CROMÁTICA — VERMELHO VIVO
+    ========================================== */
+
     :root {
-      --idol-rosa: #f18ab6;
-      --idol-rosa-claro: #ffd5e7;
-      --idol-vinho: #762342;
-      --idol-fundo: #0c080d;
-      --idol-card: #181019;
+      --idol-vermelho: #e50924;
+      --idol-vermelho-vivo: #ff1738;
+      --idol-vermelho-claro: #ffabb5;
+      --idol-vermelho-escuro: #8b0015;
+
+      --idol-fundo: #090608;
+      --idol-card: #170b0e;
+      --idol-borda: #53202a;
+
+      --idol-texto: #ded1d4;
     }
 
-    /* MENU SUPERIOR */
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
 
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
@@ -53,17 +92,22 @@
       color: #ffffff;
     }
 
-    /* ESTRUTURA */
+    /* ==========================================
+       ESTRUTURA PRINCIPAL
+    ========================================== */
 
     .pagina-arquivo-idol {
       min-height: 100vh;
       background: var(--idol-fundo);
     }
 
-    /* BANNER */
+    /* ==========================================
+       BANNER PRINCIPAL
+    ========================================== */
 
     .pagina-arquivo-idol .pagina-topo {
       position: relative;
+
       display: flex;
       align-items: flex-end;
 
@@ -71,6 +115,7 @@
       padding: 165px 7% 90px !important;
 
       overflow: hidden;
+
       border: none !important;
       border-bottom: none !important;
       box-shadow: none !important;
@@ -78,26 +123,27 @@
       background:
         radial-gradient(
           ellipse at 79% 30%,
-          rgba(241, 138, 182, 0.25),
+          rgba(229, 9, 36, 0.36),
           transparent 48%
         ),
         radial-gradient(
           ellipse at 36% 90%,
-          rgba(118, 35, 66, 0.35),
+          rgba(139, 0, 21, 0.42),
           transparent 60%
         ),
         linear-gradient(
           115deg,
-          #09070a 9%,
-          #301326 65%,
-          #0a070b 100%
+          #090608 9%,
+          #500817 65%,
+          #100508 100%
         ) !important;
     }
 
-    /* TEXTO DECORATIVO */
+    /* TEXTO DECORATIVO DO BANNER */
 
     .pagina-arquivo-idol .pagina-topo::before {
       content: "IDOL";
+
       position: absolute;
       top: 95px;
       right: -2%;
@@ -107,15 +153,20 @@
       line-height: 1;
       letter-spacing: -8px;
 
-      color: rgba(255, 197, 221, 0.065);
+      color: rgba(255, 70, 91, 0.10);
+
       pointer-events: none;
       user-select: none;
     }
+
+    /* REMOVE ELEMENTO DO CSS GLOBAL */
 
     .pagina-arquivo-idol .pagina-topo::after {
       content: none !important;
       display: none !important;
     }
+
+    /* CONTEÚDO DO BANNER */
 
     .pagina-arquivo-idol .pagina-topo-conteudo {
       position: relative;
@@ -126,21 +177,27 @@
       padding: 0 !important;
     }
 
+    /* CATEGORIA DO BANNER */
+
     .pagina-arquivo-idol .pagina-topo .subtitulo-secao {
       display: block;
       margin-bottom: 18px;
 
-      color: var(--idol-rosa);
+      color: var(--idol-vermelho-vivo);
+
       font-size: 0.76rem;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
+    /* TÍTULO PRINCIPAL */
+
     .pagina-arquivo-idol .pagina-topo h1 {
       margin: 0 0 25px !important;
 
-      color: var(--idol-rosa-claro) !important;
+      color: #ffffff !important;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(5rem, 12vw, 10rem) !important;
       font-weight: 400;
@@ -149,16 +206,21 @@
       text-transform: uppercase;
     }
 
+    /* DESCRIÇÃO DO BANNER */
+
     .pagina-arquivo-idol .pagina-topo-conteudo > p {
       max-width: 675px !important;
       margin-bottom: 30px !important;
 
-      color: #e0c7d5 !important;
+      color: #ead9dd !important;
+
       font-size: 1.06rem;
       line-height: 1.8;
     }
 
-    /* BOTÕES */
+    /* ==========================================
+       BOTÕES
+    ========================================== */
 
     .pagina-arquivo-idol .botao-idol {
       display: inline-flex;
@@ -167,9 +229,9 @@
 
       padding: 14px 23px;
 
-      color: #180911;
-      background: var(--idol-rosa);
-      border: 1px solid var(--idol-rosa);
+      color: #ffffff;
+      background: var(--idol-vermelho);
+      border: 1px solid var(--idol-vermelho);
 
       font-size: 0.76rem;
       font-weight: 800;
@@ -179,17 +241,23 @@
 
       transition:
         background 0.2s ease,
+        border-color 0.2s ease,
         color 0.2s ease;
     }
 
     .pagina-arquivo-idol .botao-idol:hover {
-      color: var(--idol-rosa-claro);
+      color: #ffffff;
       background: transparent;
+      border-color: var(--idol-vermelho-vivo);
+    }
+
+    .pagina-arquivo-idol .botao-idol:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 3px;
     }
 
     /* ==========================================
        SOBRE A COLUNA
-       ALINHAMENTO PRECISO ENTRE LOGO E TEXTO
     ========================================== */
 
     .pagina-arquivo-idol .sobre-coluna {
@@ -198,16 +266,14 @@
     }
 
     /*
-      A seção agora possui DUAS LINHAS:
+      LINHA 1:
+      ETIQUETA "SOBRE A COLUNA"
 
-      Linha 1:
-      - Espaço vazio | SOBRE A COLUNA
+      LINHA 2:
+      LOGO + TÍTULO E PARÁGRAFO
 
-      Linha 2:
-      - Logo | Título e parágrafo
-
-      Assim, a altura da logo acompanha
-      exclusivamente o título e o parágrafo.
+      A logo acompanha exclusivamente a
+      altura do título e do parágrafo.
     */
 
     .pagina-arquivo-idol .sobre-idol-layout {
@@ -226,7 +292,7 @@
       margin: 0 auto;
     }
 
-    /* ETIQUETA ACIMA DO TÍTULO */
+    /* ETIQUETA INDEPENDENTE */
 
     .pagina-arquivo-idol .sobre-etiqueta {
       grid-column: 2;
@@ -235,7 +301,8 @@
       display: block;
       margin: 0 !important;
 
-      color: var(--idol-rosa);
+      color: var(--idol-vermelho-vivo);
+
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 2px;
@@ -253,28 +320,28 @@
 
       position: relative;
 
+      display: block;
+
       width: 100%;
       height: 100%;
+
       min-height: 0;
       min-width: 0;
-
-      display: block;
 
       align-self: stretch;
       overflow: hidden;
     }
 
     /*
-      A IMAGEM PREENCHE A MESMA ALTURA
-      DO BLOCO QUE CONTÉM O TÍTULO E
-      O PARÁGRAFO, SEM DISTORÇÃO.
+      A IMAGEM PREENCHE A ÁREA DA LOGO
+      SEM DISTORCER O ARQUIVO ORIGINAL.
     */
 
-    .pagina-arquivo-idol .sobre-idol-logo .logo-arquivo-idol {
+    .pagina-arquivo-idol
+    .sobre-idol-logo
+    .logo-arquivo-idol {
       position: absolute;
-
-      top: 0;
-      left: 0;
+      inset: 0;
 
       display: block;
 
@@ -324,6 +391,7 @@
       margin: 0 0 20px !important;
 
       color: #ffffff;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2.6rem, 5vw, 4rem);
       font-weight: 400;
@@ -338,7 +406,8 @@
       max-width: 800px;
       margin: 0 !important;
 
-      color: #c3b2be;
+      color: var(--idol-texto);
+
       font-size: 1rem;
       line-height: 1.9;
     }
@@ -357,8 +426,10 @@
     }
 
     .pagina-arquivo-idol .titulo-secao > span {
-      color: var(--idol-rosa);
+      color: var(--idol-vermelho-vivo);
     }
+
+    /* GRADE */
 
     .grade-idol {
       display: grid;
@@ -366,15 +437,19 @@
       gap: 26px;
     }
 
-    /* CARDS */
+    /* ==========================================
+       CARDS DE MATÉRIAS
+    ========================================== */
 
     .card-idol {
       display: flex;
       flex-direction: column;
+
       min-width: 0;
 
       background: var(--idol-card);
-      border: 1px solid #42263b;
+      border: 1px solid var(--idol-borda);
+
       overflow: hidden;
 
       transition:
@@ -384,20 +459,26 @@
 
     .card-idol:hover {
       transform: translateY(-5px);
-      border-color: var(--idol-rosa);
+      border-color: var(--idol-vermelho-vivo);
     }
+
+    /* IMAGEM DO CARD */
 
     .card-idol-imagem {
       display: block;
+
       aspect-ratio: 16 / 10;
       overflow: hidden;
     }
 
     .card-idol-imagem img {
       display: block;
+
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       transition: transform 0.4s ease;
     }
 
@@ -405,10 +486,13 @@
       transform: scale(1.04);
     }
 
+    /* CONTEÚDO */
+
     .card-idol-conteudo {
       display: flex;
       flex-direction: column;
       flex: 1;
+
       padding: 27px;
     }
 
@@ -416,7 +500,8 @@
       display: block;
       margin-bottom: 14px;
 
-      color: var(--idol-rosa);
+      color: var(--idol-vermelho-vivo);
+
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1.2px;
@@ -427,6 +512,7 @@
       margin: 0 0 16px;
 
       color: #ffffff;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: 2.05rem;
       font-weight: 400;
@@ -439,14 +525,15 @@
     }
 
     .card-idol h3 a:hover {
-      color: var(--idol-rosa);
+      color: var(--idol-vermelho-vivo);
     }
 
     .card-idol p {
       flex: 1;
       margin: 0 0 25px;
 
-      color: #c6b8c0;
+      color: var(--idol-texto);
+
       font-size: 0.88rem;
       line-height: 1.75;
     }
@@ -456,8 +543,8 @@
       margin-top: auto;
       padding-bottom: 7px;
 
-      color: var(--idol-rosa-claro);
-      border-bottom: 2px solid var(--idol-rosa);
+      color: #ffffff;
+      border-bottom: 2px solid var(--idol-vermelho);
 
       font-size: 0.76rem;
       font-weight: 700;
@@ -466,17 +553,26 @@
       text-decoration: none;
     }
 
-    /* SEM PUBLICAÇÕES */
+    .card-idol-link:hover {
+      color: var(--idol-vermelho-vivo);
+    }
+
+    /* ==========================================
+       AVISO SEM PUBLICAÇÕES
+    ========================================== */
 
     .idol-sem-materias {
       padding: 40px;
+
       background: var(--idol-card);
-      border: 1px solid #42263b;
+      border: 1px solid var(--idol-borda);
     }
 
     .idol-sem-materias h3 {
       margin: 0 0 12px;
+
       color: #ffffff;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: 2rem;
       font-weight: 400;
@@ -484,19 +580,23 @@
 
     .idol-sem-materias p {
       margin: 0 0 24px;
-      color: #c6b8c0;
+
+      color: var(--idol-texto);
+
       font-size: 0.95rem;
       line-height: 1.8;
     }
 
-    /* RODAPÉ */
+    /* ==========================================
+       RODAPÉ
+    ========================================== */
 
     .rodape-principal {
       margin-top: 0;
     }
 
     /* ==========================================
-       TABLET
+       RESPONSIVIDADE — TABLET
     ========================================== */
 
     @media screen and (max-width: 1000px) {
@@ -513,7 +613,7 @@
     }
 
     /* ==========================================
-       CELULAR
+       RESPONSIVIDADE — CELULAR
     ========================================== */
 
     @media screen and (max-width: 700px) {
@@ -540,8 +640,8 @@
       }
 
       /*
-        No celular, a logo fica acima
-        do texto para evitar aperto.
+        NO CELULAR, A LOGO FICA ACIMA
+        DO TÍTULO E DO PARÁGRAFO.
       */
 
       .pagina-arquivo-idol .sobre-idol-layout {
@@ -559,8 +659,8 @@
         grid-column: 1;
         grid-row: 2;
 
-        width: 220px;
-        height: 250px;
+        width: min(260px, 100%);
+        height: 260px;
 
         justify-self: start;
       }
@@ -586,12 +686,37 @@
 
     }
 
+    /* ==========================================
+       ACESSIBILIDADE
+    ========================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .pagina-arquivo-idol .botao-idol,
+      .card-idol,
+      .card-idol-imagem img {
+        transition: none;
+      }
+
+      .card-idol:hover {
+        transform: none;
+      }
+
+      .card-idol:hover .card-idol-imagem img {
+        transform: none;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
 
   <header class="topo">
 
@@ -614,6 +739,7 @@
       id="menu-principal"
       aria-label="Menu principal"
     >
+
       <a href="../index.html">Início</a>
       <a href="../materias.html">Matérias</a>
       <a href="../colunas.html" class="ativo">Colunas</a>
@@ -626,15 +752,20 @@
       >
         Trabalhe comigo
       </a>
+
     </nav>
 
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
 
   <main class="pagina-coluna pagina-arquivo-idol">
 
-    <!-- BANNER -->
+    <!-- ==========================================
+         BANNER
+    ========================================== -->
 
     <section class="pagina-topo">
 
@@ -679,7 +810,7 @@
           Sobre a coluna
         </span>
 
-        <!-- LOGO -->
+        <!-- LOGO ORIGINAL -->
 
         <div class="sobre-idol-logo">
 
@@ -721,7 +852,9 @@
 
     </section>
 
-    <!-- PUBLICAÇÕES -->
+    <!-- ==========================================
+         PUBLICAÇÕES
+    ========================================== -->
 
     <section
       class="secao secao-publicacoes"
@@ -740,10 +873,15 @@
 
       </div>
 
-      <!-- FUTUROS CARDS -->
+      <!-- GRADE DE FUTURAS MATÉRIAS -->
 
       <div class="grade-idol">
-        <!-- MATÉRIAS SERÃO INSERIDAS AQUI -->
+
+        <!--
+          AS MATÉRIAS DA COLUNA
+          SERÃO INSERIDAS AQUI.
+        -->
+
       </div>
 
       <!-- AVISO INICIAL -->
@@ -773,11 +911,15 @@
 
   </main>
 
-  <!-- RODAPÉ -->
+  <!-- ==========================================
+       RODAPÉ
+  ========================================== -->
 
   <footer class="rodape-principal">
 
     <div class="rodape-grade">
+
+      <!-- MARCA -->
 
       <div class="rodape-marca">
 
@@ -789,11 +931,16 @@
           e entretenimento.
         </p>
 
-        <a href="../contato.html" class="rodape-contato">
+        <a
+          href="../contato.html"
+          class="rodape-contato"
+        >
           Entre em contato
         </a>
 
       </div>
+
+      <!-- NAVEGAÇÃO -->
 
       <div class="rodape-coluna">
 
@@ -811,6 +958,8 @@
 
       </div>
 
+      <!-- CATEGORIAS -->
+
       <div class="rodape-coluna">
 
         <h3>Categorias</h3>
@@ -822,6 +971,8 @@
         <a href="../Categorias/animes.html">Animes</a>
 
       </div>
+
+      <!-- COLUNAS -->
 
       <div class="rodape-coluna">
 
@@ -837,6 +988,8 @@
         <a href="arquivo-anime.html">Arquivo Anime</a>
 
       </div>
+
+      <!-- REDES SOCIAIS -->
 
       <div class="rodape-coluna">
 
@@ -878,6 +1031,8 @@
 
     </div>
 
+    <!-- BASE DO RODAPÉ -->
+
     <div class="rodape-base">
 
       <p>
@@ -886,8 +1041,12 @@
       </p>
 
       <div class="rodape-links-legais">
+
+        <!-- PÁGINAS LEGAIS AINDA PENDENTES -->
+
         <a href="#">Política de privacidade</a>
         <a href="#">Termos de uso</a>
+
       </div>
 
     </div>
@@ -895,7 +1054,6 @@
   </footer>
 
   <!-- MENU RESPONSIVO -->
-
   <script src="../js/script.js?v=104"></script>
 
 </body>
