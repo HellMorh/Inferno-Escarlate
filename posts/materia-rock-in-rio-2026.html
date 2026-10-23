@@ -1,65 +1,28 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO GOOGLE -->
   <title>Faltou rock mais uma vez no Rock in Rio 2026? | Inferno Escarlate</title>
-
-  <meta
-    name="description"
-    content="Foo Fighters, Rise Against, Detonautas, Capital Inicial e outros abrem o Rock in Rio 2026 em uma edição que reacende o debate sobre o espaço do rock no festival."
-  >
-
+  <meta name="description" content="Foo Fighters, Rise Against, Detonautas, Capital Inicial e outros abrem o Rock in Rio 2026 em uma edição que reacende o debate sobre o espaço do rock no festival.">
   <meta name="author" content="Inferno Escarlate">
   <meta name="robots" content="index, follow, max-image-preview:large">
 
-  <link
-    rel="canonical"
-    href="https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html"
-  >
+  <link rel="canonical" href="https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html">
 
-  <!-- COMPARTILHAMENTO NAS REDES SOCIAIS -->
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
-
-  <meta
-    property="og:title"
-    content="Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?"
-  >
-
-  <meta
-    property="og:description"
-    content="Foo Fighters, Rise Against, Detonautas e Capital Inicial abrem o Rock in Rio 2026 em meio ao debate sobre o espaço do rock no festival."
-  >
-
-  <meta
-    property="og:url"
-    content="https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html"
-  >
-
-  <meta
-    property="og:image"
-    content="https://infernoescarlate.com/imagem/rock-in-rio-foo-fighters.jpg"
-  >
-
-  <meta
-    property="og:image:alt"
-    content="Foo Fighters no Rock in Rio 2026"
-  >
-
-  <meta
-    property="article:published_time"
-    content="2026-09-05"
-  >
-
+  <meta property="og:title" content="Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?">
+  <meta property="og:description" content="Foo Fighters, Rise Against, Detonautas e Capital Inicial abrem o Rock in Rio 2026 em meio ao debate sobre o espaço do rock no festival.">
+  <meta property="og:url" content="https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html">
+  <meta property="og:image" content="https://infernoescarlate.com/imagem/rock-in-rio-foo-fighters.jpg">
+  <meta property="og:image:alt" content="Foo Fighters no Rock in Rio 2026">
+  <meta property="article:published_time" content="2026-09-05">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- DADOS ESTRUTURADOS GOOGLE -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -88,11 +51,12 @@
   }
   </script>
 
-  <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="../css/style.css?v=108">
+  <link rel="stylesheet" href="../css/style.css?v=109">
 
   <style>
-    /* AJUSTES DA MATÉRIA ROCK IN RIO */
+    /* ==========================================
+       AJUSTES DA MATÉRIA ROCK IN RIO
+    ========================================== */
 
     .conteudo-materia figure {
       width: 100%;
@@ -104,11 +68,12 @@
       width: 100%;
       height: auto;
       object-fit: cover;
+      border-radius: 4px;
     }
 
     .conteudo-materia figcaption {
       margin-top: 10px;
-      color: #8f8f8f;
+      color: #999;
       font-size: 0.8rem;
       line-height: 1.5;
     }
@@ -132,22 +97,106 @@
 
     .conteudo-materia ul li {
       padding: 13px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
       line-height: 1.5;
     }
 
     .conteudo-materia ul li:first-child {
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    /* LEIA TAMBÉM NA BARRA LATERAL */
+
+    .barra-lateral .leia-tambem-automatico {
+      width: 100%;
+      margin: 0;
+      padding: 25px 20px;
+    }
+
+    .barra-lateral .leia-tambem-automatico > h2 {
+      margin: 0 0 25px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      line-height: 1.1;
+      color: #fff;
+    }
+
+    .barra-lateral .leia-tambem-item {
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .barra-lateral .leia-tambem-imagem {
+      width: 72px;
+    }
+
+    .barra-lateral .leia-tambem-conteudo h3 {
+      margin: 0;
+      font-size: 0.83rem;
+      line-height: 1.45;
+    }
+
+    /* MAIS MATÉRIAS */
+
+    #mais-materias-automaticas {
+      width: 100%;
+    }
+
+    .mais-materias[hidden] {
+      display: none !important;
+    }
+
+    /* ==========================================
+       COMENTÁRIOS — MESMO PADRÃO DA CRÍTICA
+    ========================================== */
+
+    .secao-comentarios {
+      width: min(850px, 90%);
+      margin: 50px auto 85px;
+      padding: 45px 0 20px;
+      border-top: 1px solid #333;
+    }
+
+    .secao-comentarios h2 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .secao-comentarios > p {
+      margin: 0 0 32px;
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    #disqus_thread {
+      width: 100%;
+      min-height: 250px;
+    }
+
+    @media (max-width: 700px) {
+      .barra-lateral .leia-tambem-automatico {
+        padding: 22px;
+      }
+
+      .secao-comentarios {
+        width: 90%;
+        margin-top: 35px;
+        margin-bottom: 65px;
+      }
     }
   </style>
-
 </head>
 
 <body>
 
   <!-- CABEÇALHO -->
   <header class="topo">
-
     <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
@@ -157,34 +206,23 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
-
-      <a href="../index.html">
-        Início
-      </a>
-
-      <a href="../materias.html">
-        Matérias
-      </a>
-
-      <a href="../colunas.html">
-        Colunas
-      </a>
-
-      <a href="../index.html#categorias">
-        Categorias
-      </a>
-
-      <a href="../contato.html">
-        Contato
-      </a>
-
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Navegação principal"
+    >
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+      <a href="../trabalhe-comigo/index.html">Trabalhe comigo</a>
     </nav>
-
   </header>
 
   <!-- MATÉRIA -->
@@ -192,7 +230,6 @@
 
     <!-- CAPA -->
     <section class="capa-materia">
-
       <img
         src="../imagem/rock-in-rio-foo-fighters.jpg"
         alt="Foo Fighters se apresenta no Rock in Rio 2026"
@@ -201,11 +238,7 @@
       <div class="capa-materia-overlay"></div>
 
       <div class="capa-materia-conteudo">
-
-        <a
-          href="../materias.html"
-          class="voltar"
-        >
+        <a href="../materias.html" class="voltar">
           ← Voltar para matérias
         </a>
 
@@ -224,29 +257,20 @@
         </p>
 
         <div class="informacoes-materia">
-
-          <span>
-            Por Inferno Escarlate
-          </span>
+          <span>Por Inferno Escarlate</span>
 
           <time datetime="2026-09-05">
             5 de setembro de 2026
           </time>
 
-          <span>
-            8 minutos de leitura
-          </span>
-
+          <span>8 minutos de leitura</span>
         </div>
-
       </div>
-
     </section>
 
     <!-- CONTEÚDO E BARRA LATERAL -->
     <div class="estrutura-materia">
 
-      <!-- CONTEÚDO DA MATÉRIA -->
       <article class="conteudo-materia">
 
         <p class="primeiro-paragrafo">
@@ -283,24 +307,18 @@
 
         <!-- FOTO 1 -->
         <figure>
-
           <img
             src="../imagem/rock-in-rio-foo-fighters.jpg"
             alt="Foo Fighters durante apresentação no Rock in Rio 2026"
             loading="lazy"
           >
-
           <figcaption>
             Foo Fighters foi uma das principais atrações do primeiro dia
             do festival.
           </figcaption>
-
         </figure>
 
-        <!-- JOGADA PUBLICITÁRIA -->
-        <h2>
-          JOGADA PUBLICITÁRIA VS ROCK DE VERDADE
-        </h2>
+        <h2>JOGADA PUBLICITÁRIA VS ROCK DE VERDADE</h2>
 
         <p>
           Entender o declínio no rock nacional é entender que grandes nomes
@@ -326,10 +344,7 @@
           incapaz de abrir portas para quem realmente sabe o que está falando.
         </p>
 
-        <!-- TELÃO -->
-        <h2>
-          VALE A PENA VER O SHOW DO TELÃO?
-        </h2>
+        <h2>VALE A PENA VER O SHOW DO TELÃO?</h2>
 
         <p>
           Com impressionantes 2.400 m² de painéis de LED de altíssima
@@ -347,18 +362,15 @@
 
         <!-- FOTO 2 -->
         <figure>
-
           <img
             src="../imagem/rock-in-rio-palco.jpg"
             alt="Estrutura do palco do Rock in Rio 2026"
             loading="lazy"
           >
-
           <figcaption>
             O Palco Mundo aposta em uma grande estrutura e painéis de LED
             para ampliar a experiência visual do público.
           </figcaption>
-
         </figure>
 
         <p>
@@ -410,24 +422,18 @@
 
         <!-- FOTO 3 -->
         <figure>
-
           <img
             src="../imagem/rock-in-rio-fogos.jpg"
             alt="Público acompanha show e fogos no Rock in Rio"
             loading="lazy"
           >
-
           <figcaption>
             O público acompanha uma das grandes produções visuais
             da Cidade do Rock.
           </figcaption>
-
         </figure>
 
-        <!-- ESTRUTURA -->
-        <h2>
-          ESTRUTURA DO ROCK IN RIO E SETLIST DO PRIMEIRO DIA
-        </h2>
+        <h2>ESTRUTURA DO ROCK IN RIO E SETLIST DO PRIMEIRO DIA</h2>
 
         <p>
           Fugindo das atrações principais, outros cinco palcos rodeiam o
@@ -470,10 +476,7 @@
           e O Escritório.
         </p>
 
-        <!-- SEGUNDO DIA -->
-        <h2>
-          SEGUNDO DIA DE EVENTO — 5 DE SETEMBRO
-        </h2>
+        <h2>SEGUNDO DIA DE EVENTO — 5 DE SETEMBRO</h2>
 
         <h3>Palco Mundo</h3>
         <ul>
@@ -523,221 +526,166 @@
 
         <!-- AVISO -->
         <div class="aviso-materia">
-
           <strong>Rock in Rio 2026:</strong>
-
           a programação está sujeita a alterações. Consulte os canais
           oficiais do festival para informações atualizadas.
-
         </div>
 
         <!-- COMPARTILHAMENTO -->
         <div class="compartilhar">
-
           <span>Compartilhe esta matéria:</span>
-
           <div>
-            <a
-              href="#"
-              aria-label="Compartilhar no Instagram"
-            >
-              Instagram
-            </a>
-
-            <a
-              href="#"
-              aria-label="Compartilhar no X"
-            >
-              X
-            </a>
-
-            <a
-              href="#"
-              aria-label="Compartilhar no WhatsApp"
-            >
-              WhatsApp
-            </a>
+            <a href="#" aria-label="Compartilhar no Instagram">Instagram</a>
+            <a href="#" aria-label="Compartilhar no X">X</a>
+            <a href="#" aria-label="Compartilhar no WhatsApp">WhatsApp</a>
           </div>
-
         </div>
-
       </article>
 
       <!-- BARRA LATERAL -->
       <aside class="barra-lateral">
 
         <div class="bloco-lateral">
-
-          <span class="categoria">
-            Inferno Escarlate
-          </span>
-
+          <span class="categoria">Inferno Escarlate</span>
           <h3>Entre no modo Geek</h3>
-
           <p>
             Notícias, eventos, música, cinema, games, animes e cultura pop.
           </p>
-
         </div>
 
-        <!-- LEIA TAMBÉM -->
-        <div class="bloco-lateral">
-
-          <h3>Leia também</h3>
-
-          <a
-            href="materia-bts.html"
-            class="materia-lateral"
-          >
-
-            <img
-              src="../imagem/materia-bts.jpg"
-              alt="BTS em Copacabana"
-              loading="lazy"
-            >
-
-            <span>
-              <small>Música</small>
-              BTS em Copacabana? Confira os rumores
-            </span>
-
-          </a>
-
-          <a
-            href="materia-cauby.html"
-            class="materia-lateral"
-          >
-
-            <img
-              src="../imagem/materia-cauby.jpg"
-              alt="Cauby Pro Rock"
-              loading="lazy"
-            >
-
-            <span>
-              <small>Eventos</small>
-              Niterói apresenta o Cauby Pro Rock
-            </span>
-
-          </a>
-
-        </div>
+        <!-- LEIA TAMBÉM AUTOMÁTICO -->
+        <section
+          class="leia-tambem-automatico"
+          aria-label="Leia também"
+        >
+          <h2>LEIA TAMBÉM</h2>
+          <div id="leia-tambem-lista"></div>
+        </section>
 
         <!-- CATEGORIAS -->
         <div class="bloco-lateral">
-
           <h3>Categorias</h3>
-
           <div class="categorias-laterais">
-
-            <a href="../Categorias/musica.html">
-              Música
-            </a>
-
-            <a href="../Categorias/eventos.html">
-              Eventos
-            </a>
-
-            <a href="../Categorias/festivais.html">
-              Festivais
-            </a>
-
-            <a href="../Categorias/cinema.html">
-              Cinema
-            </a>
-
+            <a href="../Categorias/musica.html">Música</a>
+            <a href="../Categorias/eventos.html">Eventos</a>
+            <a href="../Categorias/festivais.html">Festivais</a>
+            <a href="../Categorias/cinema.html">Cinema</a>
           </div>
-
         </div>
 
       </aside>
-
     </div>
 
-    <!-- MAIS MATÉRIAS -->
+    <!-- MAIS MATÉRIAS AUTOMÁTICO -->
     <section class="mais-materias">
-
       <div class="titulo-secao">
         <span>Continue explorando</span>
         <h2>Mais matérias</h2>
       </div>
 
-      <div class="grade-materias">
+      <div
+        id="mais-materias-automaticas"
+        class="grade-materias"
+      ></div>
+    </section>
 
-        <!-- BTS -->
-        <article class="card-materia">
+    <!-- COMENTÁRIOS -->
+    <section
+      class="secao-comentarios"
+      id="comentarios"
+      aria-labelledby="titulo-comentarios"
+    >
+      <h2 id="titulo-comentarios">Comentários</h2>
 
-          <img
-            src="../imagem/materia-bts.jpg"
-            alt="BTS em Copacabana"
-            loading="lazy"
-          >
+      <p>
+        O que achou da matéria? Participe da conversa!
+      </p>
 
-          <div class="card-conteudo">
-            <span class="categoria">Música</span>
+      <div id="disqus_thread"></div>
 
-            <h3>
-              BTS em Copacabana? Confira os rumores
-            </h3>
+      <script>
+        var disqus_config = function () {
+          this.page.url =
+            "https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html";
 
-            <p>
-              Entenda os rumores sobre uma possível apresentação
-              no Rio de Janeiro.
-            </p>
+          this.page.identifier =
+            "posts/materia-rock-in-rio-2026.html";
 
-            <a href="materia-bts.html">
-              Ler matéria
-            </a>
-          </div>
+          this.page.title =
+            "Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?";
+        };
 
-        </article>
+        (function () {
+          var d = document;
+          var s = d.createElement("script");
 
-        <!-- CAUBY -->
-        <article class="card-materia">
+          s.src =
+            "https://inferno-escarlate.disqus.com/embed.js";
 
-          <img
-            src="../imagem/materia-cauby.jpg"
-            alt="Cauby Pro Rock"
-            loading="lazy"
-          >
+          s.setAttribute(
+            "data-timestamp",
+            String(+new Date())
+          );
 
-          <div class="card-conteudo">
-            <span class="categoria">Eventos</span>
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
 
-            <h3>
-              Niterói apresenta o Cauby Pro Rock
-            </h3>
-
-            <p>
-              Evento reúne música, cultura e artistas em Niterói.
-            </p>
-
-            <a href="materia-cauby.html">
-              Ler matéria
-            </a>
-          </div>
-
-        </article>
-
-      </div>
-
+      <noscript>
+        Ative o JavaScript para visualizar os comentários.
+      </noscript>
     </section>
 
   </main>
 
-  <!-- ==========================================
-       RODAPÉ GLOBAL - INFERNO ESCARLATE
-       Carregado a partir de ../rodape.html
-       As oito colunas oficiais ficam em rodape.html
-  ========================================== -->
-
+  <!-- RODAPÉ GLOBAL -->
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
-  <script src="../js/rodape.js" defer></script>
-
-  <!-- MENU RESPONSIVO -->
+  <!-- SCRIPTS DO SITE -->
   <script src="../js/script.js?v=104"></script>
+  <script src="../js/rodape.js"></script>
+  <script src="../js/materias.js?v=7"></script>
+  <script src="../js/leia-tambem.js?v=1"></script>
+
+  <!-- MAIS MATÉRIAS AUTOMÁTICO -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.querySelector(
+        "#mais-materias-automaticas"
+      );
+
+      if (!container) return;
+      if (typeof MATERIAS === "undefined") return;
+
+      const caminhoAtual = window.location.pathname;
+
+      const outrasMaterias = ordenarMaterias(
+        MATERIAS.filter(function (materia) {
+          const caminho = new URL(
+            materia.url,
+            "https://infernoescarlate.com/"
+          ).pathname;
+
+          return caminho !== caminhoAtual;
+        })
+      ).slice(0, 3);
+
+      if (outrasMaterias.length === 0) {
+        const secao = container.closest(".mais-materias");
+
+        if (secao) {
+          secao.hidden = true;
+        }
+        return;
+      }
+
+      renderizarLista(
+        container,
+        outrasMaterias,
+        "../"
+      );
+    });
+  </script>
 
 </body>
 </html>

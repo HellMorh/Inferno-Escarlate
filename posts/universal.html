@@ -1,27 +1,91 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Dona da Universal Pictures planeja separação em duas empresas |
-    Inferno Escarlate
-  </title>
+  <!-- SEO GOOGLE -->
+  <title>Dona da Universal Pictures planeja separação em duas empresas | Inferno Escarlate</title>
 
   <meta
     name="description"
     content="Comcast anuncia plano de separação envolvendo NBCUniversal e Sky, ampliando as possibilidades de atuação no mercado audiovisual."
   >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/posts/universal.html"
+  >
+
+  <!-- REDES SOCIAIS -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Dona da Universal Pictures planeja separação em duas empresas"
+  >
+
+  <meta
+    property="og:description"
+    content="A Comcast anunciou um plano de reestruturação envolvendo a NBCUniversal e a Sky."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/posts/universal.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/universal.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Universal Pictures e mercado audiovisual"
+  >
+
+  <meta property="article:published_time" content="2026-06-29">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- DADOS ESTRUTURADOS -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Dona da Universal Pictures planeja separação em duas empresas",
+    "description": "A Comcast anunciou um plano de reestruturação envolvendo a NBCUniversal e a Sky.",
+    "image": [
+      "https://infernoescarlate.com/imagem/universal.jpg"
+    ],
+    "datePublished": "2026-06-29",
+    "inLanguage": "pt-BR",
+    "articleSection": "Cinema e televisão",
+    "author": {
+      "@type": "Organization",
+      "name": "Inferno Escarlate"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Inferno Escarlate",
+      "url": "https://infernoescarlate.com/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://infernoescarlate.com/posts/universal.html"
+    }
+  }
+  </script>
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     rel="preconnect"
     href="https://fonts.gstatic.com"
@@ -29,30 +93,349 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
   <!-- CSS PRINCIPAL -->
-  <link
-    rel="stylesheet"
-    href="../css/style.css?v=100"
-  >
+  <link rel="stylesheet" href="../css/style.css?v=109">
+
+  <style>
+    /* ==========================================
+       UNIVERSAL PICTURES — CAPA EDITORIAL
+    ========================================== */
+
+    body main.pagina-universal {
+      display: block;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0 0 90px;
+    }
+
+    /* CAPA EM LARGURA TOTAL */
+
+    .universal-capa {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      width: 100%;
+      max-width: none;
+      min-height: 760px;
+      margin: 0;
+      padding: 135px 6% 80px;
+
+      overflow: hidden;
+      background: #050505;
+      box-sizing: border-box;
+    }
+
+    /* IMAGEM DA CAPA */
+
+    .universal-capa-imagem {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* DEGRADÊ SOBRE A IMAGEM */
+
+    .universal-capa::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(5,5,5,0.08) 0%,
+          rgba(5,5,5,0.22) 30%,
+          rgba(5,5,5,0.53) 56%,
+          rgba(5,5,5,0.88) 80%,
+          #050505 100%
+        ),
+        linear-gradient(
+          to right,
+          rgba(0,0,0,0.72) 0%,
+          rgba(0,0,0,0.32) 65%,
+          rgba(0,0,0,0.1) 100%
+        );
+    }
+
+    /* CONTEÚDO DA CAPA */
+
+    .universal-capa-conteudo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1150px;
+    }
+
+    /* CAMINHO DE NAVEGAÇÃO */
+
+    .universal-caminho {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 30px;
+      color: #ddd;
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+    }
+
+    .universal-caminho a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .universal-caminho a:hover {
+      color: #ff3048;
+    }
+
+    /* CATEGORIA */
+
+    .universal-categoria {
+      display: inline-block;
+      margin-bottom: 18px;
+
+      color: #ff3048;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    /* TÍTULO */
+
+    body main.pagina-universal .universal-titulo {
+      max-width: 1100px;
+      margin: 12px 0 24px;
+
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 8vw, 8rem);
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      text-shadow: 0 4px 20px rgba(0,0,0,0.65);
+    }
+
+    /* SUBTÍTULO */
+
+    .universal-subtitulo {
+      max-width: 850px;
+      margin: 0 0 25px;
+
+      color: #e0e0e0;
+      font-family: "Inter", sans-serif;
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
+      line-height: 1.6;
+
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    /* INFORMAÇÕES */
+
+    .universal-informacoes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+
+      margin: 0;
+      padding: 0;
+      border: 0;
+
+      color: #d5d5d5;
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+    }
+
+    /* ==========================================
+       TEXTO DA MATÉRIA
+    ========================================== */
+
+    body main.pagina-universal .universal-corpo {
+      display: block;
+      width: min(850px, 88%);
+      max-width: none;
+      margin: 0 auto;
+      padding: 80px 0 0;
+    }
+
+    .universal-corpo p {
+      margin: 0 0 25px;
+      color: #dedede;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .universal-corpo h2 {
+      margin: 52px 0 23px;
+      padding-left: 16px;
+
+      border-left: 4px solid #ed1834;
+      color: #fff;
+
+      font-family: "Inter", sans-serif;
+      font-size: clamp(24px, 3.5vw, 31px);
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .universal-corpo blockquote {
+      margin: 38px 0;
+      padding: 20px 25px;
+
+      border-left: 4px solid #ed1834;
+      background: rgba(255,255,255,0.04);
+
+      color: #eee;
+      font-family: "Inter", sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .universal-corpo em {
+      font-style: italic;
+    }
+
+    .universal-corpo .fonte-materia {
+      margin-top: 45px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* ==========================================
+       LEIA TAMBÉM
+    ========================================== */
+
+    .universal-recomendacoes {
+      width: min(850px, 88%);
+      margin: 65px auto 60px;
+    }
+
+    .universal-recomendacoes
+    .leia-tambem-automatico {
+      width: 100%;
+    }
+
+    /* ==========================================
+       COMENTÁRIOS
+    ========================================== */
+
+    .secao-comentarios {
+      width: min(850px, 88%);
+      max-width: none;
+      margin: 0 auto 85px;
+      padding: 48px 0 25px;
+
+      border-top: 1px solid #333;
+    }
+
+    .secao-comentarios h2 {
+      margin: 0 0 12px;
+
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .secao-comentarios > p {
+      margin: 0 0 35px;
+
+      color: #aaa;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    #disqus_thread {
+      width: 100%;
+      min-height: 250px;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media (max-width: 700px) {
+
+      .universal-capa {
+        min-height: 650px;
+        padding: 115px 6% 60px;
+      }
+
+      body main.pagina-universal .universal-titulo {
+        font-size: clamp(3.2rem, 12vw, 5rem);
+        line-height: 0.94;
+      }
+
+      .universal-subtitulo {
+        font-size: 1rem;
+      }
+
+      body main.pagina-universal .universal-corpo,
+      .universal-recomendacoes,
+      .secao-comentarios {
+        width: 90%;
+      }
+
+      body main.pagina-universal .universal-corpo {
+        padding-top: 55px;
+      }
+
+      .universal-corpo p,
+      .universal-corpo blockquote {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .universal-corpo h2 {
+        margin-top: 40px;
+      }
+
+      .universal-recomendacoes {
+        margin: 45px auto 50px;
+      }
+
+      .secao-comentarios {
+        margin-bottom: 65px;
+      }
+    }
+  </style>
 
 </head>
 
 <body>
 
-  <!-- ==========================================
-       CABEÇALHO
-  ========================================== -->
-
+  <!-- CABEÇALHO -->
   <header class="topo">
 
-    <a
-      href="../index.html"
-      class="logo"
-    >
+    <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
 
@@ -61,76 +444,92 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
-
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Navegação principal"
+    >
       <a href="../index.html">Início</a>
       <a href="../materias.html">Matérias</a>
       <a href="../colunas.html">Colunas</a>
       <a href="../index.html#categorias">Categorias</a>
       <a href="../contato.html">Contato</a>
-
+      <a href="../trabalhe-comigo/index.html">Trabalhe comigo</a>
     </nav>
 
   </header>
 
-  <!-- ==========================================
-       CONTEÚDO PRINCIPAL
-  ========================================== -->
+  <main class="pagina-universal">
 
-  <main class="pagina-materia">
+    <!-- ==========================================
+         CAPA COM IMAGEM DE FUNDO
+    ========================================== -->
 
-    <section class="cabecalho-materia">
+    <section class="universal-capa">
 
-      <span class="categoria">
-        Cinema e televisão
-      </span>
+      <img
+        class="universal-capa-imagem"
+        src="../imagem/universal.jpg"
+        alt="Universal Pictures e mercado audiovisual"
+        fetchpriority="high"
+      >
 
-      <h1>
-        Dona da Universal Pictures planeja separação em duas empresas
-      </h1>
+      <div class="universal-capa-conteudo">
 
-      <p class="resumo">
-        A Comcast anunciou um plano de reestruturação envolvendo a
-        NBCUniversal e a Sky, com a criação de duas companhias independentes
-        de capital aberto.
-      </p>
+        <nav
+          class="universal-caminho"
+          aria-label="Localização da matéria"
+        >
+          <a href="../index.html">Início</a>
+          <span>›</span>
+          <a href="../Categorias/cinema.html">Cinema</a>
+          <span>›</span>
+          <span>Universal Pictures</span>
+        </nav>
 
-      <div class="informacoes-materia">
+        <a
+          href="../Categorias/cinema.html"
+          class="universal-categoria"
+        >
+          Cinema e televisão
+        </a>
 
-        <span>
-          Por Inferno Escarlate
-        </span>
+        <h1 class="universal-titulo">
+          Dona da Universal Pictures planeja separação em duas empresas
+        </h1>
 
-        <span>
-          29 de junho de 2026
-        </span>
+        <p class="universal-subtitulo">
+          A Comcast anunciou um plano de reestruturação envolvendo a
+          NBCUniversal e a Sky, com a criação de duas companhias
+          independentes de capital aberto.
+        </p>
 
-        <span>
-          Leitura de 3 minutos
-        </span>
+        <div class="universal-informacoes">
+          <span>Inferno Escarlate</span>
+          <span>•</span>
+
+          <time datetime="2026-06-29">
+            29 de junho de 2026
+          </time>
+
+          <span>•</span>
+          <span>Leitura de 3 minutos</span>
+        </div>
 
       </div>
 
     </section>
 
-    <!-- IMAGEM PRINCIPAL -->
+    <!-- ==========================================
+         TEXTO ORIGINAL DA MATÉRIA
+    ========================================== -->
 
-    <figure class="imagem-principal-materia">
-
-      <img
-        src="../img/universal.jpg"
-        alt="Universal Pictures e mercado audiovisual"
-      >
-
-    </figure>
-
-    <!-- TEXTO DA MATÉRIA -->
-
-    <article class="conteudo-materia">
+    <article class="universal-corpo">
 
       <p>
         A Comcast anunciou nesta segunda-feira (29) um plano para separar
@@ -186,32 +585,88 @@
 
     </article>
 
+    <!-- ==========================================
+         LEIA TAMBÉM AUTOMÁTICO
+    ========================================== -->
+
+    <section class="universal-recomendacoes">
+
+      <aside
+        class="leia-tambem-automatico"
+        aria-label="Leia também"
+      >
+        <h2>LEIA TAMBÉM</h2>
+        <div id="leia-tambem-lista"></div>
+      </aside>
+
+    </section>
+
+    <!-- ==========================================
+         COMENTÁRIOS
+    ========================================== -->
+
+    <section
+      class="secao-comentarios"
+      id="comentarios"
+      aria-labelledby="titulo-comentarios"
+    >
+
+      <h2 id="titulo-comentarios">Comentários</h2>
+
+      <p>
+        O que achou da matéria? Participe da conversa!
+      </p>
+
+      <div id="disqus_thread"></div>
+
+      <script>
+        var disqus_config = function () {
+          this.page.url =
+            "https://infernoescarlate.com/posts/universal.html";
+
+          this.page.identifier =
+            "posts/universal.html";
+
+          this.page.title =
+            "Dona da Universal Pictures planeja separação em duas empresas";
+        };
+
+        (function () {
+          var d = document;
+          var s = d.createElement("script");
+
+          s.src =
+            "https://inferno-escarlate.disqus.com/embed.js";
+
+          s.setAttribute(
+            "data-timestamp",
+            String(+new Date())
+          );
+
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+
+      <noscript>
+        Ative o JavaScript para visualizar os comentários.
+      </noscript>
+
+    </section>
+
   </main>
 
-  <!-- ==========================================
-       RODAPÉ GLOBAL - INFERNO ESCARLATE
-
-       Carregado automaticamente pelo rodape.html
-
-       COLUNAS OFICIAIS:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
-  ========================================== -->
-
+  <!-- RODAPÉ GLOBAL -->
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
-  <script src="../js/rodape.js" defer></script>
+  <!-- SCRIPTS DO SITE -->
+  <script src="../js/script.js?v=104"></script>
+  <script src="../js/rodape.js"></script>
 
-  <!-- MENU RESPONSIVO -->
-  <script src="../js/script.js?v=100"></script>
+  <!-- CATÁLOGO DE MATÉRIAS -->
+  <script src="../js/materias.js?v=7"></script>
+
+  <!-- LEIA TAMBÉM AUTOMÁTICO -->
+  <script src="../js/leia-tambem.js?v=1"></script>
 
 </body>
-
 </html>

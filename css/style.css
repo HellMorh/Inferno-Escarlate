@@ -3440,4 +3440,215 @@ section:has(h2) .eyebrow {
   margin-bottom: 18px !important;
 }
 
+/* ==========================================
+   LEIA TAMBÉM AUTOMÁTICO
+   INFERNO ESCARLATE
+========================================== */
+
+/* CONTAINER PRINCIPAL */
+
+.leia-tambem-automatico {
+  width: 100%;
+  padding: 28px;
+
+  background: #130e10;
+  border: 1px solid #33272b;
+  box-sizing: border-box;
+}
+
+/* ESCONDE A SEÇÃO QUANDO NÃO HÁ MATÉRIAS */
+
+.leia-tambem-automatico[hidden] {
+  display: none !important;
+}
+
+/* TÍTULO LEIA TAMBÉM */
+
+.leia-tambem-automatico > h2 {
+  margin: 0 0 28px;
+
+  color: #ffffff;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* LISTA DE RECOMENDAÇÕES */
+
+#leia-tambem-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* CARD DE CADA MATÉRIA */
+
+.leia-tambem-item {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #33272b;
+}
+
+/* PRIMEIRO CARD */
+
+.leia-tambem-item:first-child {
+  padding-top: 0;
+}
+
+/* ÚLTIMO CARD */
+
+.leia-tambem-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* LINK DA IMAGEM */
+
+.leia-tambem-imagem {
+  display: block;
+
+  width: 82px;
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+}
+
+/* IMAGEM DA MATÉRIA */
+
+.leia-tambem-imagem img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+/* EFEITO NA IMAGEM */
+
+.leia-tambem-imagem:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTEÚDO DO CARD */
+
+.leia-tambem-conteudo {
+  min-width: 0;
+}
+
+/* CATEGORIA */
+
+.leia-tambem-categoria {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #ff1738;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* TÍTULO DA MATÉRIA */
+
+.leia-tambem-conteudo h3 {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* LINK DO TÍTULO */
+
+.leia-tambem-conteudo h3 a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+/* EFEITO NO TÍTULO */
+
+.leia-tambem-conteudo h3 a:hover {
+  color: #ff4356;
+}
+
+/* ACESSIBILIDADE */
+
+.leia-tambem-imagem:focus-visible,
+.leia-tambem-conteudo h3 a:focus-visible {
+  outline: 2px solid #ff1738;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — CELULAR
+========================================== */
+
+@media screen and (max-width: 600px) {
+
+  .leia-tambem-automatico {
+    padding: 22px;
+  }
+
+  .leia-tambem-automatico > h2 {
+    font-size: 1.8rem;
+    margin-bottom: 22px;
+  }
+
+  .leia-tambem-item {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .leia-tambem-imagem {
+    width: 72px;
+  }
+
+  .leia-tambem-conteudo h3 {
+    font-size: 0.83rem;
+  }
+
+  .leia-tambem-categoria {
+    font-size: 0.62rem;
+  }
+
+}
+
+/* ==========================================
+   ACESSIBILIDADE — MOVIMENTO REDUZIDO
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .leia-tambem-imagem img,
+  .leia-tambem-conteudo h3 a {
+    transition: none;
+  }
+
+  .leia-tambem-imagem:hover img {
+    transform: none;
+  }
+
+}
+
+
 

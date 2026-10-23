@@ -1,10 +1,14 @@
 
+<?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- PÁGINAS PRINCIPAIS -->
+  <!-- ==========================================
+       PÁGINAS PRINCIPAIS
+  ========================================== -->
 
   <url>
-    <loc>https://infernoescarlate.com/index.html</loc>
+    <loc>https://infernoescarlate.com/</loc>
   </url>
 
   <url>
@@ -19,7 +23,13 @@
     <loc>https://infernoescarlate.com/contato.html</loc>
   </url>
 
-  <!-- MATÉRIAS PUBLICADAS -->
+  <url>
+    <loc>https://infernoescarlate.com/trabalhe-comigo/index.html</loc>
+  </url>
+
+  <!-- ==========================================
+       MATÉRIAS PUBLICADAS
+  ========================================== -->
 
   <url>
     <loc>https://infernoescarlate.com/posts/se-eu-fosse-voce-3.html</loc>
@@ -29,30 +39,12 @@
     <loc>https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html</loc>
   </url>
 
-  <url>
-    <loc>https://infernoescarlate.com/posts/materia-bts.html</loc>
-  </url>
-
-  <url>
-    <loc>https://infernoescarlate.com/posts/materia-cauby.html</loc>
-  </url>
-
-  <url>
-    <loc>https://infernoescarlate.com/posts/materia-03.html</loc>
-  </url>
-
-  <url>
-    <loc>https://infernoescarlate.com/posts/universal.html</loc>
-  </url>
-
-  <!-- CATEGORIAS -->
+  <!-- ==========================================
+       CATEGORIAS
+  ========================================== -->
 
   <url>
     <loc>https://infernoescarlate.com/Categorias/cinema.html</loc>
-  </url>
-
-  <url>
-    <loc>https://infernoescarlate.com/Categorias/criticas.html</loc>
   </url>
 
   <url>
@@ -99,22 +91,56 @@
     <loc>https://infernoescarlate.com/Categorias/hqs.html</loc>
   </url>
 
-  <!-- COLUNAS -->
+  <!-- ==========================================
+       OITO COLUNAS OFICIAIS
+  ========================================== -->
+
+  <!-- ARQUIVO IDOL -->
 
   <url>
-    <loc>https://infernoescarlate.com/Colunas/cena-escarlate.html</loc>
+    <loc>https://infernoescarlate.com/Colunas/arquivo-idol.html</loc>
   </url>
 
-  <url>
-    <loc>https://infernoescarlate.com/Colunas/checkpoint.html</loc>
-  </url>
+  <!-- INFERNO MARFIM -->
 
   <url>
-    <loc>https://infernoescarlate.com/Colunas/som.html</loc>
+    <loc>https://infernoescarlate.com/Colunas/inferno-marfim.html</loc>
   </url>
 
+  <!-- ROCK SCENE GIRLS -->
+
   <url>
-    <loc>https://infernoescarlate.com/Colunas/quadro.html</loc>
+    <loc>https://infernoescarlate.com/Colunas/rock-scene-girls.html</loc>
+  </url>
+
+  <!-- INFERNO SÉPIA -->
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/inferno-sepia.html</loc>
+  </url>
+
+  <!-- INFERNO PÚRPURA -->
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/inferno-purpura.html</loc>
+  </url>
+
+  <!-- INFERNO TURQUESA -->
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/inferno-turquesa.html</loc>
+  </url>
+
+  <!-- BACKSTAGE DA ESTAGIÁRIA -->
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/backstage-da-estagiaria.html</loc>
+  </url>
+
+  <!-- ARQUIVO ANIME -->
+
+  <url>
+    <loc>https://infernoescarlate.com/Colunas/arquivo-anime.html</loc>
   </url>
 
 </urlset>
