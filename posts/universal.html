@@ -1,13 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <!-- SEO GOOGLE -->
-  <title>Dona da Universal Pictures planeja separação em duas empresas | Inferno Escarlate</title>
+  <title>
+    Dona da Universal Pictures planeja separação em duas empresas | Inferno Escarlate
+  </title>
 
   <meta
     name="description"
@@ -15,14 +19,17 @@
   >
 
   <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/posts/universal.html"
   >
 
-  <!-- REDES SOCIAIS -->
+  <!-- COMPARTILHAMENTO -->
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
@@ -52,8 +59,29 @@
     content="Universal Pictures e mercado audiovisual"
   >
 
-  <meta property="article:published_time" content="2026-06-29">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    property="article:published_time"
+    content="2026-06-29"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- DADOS ESTRUTURADOS -->
   <script type="application/ld+json">
@@ -84,278 +112,59 @@
   }
   </script>
 
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
   <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="../css/style.css?v=109">
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=109"
+  >
 
   <style>
-    /* ==========================================
-       UNIVERSAL PICTURES — CAPA EDITORIAL
-    ========================================== */
-
-    body main.pagina-universal {
-      display: block;
+    .barra-lateral .leia-tambem-automatico {
       width: 100%;
-      max-width: none;
       margin: 0;
-      padding: 0 0 90px;
+      padding: 25px 20px;
     }
 
-    /* CAPA EM LARGURA TOTAL */
-
-    .universal-capa {
-      position: relative;
-      isolation: isolate;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-
-      width: 100%;
-      max-width: none;
-      min-height: 760px;
-      margin: 0;
-      padding: 135px 6% 80px;
-
-      overflow: hidden;
-      background: #050505;
-      box-sizing: border-box;
-    }
-
-    /* IMAGEM DA CAPA */
-
-    .universal-capa-imagem {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-
-      display: block;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-
-      object-fit: cover;
-      object-position: center;
-    }
-
-    /* DEGRADÊ SOBRE A IMAGEM */
-
-    .universal-capa::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(5,5,5,0.08) 0%,
-          rgba(5,5,5,0.22) 30%,
-          rgba(5,5,5,0.53) 56%,
-          rgba(5,5,5,0.88) 80%,
-          #050505 100%
-        ),
-        linear-gradient(
-          to right,
-          rgba(0,0,0,0.72) 0%,
-          rgba(0,0,0,0.32) 65%,
-          rgba(0,0,0,0.1) 100%
-        );
-    }
-
-    /* CONTEÚDO DA CAPA */
-
-    .universal-capa-conteudo {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      max-width: 1150px;
-    }
-
-    /* CAMINHO DE NAVEGAÇÃO */
-
-    .universal-caminho {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px;
-
-      margin-bottom: 30px;
-      color: #ddd;
-      font-family: "Inter", sans-serif;
-      font-size: 13px;
-    }
-
-    .universal-caminho a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .universal-caminho a:hover {
-      color: #ff3048;
-    }
-
-    /* CATEGORIA */
-
-    .universal-categoria {
-      display: inline-block;
-      margin-bottom: 18px;
-
-      color: #ff3048;
-      font-family: "Inter", sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
-
-    /* TÍTULO */
-
-    body main.pagina-universal .universal-titulo {
-      max-width: 1100px;
-      margin: 12px 0 24px;
-
-      color: #fff;
+    .barra-lateral .leia-tambem-automatico > h2 {
+      margin: 0 0 25px;
       font-family: "Bebas Neue", sans-serif;
-      font-size: clamp(4rem, 8vw, 8rem);
-      font-weight: 400;
-      line-height: 0.9;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-
-      text-shadow: 0 4px 20px rgba(0,0,0,0.65);
+      font-size: 2rem;
+      line-height: 1.1;
+      color: #ffffff;
     }
 
-    /* SUBTÍTULO */
-
-    .universal-subtitulo {
-      max-width: 850px;
-      margin: 0 0 25px;
-
-      color: #e0e0e0;
-      font-family: "Inter", sans-serif;
-      font-size: clamp(1.05rem, 2vw, 1.4rem);
-      line-height: 1.6;
-
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
-
-    /* INFORMAÇÕES */
-
-    .universal-informacoes {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+    .barra-lateral .leia-tambem-item {
+      grid-template-columns: 72px minmax(0, 1fr);
       gap: 12px;
+    }
 
+    .barra-lateral .leia-tambem-imagem {
+      width: 72px;
+    }
+
+    .barra-lateral .leia-tambem-conteudo h3 {
       margin: 0;
-      padding: 0;
-      border: 0;
-
-      color: #d5d5d5;
-      font-family: "Inter", sans-serif;
-      font-size: 13px;
+      font-size: 0.83rem;
+      line-height: 1.45;
     }
 
-    /* ==========================================
-       TEXTO DA MATÉRIA
-    ========================================== */
-
-    body main.pagina-universal .universal-corpo {
-      display: block;
-      width: min(850px, 88%);
-      max-width: none;
-      margin: 0 auto;
-      padding: 80px 0 0;
-    }
-
-    .universal-corpo p {
-      margin: 0 0 25px;
-      color: #dedede;
-      font-family: "Inter", sans-serif;
-      font-size: 18px;
-      line-height: 1.85;
-    }
-
-    .universal-corpo h2 {
-      margin: 52px 0 23px;
-      padding-left: 16px;
-
-      border-left: 4px solid #ed1834;
-      color: #fff;
-
-      font-family: "Inter", sans-serif;
-      font-size: clamp(24px, 3.5vw, 31px);
-      font-weight: 800;
-      line-height: 1.3;
-    }
-
-    .universal-corpo blockquote {
-      margin: 38px 0;
-      padding: 20px 25px;
-
-      border-left: 4px solid #ed1834;
-      background: rgba(255,255,255,0.04);
-
-      color: #eee;
-      font-family: "Inter", sans-serif;
-      font-size: 18px;
-      line-height: 1.8;
-      font-style: italic;
-    }
-
-    .universal-corpo em {
-      font-style: italic;
-    }
-
-    .universal-corpo .fonte-materia {
-      margin-top: 45px;
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    /* ==========================================
-       LEIA TAMBÉM
-    ========================================== */
-
-    .universal-recomendacoes {
-      width: min(850px, 88%);
-      margin: 65px auto 60px;
-    }
-
-    .universal-recomendacoes
-    .leia-tambem-automatico {
+    #mais-materias-automaticas {
       width: 100%;
     }
 
-    /* ==========================================
-       COMENTÁRIOS
-    ========================================== */
+    .mais-materias[hidden] {
+      display: none !important;
+    }
 
     .secao-comentarios {
-      width: min(850px, 88%);
-      max-width: none;
-      margin: 0 auto 85px;
-      padding: 48px 0 25px;
-
+      width: min(850px, 90%);
+      margin: 50px auto 85px;
+      padding: 45px 0 20px;
       border-top: 1px solid #333;
     }
 
     .secao-comentarios h2 {
       margin: 0 0 12px;
-
       color: #fff;
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -365,10 +174,8 @@
     }
 
     .secao-comentarios > p {
-      margin: 0 0 35px;
-
+      margin: 0 0 32px;
       color: #aaa;
-      font-family: "Inter", sans-serif;
       font-size: 15px;
       line-height: 1.6;
     }
@@ -378,56 +185,18 @@
       min-height: 250px;
     }
 
-    /* ==========================================
-       RESPONSIVIDADE
-    ========================================== */
-
     @media (max-width: 700px) {
-
-      .universal-capa {
-        min-height: 650px;
-        padding: 115px 6% 60px;
+      .barra-lateral .leia-tambem-automatico {
+        padding: 22px;
       }
 
-      body main.pagina-universal .universal-titulo {
-        font-size: clamp(3.2rem, 12vw, 5rem);
-        line-height: 0.94;
-      }
-
-      .universal-subtitulo {
-        font-size: 1rem;
-      }
-
-      body main.pagina-universal .universal-corpo,
-      .universal-recomendacoes,
       .secao-comentarios {
         width: 90%;
-      }
-
-      body main.pagina-universal .universal-corpo {
-        padding-top: 55px;
-      }
-
-      .universal-corpo p,
-      .universal-corpo blockquote {
-        font-size: 16px;
-        line-height: 1.8;
-      }
-
-      .universal-corpo h2 {
-        margin-top: 40px;
-      }
-
-      .universal-recomendacoes {
-        margin: 45px auto 50px;
-      }
-
-      .secao-comentarios {
+        margin-top: 35px;
         margin-bottom: 65px;
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -435,7 +204,10 @@
   <!-- CABEÇALHO -->
   <header class="topo">
 
-    <a href="../index.html" class="logo">
+    <a
+      href="../index.html"
+      class="logo"
+    >
       Inferno Escarlate
     </a>
 
@@ -464,60 +236,47 @@
 
   </header>
 
-  <main class="pagina-universal">
+  <!-- MATÉRIA -->
+  <main class="pagina-materia">
 
-    <!-- ==========================================
-         CAPA COM IMAGEM DE FUNDO
-    ========================================== -->
-
-    <section class="universal-capa">
+    <!-- CAPA -->
+    <section class="capa-materia">
 
       <img
-        class="universal-capa-imagem"
         src="../imagem/universal.jpg"
         alt="Universal Pictures e mercado audiovisual"
-        fetchpriority="high"
       >
 
-      <div class="universal-capa-conteudo">
+      <div class="capa-materia-overlay"></div>
 
-        <nav
-          class="universal-caminho"
-          aria-label="Localização da matéria"
-        >
-          <a href="../index.html">Início</a>
-          <span>›</span>
-          <a href="../Categorias/cinema.html">Cinema</a>
-          <span>›</span>
-          <span>Universal Pictures</span>
-        </nav>
+      <div class="capa-materia-conteudo">
 
         <a
-          href="../Categorias/cinema.html"
-          class="universal-categoria"
+          href="../materias.html"
+          class="voltar"
         >
-          Cinema e televisão
+          ← Voltar para matérias
         </a>
 
-        <h1 class="universal-titulo">
+        <span class="categoria">
+          Cinema e televisão
+        </span>
+
+        <h1>
           Dona da Universal Pictures planeja separação em duas empresas
         </h1>
 
-        <p class="universal-subtitulo">
-          A Comcast anunciou um plano de reestruturação envolvendo a
-          NBCUniversal e a Sky, com a criação de duas companhias
-          independentes de capital aberto.
+        <p class="subtitulo-materia">
+          A Comcast anunciou um plano de reestruturação envolvendo a NBCUniversal e a Sky, com a criação de duas companhias independentes de capital aberto.
         </p>
 
-        <div class="universal-informacoes">
+        <div class="informacoes-materia">
           <span>Inferno Escarlate</span>
-          <span>•</span>
 
           <time datetime="2026-06-29">
             29 de junho de 2026
           </time>
 
-          <span>•</span>
           <span>Leitura de 3 minutos</span>
         </div>
 
@@ -525,92 +284,132 @@
 
     </section>
 
-    <!-- ==========================================
-         TEXTO ORIGINAL DA MATÉRIA
-    ========================================== -->
+    <!-- CONTEÚDO + BARRA LATERAL -->
+    <div class="estrutura-materia">
 
-    <article class="universal-corpo">
+      <article class="conteudo-materia">
 
-      <p>
-        A Comcast anunciou nesta segunda-feira (29) um plano para separar
-        a NBCUniversal e a Sky em duas companhias independentes de capital
-        aberto. As informações são do <em>The Hollywood Reporter</em>.
-      </p>
+        <p class="primeiro-paragrafo">
+          A Comcast anunciou nesta segunda-feira (29) um plano para separar
+          a NBCUniversal e a Sky em duas companhias independentes de capital
+          aberto. As informações são do <em>The Hollywood Reporter</em>.
+        </p>
 
-      <p>
-        Tendo como principais ativos sua divisão de parques temáticos, a
-        nova NBCUniversal contará com os estúdios de cinema e televisão da
-        Universal, além das redes NBC e Telemundo, do canal Bravo, do serviço
-        de streaming Peacock e da subsidiária Sky, que atua no mercado de
-        mídia europeu.
-      </p>
+        <p>
+          Tendo como principais ativos sua divisão de parques temáticos, a
+          nova NBCUniversal contará com os estúdios de cinema e televisão da
+          Universal, além das redes NBC e Telemundo, do canal Bravo, do serviço
+          de streaming Peacock e da subsidiária Sky, que atua no mercado de
+          mídia europeu.
+        </p>
 
-      <blockquote>
-        “Por mais de 60 anos, nossa empresa cresceu abraçando a mudança e
-        investindo no futuro. Hoje é mais um desses momentos.”
-      </blockquote>
+        <blockquote>
+          “Por mais de 60 anos, nossa empresa cresceu abraçando a mudança e
+          investindo no futuro. Hoje é mais um desses momentos.”
+        </blockquote>
 
-      <p>
-        A declaração foi feita pelos co-CEOs da Comcast, Brian Roberts e
-        Mike Cavanagh, em um comunicado enviado aos funcionários, no qual
-        destacaram a importância da mudança para o futuro da companhia.
-      </p>
+        <p>
+          A declaração foi feita pelos co-CEOs da Comcast, Brian Roberts e
+          Mike Cavanagh, em um comunicado enviado aos funcionários, no qual
+          destacaram a importância da mudança para o futuro da companhia.
+        </p>
 
-      <h2>
-        Movimento semelhante ao da Warner Bros. Discovery
-      </h2>
+        <h2>
+          Movimento semelhante ao da Warner Bros. Discovery
+        </h2>
 
-      <p>
-        O anúncio relembra o processo de reestruturação da Warner Bros.
-        Discovery, que separou suas operações de televisão por assinatura
-        e seus estúdios.
-      </p>
+        <p>
+          O anúncio relembra o processo de reestruturação da Warner Bros.
+          Discovery, que separou suas operações de televisão por assinatura
+          e seus estúdios.
+        </p>
 
-      <p>
-        A movimentação também provocou uma disputa envolvendo empresas como
-        Paramount Skydance, NBCUniversal e Netflix, encerrada com uma
-        importante estratégia adotada pela Paramount.
-      </p>
+        <p>
+          A movimentação também provocou uma disputa envolvendo empresas como
+          Paramount Skydance, NBCUniversal e Netflix, encerrada com uma
+          importante estratégia adotada pela Paramount.
+        </p>
 
-      <p>
-        De forma semelhante, uma NBCUniversal independente poderá gerar
-        novos movimentos no mercado. A separação pode facilitar acordos com
-        outras empresas de mídia, ampliar a presença da companhia no setor
-        audiovisual e fortalecer a competição entre os grandes conglomerados.
-      </p>
+        <p>
+          De forma semelhante, uma NBCUniversal independente poderá gerar
+          novos movimentos no mercado. A separação pode facilitar acordos com
+          outras empresas de mídia, ampliar a presença da companhia no setor
+          audiovisual e fortalecer a competição entre os grandes conglomerados.
+        </p>
 
-      <p class="fonte-materia">
-        Fonte consultada: The Hollywood Reporter.
-      </p>
+        <p class="fonte-materia">
+          Fonte consultada: The Hollywood Reporter.
+        </p>
 
-    </article>
+        <div class="compartilhar">
+          <span>Compartilhe esta matéria:</span>
 
-    <!-- ==========================================
-         LEIA TAMBÉM AUTOMÁTICO
-    ========================================== -->
+          <div>
+            <a href="#" aria-label="Compartilhar no Instagram">Instagram</a>
+            <a href="#" aria-label="Compartilhar no X">X</a>
+            <a href="#" aria-label="Compartilhar no WhatsApp">WhatsApp</a>
+          </div>
+        </div>
 
-    <section class="universal-recomendacoes">
+      </article>
 
-      <aside
-        class="leia-tambem-automatico"
-        aria-label="Leia também"
-      >
-        <h2>LEIA TAMBÉM</h2>
-        <div id="leia-tambem-lista"></div>
+      <!-- BARRA LATERAL -->
+      <aside class="barra-lateral">
+
+        <div class="bloco-lateral">
+          <span class="categoria">Inferno Escarlate</span>
+
+          <h3>Entre no modo Geek</h3>
+
+          <p>
+            Notícias, eventos, música, cinema, games, animes e cultura pop.
+          </p>
+        </div>
+
+        <section
+          class="leia-tambem-automatico"
+          aria-label="Leia também"
+        >
+          <h2>LEIA TAMBÉM</h2>
+          <div id="leia-tambem-lista"></div>
+        </section>
+
+        <div class="bloco-lateral">
+          <h3>Categorias</h3>
+
+          <div class="categorias-laterais">
+            <a href="../Categorias/cinema.html">Cinema</a>
+            <a href="../Categorias/musica.html">Música</a>
+            <a href="../Categorias/games.html">Games</a>
+            <a href="../Categorias/animes.html">Animes</a>
+          </div>
+        </div>
+
       </aside>
+
+    </div>
+
+    <!-- MAIS MATÉRIAS -->
+    <section class="mais-materias">
+
+      <div class="titulo-secao">
+        <span>Continue explorando</span>
+        <h2>Mais matérias</h2>
+      </div>
+
+      <div
+        id="mais-materias-automaticas"
+        class="grade-materias"
+      ></div>
 
     </section>
 
-    <!-- ==========================================
-         COMENTÁRIOS
-    ========================================== -->
-
+    <!-- COMENTÁRIOS -->
     <section
       class="secao-comentarios"
       id="comentarios"
       aria-labelledby="titulo-comentarios"
     >
-
       <h2 id="titulo-comentarios">Comentários</h2>
 
       <p>
@@ -650,7 +449,6 @@
       <noscript>
         Ative o JavaScript para visualizar os comentários.
       </noscript>
-
     </section>
 
   </main>
@@ -658,15 +456,50 @@
   <!-- RODAPÉ GLOBAL -->
   <div id="rodape-global"></div>
 
-  <!-- SCRIPTS DO SITE -->
+  <!-- SCRIPTS -->
   <script src="../js/script.js?v=104"></script>
   <script src="../js/rodape.js"></script>
-
-  <!-- CATÁLOGO DE MATÉRIAS -->
   <script src="../js/materias.js?v=7"></script>
-
-  <!-- LEIA TAMBÉM AUTOMÁTICO -->
   <script src="../js/leia-tambem.js?v=1"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.querySelector(
+        "#mais-materias-automaticas"
+      );
+
+      if (!container) return;
+      if (typeof MATERIAS === "undefined") return;
+
+      const caminhoAtual = window.location.pathname;
+
+      const outrasMaterias = ordenarMaterias(
+        MATERIAS.filter(function (materia) {
+          const caminho = new URL(
+            materia.url,
+            "https://infernoescarlate.com/"
+          ).pathname;
+
+          return caminho !== caminhoAtual;
+        })
+      ).slice(0, 3);
+
+      if (outrasMaterias.length === 0) {
+        const secao = container.closest(".mais-materias");
+
+        if (secao) {
+          secao.hidden = true;
+        }
+        return;
+      }
+
+      renderizarLista(
+        container,
+        outrasMaterias,
+        "../"
+      );
+    });
+  </script>
 
 </body>
 </html>
