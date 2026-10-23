@@ -425,33 +425,33 @@ textarea {
 /* ESTRUTURA GERAL */
 
 .secao {
-
   width: min(1180px, 88%);
-
   margin: 0 auto;
-
   padding: 90px 0;
-
 }
 
 .titulo-secao {
-
   margin-bottom: 36px;
-
 }
 
 .titulo-secao h2 {
-
   margin-top: 5px;
-
   font-family: "Bebas Neue", sans-serif;
-
   font-size: clamp(2.8rem, 6vw, 5rem);
-
   line-height: 1;
-
   letter-spacing: 2px;
+}
 
+/* CORREÇÃO - ÚLTIMAS MATÉRIAS */
+
+#materias .titulo-secao > span {
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+#materias .titulo-secao > h2 {
+  margin-top: 0;
 }
 
 /* CATEGORIAS DA HOME */
@@ -3428,4 +3428,16 @@ textarea {
     margin: 0 0 24px -30px !important;
   }
 }
+/* AJUSTE DO TÍTULO ÚLTIMAS MATÉRIAS */
+
+.secao-topo .subtitulo {
+  display: block;
+  margin-bottom: 12px;
+  transform: translateY(-6px);
+}/* ESPAÇAMENTO ENTRE ATUALIZAÇÕES E ÚLTIMAS MATÉRIAS */
+
+section:has(h2) .eyebrow {
+  margin-bottom: 18px !important;
+}
+
 

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -10,20 +10,85 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <!-- SEO -->
+  <title>Cinema | Inferno Escarlate</title>
+
   <meta
     name="description"
     content="Cinema no Inferno Escarlate: notícias, estreias, críticas, trailers e novidades do cinema nacional e internacional."
   >
 
-  <title>Cinema | Inferno Escarlate</title>
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
   <link
-    rel="stylesheet"
-    href="../css/style.css?v=105"
+    rel="canonical"
+    href="https://infernoescarlate.com/Categorias/cinema.html"
   >
 
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Cinema | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Notícias, estreias, críticas, trailers e novidades do cinema nacional e internacional."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Categorias/cinema.html"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL -->
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=108"
+  >
+
+  <!-- CSS EXCLUSIVO DA CATEGORIA -->
   <style>
-    /* LINKS CLICÁVEIS DAS MATÉRIAS */
+
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+    /* ==========================================
+       LINKS CLICÁVEIS DAS MATÉRIAS
+    ========================================== */
 
     .link-imagem-materia {
       display: block;
@@ -52,16 +117,29 @@
       outline: 2px solid #e63946;
       outline-offset: 3px;
     }
+
   </style>
+
 </head>
+
+<!--
+  O atributo data-categoria-pagina="cinema"
+  é utilizado pelo materias.js para
+  identificar as publicações desta categoria.
+-->
 
 <body data-categoria-pagina="cinema">
 
-  <!-- CABEÇALHO -->
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
 
   <header class="topo">
 
-    <a href="../index.html" class="logo">
+    <a
+      href="../index.html"
+      class="logo"
+    >
       Inferno Escarlate
     </a>
 
@@ -70,11 +148,16 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
 
       <a href="../index.html">
         Início
@@ -84,7 +167,7 @@
         Matérias
       </a>
 
-      <a href="../index.html#colunas">
+      <a href="../colunas.html">
         Colunas
       </a>
 
@@ -96,15 +179,26 @@
         Contato
       </a>
 
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
     </nav>
 
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
 
   <main class="pagina-categoria">
 
-    <!-- APRESENTAÇÃO DA CATEGORIA -->
+    <!-- ==========================================
+         APRESENTAÇÃO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-categoria">
 
@@ -114,7 +208,9 @@
           Categoria
         </span>
 
-        <h1>Cinema</h1>
+        <h1>
+          Cinema
+        </h1>
 
         <p>
           Notícias, estreias, trailers, bastidores,
@@ -133,7 +229,9 @@
 
     </section>
 
-    <!-- MATÉRIAS AUTOMÁTICAS DE CINEMA -->
+    <!-- ==========================================
+         MATÉRIAS AUTOMÁTICAS DE CINEMA
+    ========================================== -->
 
     <section
       class="secao"
@@ -156,8 +254,12 @@
         AS MATÉRIAS SERÃO CARREGADAS
         AUTOMATICAMENTE PELO materias.js.
 
-        A categoria é definida no BODY:
+        A CATEGORIA É DEFINIDA NO BODY:
         data-categoria-pagina="cinema"
+
+        O ID categoria-materias DEVE
+        SER MANTIDO PARA O JAVASCRIPT
+        ENCONTRAR A GRADE DE PUBLICAÇÕES.
       -->
 
       <div
@@ -170,199 +272,35 @@
 
   </main>
 
-  <!-- RODAPÉ ORIGINAL -->
+  <!-- ==========================================
+       RODAPÉ GLOBAL — INFERNO ESCARLATE
 
-  <footer class="rodape-principal">
+       O conteúdo é carregado automaticamente
+       a partir do arquivo rodape.html,
+       localizado na raiz do projeto.
 
-    <div class="rodape-grade">
+       Inclui as oito colunas editoriais oficiais:
+       Arquivo Idol
+       Inferno Marfim
+       Rock Scene Girls
+       Inferno Sépia
+       Inferno Púrpura
+       Inferno Turquesa
+       Backstage da Estagiária
+       Arquivo Anime
+  ========================================== -->
 
-      <!-- MARCA -->
+  <div id="rodape-global"></div>
 
-      <div class="rodape-marca">
+  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <script src="../js/rodape.js" defer></script>
 
-        <h2>
-          Inferno<br>
-          Escarlate
-        </h2>
-
-        <p>
-          Notícias, críticas, cultura geek,
-          cinema, música, games, animes
-          e entretenimento.
-        </p>
-
-        <a
-          href="../contato.html"
-          class="rodape-contato"
-        >
-          Entre em contato
-        </a>
-
-      </div>
-
-      <!-- NAVEGAÇÃO -->
-
-      <div class="rodape-coluna">
-
-        <h3>Navegação</h3>
-
-        <a href="../index.html">
-          Início
-        </a>
-
-        <a href="../materias.html">
-          Matérias
-        </a>
-
-        <a href="../colunas.html">
-          Colunas
-        </a>
-
-        <a href="../index.html#categorias">
-          Categorias
-        </a>
-
-        <a href="../contato.html">
-          Contato
-        </a>
-
-      </div>
-
-      <!-- CATEGORIAS -->
-
-      <div class="rodape-coluna">
-
-        <h3>Categorias</h3>
-
-        <a href="../Categorias/cinema.html">
-          Cinema
-        </a>
-
-        <a href="../Categorias/series-tv.html">
-          Séries e TV
-        </a>
-
-        <a href="../Categorias/games.html">
-          Games
-        </a>
-
-        <a href="../Categorias/musica.html">
-          Música
-        </a>
-
-        <a href="../Categorias/animes.html">
-          Animes
-        </a>
-
-        <a href="../Categorias/hqs.html">
-          HQs
-        </a>
-
-        <a href="../Categorias/criticas.html">
-          Críticas
-        </a>
-
-      </div>
-
-      <!-- COLUNAS -->
-
-      <div class="rodape-coluna">
-
-        <h3>Colunas</h3>
-
-        <a href="../Colunas/cena-escarlate.html">
-          Cena Escarlate
-        </a>
-
-        <a href="../Colunas/checkpoint.html">
-          Checkpoint
-        </a>
-
-        <a href="../Colunas/som.html">
-          Som no Inferno
-        </a>
-
-        <a href="../Colunas/quadro.html">
-          Além do Quadro
-        </a>
-
-      </div>
-
-      <!-- REDES SOCIAIS -->
-
-      <div class="rodape-coluna">
-
-        <h3>Redes sociais</h3>
-
-        <a
-          href="https://www.instagram.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram:<br>
-          @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.tiktok.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TikTok: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.youtube.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube:<br>
-          @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://x.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X / Twitter:<br>
-          @infernoescarlatebr
-        </a>
-
-      </div>
-
-    </div>
-
-    <!-- BASE DO RODAPÉ -->
-
-    <div class="rodape-base">
-
-      <p>
-        © 2026 Inferno Escarlate.
-        Todos os direitos reservados.
-      </p>
-
-      <div class="rodape-links-legais">
-
-        <a href="#">
-          Política de privacidade
-        </a>
-
-        <a href="#">
-          Termos de uso
-        </a>
-
-      </div>
-
-    </div>
-
-  </footer>
-
-  <!-- JAVASCRIPT -->
-
+  <!-- CARREGAMENTO AUTOMÁTICO DAS MATÉRIAS -->
   <script src="../js/materias.js?v=5"></script>
 
+  <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>
 
 </body>
+
 </html>

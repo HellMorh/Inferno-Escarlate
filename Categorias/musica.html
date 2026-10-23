@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -10,43 +10,107 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <!-- SEO -->
+  <title>Música | Inferno Escarlate</title>
+
   <meta
     name="description"
-    content="Matérias sobre música no Inferno Escarlate."
+    content="Notícias e matérias sobre música, artistas, shows, festivais, lançamentos e movimentos musicais no Inferno Escarlate."
   >
 
-  <title>
-    Música | Inferno Escarlate
-  </title>
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
   <link
-    rel="stylesheet"
-    href="../css/style.css?v=104"
+    rel="canonical"
+    href="https://infernoescarlate.com/Categorias/musica.html"
   >
 
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Música | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Artistas, shows, festivais, lançamentos e movimentos que fazem parte do universo musical."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Categorias/musica.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL -->
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=108"
+  >
+
+  <!-- CSS EXCLUSIVO DA CATEGORIA -->
   <style>
 
-    /* =========================================
-       MENU
+    /* ==========================================
+       MENU SUPERIOR
     ========================================== */
 
-    .menu-botao {
-      display: none !important;
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
 
-    /* =========================================
-       PÁGINA
+    /*
+       O botão do menu responsivo utiliza
+       as regras do CSS principal.
+
+       Não ocultamos .menu-botao com
+       display: none !important, pois isso
+       poderia impedir o menu de funcionar
+       em determinados tamanhos de tela.
+    */
+
+    /* ==========================================
+       ESTRUTURA PRINCIPAL
     ========================================== */
 
     .pagina-listagem {
       padding-top: 78px;
     }
 
-
-    /* =========================================
+    /* ==========================================
        CABEÇALHO DA CATEGORIA
-       MESMO ESTILO DA REFERÊNCIA
     ========================================== */
 
     .cabecalho-listagem {
@@ -89,8 +153,7 @@
         no-repeat;
     }
 
-
-    /* =========================================
+    /* ==========================================
        CONTEÚDO DO CABEÇALHO
     ========================================== */
 
@@ -101,7 +164,6 @@
       position: relative;
       z-index: 2;
     }
-
 
     .cabecalho-listagem .categoria {
       display: inline-block;
@@ -114,75 +176,57 @@
       font-weight: 800;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
     }
 
-
     .cabecalho-listagem h1 {
-      margin:
-        8px
-        0
-        22px;
+      margin: 8px 0 22px;
 
-      font-family:
-        "Bebas Neue",
-        sans-serif;
-
-      font-size:
-        clamp(
-          5.5rem,
-          10vw,
-          9rem
-        );
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(5.5rem, 10vw, 9rem);
 
       line-height: 0.88;
-
       letter-spacing: 1px;
-
       text-transform: uppercase;
 
       color: #ffffff;
     }
 
-
     .cabecalho-listagem p {
       max-width: 720px;
-
       margin: 0;
 
       color: #e1e1e1;
 
       font-size: 1.05rem;
-
       line-height: 1.75;
     }
 
-
-    /* =========================================
+    /* ==========================================
        SEÇÃO DE MATÉRIAS
     ========================================== */
 
-    .secao {
+    .pagina-listagem .secao {
       position: relative;
     }
 
-
-    /* =========================================
-       RESPONSIVO
+    /* ==========================================
+       RESPONSIVIDADE — TABLET
     ========================================== */
 
-    @media screen and (max-width: 600px) {
-
-      .menu-botao {
-        display: block !important;
-      }
-
+    @media screen and (max-width: 800px) {
 
       .pagina-listagem {
         padding-top: 0;
       }
 
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — CELULAR
+    ========================================== */
+
+    @media screen and (max-width: 600px) {
 
       .cabecalho-listagem {
         min-height: 420px;
@@ -214,16 +258,9 @@
           no-repeat;
       }
 
-
       .cabecalho-listagem h1 {
-        font-size:
-          clamp(
-            4rem,
-            18vw,
-            6rem
-          );
+        font-size: clamp(4rem, 18vw, 6rem);
       }
-
 
       .cabecalho-listagem p {
         font-size: 1rem;
@@ -235,11 +272,9 @@
 
 </head>
 
-
 <body data-categoria-pagina="musica">
 
-
-  <!-- =========================================
+  <!-- ==========================================
        CABEÇALHO
   ========================================== -->
 
@@ -257,11 +292,16 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
 
       <a href="../index.html">
         Início
@@ -283,20 +323,24 @@
         Contato
       </a>
 
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
     </nav>
 
   </header>
 
-
-
-  <!-- =========================================
+  <!-- ==========================================
        CONTEÚDO PRINCIPAL
   ========================================== -->
 
   <main class="pagina-listagem">
 
-
-    <!-- =========================================
+    <!-- ==========================================
          CABEÇALHO DA CATEGORIA
     ========================================== -->
 
@@ -321,9 +365,7 @@
 
     </section>
 
-
-
-    <!-- =========================================
+    <!-- ==========================================
          MATÉRIAS DE MÚSICA
     ========================================== -->
 
@@ -332,7 +374,7 @@
       <div class="titulo-secao">
 
         <span>
-          Som no Inferno
+          Música • Shows • Festivais
         </span>
 
         <h2>
@@ -341,10 +383,15 @@
 
       </div>
 
-
       <!--
         AS MATÉRIAS SÃO CARREGADAS AUTOMATICAMENTE
-        PELO ARQUIVO materias.js
+        PELO ARQUIVO materias.js.
+
+        O atributo data-categoria-pagina="musica"
+        IDENTIFICA A CATEGORIA ATUAL.
+
+        MANTER O ID categoria-materias PARA
+        O JAVASCRIPT EXIBIR AS PUBLICAÇÕES.
       -->
 
       <div
@@ -355,218 +402,35 @@
 
     </section>
 
-
   </main>
 
+  <!-- ==========================================
+       RODAPÉ GLOBAL — INFERNO ESCARLATE
 
+       Carregado a partir de rodape.html
+       localizado na raiz do projeto.
 
-  <!-- =========================================
-       RODAPÉ
+       Contém as oito colunas oficiais:
+       Arquivo Idol
+       Inferno Marfim
+       Rock Scene Girls
+       Inferno Sépia
+       Inferno Púrpura
+       Inferno Turquesa
+       Backstage da Estagiária
+       Arquivo Anime
   ========================================== -->
 
-  <footer class="rodape-principal">
+  <div id="rodape-global"></div>
 
+  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <script src="../js/rodape.js" defer></script>
 
-    <div class="rodape-grade">
-
-
-      <!-- MARCA -->
-
-      <div class="rodape-marca">
-
-        <h2>
-          Inferno Escarlate
-        </h2>
-
-        <p>
-          Notícias, críticas, cultura geek, cinema, música,
-          games, animes e entretenimento.
-        </p>
-
-        <a
-          href="../contato.html"
-          class="rodape-contato"
-        >
-          Entre em contato
-        </a>
-
-      </div>
-
-
-
-      <!-- NAVEGAÇÃO -->
-
-      <div class="rodape-coluna">
-
-        <h3>
-          Navegação
-        </h3>
-
-        <a href="../index.html">
-          Início
-        </a>
-
-        <a href="../materias.html">
-          Matérias
-        </a>
-
-        <a href="../colunas.html">
-          Colunas
-        </a>
-
-        <a href="../index.html#categorias">
-          Categorias
-        </a>
-
-        <a href="../contato.html">
-          Contato
-        </a>
-
-      </div>
-
-
-
-      <!-- CATEGORIAS -->
-
-      <div class="rodape-coluna">
-
-        <h3>
-          Categorias
-        </h3>
-
-        <a href="cinema.html">
-          Cinema
-        </a>
-
-        <a href="series-tv.html">
-          Séries e TV
-        </a>
-
-        <a href="games.html">
-          Games
-        </a>
-
-        <a href="musica.html">
-          Música
-        </a>
-
-        <a href="eventos.html">
-          Eventos
-        </a>
-
-        <a href="festivais.html">
-          Festivais
-        </a>
-
-        <a href="animes.html">
-          Animes
-        </a>
-
-      </div>
-
-
-
-      <!-- COLUNAS -->
-
-      <div class="rodape-coluna">
-
-        <h3>
-          Colunas
-        </h3>
-
-        <a href="../Colunas/cena-escarlate.html">
-          Cena Escarlate
-        </a>
-
-        <a href="../Colunas/checkpoint.html">
-          Checkpoint
-        </a>
-
-        <a href="../Colunas/som.html">
-          Som no Inferno
-        </a>
-
-        <a href="../Colunas/quadro.html">
-          Além do Quadro
-        </a>
-
-      </div>
-
-
-
-      <!-- REDES SOCIAIS -->
-
-      <div class="rodape-coluna">
-
-        <h3>
-          Redes sociais
-        </h3>
-
-        <a
-          href="https://www.instagram.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.tiktok.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TikTok: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.youtube.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://x.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X / Twitter: @infernoescarlatebr
-        </a>
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- =========================================
-         BASE DO RODAPÉ
-    ========================================== -->
-
-    <div class="rodape-base">
-
-      <p>
-        © 2026 Inferno Escarlate.
-        Todos os direitos reservados.
-      </p>
-
-    </div>
-
-
-  </footer>
-
-
-
-  <!-- =========================================
-       JAVASCRIPT
-  ========================================== -->
-
+  <!-- CARREGAMENTO AUTOMÁTICO DAS MATÉRIAS -->
   <script src="../js/materias.js?v=5"></script>
 
+  <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>
-
 
 </body>
 

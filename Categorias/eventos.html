@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -10,27 +10,93 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <!-- SEO -->
+  <title>Eventos | Inferno Escarlate</title>
+
   <meta
     name="description"
-    content="Matérias sobre eventos no Inferno Escarlate."
+    content="Notícias, shows, festivais, encontros e acontecimentos que movimentam a música, o entretenimento e a cultura no Inferno Escarlate."
   >
 
-  <title>
-    Eventos | Inferno Escarlate
-  </title>
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
-  <link rel="stylesheet" href="../css/style.css?v=102">
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/Categorias/eventos.html"
+  >
 
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
 
+  <meta
+    property="og:title"
+    content="Eventos | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Festivais, shows, encontros e acontecimentos que movimentam música, entretenimento e cultura."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Categorias/eventos.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL -->
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=108"
+  >
+
+  <!-- CSS EXCLUSIVO DA CATEGORIA -->
   <style>
 
-    .menu-botao {
-      display: none !important;
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
-    .pagina-listagem {
-      padding-top: 78px;
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
     }
+
+    /* ==========================================
+       ESTRUTURA PRINCIPAL
+    ========================================== */
+
+    .pagina-listagem {
+      padding-top: 0;
+    }
+
+    /* ==========================================
+       CABEÇALHO DA CATEGORIA
+    ========================================== */
 
     .cabecalho-listagem {
       min-height: 430px;
@@ -39,6 +105,9 @@
       display: flex;
       align-items: flex-end;
 
+      position: relative;
+      overflow: hidden;
+
       background:
         linear-gradient(
           90deg,
@@ -46,8 +115,13 @@
           rgba(0, 0, 0, 0.55),
           rgba(0, 0, 0, 0.25)
         ),
-        url("../img/banner.png") center / cover no-repeat;
+        url("../imagem/banner.png")
+        center / cover no-repeat;
     }
+
+    /* ==========================================
+       CONTEÚDO DO CABEÇALHO
+    ========================================== */
 
     .cabecalho-listagem-conteudo {
       width: min(1180px, 100%);
@@ -56,31 +130,73 @@
 
     .cabecalho-listagem h1 {
       margin: 10px 0 18px;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(5rem, 10vw, 8rem);
       line-height: 0.9;
       text-transform: uppercase;
+
+      color: #ffffff;
     }
 
     .cabecalho-listagem p {
       max-width: 650px;
+
       color: #c2c2c2;
       line-height: 1.7;
     }
 
+    /* ==========================================
+       CARDS DE MATÉRIAS
+    ========================================== */
+
+    .pagina-listagem .grade-materias {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .pagina-listagem .card-materia {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .pagina-listagem .card-materia img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — TABLET
+    ========================================== */
+
+    @media screen and (max-width: 1000px) {
+
+      .pagina-listagem .grade-materias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE — CELULAR
+    ========================================== */
+
     @media screen and (max-width: 600px) {
-
-      .menu-botao {
-        display: block !important;
-      }
-
-      .pagina-listagem {
-        padding-top: 0;
-      }
 
       .cabecalho-listagem {
         min-height: 390px;
         padding: 110px 6% 50px;
+      }
+
+      .cabecalho-listagem h1 {
+        font-size: clamp(4rem, 18vw, 6rem);
+      }
+
+      .pagina-listagem .grade-materias {
+        grid-template-columns: 1fr;
       }
 
     }
@@ -89,13 +205,18 @@
 
 </head>
 
-
 <body>
 
+  <!-- ==========================================
+       CABEÇALHO DO SITE
+  ========================================== -->
 
   <header class="topo">
 
-    <a href="../index.html" class="logo">
+    <a
+      href="../index.html"
+      class="logo"
+    >
       Inferno Escarlate
     </a>
 
@@ -104,40 +225,47 @@
       type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
 
-      <a href="../index.html">
-        Início
-      </a>
+      <a href="../index.html">Início</a>
 
-      <a href="../materias.html">
-        Matérias
-      </a>
+      <a href="../materias.html">Matérias</a>
 
-      <a href="../colunas.html">
-        Colunas
-      </a>
+      <a href="../colunas.html">Colunas</a>
 
-      <a href="../index.html#categorias">
-        Categorias
-      </a>
+      <a href="../index.html#categorias">Categorias</a>
 
-      <a href="../contato.html">
-        Contato
+      <a href="../contato.html">Contato</a>
+
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
       </a>
 
     </nav>
 
   </header>
 
-
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
 
   <main class="pagina-listagem">
 
+    <!-- ==========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-listagem">
 
@@ -160,10 +288,14 @@
 
     </section>
 
+    <!-- ==========================================
+         MATÉRIAS DE EVENTOS
+    ========================================== -->
 
-
-    <section class="secao">
-
+    <section
+      class="secao"
+      id="materias-eventos"
+    >
 
       <div class="titulo-secao">
 
@@ -177,18 +309,18 @@
 
       </div>
 
-
-
       <div class="grade-materias">
 
-
-        <!-- ROCK IN RIO -->
+        <!-- ======================================
+             ROCK IN RIO 2026
+        ======================================= -->
 
         <article class="card-materia">
 
           <img
-            src="../img/rock-in-rio-foo-fighters.jpg"
+            src="../imagem/rock-in-rio-foo-fighters.jpg"
             alt="Foo Fighters no Rock in Rio 2026"
+            loading="lazy"
           >
 
           <div class="card-conteudo">
@@ -206,7 +338,9 @@
               grandes shows e pelo debate sobre a essência do festival.
             </p>
 
-            <a href="../posts/materia-rock-in-rio-2026.html">
+            <a
+              href="../posts/materia-rock-in-rio-2026.html"
+            >
               Ler matéria
             </a>
 
@@ -214,175 +348,43 @@
 
         </article>
 
-
-
-        <!-- CAUBY -->
-
-        <article class="card-materia">
-
-          <img
-            src="../img/materia-cauby.jpg"
-            alt="Cauby Pro Rock"
-          >
-
-          <div class="card-conteudo">
-
-            <span class="categoria">
-              Eventos
-            </span>
-
-            <h3>
-              Niterói apresenta o Cauby Pro Rock
-            </h3>
-
-            <p>
-              Evento reúne música, cultura e artistas da cena independente.
-            </p>
-
-            <a href="../posts/materia-cauby.html">
-              Ler matéria
-            </a>
-
-          </div>
-
-        </article>
-
+        <!--
+          NOVAS MATÉRIAS DE EVENTOS
+          PODERÃO SER ADICIONADAS AQUI.
+        -->
 
       </div>
 
     </section>
 
-
   </main>
 
+  <!-- ==========================================
+       RODAPÉ GLOBAL — INFERNO ESCARLATE
 
+       O conteúdo é carregado automaticamente
+       a partir do arquivo rodape.html
+       localizado na raiz do projeto.
 
-  <footer class="rodape-principal">
+       Inclui as oito colunas editoriais oficiais:
+       Arquivo Idol
+       Inferno Marfim
+       Rock Scene Girls
+       Inferno Sépia
+       Inferno Púrpura
+       Inferno Turquesa
+       Backstage da Estagiária
+       Arquivo Anime
+  ========================================== -->
 
+  <div id="rodape-global"></div>
 
-    <div class="rodape-grade">
+  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <script src="../js/rodape.js" defer></script>
 
-
-      <div class="rodape-marca">
-
-        <h2>
-          Inferno Escarlate
-        </h2>
-
-        <p>
-          Notícias, críticas, cultura geek, cinema, música,
-          games, animes e entretenimento.
-        </p>
-
-        <a href="../contato.html" class="rodape-contato">
-          Entre em contato
-        </a>
-
-      </div>
-
-
-
-      <div class="rodape-coluna">
-
-        <h3>Navegação</h3>
-
-        <a href="../index.html">Início</a>
-        <a href="../materias.html">Matérias</a>
-        <a href="../colunas.html">Colunas</a>
-        <a href="../index.html#categorias">Categorias</a>
-        <a href="../contato.html">Contato</a>
-
-      </div>
-
-
-
-      <div class="rodape-coluna">
-
-        <h3>Categorias</h3>
-
-        <a href="cinema.html">Cinema</a>
-        <a href="series-tv.html">Séries e TV</a>
-        <a href="games.html">Games</a>
-        <a href="musica.html">Música</a>
-        <a href="eventos.html">Eventos</a>
-        <a href="animes.html">Animes</a>
-
-      </div>
-
-
-
-      <div class="rodape-coluna">
-
-        <h3>Colunas</h3>
-
-        <a href="../Colunas/cena-escarlate.html">
-          Cena Escarlate
-        </a>
-
-        <a href="../Colunas/checkpoint.html">
-          Checkpoint
-        </a>
-
-        <a href="../Colunas/som.html">
-          Som no Inferno
-        </a>
-
-        <a href="../Colunas/quadro.html">
-          Além do Quadro
-        </a>
-
-      </div>
-
-
-
-      <div class="rodape-coluna">
-
-        <h3>Redes sociais</h3>
-
-        <a
-          href="https://www.instagram.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.tiktok.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TikTok: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.youtube.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube: @infernoescarlatebr
-        </a>
-
-      </div>
-
-
-    </div>
-
-
-    <div class="rodape-base">
-
-      <p>
-        © 2026 Inferno Escarlate. Todos os direitos reservados.
-      </p>
-
-    </div>
-
-
-  </footer>
-
-
-  <script src="../js/script.js?v=102"></script>
-
+  <!-- MENU RESPONSIVO -->
+  <script src="../js/script.js?v=104"></script>
 
 </body>
+
 </html>

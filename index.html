@@ -44,9 +44,7 @@
 
   <!-- CSS EXCLUSIVO DA HOME -->
   <style>
-
     /* LINKS DOS CARDS AUTOMÁTICOS */
-
     .link-imagem-materia {
       display: block;
       overflow: hidden;
@@ -62,7 +60,6 @@
     }
 
     /* IMAGEM CLICÁVEL DO DESTAQUE */
-
     .destaque-imagem > a {
       display: block;
       width: 100%;
@@ -76,7 +73,6 @@
     }
 
     /* LINK TRABALHE COMIGO */
-
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
       font-weight: 700;
@@ -92,7 +88,6 @@
     /* ==========================================
        COLUNAS EDITORIAIS
     ========================================== */
-
     .secao-colunas-editoriais {
       padding-top: 80px;
       padding-bottom: 100px;
@@ -109,21 +104,15 @@
     }
 
     /* CARD */
-
     .coluna-editorial {
       min-width: 0;
       height: 100%;
-
       display: flex;
       flex-direction: column;
-
       background: #101010;
       border: 1px solid #272727;
       overflow: hidden;
-
-      transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .coluna-editorial:hover {
@@ -132,20 +121,16 @@
     }
 
     /* CAPA */
-
     .coluna-editorial-capa {
       min-height: 245px;
       aspect-ratio: 4 / 4.5;
       padding: 22px;
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       position: relative;
       isolation: isolate;
       overflow: hidden;
-
       color: #ffffff;
       background: var(--fundo-coluna, #222222);
       text-decoration: none;
@@ -153,11 +138,9 @@
 
     .coluna-editorial-capa::before {
       content: "";
-
       position: absolute;
       z-index: -1;
       inset: 0;
-
       background:
         radial-gradient(
           circle at 80% 20%,
@@ -169,12 +152,8 @@
           transparent,
           rgba(0, 0, 0, 0.7)
         );
-
       opacity: 0.65;
-
-      transition:
-        opacity 0.3s ease,
-        transform 0.5s ease;
+      transition: opacity 0.3s ease, transform 0.5s ease;
     }
 
     .coluna-editorial:hover .coluna-editorial-capa::before {
@@ -183,10 +162,8 @@
     }
 
     /* NUMERAÇÃO */
-
     .coluna-editorial-numero {
       align-self: flex-end;
-
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 2px;
@@ -194,22 +171,18 @@
     }
 
     /* TÍTULO DA CAPA */
-
     .coluna-editorial-titulo {
       max-width: 100%;
-
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2.8rem, 4vw, 4.6rem);
       font-weight: 400;
       line-height: 0.93;
       letter-spacing: 1px;
       text-transform: uppercase;
-
       overflow-wrap: break-word;
     }
 
     /* ASSINATURA */
-
     .coluna-editorial-assinatura {
       font-size: 0.65rem;
       font-weight: 700;
@@ -219,10 +192,8 @@
     }
 
     /* CONTEÚDO DOS CARDS */
-
     .coluna-editorial-conteudo {
       padding: 24px;
-
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -231,9 +202,7 @@
     .coluna-editorial-categoria {
       display: block;
       margin-bottom: 14px;
-
       color: var(--cor-coluna, #ed1834);
-
       font-size: 0.67rem;
       font-weight: 700;
       line-height: 1.5;
@@ -243,7 +212,6 @@
 
     .coluna-editorial-conteudo h3 {
       margin: 0 0 14px;
-
       font-family: "Bebas Neue", sans-serif;
       font-size: 2rem;
       font-weight: 400;
@@ -262,11 +230,9 @@
 
     .coluna-editorial-conteudo p {
       margin: 0 0 25px;
-
       color: #aeaeae;
       font-size: 0.86rem;
       line-height: 1.7;
-
       flex: 1;
     }
 
@@ -274,16 +240,13 @@
       align-self: flex-start;
       margin-top: auto;
       padding-bottom: 7px;
-
       color: #ffffff;
       border-bottom: 2px solid var(--cor-coluna, #ed1834);
-
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 1.2px;
       text-decoration: none;
       text-transform: uppercase;
-
       transition: color 0.2s ease;
     }
 
@@ -301,49 +264,42 @@
     ========================================== */
 
     /* 01 — ARQUIVO IDOL: VERMELHO VIVO */
-
     .arquivo-idol {
       --cor-coluna: #e50924;
       --fundo-coluna: #650011;
     }
 
     /* 02 — INFERNO MARFIM: MARFIM */
-
     .inferno-marfim {
       --cor-coluna: #f0e4ca;
       --fundo-coluna: #50402f;
     }
 
     /* 03 — ROCK SCENE GIRLS: ROXO */
-
     .rock-scene-girls {
       --cor-coluna: #9b4de0;
       --fundo-coluna: #32134f;
     }
 
     /* 04 — INFERNO SÉPIA: SÉPIA */
-
     .inferno-sepia {
       --cor-coluna: #c39658;
       --fundo-coluna: #44301c;
     }
 
     /* 05 — INFERNO PÚRPURA: PÚRPURA */
-
     .inferno-purpura {
       --cor-coluna: #b348c9;
       --fundo-coluna: #370f45;
     }
 
     /* 06 — INFERNO TURQUESA: TURQUESA */
-
     .inferno-turquesa {
       --cor-coluna: #35c9c9;
       --fundo-coluna: #103c3a;
     }
 
     /* 07 — BACKSTAGE: MULTICOLORIDO */
-
     .backstage-estagiaria {
       --cor-coluna: #ffd166;
       --fundo-coluna: #202335;
@@ -370,16 +326,14 @@
     }
 
     .backstage-estagiaria .coluna-editorial-capa::before {
-      background:
-        linear-gradient(
-          180deg,
-          transparent,
-          rgba(0, 0, 0, 0.65)
-        );
+      background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(0, 0, 0, 0.65)
+      );
     }
 
     /* 08 — ARQUIVO ANIME: AZUL */
-
     .arquivo-anime {
       --cor-coluna: #859bff;
       --fundo-coluna: #242e68;
@@ -388,7 +342,6 @@
     /* ==========================================
        VER TODAS AS COLUNAS
     ========================================== */
-
     .colunas-ver-todas {
       display: flex;
       justify-content: center;
@@ -398,19 +351,14 @@
     .colunas-ver-todas a {
       display: inline-block;
       padding: 14px 25px;
-
       color: #ffffff;
       border: 1px solid #ed1834;
       text-decoration: none;
-
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease;
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .colunas-ver-todas a:hover {
@@ -420,7 +368,6 @@
     /* ==========================================
        RESPONSIVIDADE
     ========================================== */
-
     @media screen and (max-width: 1100px) {
       .grade-colunas-editoriais {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -466,15 +413,12 @@
         transform: none;
       }
     }
-
   </style>
 </head>
 
 <body>
-
   <!-- CABEÇALHO -->
   <header class="topo">
-
     <a href="index.html" class="logo">
       Inferno Escarlate
     </a>
@@ -506,14 +450,11 @@
         Trabalhe comigo
       </a>
     </nav>
-
   </header>
 
   <main>
-
     <!-- BANNER PRINCIPAL -->
     <section class="hero" id="inicio">
-
       <img
         src="imagem/banner.png"
         alt=""
@@ -523,7 +464,6 @@
       <div class="hero-escurecimento"></div>
 
       <div class="hero-conteudo">
-
         <span class="hero-etiqueta">
           Cultura Geek • Cinema • Games
         </span>
@@ -535,27 +475,23 @@
         <a href="#materias" class="botao">
           Explorar matérias
         </a>
-
       </div>
-
     </section>
 
     <!-- ==========================================
          CATEGORIAS
+         A CATEGORIA CRÍTICAS FOI REMOVIDA
     ========================================== -->
-
     <section
       class="secao secao-categorias"
       id="categorias"
     >
-
       <div class="titulo-secao">
         <span>Explore</span>
         <h2>Categorias</h2>
       </div>
 
       <div class="categorias">
-
         <a href="Categorias/esports.html">Esports</a>
         <a href="Categorias/cinema.html">Cinema</a>
         <a href="Categorias/series-tv.html">Séries e TV</a>
@@ -567,11 +503,8 @@
         <a href="Categorias/festivais.html">Festivais</a>
         <a href="Categorias/doramas-novelas.html">Doramas e novelas</a>
         <a href="Categorias/livros.html">Livros</a>
-        <a href="Categorias/criticas.html">Críticas</a>
         <a href="Categorias/hqs.html">HQs</a>
-
       </div>
-
     </section>
 
     <!-- DESTAQUE PRINCIPAL AUTOMÁTICO -->
@@ -584,9 +517,7 @@
     <!-- ==========================================
          ÚLTIMAS MATÉRIAS
     ========================================== -->
-
     <section class="secao" id="materias">
-
       <div class="titulo-secao">
         <span>Atualizações</span>
         <h2>Últimas matérias</h2>
@@ -596,18 +527,15 @@
         class="grade-materias"
         id="ultimas-materias"
       ></div>
-
     </section>
 
     <!-- ==========================================
          OITO COLUNAS EDITORIAIS
     ========================================== -->
-
     <section
       class="secao secao-colunas-editoriais"
       id="colunas"
     >
-
       <div class="titulo-secao">
         <span>Conteúdo especial</span>
         <h2>Colunas em destaque</h2>
@@ -617,7 +545,6 @@
 
         <!-- 01 — ARQUIVO IDOL -->
         <article class="coluna-editorial arquivo-idol">
-
           <a
             href="Colunas/arquivo-idol.html"
             class="coluna-editorial-capa"
@@ -635,7 +562,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               K-pop • Doramas • Cultura asiática
             </span>
@@ -663,7 +589,6 @@
 
         <!-- 02 — INFERNO MARFIM -->
         <article class="coluna-editorial inferno-marfim">
-
           <a
             href="Colunas/inferno-marfim.html"
             class="coluna-editorial-capa"
@@ -681,7 +606,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Cinema nacional • Comédia • Romance
             </span>
@@ -709,7 +633,6 @@
 
         <!-- 03 — ROCK SCENE GIRLS -->
         <article class="coluna-editorial rock-scene-girls">
-
           <a
             href="Colunas/rock-scene-girls.html"
             class="coluna-editorial-capa"
@@ -727,7 +650,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Rock • Música • Festivais
             </span>
@@ -755,7 +677,6 @@
 
         <!-- 04 — INFERNO SÉPIA -->
         <article class="coluna-editorial inferno-sepia">
-
           <a
             href="Colunas/inferno-sepia.html"
             class="coluna-editorial-capa"
@@ -773,7 +694,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Cinema clássico • Séries • História
             </span>
@@ -801,7 +721,6 @@
 
         <!-- 05 — INFERNO PÚRPURA -->
         <article class="coluna-editorial inferno-purpura">
-
           <a
             href="Colunas/inferno-purpura.html"
             class="coluna-editorial-capa"
@@ -819,7 +738,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Terror • Horror • Suspense
             </span>
@@ -847,7 +765,6 @@
 
         <!-- 06 — INFERNO TURQUESA -->
         <article class="coluna-editorial inferno-turquesa">
-
           <a
             href="Colunas/inferno-turquesa.html"
             class="coluna-editorial-capa"
@@ -865,7 +782,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Vampiros • Cinema • Literatura
             </span>
@@ -893,7 +809,6 @@
 
         <!-- 07 — BACKSTAGE DA ESTAGIÁRIA -->
         <article class="coluna-editorial backstage-estagiaria">
-
           <a
             href="Colunas/backstage-da-estagiaria.html"
             class="coluna-editorial-capa"
@@ -911,7 +826,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Cinema cult • Sociedade • Análise
             </span>
@@ -939,7 +853,6 @@
 
         <!-- 08 — ARQUIVO ANIME -->
         <article class="coluna-editorial arquivo-anime">
-
           <a
             href="Colunas/arquivo-anime.html"
             class="coluna-editorial-capa"
@@ -957,7 +870,6 @@
           </a>
 
           <div class="coluna-editorial-conteudo">
-
             <span class="coluna-editorial-categoria">
               Anime • Mangá • Animação japonesa
             </span>
@@ -993,133 +905,16 @@
       </div>
 
     </section>
-
   </main>
 
   <!-- ==========================================
-       RODAPÉ
+       RODAPÉ GLOBAL DO INFERNO ESCARLATE
   ========================================== -->
 
-  <footer class="rodape-principal">
+  <div id="rodape-global"></div>
 
-    <div class="rodape-grade">
-
-      <!-- MARCA -->
-      <div class="rodape-marca">
-
-        <h2>
-          Inferno<br>
-          Escarlate
-        </h2>
-
-        <p>
-          Notícias, críticas, cultura geek,
-          cinema, música, games, animes
-          e entretenimento.
-        </p>
-
-        <a href="contato.html" class="rodape-contato">
-          Entre em contato
-        </a>
-      </div>
-
-      <!-- NAVEGAÇÃO -->
-      <div class="rodape-coluna">
-        <h3>Navegação</h3>
-
-        <a href="index.html">Início</a>
-        <a href="materias.html">Matérias</a>
-        <a href="colunas.html">Colunas</a>
-        <a href="index.html#categorias">Categorias</a>
-        <a href="contato.html">Contato</a>
-        <a href="trabalhe-comigo/index.html">Trabalhe comigo</a>
-      </div>
-
-      <!-- CATEGORIAS -->
-      <div class="rodape-coluna">
-        <h3>Categorias</h3>
-
-        <a href="Categorias/cinema.html">Cinema</a>
-        <a href="Categorias/criticas.html">Críticas</a>
-        <a href="Categorias/series-tv.html">Séries e TV</a>
-        <a href="Categorias/games.html">Games</a>
-        <a href="Categorias/musica.html">Música</a>
-        <a href="Categorias/animes.html">Animes</a>
-        <a href="Categorias/hqs.html">HQs</a>
-        <a href="Categorias/eventos.html">Eventos</a>
-        <a href="Categorias/festivais.html">Festivais</a>
-      </div>
-
-      <!-- COLUNAS -->
-      <div class="rodape-coluna">
-        <h3>Colunas</h3>
-
-        <a href="Colunas/arquivo-idol.html">Arquivo Idol</a>
-        <a href="Colunas/inferno-marfim.html">Inferno Marfim</a>
-        <a href="Colunas/rock-scene-girls.html">Rock Scene Girls</a>
-        <a href="Colunas/inferno-sepia.html">Inferno Sépia</a>
-        <a href="Colunas/inferno-purpura.html">Inferno Púrpura</a>
-        <a href="Colunas/inferno-turquesa.html">Inferno Turquesa</a>
-        <a href="Colunas/backstage-da-estagiaria.html">Backstage da Estagiária</a>
-        <a href="Colunas/arquivo-anime.html">Arquivo Anime</a>
-      </div>
-
-      <!-- REDES SOCIAIS -->
-      <div class="rodape-coluna">
-        <h3>Redes sociais</h3>
-
-        <a
-          href="https://www.instagram.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram:<br>@infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.tiktok.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          TikTok: @infernoescarlatebr
-        </a>
-
-        <a
-          href="https://www.youtube.com/@infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          YouTube:<br>@infernoescarlatebr
-        </a>
-
-        <a
-          href="https://x.com/infernoescarlatebr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X / Twitter:<br>@infernoescarlatebr
-        </a>
-      </div>
-
-    </div>
-
-    <!-- BASE DO RODAPÉ -->
-    <div class="rodape-base">
-
-      <p>
-        © 2026 Inferno Escarlate.
-        Todos os direitos reservados.
-      </p>
-
-      <div class="rodape-links-legais">
-        <!-- Páginas legais ainda pendentes -->
-        <a href="#">Política de privacidade</a>
-        <a href="#">Termos de uso</a>
-      </div>
-
-    </div>
-
-  </footer>
+  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <script src="js/rodape.js" defer></script>
 
   <!-- CATÁLOGO AUTOMÁTICO DAS MATÉRIAS -->
   <script src="js/materias.js?v=7"></script>

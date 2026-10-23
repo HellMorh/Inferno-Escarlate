@@ -1,50 +1,138 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <!-- SEO -->
+  <title>Games | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Matérias de games do Inferno Escarlate."
+    content="Matérias sobre games, lançamentos, análises, novidades, bastidores e histórias do universo dos videogames no Inferno Escarlate."
   >
 
-  <title>Games | Inferno Escarlate</title>
+  <meta name="author" content="Inferno Escarlate">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
-  <link rel="stylesheet" href="../css/style.css?v=30">
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/Categorias/games.html"
+  >
+
+  <!-- COMPARTILHAMENTO -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+  <meta property="og:title" content="Games | Inferno Escarlate">
+
+  <meta
+    property="og:description"
+    content="Lançamentos, análises, novidades, bastidores e histórias do universo dos videogames."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Categorias/games.html"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="../css/style.css?v=108">
+
+  <!-- AJUSTES EXCLUSIVOS DA PÁGINA -->
+  <style>
+
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .topo .menu a.link-trabalhe-comigo:hover,
+    .topo .menu a.link-trabalhe-comigo:focus-visible {
+      color: #ffffff;
+    }
+
+  </style>
+
 </head>
 
 <body>
 
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+
   <header class="topo">
+
     <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
 
     <button
       class="menu-botao"
+      type="button"
       aria-label="Abrir menu"
       aria-expanded="false"
+      aria-controls="menu-principal"
     >
       ☰
     </button>
 
-    <nav class="menu">
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+
       <a href="../index.html">Início</a>
-      <a href="../index.html#materias">Matérias</a>
-      <a href="../index.html#colunas">Colunas</a>
+
+      <a href="../materias.html">Matérias</a>
+
+      <a href="../colunas.html">Colunas</a>
+
       <a href="../index.html#categorias">Categorias</a>
+
       <a href="../contato.html">Contato</a>
+
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
     </nav>
+
   </header>
+
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
 
   <main class="pagina-categoria">
 
+    <!-- CABEÇALHO DA CATEGORIA -->
+
     <section class="cabecalho-categoria">
+
       <div class="cabecalho-categoria-conteudo">
 
         <span class="categoria">
@@ -58,171 +146,77 @@
           do universo dos videogames.
         </p>
 
-        <a href="#materias-games" class="botao">
+        <a
+          href="#materias-games"
+          class="botao"
+        >
           Explorar matérias
         </a>
 
       </div>
+
     </section>
 
-    <section class="secao" id="materias-games">
+    <!-- ==========================================
+         MATÉRIAS DA CATEGORIA
+    ========================================== -->
+
+    <section
+      class="secao"
+      id="materias-games"
+    >
 
       <div class="titulo-secao">
+
         <span>Conteúdo recente</span>
+
         <h2>Matérias de games</h2>
+
       </div>
 
+      <!-- MENSAGEM ENQUANTO NÃO HÁ MATÉRIAS -->
+
       <div class="categoria-vazia">
+
         <h3>Novas matérias em breve</h3>
 
         <p>
           Esta categoria já está pronta. Quando você publicar uma matéria
           sobre games, poderá adicionar o card dela nesta área.
         </p>
+
       </div>
 
     </section>
 
   </main>
 
- <footer class="rodape-principal">
+  <!-- ==========================================
+       RODAPÉ GLOBAL — INFERNO ESCARLATE
 
-  <div class="rodape-grade">
+       O rodapé é carregado automaticamente
+       a partir do arquivo rodape.html,
+       localizado na raiz do projeto.
 
-    <div class="rodape-marca">
+       Contém as oito colunas oficiais:
+       Arquivo Idol
+       Inferno Marfim
+       Rock Scene Girls
+       Inferno Sépia
+       Inferno Púrpura
+       Inferno Turquesa
+       Backstage da Estagiária
+       Arquivo Anime
+  ========================================== -->
 
-      <h2>
-        Inferno<br>
-        Escarlate
-      </h2>
+  <div id="rodape-global"></div>
 
-      <p>
-        Notícias, críticas, cultura geek, cinema, música,
-        games, animes e entretenimento.
-      </p>
+  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <script src="../js/rodape.js" defer></script>
 
-      <a
-        href="../contato.html"
-        class="rodape-contato"
-      >
-        Entre em contato
-      </a>
-
-    </div>
-
-    <div class="rodape-coluna">
-
-      <h3>Navegação</h3>
-
-      <a href="../index.html">Início</a>
-      <a href="../materias.html">Matérias</a>
-      <a href="../colunas.html">Colunas</a>
-      <a href="../index.html#categorias">Categorias</a>
-      <a href="../contato.html">Contato</a>
-
-    </div>
-
-    <div class="rodape-coluna">
-
-      <h3>Categorias</h3>
-
-      <a href="../Categorias/cinema.html">Cinema</a>
-      <a href="../Categorias/series-tv.html">Séries e TV</a>
-      <a href="../Categorias/games.html">Games</a>
-      <a href="../Categorias/musica.html">Música</a>
-      <a href="../Categorias/animes.html">Animes</a>
-      <a href="../Categorias/hqs.html">HQs</a>
-
-    </div>
-
-    <div class="rodape-coluna">
-
-      <h3>Colunas</h3>
-
-      <a href="../Colunas/cena-escarlate.html">
-        Cena Escarlate
-      </a>
-
-      <a href="../Colunas/checkpoint.html">
-        Checkpoint
-      </a>
-
-      <a href="../Colunas/som.html">
-        Som no Inferno
-      </a>
-
-      <a href="../Colunas/quadro.html">
-        Além do Quadro
-      </a>
-
-    </div>
-
-    <div class="rodape-coluna">
-
-      <h3>Redes sociais</h3>
-
-      <a
-        href="https://www.instagram.com/infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instagram:<br>
-        @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        TikTok: @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://www.youtube.com/@infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        YouTube:<br>
-        @infernoescarlatebr
-      </a>
-
-      <a
-        href="https://x.com/infernoescarlatebr"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        X / Twitter:<br>
-        @infernoescarlatebr
-      </a>
-
-    </div>
-
-  </div>
-
-  <div class="rodape-base">
-
-    <p>
-      © 2026 Inferno Escarlate. Todos os direitos reservados.
-    </p>
-
-    <div class="rodape-links-legais">
-
-      <a href="#">
-        Política de privacidade
-      </a>
-
-      <a href="#">
-        Termos de uso
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
-
-  <script src="../js/script.js?v=100"></script>
+  <!-- MENU RESPONSIVO -->
+  <script src="../js/script.js?v=104"></script>
 
 </body>
+
 </html>
