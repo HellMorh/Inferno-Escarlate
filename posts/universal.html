@@ -1,17 +1,38 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- SEO GOOGLE -->
-  <title>
-    Dona da Universal Pictures planeja separação em duas empresas | Inferno Escarlate
-  </title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+       INFERNO ESCARLATE
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO GOOGLE
+  ========================================== -->
+
+  <title>Dona da Universal Pictures planeja separação em duas empresas | Inferno Escarlate</title>
 
   <meta
     name="description"
@@ -19,6 +40,7 @@
   >
 
   <meta name="author" content="Inferno Escarlate">
+
   <meta
     name="robots"
     content="index, follow, max-image-preview:large"
@@ -29,9 +51,14 @@
     href="https://infernoescarlate.com/posts/universal.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       COMPARTILHAMENTO E REDES SOCIAIS
+  ========================================== -->
+
   <meta property="og:type" content="article">
+
   <meta property="og:locale" content="pt_BR">
+
   <meta property="og:site_name" content="Inferno Escarlate">
 
   <meta
@@ -69,8 +96,14 @@
     content="summary_large_image"
   >
 
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -83,7 +116,10 @@
     rel="stylesheet"
   >
 
-  <!-- DADOS ESTRUTURADOS -->
+  <!-- ==========================================
+       DADOS ESTRUTURADOS - ARTICLE
+  ========================================== -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -112,13 +148,21 @@
   }
   </script>
 
-  <!-- CSS PRINCIPAL -->
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
+
   <link
     rel="stylesheet"
     href="../css/style.css?v=109"
   >
 
   <style>
+
+    /* ==========================================
+       BARRA LATERAL
+    ========================================== */
+
     .barra-lateral .leia-tambem-automatico {
       width: 100%;
       margin: 0;
@@ -148,6 +192,10 @@
       line-height: 1.45;
     }
 
+    /* ==========================================
+       MAIS MATÉRIAS
+    ========================================== */
+
     #mais-materias-automaticas {
       width: 100%;
     }
@@ -155,6 +203,78 @@
     .mais-materias[hidden] {
       display: none !important;
     }
+
+    /* ==========================================
+       COMPARTILHAMENTO
+    ========================================== */
+
+    .compartilhar {
+      margin-top: 55px;
+      padding-top: 25px;
+      border-top: 1px solid #333;
+    }
+
+    .compartilhar > span {
+      display: block;
+      margin-bottom: 18px;
+      color: #ddd;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .compartilhar > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .compartilhar a,
+    .compartilhar button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 43px;
+      padding: 12px 17px;
+      border: 1px solid #333;
+      border-radius: 0;
+      background: #0b0b0b;
+      color: #ffffff;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .compartilhar a:hover,
+    .compartilhar button:hover {
+      background: #a91b29;
+      border-color: #a91b29;
+      color: #ffffff;
+    }
+
+    .compartilhar a:focus-visible,
+    .compartilhar button:focus-visible {
+      outline: 2px solid #ff3048;
+      outline-offset: 3px;
+    }
+
+    .compartilhar-feedback {
+      display: block;
+      min-height: 18px;
+      margin-top: 12px;
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    /* ==========================================
+       COMENTÁRIOS
+    ========================================== */
 
     .secao-comentarios {
       width: min(850px, 90%);
@@ -165,7 +285,7 @@
 
     .secao-comentarios h2 {
       margin: 0 0 12px;
-      color: #fff;
+      color: #ffffff;
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 400;
@@ -185,7 +305,12 @@
       min-height: 250px;
     }
 
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
     @media (max-width: 700px) {
+
       .barra-lateral .leia-tambem-automatico {
         padding: 22px;
       }
@@ -195,13 +320,38 @@
         margin-top: 35px;
         margin-bottom: 65px;
       }
+
+      .compartilhar > div {
+        gap: 8px;
+      }
+
+      .compartilhar a,
+      .compartilhar button {
+        padding: 11px 13px;
+        font-size: 11px;
+      }
+
     }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .compartilhar a,
+      .compartilhar button {
+        transition: none;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+
   <header class="topo">
 
     <a
@@ -226,20 +376,45 @@
       id="menu-principal"
       aria-label="Navegação principal"
     >
-      <a href="../index.html">Início</a>
-      <a href="../materias.html">Matérias</a>
-      <a href="../colunas.html">Colunas</a>
-      <a href="../index.html#categorias">Categorias</a>
-      <a href="../contato.html">Contato</a>
-      <a href="../trabalhe-comigo/index.html">Trabalhe comigo</a>
+
+      <a href="../index.html">
+        Início
+      </a>
+
+      <a href="../materias.html">
+        Matérias
+      </a>
+
+      <a href="../colunas.html">
+        Colunas
+      </a>
+
+      <a href="../index.html#categorias">
+        Categorias
+      </a>
+
+      <a href="../contato.html">
+        Contato
+      </a>
+
+      <a href="../trabalhe-comigo/index.html">
+        Trabalhe comigo
+      </a>
+
     </nav>
 
   </header>
 
-  <!-- MATÉRIA -->
+  <!-- ==========================================
+       MATÉRIA UNIVERSAL PICTURES
+  ========================================== -->
+
   <main class="pagina-materia">
 
-    <!-- CAPA -->
+    <!-- ==========================================
+         CAPA
+    ========================================== -->
+
     <section class="capa-materia">
 
       <img
@@ -271,20 +446,29 @@
         </p>
 
         <div class="informacoes-materia">
-          <span>Inferno Escarlate</span>
+
+          <span>
+            Inferno Escarlate
+          </span>
 
           <time datetime="2026-06-29">
             29 de junho de 2026
           </time>
 
-          <span>Leitura de 3 minutos</span>
+          <span>
+            Leitura de 3 minutos
+          </span>
+
         </div>
 
       </div>
 
     </section>
 
-    <!-- CONTEÚDO + BARRA LATERAL -->
+    <!-- ==========================================
+         CONTEÚDO E BARRA LATERAL
+    ========================================== -->
+
     <div class="estrutura-materia">
 
       <article class="conteudo-materia">
@@ -341,60 +525,159 @@
           Fonte consultada: The Hollywood Reporter.
         </p>
 
-        <div class="compartilhar">
-          <span>Compartilhe esta matéria:</span>
+        <!-- ==========================================
+             COMPARTILHAMENTO
+        ========================================== -->
+
+        <div
+          class="compartilhar"
+          aria-label="Compartilhar esta matéria"
+        >
+
+          <span>
+            Compartilhe esta matéria:
+          </span>
 
           <div>
-            <a href="#" aria-label="Compartilhar no Instagram">Instagram</a>
-            <a href="#" aria-label="Compartilhar no X">X</a>
-            <a href="#" aria-label="Compartilhar no WhatsApp">WhatsApp</a>
+
+            <button
+              type="button"
+              id="compartilhar-instagram"
+              aria-label="Compartilhar usando o Instagram"
+            >
+              Instagram
+            </button>
+
+            <a
+              id="compartilhar-x"
+              href="https://twitter.com/intent/tweet?url=https%3A%2F%2Finfernoescarlate.com%2Fposts%2Funiversal.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Compartilhar no X"
+            >
+              X
+            </a>
+
+            <a
+              id="compartilhar-whatsapp"
+              href="https://api.whatsapp.com/send?text=https%3A%2F%2Finfernoescarlate.com%2Fposts%2Funiversal.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Compartilhar no WhatsApp"
+            >
+              WhatsApp
+            </a>
+
+            <button
+              type="button"
+              id="copiar-link-materia"
+            >
+              Copiar link
+            </button>
+
           </div>
+
+          <small
+            class="compartilhar-feedback"
+            id="compartilhar-feedback"
+            role="status"
+            aria-live="polite"
+          ></small>
+
         </div>
 
       </article>
 
-      <!-- BARRA LATERAL -->
+      <!-- ==========================================
+           BARRA LATERAL
+      ========================================== -->
+
       <aside class="barra-lateral">
 
-        <div class="bloco-lateral">
-          <span class="categoria">Inferno Escarlate</span>
+        <!-- APRESENTAÇÃO -->
 
-          <h3>Entre no modo Geek</h3>
+        <div class="bloco-lateral">
+
+          <span class="categoria">
+            Inferno Escarlate
+          </span>
+
+          <h3>
+            Entre no modo Geek
+          </h3>
 
           <p>
-            Notícias, eventos, música, cinema, games, animes e cultura pop.
+            Notícias, eventos, música, cinema,
+            games, animes e cultura pop.
           </p>
+
         </div>
+
+        <!-- LEIA TAMBÉM AUTOMÁTICO -->
 
         <section
           class="leia-tambem-automatico"
           aria-label="Leia também"
         >
-          <h2>LEIA TAMBÉM</h2>
+
+          <h2>
+            LEIA TAMBÉM
+          </h2>
+
           <div id="leia-tambem-lista"></div>
+
         </section>
 
+        <!-- CATEGORIAS -->
+
         <div class="bloco-lateral">
-          <h3>Categorias</h3>
+
+          <h3>
+            Categorias
+          </h3>
 
           <div class="categorias-laterais">
-            <a href="../Categorias/cinema.html">Cinema</a>
-            <a href="../Categorias/musica.html">Música</a>
-            <a href="../Categorias/games.html">Games</a>
-            <a href="../Categorias/animes.html">Animes</a>
+
+            <a href="../Categorias/cinema.html">
+              Cinema
+            </a>
+
+            <a href="../Categorias/musica.html">
+              Música
+            </a>
+
+            <a href="../Categorias/games.html">
+              Games
+            </a>
+
+            <a href="../Categorias/animes.html">
+              Animes
+            </a>
+
           </div>
+
         </div>
 
       </aside>
 
     </div>
 
-    <!-- MAIS MATÉRIAS -->
+    <!-- ==========================================
+         MAIS MATÉRIAS AUTOMÁTICO
+    ========================================== -->
+
     <section class="mais-materias">
 
       <div class="titulo-secao">
-        <span>Continue explorando</span>
-        <h2>Mais matérias</h2>
+
+        <span>
+          Continue explorando
+        </span>
+
+        <h2>
+          Mais matérias
+        </h2>
+
       </div>
 
       <div
@@ -404,13 +687,19 @@
 
     </section>
 
-    <!-- COMENTÁRIOS -->
+    <!-- ==========================================
+         COMENTÁRIOS DISQUS
+    ========================================== -->
+
     <section
       class="secao-comentarios"
       id="comentarios"
       aria-labelledby="titulo-comentarios"
     >
-      <h2 id="titulo-comentarios">Comentários</h2>
+
+      <h2 id="titulo-comentarios">
+        Comentários
+      </h2>
 
       <p>
         O que achou da matéria? Participe da conversa!
@@ -419,7 +708,9 @@
       <div id="disqus_thread"></div>
 
       <script>
+
         var disqus_config = function () {
+
           this.page.url =
             "https://infernoescarlate.com/posts/universal.html";
 
@@ -428,9 +719,11 @@
 
           this.page.title =
             "Dona da Universal Pictures planeja separação em duas empresas";
+
         };
 
         (function () {
+
           var d = document;
           var s = d.createElement("script");
 
@@ -443,53 +736,78 @@
           );
 
           (d.head || d.body).appendChild(s);
+
         })();
+
       </script>
 
       <noscript>
         Ative o JavaScript para visualizar os comentários.
       </noscript>
+
     </section>
 
   </main>
 
-  <!-- RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       RODAPÉ GLOBAL
+  ========================================== -->
+
   <div id="rodape-global"></div>
 
-  <!-- SCRIPTS -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
   <script src="../js/script.js?v=104"></script>
+
   <script src="../js/rodape.js"></script>
+
   <script src="../js/materias.js?v=7"></script>
+
   <script src="../js/leia-tambem.js?v=1"></script>
 
+  <!-- ==========================================
+       MAIS MATÉRIAS AUTOMÁTICO
+  ========================================== -->
+
   <script>
+
     document.addEventListener("DOMContentLoaded", function () {
+
       const container = document.querySelector(
         "#mais-materias-automaticas"
       );
 
       if (!container) return;
+
       if (typeof MATERIAS === "undefined") return;
 
       const caminhoAtual = window.location.pathname;
 
       const outrasMaterias = ordenarMaterias(
+
         MATERIAS.filter(function (materia) {
+
           const caminho = new URL(
             materia.url,
             "https://infernoescarlate.com/"
           ).pathname;
 
           return caminho !== caminhoAtual;
+
         })
+
       ).slice(0, 3);
 
       if (outrasMaterias.length === 0) {
+
         const secao = container.closest(".mais-materias");
 
         if (secao) {
           secao.hidden = true;
         }
+
         return;
       }
 
@@ -498,7 +816,199 @@
         outrasMaterias,
         "../"
       );
+
     });
+
+  </script>
+
+  <!-- ==========================================
+       COMPARTILHAMENTO FUNCIONAL
+  ========================================== -->
+
+  <script>
+
+    (function () {
+
+      const url =
+        "https://infernoescarlate.com/posts/universal.html";
+
+      const titulo =
+        "Dona da Universal Pictures planeja separação em duas empresas";
+
+      const feedback = document.getElementById(
+        "compartilhar-feedback"
+      );
+
+      const botaoCopiar = document.getElementById(
+        "copiar-link-materia"
+      );
+
+      const botaoInstagram = document.getElementById(
+        "compartilhar-instagram"
+      );
+
+      const linkX = document.getElementById(
+        "compartilhar-x"
+      );
+
+      const linkWhatsApp = document.getElementById(
+        "compartilhar-whatsapp"
+      );
+
+      // ==========================================
+      // COMPARTILHAR NO X
+      // ==========================================
+
+      if (linkX) {
+
+        linkX.href =
+          "https://twitter.com/intent/tweet?text=" +
+          encodeURIComponent(titulo) +
+          "&url=" +
+          encodeURIComponent(url);
+
+      }
+
+      // ==========================================
+      // COMPARTILHAR NO WHATSAPP
+      // ==========================================
+
+      if (linkWhatsApp) {
+
+        linkWhatsApp.href =
+          "https://api.whatsapp.com/send?text=" +
+          encodeURIComponent(titulo + " " + url);
+
+      }
+
+      // ==========================================
+      // COPIAR LINK
+      // ==========================================
+
+      async function copiarLink() {
+
+        try {
+
+          if (
+            navigator.clipboard &&
+            window.isSecureContext
+          ) {
+
+            await navigator.clipboard.writeText(url);
+
+          } else {
+
+            const campo = document.createElement(
+              "textarea"
+            );
+
+            campo.value = url;
+            campo.style.position = "fixed";
+            campo.style.opacity = "0";
+
+            document.body.appendChild(campo);
+
+            campo.select();
+
+            const copiado = document.execCommand(
+              "copy"
+            );
+
+            campo.remove();
+
+            if (!copiado) {
+              throw new Error("Falha ao copiar");
+            }
+
+          }
+
+          if (feedback) {
+
+            feedback.textContent =
+              "Link copiado! Você pode colá-lo onde quiser.";
+
+          }
+
+          return true;
+
+        } catch (erro) {
+
+          if (feedback) {
+
+            feedback.textContent =
+              "Não foi possível copiar automaticamente. " +
+              "Copie o endereço da barra do navegador.";
+
+          }
+
+          return false;
+
+        }
+
+      }
+
+      if (botaoCopiar) {
+
+        botaoCopiar.addEventListener(
+          "click",
+          copiarLink
+        );
+
+      }
+
+      // ==========================================
+      // COMPARTILHAMENTO NO INSTAGRAM
+      // ==========================================
+
+      if (botaoInstagram) {
+
+        botaoInstagram.addEventListener(
+          "click",
+          async function () {
+
+            // Compartilhamento nativo do dispositivo
+
+            if (navigator.share) {
+
+              try {
+
+                await navigator.share({
+                  title: titulo,
+                  text: titulo,
+                  url: url
+                });
+
+                return;
+
+              } catch (erro) {
+
+                if (erro.name === "AbortError") {
+                  return;
+                }
+
+              }
+
+            }
+
+            // Alternativa: copiar endereço
+
+            const copiado = await copiarLink();
+
+            if (copiado && feedback) {
+
+              feedback.textContent =
+                "Link copiado. Abra o Instagram " +
+                "e compartilhe onde desejar.";
+
+            }
+
+          }
+        );
+
+      }
+
+    })();
+
   </script>
 
 </body>
