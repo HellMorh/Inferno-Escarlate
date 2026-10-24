@@ -4,41 +4,63 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+  ========================================== -->
 
-  <!-- SEO -->
-  <title>Eventos | Inferno Escarlate</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO — CATEGORIA EVENTOS
+  ========================================== -->
+
+  <title>Eventos: Shows, Festivais e Cultura | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Notícias, shows, festivais, encontros e acontecimentos que movimentam a música, o entretenimento e a cultura no Inferno Escarlate."
+    content="Acompanhe notícias e coberturas de eventos, shows, festivais, encontros e acontecimentos de música, entretenimento e cultura no Inferno Escarlate."
   >
 
   <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/eventos.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       OPEN GRAPH
+  ========================================== -->
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
 
   <meta
     property="og:title"
-    content="Eventos | Inferno Escarlate"
+    content="Eventos: Shows, Festivais e Cultura | Inferno Escarlate"
   >
 
   <meta
     property="og:description"
-    content="Festivais, shows, encontros e acontecimentos que movimentam música, entretenimento e cultura."
+    content="Coberturas de eventos, shows, festivais e acontecimentos culturais no Inferno Escarlate."
   >
 
   <meta
@@ -51,9 +73,89 @@
     content="https://infernoescarlate.com/imagem/banner.png"
   >
 
+  <meta
+    property="og:image:alt"
+    content="Eventos e cultura no Inferno Escarlate"
+  >
+
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- FONTES -->
+  <meta
+    name="twitter:title"
+    content="Eventos | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Shows, festivais e coberturas de eventos no Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/eventos.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/eventos.html",
+        "name": "Eventos: Shows, Festivais e Cultura | Inferno Escarlate",
+        "description": "Notícias e coberturas de shows, festivais e acontecimentos culturais.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/eventos.html#breadcrumb"
+        },
+        "mainEntity": {
+          "@id": "https://infernoescarlate.com/Categorias/eventos.html#lista"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/eventos.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Eventos",
+            "item": "https://infernoescarlate.com/Categorias/eventos.html"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://infernoescarlate.com/Categorias/eventos.html#lista",
+        "name": "Matérias de eventos",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?",
+            "url": "https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -62,13 +164,16 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
-  <link
-    rel="stylesheet"
-    href="../css/style.css?v=108"
-  >
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
 
-  <!-- CSS EXCLUSIVO DA CATEGORIA -->
+  <link rel="stylesheet" href="../css/style.css?v=109">
+
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA
+  ========================================== -->
+
   <style>
 
     /* ==========================================
@@ -135,15 +240,37 @@
       font-size: clamp(5rem, 10vw, 8rem);
       line-height: 0.9;
       text-transform: uppercase;
-
       color: #ffffff;
     }
 
     .cabecalho-listagem p {
       max-width: 650px;
-
       color: #c2c2c2;
       line-height: 1.7;
+    }
+
+    /* ==========================================
+       BREADCRUMBS
+    ========================================== */
+
+    .navegacao-categoria {
+      margin-bottom: 22px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span[aria-hidden="true"] {
+      margin: 0 8px;
     }
 
     /* ==========================================
@@ -168,16 +295,67 @@
       object-fit: cover;
     }
 
+    /* LINKS DOS CARDS */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       LINKS EDITORIAIS
+    ========================================== */
+
+    .links-editoriais-eventos {
+      max-width: 1050px;
+      margin-top: 45px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-eventos p {
+      margin-bottom: 16px;
+    }
+
+    .links-editoriais-eventos a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-eventos a:hover {
+      color: #e63946;
+    }
+
     /* ==========================================
        RESPONSIVIDADE — TABLET
     ========================================== */
 
     @media screen and (max-width: 1000px) {
-
       .pagina-listagem .grade-materias {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-
     }
 
     /* ==========================================
@@ -199,6 +377,10 @@
         grid-template-columns: 1fr;
       }
 
+      .links-editoriais-eventos {
+        font-size: 0.85rem;
+      }
+
     }
 
   </style>
@@ -213,10 +395,7 @@
 
   <header class="topo">
 
-    <a
-      href="../index.html"
-      class="logo"
-    >
+    <a href="../index.html" class="logo">
       Inferno Escarlate
     </a>
 
@@ -271,13 +450,30 @@
 
       <div class="cabecalho-listagem-conteudo">
 
+        <!-- CAMINHO DE NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <span aria-current="page">
+            Eventos
+          </span>
+
+        </nav>
+
         <span class="categoria">
           Categoria
         </span>
 
-        <h1>
-          Eventos
-        </h1>
+        <h1>Eventos</h1>
 
         <p>
           Festivais, shows, encontros e acontecimentos que movimentam
@@ -295,15 +491,14 @@
     <section
       class="secao"
       id="materias-eventos"
+      aria-labelledby="titulo-materias-eventos"
     >
 
       <div class="titulo-secao">
 
-        <span>
-          Agenda escarlate
-        </span>
+        <span>Agenda escarlate</span>
 
-        <h2>
+        <h2 id="titulo-materias-eventos">
           Matérias de eventos
         </h2>
 
@@ -317,11 +512,17 @@
 
         <article class="card-materia">
 
-          <img
-            src="../imagem/rock-in-rio-foo-fighters.jpg"
-            alt="Foo Fighters no Rock in Rio 2026"
-            loading="lazy"
+          <a
+            class="link-imagem-materia"
+            href="../posts/materia-rock-in-rio-2026.html"
+            aria-label="Ler matéria sobre o Rock in Rio 2026"
           >
+            <img
+              src="../imagem/rock-in-rio-foo-fighters.jpg"
+              alt="Imagem de divulgação relacionada à matéria sobre Rock in Rio 2026"
+              loading="lazy"
+            >
+          </a>
 
           <div class="card-conteudo">
 
@@ -330,7 +531,12 @@
             </span>
 
             <h3>
-              Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?
+              <a
+                class="link-titulo-materia"
+                href="../posts/materia-rock-in-rio-2026.html"
+              >
+                Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?
+              </a>
             </h3>
 
             <p>
@@ -339,6 +545,7 @@
             </p>
 
             <a
+              class="link-ler-materia"
               href="../posts/materia-rock-in-rio-2026.html"
             >
               Ler matéria
@@ -355,34 +562,47 @@
 
       </div>
 
+      <!-- ==========================================
+           LINKS INTERNOS PARA SEO
+      ========================================== -->
+
+      <div class="links-editoriais-eventos">
+
+        <p>
+          No <strong>Inferno Escarlate</strong>,
+          acompanhamos acontecimentos ligados
+          ao entretenimento, à música e à cultura,
+          de festivais e grandes shows a encontros
+          e eventos voltados para diferentes públicos.
+        </p>
+
+        <p>
+          Explore também nossas categorias de
+          <a href="musica.html">Música</a>
+          e
+          <a href="festivais.html">Festivais</a>,
+          ou acesse a
+          <a href="../materias.html">página de matérias</a>
+          para conferir as demais publicações.
+        </p>
+
+      </div>
+
     </section>
 
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       O conteúdo é carregado automaticamente
-       a partir do arquivo rodape.html
-       localizado na raiz do projeto.
-
-       Inclui as oito colunas editoriais oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
-  <script src="../js/rodape.js" defer></script>
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
 
-  <!-- MENU RESPONSIVO -->
+  <script src="../js/rodape.js" defer></script>
   <script src="../js/script.js?v=104"></script>
 
 </body>

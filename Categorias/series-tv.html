@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -10,23 +10,162 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- SEO -->
-  <title>Séries e TV | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+       INFERNO ESCARLATE
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO GOOGLE — SÉRIES E TV
+  ========================================== -->
+
+  <title>Séries e TV: Notícias, Streaming e Estreias | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Matérias sobre séries e televisão do Inferno Escarlate."
+    content="Acompanhe notícias de séries e TV, estreias, novas temporadas, streaming, produções nacionais e internacionais e novidades da televisão no Inferno Escarlate."
   >
 
-  <meta name="robots" content="index, follow">
+  <meta
+    name="author"
+    content="Inferno Escarlate"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/series-tv.html"
   >
 
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- ==========================================
+       COMPARTILHAMENTO
+       OPEN GRAPH
+  ========================================== -->
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:locale" content="pt_BR">
+
+  <meta property="og:site_name" content="Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Séries e TV: Notícias, Streaming e Estreias | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Notícias, séries, streaming, estreias, temporadas, bastidores e novidades da televisão."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/Categorias/series-tv.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Inferno Escarlate — Séries e televisão"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Séries e TV | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notícias, estreias, séries, streaming e televisão no Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTION PAGE + BREADCRUMBS
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/series-tv.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/series-tv.html",
+        "name": "Séries e TV: Notícias, Streaming e Estreias | Inferno Escarlate",
+        "description": "Notícias de séries e televisão, streaming, estreias, temporadas e produções nacionais e internacionais.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/series-tv.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/series-tv.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Séries e TV",
+            "item": "https://infernoescarlate.com/Categorias/series-tv.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -39,14 +178,25 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
+
   <link
     rel="stylesheet"
-    href="../css/style.css?v=108"
+    href="../css/style.css?v=109"
   >
 
-  <!-- AJUSTES DO MENU -->
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA
+  ========================================== -->
+
   <style>
+
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
+
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
       font-weight: 700;
@@ -57,11 +207,129 @@
     .topo .menu a.link-trabalhe-comigo:focus-visible {
       color: #ffffff;
     }
+
+    /* ==========================================
+       BREADCRUMBS
+    ========================================== */
+
+    .navegacao-categoria {
+      width: 100%;
+      margin-bottom: 22px;
+
+      color: #aaaaaa;
+
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span[aria-hidden="true"] {
+      margin: 0 8px;
+    }
+
+    .navegacao-categoria a:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       LINKS DAS MATÉRIAS AUTOMÁTICAS
+    ========================================== */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       LINKS EDITORIAIS
+    ========================================== */
+
+    .links-editoriais-series {
+      max-width: 1050px;
+      margin-top: 45px;
+
+      color: #aaaaaa;
+
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-series p {
+      margin-bottom: 16px;
+    }
+
+    .links-editoriais-series a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-series a:hover {
+      color: #e63946;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .navegacao-categoria {
+        font-size: 0.75rem;
+      }
+
+      .links-editoriais-series {
+        margin-top: 30px;
+        font-size: 0.85rem;
+      }
+
+    }
+
   </style>
 
 </head>
 
-<body>
+<!-- ==========================================
+     CATEGORIA AUTOMÁTICA: SÉRIES E TV
+========================================== -->
+
+<body data-categoria-pagina="series">
 
   <!-- ==========================================
        CABEÇALHO
@@ -129,11 +397,34 @@
 
   <main class="pagina-categoria">
 
-    <!-- BANNER DA CATEGORIA -->
+    <!-- ==========================================
+         APRESENTAÇÃO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-categoria">
 
       <div class="cabecalho-categoria-conteudo">
+
+        <!-- CAMINHO DE NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span aria-current="page">
+            Séries e TV
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -144,8 +435,9 @@
         </h1>
 
         <p>
-          Notícias, estreias, temporadas, críticas, bastidores e novidades
-          das principais séries, programas e produções da televisão.
+          Notícias, estreias, temporadas, bastidores,
+          streaming e novidades das séries e produções
+          da televisão nacional e internacional.
         </p>
 
         <a
@@ -160,12 +452,13 @@
     </section>
 
     <!-- ==========================================
-         MATÉRIAS DA CATEGORIA
+         MATÉRIAS AUTOMÁTICAS
     ========================================== -->
 
     <section
       class="secao"
       id="materias-series"
+      aria-labelledby="titulo-materias-series"
     >
 
       <div class="titulo-secao">
@@ -174,23 +467,70 @@
           Conteúdo recente
         </span>
 
-        <h2>
+        <h2 id="titulo-materias-series">
           Matérias de Séries e TV
         </h2>
 
       </div>
 
-      <!-- MENSAGEM ENQUANTO NÃO HÁ MATÉRIAS -->
+      <!-- ==========================================
+           PUBLICAÇÕES AUTOMÁTICAS
 
-      <div class="categoria-vazia">
+           O materias.js identifica a categoria
+           usando o atributo:
 
-        <h3>
-          Novas matérias em breve
-        </h3>
+           data-categoria-pagina="series"
+
+           O ID categoria-materias deve ser mantido.
+
+           Cada matéria cadastrada com a
+           categoria "series" poderá aparecer aqui.
+      ========================================== -->
+
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+      ></div>
+
+      <!-- ==========================================
+           LINKS INTERNOS E DESCRIÇÃO EDITORIAL
+      ========================================== -->
+
+      <div class="links-editoriais-series">
 
         <p>
-          Esta categoria já está pronta para receber notícias, críticas,
-          listas e conteúdos sobre séries, streaming e televisão.
+          Explore as publicações de
+          <strong>Séries e TV</strong> do
+          <strong>Inferno Escarlate</strong>,
+          com notícias sobre televisão, serviços
+          de streaming, novas temporadas, produções
+          nacionais e internacionais e os bastidores
+          do mercado audiovisual.
+        </p>
+
+        <p>
+          Acompanhe também as notícias sobre
+          <a href="../posts/universal.html">
+            o mercado audiovisual e a Universal Pictures
+          </a>,
+          explore nossa categoria de
+          <a href="cinema.html">
+            Cinema
+          </a>
+          e conheça a coluna
+          <a href="../Colunas/inferno-sepia.html">
+            Inferno Sépia
+          </a>,
+          dedicada a filmes e séries de outras épocas.
+        </p>
+
+        <p>
+          Para encontrar todas as publicações,
+          acesse a
+          <a href="../materias.html">
+            página de matérias
+          </a>
+          do Inferno Escarlate.
         </p>
 
       </div>
@@ -201,18 +541,19 @@
 
   <!-- ==========================================
        RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       Carregado automaticamente a partir
-       do arquivo rodape.html na raiz do site.
-
-       O rodapé compartilhado contém as
-       oito colunas editoriais oficiais.
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
+  <!-- RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
+
+  <!-- MATÉRIAS AUTOMÁTICAS -->
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>

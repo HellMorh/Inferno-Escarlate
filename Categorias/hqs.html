@@ -6,27 +6,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>HQs | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+       INFERNO ESCARLATE
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO — CATEGORIA HQS
+  ========================================== -->
+
+  <title>HQs: Notícias, Quadrinhos e Lançamentos | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Matérias sobre HQs, quadrinhos, personagens, editoras e adaptações no Inferno Escarlate."
+    content="Acompanhe notícias sobre HQs, histórias em quadrinhos, lançamentos, autores, editoras, personagens e adaptações para cinema e TV no Inferno Escarlate."
   >
 
   <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/hqs.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       OPEN GRAPH E REDES SOCIAIS
+  ========================================== -->
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
-  <meta property="og:title" content="HQs | Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="HQs: Notícias, Quadrinhos e Lançamentos | Inferno Escarlate"
+  >
 
   <meta
     property="og:description"
@@ -38,9 +70,75 @@
     content="https://infernoescarlate.com/Categorias/hqs.html"
   >
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
-  <!-- FONTES -->
+  <meta
+    name="twitter:title"
+    content="HQs | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notícias, lançamentos e novidades do universo das histórias em quadrinhos."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTIONPAGE + BREADCRUMBLIST
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/hqs.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/hqs.html",
+        "name": "HQs: Notícias, Quadrinhos e Lançamentos | Inferno Escarlate",
+        "description": "Notícias, lançamentos, autores, editoras, personagens e adaptações de histórias em quadrinhos.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://infernoescarlate.com/#website",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/hqs.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/hqs.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "HQs",
+            "item": "https://infernoescarlate.com/Categorias/hqs.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -49,10 +147,16 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="../css/style.css?v=108">
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
 
-  <!-- AJUSTES EXCLUSIVOS DA PÁGINA -->
+  <link rel="stylesheet" href="../css/style.css?v=109">
+
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA
+  ========================================== -->
+
   <style>
 
     /* ==========================================
@@ -70,11 +174,124 @@
       color: #ffffff;
     }
 
+    /* ==========================================
+       CAMINHO DE NAVEGAÇÃO
+    ========================================== */
+
+    .navegacao-categoria {
+      width: 100%;
+      margin-bottom: 22px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span[aria-hidden="true"] {
+      margin: 0 8px;
+    }
+
+    .navegacao-categoria a:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       LINKS DAS MATÉRIAS
+    ========================================== */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       LINKS EDITORIAIS
+    ========================================== */
+
+    .links-editoriais-hqs {
+      max-width: 1050px;
+      margin-top: 45px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-hqs p {
+      margin-bottom: 16px;
+    }
+
+    .links-editoriais-hqs a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-hqs a:hover {
+      color: #e63946;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .navegacao-categoria {
+        font-size: 0.75rem;
+      }
+
+      .links-editoriais-hqs {
+        margin-top: 30px;
+        font-size: 0.85rem;
+      }
+
+    }
+
   </style>
 
 </head>
 
-<body>
+<!-- ==========================================
+     CATEGORIA AUTOMÁTICA: HQS
+========================================== -->
+
+<body data-categoria-pagina="hqs">
 
   <!-- ==========================================
        CABEÇALHO
@@ -129,11 +346,32 @@
 
   <main class="pagina-categoria">
 
-    <!-- CABEÇALHO DA CATEGORIA -->
+    <!-- ==========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-categoria">
 
       <div class="cabecalho-categoria-conteudo">
+
+        <!-- CAMINHO DE NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <span aria-current="page">
+            HQs
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -142,8 +380,8 @@
         <h1>HQs</h1>
 
         <p>
-          Notícias, lançamentos, personagens, autores, editoras, adaptações
-          e novidades do universo dos quadrinhos.
+          Notícias, lançamentos, personagens, autores, editoras,
+          adaptações e novidades do universo dos quadrinhos.
         </p>
 
         <a
@@ -158,32 +396,76 @@
     </section>
 
     <!-- ==========================================
-         MATÉRIAS DA CATEGORIA
+         MATÉRIAS DE HQS
     ========================================== -->
 
     <section
       class="secao"
       id="materias-hqs"
+      aria-labelledby="titulo-materias-hqs"
     >
 
       <div class="titulo-secao">
 
         <span>Conteúdo recente</span>
 
-        <h2>Matérias de HQs</h2>
+        <h2 id="titulo-materias-hqs">
+          Matérias de HQs
+        </h2>
 
       </div>
 
-      <!-- MENSAGEM ENQUANTO NÃO HÁ MATÉRIAS -->
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
 
-      <div class="categoria-vazia">
+           O materias.js identifica a categoria
+           pelo atributo:
 
-        <h3>Novas matérias em breve</h3>
+           data-categoria-pagina="hqs"
+
+           O ID categoria-materias deve ser mantido.
+      ========================================== -->
+
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+        aria-live="polite"
+      ></div>
+
+      <!-- ==========================================
+           LINKS EDITORIAIS E NAVEGAÇÃO
+      ========================================== -->
+
+      <div class="links-editoriais-hqs">
 
         <p>
-          Esta categoria está pronta para receber notícias, críticas,
-          listas e conteúdos sobre quadrinhos, editoras, autores,
-          personagens e adaptações.
+          O <strong>Inferno Escarlate</strong>
+          reúne notícias, lançamentos, autores,
+          editoras, personagens e novidades
+          sobre histórias em quadrinhos.
+        </p>
+
+        <p>
+          Explore também nossa categoria de
+          <a href="mangas.html">
+            Mangás
+          </a>,
+          dedicada às publicações japonesas,
+          e a categoria
+          <a href="cinema.html">
+            Cinema
+          </a>,
+          onde você poderá acompanhar novidades
+          sobre adaptações de quadrinhos para as telas.
+        </p>
+
+        <p>
+          Para encontrar todas as publicações,
+          visite a
+          <a href="../materias.html">
+            página de matérias
+          </a>
+          do Inferno Escarlate.
         </p>
 
       </div>
@@ -193,27 +475,20 @@
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       O rodapé é carregado automaticamente
-       a partir do arquivo rodape.html
-       localizado na raiz do projeto.
-
-       Contém as oito colunas oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
+  <!-- RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
+
+  <!-- MATÉRIAS AUTOMÁTICAS -->
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>

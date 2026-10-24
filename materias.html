@@ -1,25 +1,50 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
-
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- SEO GOOGLE -->
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+       INFERNO ESCARLATE
+  ========================================== -->
 
-  <title>Matérias, Notícias e Críticas | Inferno Escarlate</title>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"
+  ></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-LDXXNBNL8K");
+  </script>
+
+  <!-- ==========================================
+       SEO — ARQUIVO EDITORIAL
+  ========================================== -->
+
+  <title>Matérias e Notícias de Cultura Pop | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Confira todas as matérias do Inferno Escarlate: notícias, críticas e análises sobre cinema, séries, games, música, animes, eventos e cultura geek."
+    content="Explore as matérias do Inferno Escarlate sobre cinema, séries, games, música, festivais, animes, quadrinhos e cultura pop. Notícias, análises e conteúdos autorais."
   >
 
-  <meta name="author" content="Inferno Escarlate">
+  <meta
+    name="author"
+    content="Inferno Escarlate"
+  >
 
   <meta
     name="robots"
@@ -31,7 +56,9 @@
     href="https://infernoescarlate.com/materias.html"
   >
 
-  <!-- COMPARTILHAMENTO NAS REDES SOCIAIS -->
+  <!-- ==========================================
+       OPEN GRAPH E REDES SOCIAIS
+  ========================================== -->
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -39,12 +66,12 @@
 
   <meta
     property="og:title"
-    content="Todas as matérias | Inferno Escarlate"
+    content="Todas as Matérias | Inferno Escarlate"
   >
 
   <meta
     property="og:description"
-    content="Notícias, críticas e análises sobre cinema, séries, games, música, eventos e cultura geek."
+    content="Notícias, análises e conteúdos autorais sobre cinema, séries, games, música e cultura pop."
   >
 
   <meta
@@ -64,64 +91,118 @@
 
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- DADOS ESTRUTURADOS -->
+  <meta
+    name="twitter:title"
+    content="Matérias e Notícias | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Explore todas as matérias de cultura pop do Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTION PAGE + BREADCRUMBS
+
+       A LISTA DE MATÉRIAS É GERADA
+       PELO ARQUIVO materias.js.
+  ========================================== -->
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Todas as matérias | Inferno Escarlate",
-    "description": "Arquivo editorial com matérias, notícias, críticas e análises sobre cinema, séries, games, música, eventos e cultura geek.",
-    "url": "https://infernoescarlate.com/materias.html",
-    "inLanguage": "pt-BR",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Inferno Escarlate",
-      "url": "https://infernoescarlate.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Inferno Escarlate",
-      "url": "https://infernoescarlate.com/"
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia",
-          "url": "https://infernoescarlate.com/posts/se-eu-fosse-voce-3.html"
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/materias.html#webpage",
+        "url": "https://infernoescarlate.com/materias.html",
+        "name": "Matérias e Notícias de Cultura Pop | Inferno Escarlate",
+        "description": "Arquivo editorial de notícias, análises e matérias sobre cinema, televisão, games, música, animes e cultura pop.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://infernoescarlate.com/#website",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Rock in Rio 2026",
-          "url": "https://infernoescarlate.com/posts/materia-rock-in-rio-2026.html"
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/materias.html#breadcrumb"
         }
-      ]
-    }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/materias.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Matérias",
+            "item": "https://infernoescarlate.com/materias.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
 
-  <!-- CSS PRINCIPAL -->
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
 
   <link
     rel="stylesheet"
-    href="./css/style.css?v=108"
+    href="./css/style.css?v=109"
   >
 
-  <!-- ESTILOS EXCLUSIVOS DESTA PÁGINA -->
+  <!-- ==========================================
+       CSS EXCLUSIVO DE MATÉRIAS
+  ========================================== -->
 
   <style>
 
-    /* PÁGINA DE MATÉRIAS */
+    /* ==========================================
+       PÁGINA DE MATÉRIAS
+    ========================================== */
 
     .pagina-listagem {
       padding-top: 78px;
     }
 
-    /* CABEÇALHO */
+    /* ==========================================
+       CABEÇALHO
+    ========================================== */
 
     .cabecalho-listagem {
       min-height: 460px;
@@ -153,8 +234,10 @@
 
     .cabecalho-listagem h1 {
       margin: 10px 0 18px;
+
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(4rem, 10vw, 8.5rem);
+
       line-height: 0.9;
       letter-spacing: 4px;
       text-transform: uppercase;
@@ -162,12 +245,15 @@
 
     .cabecalho-listagem p {
       max-width: 680px;
+
       color: #c2c2c2;
       font-size: 1.05rem;
       line-height: 1.75;
     }
 
-    /* NOVA ABA — TRABALHE COMIGO */
+    /* ==========================================
+       MENU SUPERIOR
+    ========================================== */
 
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
@@ -181,10 +267,40 @@
       color: #ffffff;
     }
 
-    /* FILTROS */
+    /* ==========================================
+       CAMINHO DE NAVEGAÇÃO
+    ========================================== */
+
+    .navegacao-materias {
+      margin-bottom: 24px;
+
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .navegacao-materias a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-materias a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-materias span[aria-hidden="true"] {
+      margin: 0 8px;
+    }
+
+    /* ==========================================
+       FILTROS
+    ========================================== */
 
     .filtros-materias {
       margin-bottom: 34px;
+
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -219,7 +335,9 @@
       outline-offset: 3px;
     }
 
-    /* CARDS AUTOMÁTICOS */
+    /* ==========================================
+       CARDS AUTOMÁTICOS
+    ========================================== */
 
     #todas-materias .card-materia {
       min-width: 0;
@@ -253,7 +371,9 @@
       outline-offset: 3px;
     }
 
-    /* SEM RESULTADOS */
+    /* ==========================================
+       SEM RESULTADOS
+    ========================================== */
 
     .mensagem-sem-materias {
       display: none;
@@ -280,7 +400,65 @@
       line-height: 1.6;
     }
 
-    /* RESPONSIVIDADE */
+    /* ==========================================
+       ARQUIVO EDITORIAL
+       LINKS PERMANENTES
+    ========================================== */
+
+    .arquivo-editorial-links {
+      margin-top: 65px;
+      padding-top: 30px;
+
+      border-top: 1px solid var(--borda, #333);
+    }
+
+    .arquivo-editorial-links h2 {
+      margin: 0 0 18px;
+
+      color: #ffffff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 1px;
+    }
+
+    .arquivo-editorial-links p {
+      max-width: 850px;
+
+      color: #aaaaaa;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .arquivo-editorial-links ul {
+      margin: 22px 0;
+      padding-left: 20px;
+    }
+
+    .arquivo-editorial-links li {
+      margin-bottom: 12px;
+      color: #bbbbbb;
+      line-height: 1.6;
+    }
+
+    .arquivo-editorial-links a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .arquivo-editorial-links a:hover {
+      color: #ff4356;
+    }
+
+    .arquivo-editorial-links a:focus-visible {
+      outline: 2px solid #ff4356;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
 
     @media screen and (max-width: 700px) {
 
@@ -310,6 +488,10 @@
         font-size: 0.68rem;
       }
 
+      .arquivo-editorial-links {
+        margin-top: 45px;
+      }
+
     }
 
   </style>
@@ -318,7 +500,9 @@
 
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- ==========================================
+       CABEÇALHO GLOBAL
+  ========================================== -->
 
   <header class="topo">
 
@@ -346,7 +530,11 @@
         Início
       </a>
 
-      <a href="materias.html" class="ativo">
+      <a
+        href="materias.html"
+        class="ativo"
+        aria-current="page"
+      >
         Matérias
       </a>
 
@@ -362,8 +550,6 @@
         Contato
       </a>
 
-      <!-- NOVA PÁGINA -->
-
       <a
         href="trabalhe-comigo/index.html"
         class="link-trabalhe-comigo"
@@ -375,15 +561,36 @@
 
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- ==========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
 
   <main class="pagina-listagem">
 
-    <!-- CABEÇALHO DA PÁGINA -->
+    <!-- ==========================================
+       CABEÇALHO DA PÁGINA
+    ========================================== -->
 
     <section class="cabecalho-listagem">
 
       <div class="cabecalho-listagem-conteudo">
+
+        <nav
+          class="navegacao-materias"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <span aria-current="page">
+            Matérias
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Arquivo editorial
@@ -394,21 +601,23 @@
         </h1>
 
         <p>
-          Notícias, críticas, análises, eventos
-          e conteúdos sobre cinema nacional e
-          internacional, séries, games, música,
-          animes e cultura geek.
+          Notícias, análises, eventos e conteúdos
+          sobre cinema nacional e internacional,
+          séries, games, música, animes e cultura geek.
         </p>
 
       </div>
 
     </section>
 
-    <!-- LISTAGEM GERAL -->
+    <!-- ==========================================
+       LISTAGEM GERAL DE MATÉRIAS
+    ========================================== -->
 
     <section
       class="secao"
       id="arquivo-materias"
+      aria-labelledby="titulo-arquivo-materias"
     >
 
       <div class="titulo-secao">
@@ -417,14 +626,21 @@
           Conteúdo publicado
         </span>
 
-        <h2>
+        <h2 id="titulo-arquivo-materias">
           Explore as matérias
         </h2>
 
       </div>
 
-      <!-- FILTROS -->
-      <!-- A CATEGORIA CRÍTICAS FOI REMOVIDA -->
+      <!-- ==========================================
+           FILTROS DAS 12 CATEGORIAS
+
+           TODOS OS IDENTIFICADORES ABAIXO
+           SÃO COMPATÍVEIS COM materias.js.
+
+           A CATEGORIA CRÍTICAS
+           NÃO FAZ PARTE DA NAVEGAÇÃO.
+      ========================================== -->
 
       <div
         class="filtros-materias"
@@ -451,10 +667,42 @@
 
         <button
           type="button"
+          data-filtro="series"
+          aria-pressed="false"
+        >
+          Séries e TV
+        </button>
+
+        <button
+          type="button"
+          data-filtro="games"
+          aria-pressed="false"
+        >
+          Games
+        </button>
+
+        <button
+          type="button"
           data-filtro="musica"
           aria-pressed="false"
         >
           Música
+        </button>
+
+        <button
+          type="button"
+          data-filtro="animes"
+          aria-pressed="false"
+        >
+          Animes
+        </button>
+
+        <button
+          type="button"
+          data-filtro="mangas"
+          aria-pressed="false"
+        >
+          Mangás
         </button>
 
         <button
@@ -475,48 +723,58 @@
 
         <button
           type="button"
-          data-filtro="games"
+          data-filtro="doramas-novelas"
           aria-pressed="false"
         >
-          Games
+          Doramas e Novelas
         </button>
 
         <button
           type="button"
-          data-filtro="animes"
+          data-filtro="livros"
           aria-pressed="false"
         >
-          Animes
+          Livros
         </button>
 
         <button
           type="button"
-          data-filtro="series"
+          data-filtro="esports"
           aria-pressed="false"
         >
-          Séries e TV
+          Esports
+        </button>
+
+        <button
+          type="button"
+          data-filtro="hqs"
+          aria-pressed="false"
+        >
+          HQs
         </button>
 
       </div>
 
-      <!-- MATÉRIAS AUTOMÁTICAS -->
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
 
-      <!--
-        As publicações são carregadas
-        automaticamente pelo js/materias.js.
+           O materias.js CRIA OS CARDS,
+           ORDENA AS PUBLICAÇÕES
+           E CONTROLA OS FILTROS.
 
-        A categoria Críticas foi retirada
-        da navegação desta página.
-      -->
+           MANTER:
+           id="todas-materias"
+      ========================================== -->
 
       <div
         class="grade-materias"
         id="todas-materias"
         aria-live="polite"
-      >
-      </div>
+      ></div>
 
-      <!-- MENSAGEM SEM RESULTADOS -->
+      <!-- ==========================================
+           AVISO PARA FILTROS SEM MATÉRIAS
+      ========================================== -->
 
       <div
         class="mensagem-sem-materias"
@@ -536,102 +794,93 @@
 
       </div>
 
+      <!-- ==========================================
+           LINKS HTML PERMANENTES
+
+           AUXILIAM A DESCOBERTA DAS MATÉRIAS
+           SEM DEPENDER DA EXECUÇÃO
+           DO JAVASCRIPT.
+
+           ATUALIZAR QUANDO NOVAS MATÉRIAS
+           FOREM PUBLICADAS.
+      ========================================== -->
+
+      <nav
+        class="arquivo-editorial-links"
+        aria-label="Arquivo de publicações"
+      >
+
+        <h2>
+          Arquivo de publicações
+        </h2>
+
+        <p>
+          Confira as notícias e análises publicadas
+          pelo Inferno Escarlate e explore
+          os conteúdos do nosso arquivo editorial.
+        </p>
+
+        <ul>
+
+          <li>
+            <a href="posts/se-eu-fosse-voce-3.html">
+              Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia
+            </a>
+            — Cinema nacional
+          </li>
+
+          <li>
+            <a href="posts/materia-rock-in-rio-2026.html">
+              Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?
+            </a>
+            — Música e festivais
+          </li>
+
+          <li>
+            <a href="posts/universal.html">
+              Dona da Universal Pictures planeja separação em duas empresas
+            </a>
+            — Cinema e televisão
+          </li>
+
+        </ul>
+
+        <p>
+          Para navegar por temas, conheça as categorias de
+          <a href="Categorias/cinema.html">Cinema</a>,
+          <a href="Categorias/musica.html">Música</a>,
+          <a href="Categorias/series-tv.html">Séries e TV</a>
+          e
+          <a href="Categorias/festivais.html">Festivais</a>.
+          Conheça também nossas
+          <a href="colunas.html">colunas editoriais</a>.
+        </p>
+
+      </nav>
+
     </section>
 
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL - INFERNO ESCARLATE
-
-       O RODAPÉ AGORA É CARREGADO PELO
-       ARQUIVO rodape.html
-
-       AS OITO COLUNAS OFICIAIS SÃO:
-
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- JAVASCRIPT -->
+  <!-- ==========================================
+       SCRIPTS
+  ========================================== -->
 
   <!-- RODAPÉ COMPARTILHADO -->
   <script src="./js/rodape.js" defer></script>
 
-  <!-- CATÁLOGO DE MATÉRIAS -->
+  <!-- SISTEMA CENTRAL DE MATÉRIAS -->
   <script src="./js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="./js/script.js?v=104"></script>
 
-  <!-- CONTROLE VISUAL DOS FILTROS -->
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-      const botoes = document.querySelectorAll(
-        ".filtros-materias [data-filtro]"
-      );
-
-      const container = document.querySelector(
-        "#todas-materias"
-      );
-
-      const aviso = document.querySelector(
-        "#sem-materias"
-      );
-
-      if (!container || !aviso) {
-        return;
-      }
-
-      function atualizarEstado() {
-
-        const cards = [
-          ...container.querySelectorAll(".card-materia")
-        ];
-
-        const quantidadeVisiveis = cards.filter((card) => {
-          return getComputedStyle(card).display !== "none";
-        }).length;
-
-        aviso.classList.toggle(
-          "visivel",
-          quantidadeVisiveis === 0
-        );
-
-        botoes.forEach((botao) => {
-
-          const ativo = botao.classList.contains("ativo");
-
-          botao.setAttribute(
-            "aria-pressed",
-            String(ativo)
-          );
-
-        });
-
-      }
-
-      botoes.forEach((botao) => {
-
-        botao.addEventListener("click", () => {
-          atualizarEstado();
-        });
-
-      });
-
-      atualizarEstado();
-
-    });
-  </script>
-
 </body>
+
 </html>

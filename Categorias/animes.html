@@ -6,31 +6,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>Animes | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO — CATEGORIA ANIMES
+  ========================================== -->
+
+  <title>Animes: Notícias, Estreias e Novidades | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Matérias sobre animes do Inferno Escarlate."
+    content="Acompanhe notícias sobre animes, estreias, novas temporadas, adaptações de mangás, personagens e novidades da animação japonesa no Inferno Escarlate."
   >
 
   <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/animes.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       OPEN GRAPH E REDES SOCIAIS
+  ========================================== -->
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
-  <meta property="og:title" content="Animes | Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Animes: Notícias, Estreias e Novidades | Inferno Escarlate"
+  >
 
   <meta
     property="og:description"
-    content="Notícias, estreias, temporadas, personagens, curiosidades e novidades do universo dos animes."
+    content="Notícias, estreias, temporadas e novidades do universo dos animes e da animação japonesa."
   >
 
   <meta
@@ -38,9 +69,74 @@
     content="https://infernoescarlate.com/Categorias/animes.html"
   >
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
-  <!-- FONTES -->
+  <meta
+    name="twitter:title"
+    content="Animes | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notícias, estreias e novidades da animação japonesa no Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTIONPAGE + BREADCRUMBLIST
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/animes.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/animes.html",
+        "name": "Animes: Notícias, Estreias e Novidades | Inferno Escarlate",
+        "description": "Notícias, estreias, temporadas e novidades sobre animes e animação japonesa.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/animes.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/animes.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Animes",
+            "item": "https://infernoescarlate.com/Categorias/animes.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -49,10 +145,16 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="../css/style.css?v=108">
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
 
-  <!-- AJUSTES EXCLUSIVOS DA PÁGINA -->
+  <link rel="stylesheet" href="../css/style.css?v=109">
+
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA
+  ========================================== -->
+
   <style>
 
     /* ==========================================
@@ -70,11 +172,125 @@
       color: #ffffff;
     }
 
+    /* ==========================================
+       CAMINHO DE NAVEGAÇÃO
+    ========================================== */
+
+    .navegacao-categoria {
+      width: 100%;
+      margin-bottom: 22px;
+
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span[aria-hidden="true"] {
+      margin: 0 8px;
+    }
+
+    .navegacao-categoria a:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       LINKS DAS MATÉRIAS
+    ========================================== */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       LINKS EDITORIAIS
+    ========================================== */
+
+    .links-editoriais-animes {
+      max-width: 1050px;
+      margin-top: 45px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-animes p {
+      margin-bottom: 16px;
+    }
+
+    .links-editoriais-animes a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-animes a:hover {
+      color: #e63946;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .navegacao-categoria {
+        font-size: 0.75rem;
+      }
+
+      .links-editoriais-animes {
+        margin-top: 30px;
+        font-size: 0.85rem;
+      }
+
+    }
+
   </style>
 
 </head>
 
-<body>
+<!-- ==========================================
+     CATEGORIA AUTOMÁTICA: ANIMES
+========================================== -->
+
+<body data-categoria-pagina="animes">
 
   <!-- ==========================================
        CABEÇALHO
@@ -129,11 +345,32 @@
 
   <main class="pagina-categoria">
 
-    <!-- CABEÇALHO DA CATEGORIA -->
+    <!-- ==========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-categoria">
 
       <div class="cabecalho-categoria-conteudo">
+
+        <!-- CAMINHO DE NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <span aria-current="page">
+            Animes
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -142,8 +379,8 @@
         <h1>Animes</h1>
 
         <p>
-          Notícias, estreias, temporadas, personagens, curiosidades e novidades
-          do universo dos animes.
+          Notícias, estreias, temporadas, personagens, curiosidades
+          e novidades do universo dos animes.
         </p>
 
         <a
@@ -164,25 +401,62 @@
     <section
       class="secao"
       id="materias-animes"
+      aria-labelledby="titulo-materias-animes"
     >
 
       <div class="titulo-secao">
 
         <span>Conteúdo recente</span>
 
-        <h2>Matérias de animes</h2>
+        <h2 id="titulo-materias-animes">
+          Matérias de animes
+        </h2>
 
       </div>
 
-      <!-- MENSAGEM ENQUANTO NÃO HÁ MATÉRIAS -->
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
 
-      <div class="categoria-vazia">
+           O materias.js identifica a categoria
+           pelo atributo:
 
-        <h3>Novas matérias em breve</h3>
+           data-categoria-pagina="animes"
+
+           O ID categoria-materias deve ser mantido.
+      ========================================== -->
+
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+      ></div>
+
+      <!-- ==========================================
+           LINKS EDITORIAIS E NAVEGAÇÃO
+      ========================================== -->
+
+      <div class="links-editoriais-animes">
 
         <p>
-          Esta categoria já está pronta para receber notícias, críticas,
-          listas e conteúdos sobre animes.
+          O <strong>Inferno Escarlate</strong>
+          reúne notícias e conteúdos relacionados
+          à animação japonesa, com novidades sobre
+          estreias, temporadas, adaptações,
+          personagens e produções de anime.
+        </p>
+
+        <p>
+          Explore também nossa categoria de
+          <a href="mangas.html">
+            Mangás
+          </a>,
+          conheça a coluna
+          <a href="../Colunas/arquivo-anime.html">
+            Arquivo Anime
+          </a>
+          e acompanhe todas as publicações na
+          <a href="../materias.html">
+            página de matérias
+          </a>.
         </p>
 
       </div>
@@ -192,27 +466,20 @@
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       O rodapé é carregado automaticamente
-       a partir do arquivo rodape.html,
-       localizado na raiz do projeto.
-
-       Contém as oito colunas oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
+  <!-- RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
+
+  <!-- MATÉRIAS AUTOMÁTICAS -->
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>

@@ -1,12 +1,19 @@
 
 /* ==========================================
-   CATÁLOGO DE MATÉRIAS — INFERNO ESCARLATE
+   INFERNO ESCARLATE
+   SISTEMA CENTRAL DE MATÉRIAS
+========================================== */
+
+
+/* ==========================================
+   CATÁLOGO DE MATÉRIAS
 ========================================== */
 
 const MATERIAS = [
 
   /* ==========================================
      SE EU FOSSE VOCÊ 3
+     CINEMA NACIONAL / INFERNO MARFIM
   ========================================== */
 
   {
@@ -22,7 +29,7 @@ const MATERIAS = [
 
     categorias: ["cinema"],
 
-    categoriaTexto: "Cinema nacional • Crítica",
+    categoriaTexto: "Cinema nacional • Coluna",
 
     data: "2026-10-10T15:00:00",
 
@@ -31,6 +38,7 @@ const MATERIAS = [
 
   /* ==========================================
      ROCK IN RIO 2026
+     MÚSICA / EVENTOS / FESTIVAIS
   ========================================== */
 
   {
@@ -55,6 +63,7 @@ const MATERIAS = [
 
   /* ==========================================
      UNIVERSAL PICTURES
+     CINEMA / SÉRIES E TV
   ========================================== */
 
   {
@@ -81,14 +90,39 @@ const MATERIAS = [
 
 
 /* ==========================================
-   CONFIGURAÇÕES SEO
+   CONFIGURAÇÕES GERAIS
 ========================================== */
 
 const SITE_URL = "https://infernoescarlate.com/";
 
+const CATEGORIAS_VALIDAS = [
+  "cinema",
+  "series",
+  "games",
+  "musica",
+  "animes",
+  "mangas",
+  "eventos",
+  "festivais",
+  "doramas-novelas",
+  "livros",
+  "esports",
+  "hqs"
+];
+
+
+/* ==========================================
+   URLs ABSOLUTAS
+========================================== */
+
 function urlAbsoluta(caminho) {
   return new URL(caminho, SITE_URL).href;
 }
+
+
+/* ==========================================
+   FORMATAÇÃO DAS DATAS
+========================================== */
 
 function dataFormatada(data) {
 
@@ -107,6 +141,7 @@ function dataFormatada(data) {
 
 /* ==========================================
    ORDENAÇÃO DAS MATÉRIAS
+   MAIS RECENTES PRIMEIRO
 ========================================== */
 
 function ordenarMaterias(lista) {
@@ -121,7 +156,13 @@ function ordenarMaterias(lista) {
 
 
 /* ==========================================
-   CAMINHOS DOS ARQUIVOS
+   CAMINHOS RELATIVOS
+
+   HOME:
+   posts/materia.html
+
+   CATEGORIA:
+   ../posts/materia.html
 ========================================== */
 
 function caminhoComPrefixo(prefixo, caminho) {
@@ -132,7 +173,39 @@ function caminhoComPrefixo(prefixo, caminho) {
 
 
 /* ==========================================
-   CARD DE MATÉRIA
+   VALIDAR CATEGORIAS CADASTRADAS
+========================================== */
+
+function validarCategorias() {
+
+  MATERIAS.forEach((materia) => {
+
+    materia.categorias.forEach((categoria) => {
+
+      if (!CATEGORIAS_VALIDAS.includes(categoria)) {
+
+        console.warn(
+          "Inferno Escarlate: categoria não reconhecida:",
+          categoria,
+          "na matéria:",
+          materia.titulo
+        );
+
+      }
+
+    });
+
+  });
+
+}
+
+
+/* ==========================================
+   CRIAR CARD DE MATÉRIA
+
+   UTILIZADO NA HOME,
+   NA LISTAGEM GERAL
+   E NAS CATEGORIAS
 ========================================== */
 
 function criarCardMateria(materia, prefixo = "") {
@@ -175,6 +248,7 @@ function criarCardMateria(materia, prefixo = "") {
           src="${imagem}"
           alt="${materia.alt}"
           loading="lazy"
+          decoding="async"
           itemprop="image"
         >
 
@@ -238,12 +312,57 @@ function renderizarLista(
 
   container.innerHTML = lista
     .map((materia) => {
+
       return criarCardMateria(
         materia,
         prefixo
       );
+
     })
     .join("");
+
+}
+
+
+/* ==========================================
+   MENSAGEM PARA CATEGORIAS VAZIAS
+
+   A MENSAGEM É CRIADA APENAS
+   QUANDO NÃO HOUVER PUBLICAÇÕES.
+========================================== */
+
+function mostrarCategoriaVazia(container) {
+
+  if (!container) return;
+
+  const avisoAnterior = container.parentElement
+    .querySelector(".categoria-vazia[data-aviso-automatico]");
+
+  if (avisoAnterior) {
+    avisoAnterior.remove();
+  }
+
+  const aviso = document.createElement("div");
+
+  aviso.className = "categoria-vazia";
+
+  aviso.dataset.avisoAutomatico = "true";
+
+  aviso.innerHTML = `
+    <h3>Novas matérias em breve</h3>
+
+    <p>
+      Estamos preparando novos conteúdos
+      para esta categoria. Enquanto isso,
+      explore as outras publicações
+      do Inferno Escarlate.
+    </p>
+  `;
+
+  container.insertAdjacentElement(
+    "afterend",
+    aviso
+  );
 
 }
 
@@ -282,6 +401,7 @@ function renderizarDestaquePrincipal() {
         <img
           src="${materia.imagem}"
           alt="${materia.alt}"
+          fetchpriority="high"
         >
 
       </a>
@@ -323,7 +443,7 @@ function renderizarDestaquePrincipal() {
 
 
 /* ==========================================
-   ÚLTIMAS MATÉRIAS
+   ÚLTIMAS MATÉRIAS DA HOME
 ========================================== */
 
 function renderizarUltimasMaterias() {
@@ -347,7 +467,7 @@ function renderizarUltimasMaterias() {
 
 
 /* ==========================================
-   TODAS AS MATÉRIAS
+   PÁGINA GERAL DE MATÉRIAS
 ========================================== */
 
 function renderizarTodasMaterias() {
@@ -370,6 +490,11 @@ function renderizarTodasMaterias() {
 
 /* ==========================================
    PÁGINAS DE CATEGORIAS
+
+   EXEMPLO:
+   <body data-categoria-pagina="cinema">
+
+   <div id="categoria-materias"></div>
 ========================================== */
 
 function renderizarPaginaCategoria() {
@@ -380,7 +505,8 @@ function renderizarPaginaCategoria() {
 
   if (!container) return;
 
-  const categoria = document.body.dataset.categoriaPagina;
+  const categoria =
+    document.body.dataset.categoriaPagina;
 
   if (!categoria) return;
 
@@ -398,6 +524,23 @@ function renderizarPaginaCategoria() {
     lista,
     "../"
   );
+
+  if (lista.length === 0) {
+
+    mostrarCategoriaVazia(container);
+
+  } else {
+
+    const avisoAnterior = container.parentElement
+      .querySelector(
+        ".categoria-vazia[data-aviso-automatico]"
+      );
+
+    if (avisoAnterior) {
+      avisoAnterior.remove();
+    }
+
+  }
 
 }
 
@@ -504,7 +647,12 @@ function ativarFiltros() {
 
 
 /* ==========================================
-   DADOS ESTRUTURADOS DA LISTAGEM
+   DADOS ESTRUTURADOS
+   LISTAGEM DE MATÉRIAS
+
+   AJUDA MECANISMOS DE BUSCA
+   A IDENTIFICAR PUBLICAÇÕES
+   PRESENTES NAS LISTAGENS.
 ========================================== */
 
 function adicionarDadosEstruturados() {
@@ -537,7 +685,9 @@ function adicionarDadosEstruturados() {
   );
 
   if (paginaInicial) {
+
     lista = lista.slice(0, 3);
+
   }
 
   if (paginaCategoria) {
@@ -555,17 +705,30 @@ function adicionarDadosEstruturados() {
 
   }
 
+  // Evita criar uma lista vazia.
+  if (lista.length === 0) return;
+
+  // Evita duplicar o script se a função
+  // for executada novamente.
+  const scriptAnterior = document.querySelector(
+    'script[data-schema-materias="true"]'
+  );
+
+  if (scriptAnterior) {
+    scriptAnterior.remove();
+  }
+
   const dados = {
 
     "@context": "https://schema.org",
 
     "@type": "ItemList",
 
-    "name": paginaInicial
-      ? "Últimas matérias do Inferno Escarlate"
-      : paginaCategoria
-        ? "Matérias por categoria do Inferno Escarlate"
-        : "Todas as matérias do Inferno Escarlate",
+    "name": paginaCategoria
+      ? "Matérias por categoria do Inferno Escarlate"
+      : paginaMaterias
+        ? "Todas as matérias do Inferno Escarlate"
+        : "Últimas matérias do Inferno Escarlate",
 
     "itemListElement": lista.map(
       (materia, indice) => ({
@@ -591,6 +754,8 @@ function adicionarDadosEstruturados() {
 
   script.type = "application/ld+json";
 
+  script.dataset.schemaMaterias = "true";
+
   script.textContent = JSON.stringify(
     dados
   );
@@ -603,22 +768,37 @@ function adicionarDadosEstruturados() {
 
 
 /* ==========================================
-   INICIALIZAÇÃO
+   INICIALIZAÇÃO DO SISTEMA
+
+   EXECUTA QUANDO O HTML
+   TERMINA DE CARREGAR.
 ========================================== */
 
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
+function iniciarSistemaMaterias() {
 
-    renderizarDestaquePrincipal();
+  validarCategorias();
 
-    renderizarUltimasMaterias();
+  renderizarDestaquePrincipal();
 
-    renderizarTodasMaterias();
+  renderizarUltimasMaterias();
 
-    renderizarPaginaCategoria();
+  renderizarTodasMaterias();
 
-    adicionarDadosEstruturados();
+  renderizarPaginaCategoria();
 
-  }
-);
+  adicionarDadosEstruturados();
+
+}
+
+if (document.readyState === "loading") {
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    iniciarSistemaMaterias
+  );
+
+} else {
+
+  iniciarSistemaMaterias();
+
+}

@@ -10,35 +10,70 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- SEO -->
-  <title>Cinema | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+       INFERNO ESCARLATE
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO GOOGLE — CATEGORIA CINEMA
+  ========================================== -->
+
+  <title>Cinema: Notícias, Filmes e Estreias | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Cinema no Inferno Escarlate: notícias, estreias, críticas, trailers e novidades do cinema nacional e internacional."
+    content="Acompanhe notícias de cinema, lançamentos, filmes nacionais e internacionais, análises, trailers e novidades do universo cinematográfico no Inferno Escarlate."
   >
 
-  <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta
+    name="author"
+    content="Inferno Escarlate"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/cinema.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       COMPARTILHAMENTO
+       OPEN GRAPH E REDES SOCIAIS
+  ========================================== -->
+
   <meta property="og:type" content="website">
+
   <meta property="og:locale" content="pt_BR">
+
   <meta property="og:site_name" content="Inferno Escarlate">
 
   <meta
     property="og:title"
-    content="Cinema | Inferno Escarlate"
+    content="Cinema: Notícias, Filmes e Estreias | Inferno Escarlate"
   >
 
   <meta
     property="og:description"
-    content="Notícias, estreias, críticas, trailers e novidades do cinema nacional e internacional."
+    content="Notícias, lançamentos, análises, trailers e novidades do cinema nacional e internacional."
   >
 
   <meta
@@ -46,10 +81,91 @@
     content="https://infernoescarlate.com/Categorias/cinema.html"
   >
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
 
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta
+    property="og:image:alt"
+    content="Inferno Escarlate — Notícias e cultura pop"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Cinema | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notícias, filmes, estreias e análises de cinema no Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTION PAGE + BREADCRUMBS
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/cinema.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/cinema.html",
+        "name": "Cinema | Inferno Escarlate",
+        "description": "Notícias, estreias, análises, trailers e novidades do cinema nacional e internacional.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/cinema.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/cinema.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cinema",
+            "item": "https://infernoescarlate.com/Categorias/cinema.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -62,13 +178,19 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
+
   <link
     rel="stylesheet"
-    href="../css/style.css?v=108"
+    href="../css/style.css?v=109"
   >
 
-  <!-- CSS EXCLUSIVO DA CATEGORIA -->
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA CINEMA
+  ========================================== -->
+
   <style>
 
     /* ==========================================
@@ -118,15 +240,73 @@
       outline-offset: 3px;
     }
 
+    /* ==========================================
+       NAVEGAÇÃO DA CATEGORIA
+    ========================================== */
+
+    .navegacao-categoria {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .navegacao-categoria a {
+      display: inline-block;
+      color: #bbbbbb;
+      font-size: 0.8rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria a:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       TEXTO DE APOIO EDITORIAL
+    ========================================== */
+
+    .descricao-editorial-cinema {
+      margin-top: 40px;
+      color: #aaaaaa;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .descricao-editorial-cinema a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .descricao-editorial-cinema a:hover {
+      color: #e63946;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media (max-width: 700px) {
+
+      .descricao-editorial-cinema {
+        margin-top: 30px;
+        font-size: 0.85rem;
+      }
+
+    }
+
   </style>
 
 </head>
 
-<!--
-  O atributo data-categoria-pagina="cinema"
-  é utilizado pelo materias.js para
-  identificar as publicações desta categoria.
--->
+<!-- ==========================================
+     CATEGORIA AUTOMÁTICA: CINEMA
+========================================== -->
 
 <body data-categoria-pagina="cinema">
 
@@ -197,12 +377,33 @@
   <main class="pagina-categoria">
 
     <!-- ==========================================
-         APRESENTAÇÃO DA CATEGORIA
+         APRESENTAÇÃO DA CATEGORIA CINEMA
     ========================================== -->
 
     <section class="cabecalho-categoria">
 
       <div class="cabecalho-categoria-conteudo">
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span aria-current="page">
+            Cinema
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -214,7 +415,7 @@
 
         <p>
           Notícias, estreias, trailers, bastidores,
-          críticas e novidades do cinema nacional
+          análises e novidades do cinema nacional
           e internacional.
         </p>
 
@@ -236,6 +437,7 @@
     <section
       class="secao"
       id="materias-cinema"
+      aria-labelledby="titulo-materias-cinema"
     >
 
       <div class="titulo-secao">
@@ -244,28 +446,56 @@
           Conteúdo recente
         </span>
 
-        <h2>
+        <h2 id="titulo-materias-cinema">
           Matérias de cinema
         </h2>
 
       </div>
 
       <!--
-        AS MATÉRIAS SERÃO CARREGADAS
+        AS MATÉRIAS SÃO CARREGADAS
         AUTOMATICAMENTE PELO materias.js.
 
-        A CATEGORIA É DEFINIDA NO BODY:
+        O CÓDIGO IDENTIFICA A CATEGORIA
+        ATRAVÉS DO ATRIBUTO:
+
         data-categoria-pagina="cinema"
 
-        O ID categoria-materias DEVE
-        SER MANTIDO PARA O JAVASCRIPT
-        ENCONTRAR A GRADE DE PUBLICAÇÕES.
+        O ID categoria-materias DEVE SER
+        MANTIDO PARA O JAVASCRIPT FUNCIONAR.
       -->
 
       <div
         class="grade-materias"
         id="categoria-materias"
-      >
+      ></div>
+
+      <!-- TEXTO EDITORIAL E LINKS INTERNOS -->
+
+      <div class="descricao-editorial-cinema">
+
+        <p>
+          Explore as publicações de cinema do
+          <strong>Inferno Escarlate</strong>,
+          com notícias sobre lançamentos,
+          produções nacionais e internacionais,
+          bastidores e análises de filmes.
+        </p>
+
+        <p>
+          Para acompanhar todas as publicações,
+          visite nossa
+          <a href="../materias.html">
+            página de matérias
+          </a>.
+          Conheça também a coluna
+          <a href="../Colunas/inferno-marfim.html">
+            Inferno Marfim
+          </a>,
+          dedicada a comédias, romances e histórias
+          do entretenimento.
+        </p>
+
       </div>
 
     </section>
@@ -273,30 +503,21 @@
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       O conteúdo é carregado automaticamente
-       a partir do arquivo rodape.html,
-       localizado na raiz do projeto.
-
-       Inclui as oito colunas editoriais oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
+       INFERNO ESCARLATE
   ========================================== -->
 
   <div id="rodape-global"></div>
+
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
 
   <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
 
   <!-- CARREGAMENTO AUTOMÁTICO DAS MATÉRIAS -->
-  <script src="../js/materias.js?v=5"></script>
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>

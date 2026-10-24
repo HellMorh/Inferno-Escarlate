@@ -6,31 +6,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>Livros | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO — CATEGORIA LIVROS
+  ========================================== -->
+
+  <title>Livros: Notícias, Lançamentos e Resenhas | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Matérias sobre livros e literatura do Inferno Escarlate."
+    content="Acompanhe notícias sobre livros, lançamentos literários, resenhas, autores, adaptações para cinema e TV e novidades da literatura no Inferno Escarlate."
   >
 
   <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/livros.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       OPEN GRAPH E REDES SOCIAIS
+  ========================================== -->
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
-  <meta property="og:title" content="Livros | Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Livros: Notícias, Lançamentos e Resenhas | Inferno Escarlate"
+  >
 
   <meta
     property="og:description"
-    content="Notícias, lançamentos, resenhas, autores, adaptações e novidades do universo da literatura."
+    content="Notícias, lançamentos, resenhas, autores e adaptações literárias no Inferno Escarlate."
   >
 
   <meta
@@ -38,9 +69,74 @@
     content="https://infernoescarlate.com/Categorias/livros.html"
   >
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
-  <!-- FONTES -->
+  <meta
+    name="twitter:title"
+    content="Livros | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notícias, lançamentos, resenhas e novidades do universo literário."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTIONPAGE + BREADCRUMBLIST
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/livros.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/livros.html",
+        "name": "Livros: Notícias, Lançamentos e Resenhas | Inferno Escarlate",
+        "description": "Notícias sobre livros, lançamentos, resenhas, autores e adaptações literárias.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/livros.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/livros.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Livros",
+            "item": "https://infernoescarlate.com/Categorias/livros.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -49,10 +145,16 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="../css/style.css?v=108">
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
 
-  <!-- AJUSTES DA PÁGINA -->
+  <link rel="stylesheet" href="../css/style.css?v=109">
+
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA
+  ========================================== -->
+
   <style>
 
     /* ==========================================
@@ -70,11 +172,124 @@
       color: #ffffff;
     }
 
+    /* ==========================================
+       CAMINHO DE NAVEGAÇÃO
+    ========================================== */
+
+    .navegacao-categoria {
+      width: 100%;
+      margin-bottom: 22px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span[aria-hidden="true"] {
+      margin: 0 8px;
+    }
+
+    .navegacao-categoria a:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 4px;
+    }
+
+    /* ==========================================
+       LINKS DAS MATÉRIAS
+    ========================================== */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       LINKS EDITORIAIS
+    ========================================== */
+
+    .links-editoriais-livros {
+      max-width: 1050px;
+      margin-top: 45px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-livros p {
+      margin-bottom: 16px;
+    }
+
+    .links-editoriais-livros a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-livros a:hover {
+      color: #e63946;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE
+    ========================================== */
+
+    @media screen and (max-width: 700px) {
+
+      .navegacao-categoria {
+        font-size: 0.75rem;
+      }
+
+      .links-editoriais-livros {
+        margin-top: 30px;
+        font-size: 0.85rem;
+      }
+
+    }
+
   </style>
 
 </head>
 
-<body>
+<!-- ==========================================
+     CATEGORIA AUTOMÁTICA: LIVROS
+========================================== -->
+
+<body data-categoria-pagina="livros">
 
   <!-- ==========================================
        CABEÇALHO
@@ -129,11 +344,32 @@
 
   <main class="pagina-categoria">
 
-    <!-- CABEÇALHO DA CATEGORIA -->
+    <!-- ==========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-categoria">
 
       <div class="cabecalho-categoria-conteudo">
+
+        <!-- CAMINHO DE NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <span aria-current="page">
+            Livros
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -142,8 +378,8 @@
         <h1>Livros</h1>
 
         <p>
-          Notícias, lançamentos, resenhas, autores, adaptações e novidades
-          do universo da literatura.
+          Notícias, lançamentos, resenhas, autores, adaptações
+          e novidades do universo da literatura.
         </p>
 
         <a
@@ -164,25 +400,69 @@
     <section
       class="secao"
       id="materias-livros"
+      aria-labelledby="titulo-materias-livros"
     >
 
       <div class="titulo-secao">
 
         <span>Conteúdo recente</span>
 
-        <h2>Matérias de livros</h2>
+        <h2 id="titulo-materias-livros">
+          Matérias de livros
+        </h2>
 
       </div>
 
-      <!-- MENSAGEM ENQUANTO NÃO HÁ MATÉRIAS -->
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
 
-      <div class="categoria-vazia">
+           O materias.js identifica a categoria
+           pelo atributo:
 
-        <h3>Novas matérias em breve</h3>
+           data-categoria-pagina="livros"
+
+           O ID categoria-materias deve ser mantido.
+      ========================================== -->
+
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+      ></div>
+
+      <!-- ==========================================
+           LINKS EDITORIAIS E NAVEGAÇÃO
+      ========================================== -->
+
+      <div class="links-editoriais-livros">
 
         <p>
-          Esta categoria já está pronta para receber resenhas, listas,
-          notícias e conteúdos sobre livros, autores e adaptações.
+          O <strong>Inferno Escarlate</strong>
+          reúne notícias e conteúdos relacionados
+          à literatura, com novidades sobre
+          lançamentos, escritores, editoras,
+          resenhas e adaptações de livros.
+        </p>
+
+        <p>
+          Explore também nossas categorias de
+          <a href="cinema.html">
+            Cinema
+          </a>
+          e
+          <a href="series-tv.html">
+            Séries e TV
+          </a>,
+          onde você pode acompanhar notícias
+          sobre adaptações literárias.
+        </p>
+
+        <p>
+          Para conferir todas as publicações,
+          visite a
+          <a href="../materias.html">
+            página de matérias
+          </a>
+          do Inferno Escarlate.
         </p>
 
       </div>
@@ -192,27 +472,20 @@
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       O conteúdo é carregado automaticamente
-       pelo arquivo rodape.html, localizado
-       na raiz do projeto.
-
-       Contém as oito colunas oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
+  <!-- RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
+
+  <!-- MATÉRIAS AUTOMÁTICAS -->
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>

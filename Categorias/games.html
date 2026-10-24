@@ -4,33 +4,64 @@
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>Games | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO — CATEGORIA GAMES
+  ========================================== -->
+
+  <title>Games: Notícias, Lançamentos e Análises | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Matérias sobre games, lançamentos, análises, novidades, bastidores e histórias do universo dos videogames no Inferno Escarlate."
+    content="Acompanhe notícias sobre games, lançamentos, análises, consoles, jogos para PC e bastidores da indústria dos videogames no Inferno Escarlate."
   >
 
   <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/games.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       OPEN GRAPH E REDES SOCIAIS
+  ========================================== -->
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
-  <meta property="og:title" content="Games | Inferno Escarlate">
+
+  <meta
+    property="og:title"
+    content="Games: Notícias, Lançamentos e Análises | Inferno Escarlate"
+  >
 
   <meta
     property="og:description"
-    content="Lançamentos, análises, novidades, bastidores e histórias do universo dos videogames."
+    content="Notícias, lançamentos, análises e histórias do universo dos videogames."
   >
 
   <meta
@@ -38,26 +69,100 @@
     content="https://infernoescarlate.com/Categorias/games.html"
   >
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
-  <!-- FONTES -->
+  <meta
+    name="twitter:title"
+    content="Games | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Notícias, lançamentos e análises de videogames no Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTIONPAGE + BREADCRUMBLIST
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/games.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/games.html",
+        "name": "Games: Notícias, Lançamentos e Análises | Inferno Escarlate",
+        "description": "Notícias, lançamentos, análises e bastidores do universo dos videogames.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/games.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/games.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Games",
+            "item": "https://infernoescarlate.com/Categorias/games.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
-  <link rel="stylesheet" href="../css/style.css?v=108">
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
 
-  <!-- AJUSTES EXCLUSIVOS DA PÁGINA -->
+  <link rel="stylesheet" href="../css/style.css?v=109">
+
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA
+  ========================================== -->
+
   <style>
 
-    /* ==========================================
-       MENU SUPERIOR
-    ========================================== */
+    /* MENU SUPERIOR */
 
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
@@ -70,11 +175,116 @@
       color: #ffffff;
     }
 
+    /* CAMINHO DE NAVEGAÇÃO */
+
+    .navegacao-categoria {
+      width: 100%;
+      margin-bottom: 22px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span[aria-hidden="true"] {
+      margin: 0 8px;
+    }
+
+    .navegacao-categoria a:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 4px;
+    }
+
+    /* LINKS DAS MATÉRIAS */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* LINKS EDITORIAIS */
+
+    .links-editoriais-games {
+      max-width: 1050px;
+      margin-top: 45px;
+      color: #aaaaaa;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-games p {
+      margin-bottom: 16px;
+    }
+
+    .links-editoriais-games a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-games a:hover {
+      color: #e63946;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media screen and (max-width: 700px) {
+
+      .navegacao-categoria {
+        font-size: 0.75rem;
+      }
+
+      .links-editoriais-games {
+        margin-top: 30px;
+        font-size: 0.85rem;
+      }
+
+    }
+
   </style>
 
 </head>
 
-<body>
+<!-- ==========================================
+     CATEGORIA AUTOMÁTICA: GAMES
+========================================== -->
+
+<body data-categoria-pagina="games">
 
   <!-- ==========================================
        CABEÇALHO
@@ -129,11 +339,32 @@
 
   <main class="pagina-categoria">
 
-    <!-- CABEÇALHO DA CATEGORIA -->
+    <!-- ==========================================
+         CABEÇALHO DA CATEGORIA
+    ========================================== -->
 
     <section class="cabecalho-categoria">
 
       <div class="cabecalho-categoria-conteudo">
+
+        <!-- CAMINHO DE NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">/</span>
+
+          <span aria-current="page">
+            Games
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -164,25 +395,59 @@
     <section
       class="secao"
       id="materias-games"
+      aria-labelledby="titulo-materias-games"
     >
 
       <div class="titulo-secao">
 
         <span>Conteúdo recente</span>
 
-        <h2>Matérias de games</h2>
+        <h2 id="titulo-materias-games">
+          Matérias de games
+        </h2>
 
       </div>
 
-      <!-- MENSAGEM ENQUANTO NÃO HÁ MATÉRIAS -->
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
 
-      <div class="categoria-vazia">
+           O materias.js busca publicações
+           cadastradas na categoria "games".
 
-        <h3>Novas matérias em breve</h3>
+           Os elementos essenciais são:
+           data-categoria-pagina="games"
+           id="categoria-materias"
+      ========================================== -->
+
+      <div
+        class="grade-materias"
+        id="categoria-materias"
+      ></div>
+
+      <!-- ==========================================
+           CONTEÚDO EDITORIAL E LINKS INTERNOS
+      ========================================== -->
+
+      <div class="links-editoriais-games">
 
         <p>
-          Esta categoria já está pronta. Quando você publicar uma matéria
-          sobre games, poderá adicionar o card dela nesta área.
+          O <strong>Inferno Escarlate</strong>
+          reúne nesta categoria notícias,
+          lançamentos, análises e novidades
+          relacionadas aos videogames,
+          consoles, jogos para computador
+          e à indústria dos jogos digitais.
+        </p>
+
+        <p>
+          Explore também nossa categoria de
+          <a href="esports.html">
+            Esports
+          </a>
+          e acompanhe todas as novidades na
+          <a href="../materias.html">
+            página de matérias
+          </a>.
         </p>
 
       </div>
@@ -192,27 +457,20 @@
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       O rodapé é carregado automaticamente
-       a partir do arquivo rodape.html,
-       localizado na raiz do projeto.
-
-       Contém as oito colunas oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
+  <!-- RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
+
+  <!-- MATÉRIAS AUTOMÁTICAS -->
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -10,35 +10,68 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- SEO -->
-  <title>Música | Inferno Escarlate</title>
+  <!-- ==========================================
+       GOOGLE ANALYTICS 4
+       INFERNO ESCARLATE
+  ========================================== -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDXXNBNL8K"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-LDXXNBNL8K');
+  </script>
+
+  <!-- ==========================================
+       SEO GOOGLE — CATEGORIA MÚSICA
+  ========================================== -->
+
+  <title>Música: Notícias, Shows e Festivais | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Notícias e matérias sobre música, artistas, shows, festivais, lançamentos e movimentos musicais no Inferno Escarlate."
+    content="Acompanhe notícias de música, shows, festivais, artistas, bandas e lançamentos musicais no Inferno Escarlate. Entre no modo Geek."
   >
 
-  <meta name="author" content="Inferno Escarlate">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta
+    name="author"
+    content="Inferno Escarlate"
+  >
+
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large"
+  >
 
   <link
     rel="canonical"
     href="https://infernoescarlate.com/Categorias/musica.html"
   >
 
-  <!-- COMPARTILHAMENTO -->
+  <!-- ==========================================
+       OPEN GRAPH E COMPARTILHAMENTO
+  ========================================== -->
+
   <meta property="og:type" content="website">
+
   <meta property="og:locale" content="pt_BR">
+
   <meta property="og:site_name" content="Inferno Escarlate">
 
   <meta
     property="og:title"
-    content="Música | Inferno Escarlate"
+    content="Música: Notícias, Shows e Festivais | Inferno Escarlate"
   >
 
   <meta
     property="og:description"
-    content="Artistas, shows, festivais, lançamentos e movimentos que fazem parte do universo musical."
+    content="Notícias, artistas, shows, festivais e lançamentos musicais no Inferno Escarlate."
   >
 
   <meta
@@ -51,10 +84,86 @@
     content="https://infernoescarlate.com/imagem/banner.png"
   >
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    property="og:image:alt"
+    content="Inferno Escarlate — Notícias e cultura pop"
+  >
 
-  <!-- FONTES -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Música | Inferno Escarlate"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Shows, festivais, artistas e notícias de música no Inferno Escarlate."
+  >
+
+  <!-- ==========================================
+       DADOS ESTRUTURADOS
+       COLLECTION PAGE + BREADCRUMBS
+  ========================================== -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://infernoescarlate.com/Categorias/musica.html#webpage",
+        "url": "https://infernoescarlate.com/Categorias/musica.html",
+        "name": "Música: Notícias, Shows e Festivais | Inferno Escarlate",
+        "description": "Notícias, artistas, shows, festivais e lançamentos musicais no Inferno Escarlate.",
+        "inLanguage": "pt-BR",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Inferno Escarlate",
+          "url": "https://infernoescarlate.com/"
+        },
+        "breadcrumb": {
+          "@id": "https://infernoescarlate.com/Categorias/musica.html#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://infernoescarlate.com/Categorias/musica.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Início",
+            "item": "https://infernoescarlate.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Música",
+            "item": "https://infernoescarlate.com/Categorias/musica.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ==========================================
+       FONTES
+  ========================================== -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
   <link
     rel="preconnect"
@@ -67,13 +176,19 @@
     rel="stylesheet"
   >
 
-  <!-- CSS PRINCIPAL -->
+  <!-- ==========================================
+       CSS PRINCIPAL
+  ========================================== -->
+
   <link
     rel="stylesheet"
-    href="../css/style.css?v=108"
+    href="../css/style.css?v=109"
   >
 
-  <!-- CSS EXCLUSIVO DA CATEGORIA -->
+  <!-- ==========================================
+       CSS EXCLUSIVO DA CATEGORIA MÚSICA
+  ========================================== -->
+
   <style>
 
     /* ==========================================
@@ -90,16 +205,6 @@
     .topo .menu a.link-trabalhe-comigo:focus-visible {
       color: #ffffff;
     }
-
-    /*
-       O botão do menu responsivo utiliza
-       as regras do CSS principal.
-
-       Não ocultamos .menu-botao com
-       display: none !important, pois isso
-       poderia impedir o menu de funcionar
-       em determinados tamanhos de tela.
-    */
 
     /* ==========================================
        ESTRUTURA PRINCIPAL
@@ -203,11 +308,93 @@
     }
 
     /* ==========================================
+       BREADCRUMBS
+    ========================================== */
+
+    .navegacao-categoria {
+      margin-bottom: 22px;
+      font-size: 0.8rem;
+      color: #aaaaaa;
+    }
+
+    .navegacao-categoria a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+
+    .navegacao-categoria a:hover {
+      color: #ffffff;
+    }
+
+    .navegacao-categoria span {
+      margin: 0 6px;
+    }
+
+    /* ==========================================
        SEÇÃO DE MATÉRIAS
     ========================================== */
 
     .pagina-listagem .secao {
       position: relative;
+    }
+
+    /* ==========================================
+       LINKS DAS MATÉRIAS
+    ========================================== */
+
+    .link-imagem-materia {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      overflow: hidden;
+    }
+
+    .link-imagem-materia img {
+      display: block;
+      width: 100%;
+    }
+
+    .link-titulo-materia {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .link-titulo-materia:hover {
+      color: #e63946;
+    }
+
+    .link-imagem-materia:focus-visible,
+    .link-titulo-materia:focus-visible,
+    .link-ler-materia:focus-visible {
+      outline: 2px solid #e63946;
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       LINKS EDITORIAIS INTERNOS
+    ========================================== */
+
+    .links-editoriais-musica {
+      margin-top: 40px;
+      max-width: 1000px;
+      color: #aaaaaa;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .links-editoriais-musica p {
+      margin-bottom: 14px;
+    }
+
+    .links-editoriais-musica a {
+      color: #ffffff;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .links-editoriais-musica a:hover {
+      color: #e63946;
     }
 
     /* ==========================================
@@ -264,6 +451,10 @@
 
       .cabecalho-listagem p {
         font-size: 1rem;
+      }
+
+      .links-editoriais-musica {
+        font-size: 0.85rem;
       }
 
     }
@@ -341,12 +532,33 @@
   <main class="pagina-listagem">
 
     <!-- ==========================================
-         CABEÇALHO DA CATEGORIA
+         CABEÇALHO DA CATEGORIA MÚSICA
     ========================================== -->
 
     <section class="cabecalho-listagem">
 
       <div class="cabecalho-listagem-conteudo">
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav
+          class="navegacao-categoria"
+          aria-label="Caminho de navegação"
+        >
+
+          <a href="../index.html">
+            Início
+          </a>
+
+          <span aria-hidden="true">
+            /
+          </span>
+
+          <span aria-current="page">
+            Música
+          </span>
+
+        </nav>
 
         <span class="categoria">
           Categoria
@@ -369,7 +581,11 @@
          MATÉRIAS DE MÚSICA
     ========================================== -->
 
-    <section class="secao">
+    <section
+      class="secao"
+      id="materias-musica"
+      aria-labelledby="titulo-materias-musica"
+    >
 
       <div class="titulo-secao">
 
@@ -377,27 +593,65 @@
           Música • Shows • Festivais
         </span>
 
-        <h2>
+        <h2 id="titulo-materias-musica">
           Matérias de música
         </h2>
 
       </div>
 
-      <!--
-        AS MATÉRIAS SÃO CARREGADAS AUTOMATICAMENTE
-        PELO ARQUIVO materias.js.
+      <!-- ==========================================
+           MATÉRIAS AUTOMÁTICAS
 
-        O atributo data-categoria-pagina="musica"
-        IDENTIFICA A CATEGORIA ATUAL.
+           O sistema materias.js identifica
+           a categoria através do atributo:
 
-        MANTER O ID categoria-materias PARA
-        O JAVASCRIPT EXIBIR AS PUBLICAÇÕES.
-      -->
+           data-categoria-pagina="musica"
+
+           O ID categoria-materias deve ser mantido.
+      ========================================== -->
 
       <div
         class="grade-materias"
         id="categoria-materias"
-      >
+      ></div>
+
+      <!-- ==========================================
+           LINKS INTERNOS PARA SEO
+      ========================================== -->
+
+      <div class="links-editoriais-musica">
+
+        <p>
+          Acompanhe as publicações de música do
+          <strong>Inferno Escarlate</strong>,
+          com notícias sobre artistas, bandas,
+          apresentações ao vivo, lançamentos e festivais.
+        </p>
+
+        <p>
+          Confira também a cobertura do
+          <a href="../posts/materia-rock-in-rio-2026.html">
+            Rock in Rio 2026
+          </a>,
+          explore a categoria
+          <a href="festivais.html">
+            Festivais
+          </a>
+          e conheça a coluna
+          <a href="../Colunas/rock-scene-girls.html">
+            Rock Scene Girls
+          </a>,
+          dedicada ao universo do rock.
+        </p>
+
+        <p>
+          Para encontrar todas as notícias e análises,
+          acesse nossa
+          <a href="../materias.html">
+            página de matérias
+          </a>.
+        </p>
+
       </div>
 
     </section>
@@ -405,29 +659,21 @@
   </main>
 
   <!-- ==========================================
-       RODAPÉ GLOBAL — INFERNO ESCARLATE
-
-       Carregado a partir de rodape.html
-       localizado na raiz do projeto.
-
-       Contém as oito colunas oficiais:
-       Arquivo Idol
-       Inferno Marfim
-       Rock Scene Girls
-       Inferno Sépia
-       Inferno Púrpura
-       Inferno Turquesa
-       Backstage da Estagiária
-       Arquivo Anime
+       RODAPÉ GLOBAL
+       INFERNO ESCARLATE
   ========================================== -->
 
   <div id="rodape-global"></div>
 
-  <!-- CARREGAMENTO DO RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       SCRIPTS DO SITE
+  ========================================== -->
+
+  <!-- RODAPÉ GLOBAL -->
   <script src="../js/rodape.js" defer></script>
 
-  <!-- CARREGAMENTO AUTOMÁTICO DAS MATÉRIAS -->
-  <script src="../js/materias.js?v=5"></script>
+  <!-- MATÉRIAS AUTOMÁTICAS -->
+  <script src="../js/materias.js?v=7"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="../js/script.js?v=104"></script>
