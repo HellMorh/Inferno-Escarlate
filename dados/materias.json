@@ -1,17 +1,1 @@
-[
-  {
-    "titulo": "Teste Painel Editorial ",
-    "resumo": "Teste de funcionamento do Pages CMS.",
-    "imagem": "",
-    "alt": "",
-    "url": "/posts/teste-painel-editorial.html",
-    "categoriaTexto": "Cinema",
-    "categorias": [
-      "cinema"
-    ],
-    "coluna": "Inferno Marfim",
-    "autor": "Inferno Escarlate",
-    "data": "2026-11-10T00:00:00.000Z",
-    "destaque": false
-  }
-]
+[]
