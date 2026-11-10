@@ -41,10 +41,7 @@
     content="Explore as matérias do Inferno Escarlate sobre cinema, séries, games, música, festivais, animes, quadrinhos e cultura pop. Notícias, análises e conteúdos autorais."
   >
 
-  <meta
-    name="author"
-    content="Inferno Escarlate"
-  >
+  <meta name="author" content="Inferno Escarlate">
 
   <meta
     name="robots"
@@ -104,9 +101,6 @@
   <!-- ==========================================
        DADOS ESTRUTURADOS
        COLLECTION PAGE + BREADCRUMBS
-
-       A LISTA DE MATÉRIAS É GERADA
-       PELO ARQUIVO materias.js.
   ========================================== -->
 
   <script type="application/ld+json">
@@ -177,10 +171,7 @@
     rel="stylesheet"
   >
 
-  <!-- ==========================================
-       CSS PRINCIPAL
-  ========================================== -->
-
+  <!-- CSS PRINCIPAL -->
   <link
     rel="stylesheet"
     href="./css/style.css?v=109"
@@ -192,22 +183,17 @@
 
   <style>
 
-    /* ==========================================
-       PÁGINA DE MATÉRIAS
-    ========================================== */
+    /* PÁGINA DE MATÉRIAS */
 
     .pagina-listagem {
       padding-top: 78px;
     }
 
-    /* ==========================================
-       CABEÇALHO
-    ========================================== */
+    /* CABEÇALHO */
 
     .cabecalho-listagem {
       min-height: 460px;
       padding: 130px 7% 70px;
-
       display: flex;
       align-items: flex-end;
 
@@ -234,10 +220,8 @@
 
     .cabecalho-listagem h1 {
       margin: 10px 0 18px;
-
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(4rem, 10vw, 8.5rem);
-
       line-height: 0.9;
       letter-spacing: 4px;
       text-transform: uppercase;
@@ -245,15 +229,12 @@
 
     .cabecalho-listagem p {
       max-width: 680px;
-
       color: #c2c2c2;
       font-size: 1.05rem;
       line-height: 1.75;
     }
 
-    /* ==========================================
-       MENU SUPERIOR
-    ========================================== */
+    /* MENU SUPERIOR */
 
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
@@ -267,13 +248,10 @@
       color: #ffffff;
     }
 
-    /* ==========================================
-       CAMINHO DE NAVEGAÇÃO
-    ========================================== */
+    /* CAMINHO DE NAVEGAÇÃO */
 
     .navegacao-materias {
       margin-bottom: 24px;
-
       color: #aaaaaa;
       font-family: "Inter", sans-serif;
       font-size: 0.8rem;
@@ -294,13 +272,10 @@
       margin: 0 8px;
     }
 
-    /* ==========================================
-       FILTROS
-    ========================================== */
+    /* FILTROS */
 
     .filtros-materias {
       margin-bottom: 34px;
-
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -308,17 +283,14 @@
 
     .filtros-materias button {
       padding: 11px 16px;
-
       background: var(--preto-claro, #101010);
       border: 1px solid var(--borda, #333);
       color: var(--cinza, #a8a8a8);
-
       font-family: inherit;
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
-
       cursor: pointer;
       transition: 0.3s;
     }
@@ -335,9 +307,7 @@
       outline-offset: 3px;
     }
 
-    /* ==========================================
-       CARDS AUTOMÁTICOS
-    ========================================== */
+    /* CARDS AUTOMÁTICOS */
 
     #todas-materias .card-materia {
       min-width: 0;
@@ -371,14 +341,11 @@
       outline-offset: 3px;
     }
 
-    /* ==========================================
-       SEM RESULTADOS
-    ========================================== */
+    /* SEM RESULTADOS */
 
     .mensagem-sem-materias {
       display: none;
       padding: 35px 20px;
-
       background: var(--preto-claro, #101010);
       border: 1px solid var(--borda, #333);
       text-align: center;
@@ -400,21 +367,16 @@
       line-height: 1.6;
     }
 
-    /* ==========================================
-       ARQUIVO EDITORIAL
-       LINKS PERMANENTES
-    ========================================== */
+    /* ARQUIVO EDITORIAL */
 
     .arquivo-editorial-links {
       margin-top: 65px;
       padding-top: 30px;
-
       border-top: 1px solid var(--borda, #333);
     }
 
     .arquivo-editorial-links h2 {
       margin: 0 0 18px;
-
       color: #ffffff;
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -423,7 +385,6 @@
 
     .arquivo-editorial-links p {
       max-width: 850px;
-
       color: #aaaaaa;
       font-size: 0.9rem;
       line-height: 1.8;
@@ -456,9 +417,7 @@
       outline-offset: 4px;
     }
 
-    /* ==========================================
-       RESPONSIVIDADE
-    ========================================== */
+    /* RESPONSIVIDADE */
 
     @media screen and (max-width: 700px) {
 
@@ -567,9 +526,7 @@
 
   <main class="pagina-listagem">
 
-    <!-- ==========================================
-       CABEÇALHO DA PÁGINA
-    ========================================== -->
+    <!-- CABEÇALHO DA PÁGINA -->
 
     <section class="cabecalho-listagem">
 
@@ -611,7 +568,7 @@
     </section>
 
     <!-- ==========================================
-       LISTAGEM GERAL DE MATÉRIAS
+         LISTAGEM GERAL DE MATÉRIAS
     ========================================== -->
 
     <section
@@ -634,12 +591,6 @@
 
       <!-- ==========================================
            FILTROS DAS 12 CATEGORIAS
-
-           TODOS OS IDENTIFICADORES ABAIXO
-           SÃO COMPATÍVEIS COM materias.js.
-
-           A CATEGORIA CRÍTICAS
-           NÃO FAZ PARTE DA NAVEGAÇÃO.
       ========================================== -->
 
       <div
@@ -757,13 +708,8 @@
 
       <!-- ==========================================
            MATÉRIAS AUTOMÁTICAS
-
-           O materias.js CRIA OS CARDS,
-           ORDENA AS PUBLICAÇÕES
-           E CONTROLA OS FILTROS.
-
-           MANTER:
-           id="todas-materias"
+           O materias.js CRIA OS CARDS
+           E CONTROLA OS FILTROS
       ========================================== -->
 
       <div
@@ -795,14 +741,10 @@
       </div>
 
       <!-- ==========================================
-           LINKS HTML PERMANENTES
+           ARQUIVO EDITORIAL
 
-           AUXILIAM A DESCOBERTA DAS MATÉRIAS
-           SEM DEPENDER DA EXECUÇÃO
-           DO JAVASCRIPT.
-
-           ATUALIZAR QUANDO NOVAS MATÉRIAS
-           FOREM PUBLICADAS.
+           PRESERVA OS LINKS ANTIGOS
+           NOVAS MATÉRIAS ENTRAM VIA JAVASCRIPT
       ========================================== -->
 
       <nav
@@ -878,9 +820,230 @@
   <!-- SISTEMA CENTRAL DE MATÉRIAS -->
   <script src="./js/materias.js?v=7"></script>
 
+  <!-- ==========================================
+       ARQUIVO DE PUBLICAÇÕES AUTOMÁTICO
+       INFERNO ESCARLATE
+
+       Inclui matérias antigas e novas,
+       sem duplicar os links existentes.
+  ========================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      async function () {
+
+        const lista = document.querySelector(
+          ".arquivo-editorial-links ul"
+        );
+
+        if (!lista) return;
+
+        /* NORMALIZAR CAMINHOS */
+
+        function normalizarCaminho(url) {
+
+          try {
+
+            const destino = new URL(
+              url,
+              window.location.origin + "/"
+            );
+
+            return (
+              destino.origin === window.location.origin
+                ? destino.pathname
+                : ""
+            );
+
+          } catch (erro) {
+
+            return "";
+
+          }
+
+        }
+
+        /* PRESERVAR LINKS HTML EXISTENTES */
+
+        const linksExistentes = new Set();
+
+        lista.querySelectorAll(
+          "a[href]"
+        ).forEach(function (link) {
+
+          const caminho = normalizarCaminho(
+            link.href
+          );
+
+          if (caminho) {
+
+            linksExistentes.add(caminho);
+
+          }
+
+        });
+
+        /* MATÉRIAS ANTIGAS */
+
+        const materiasAntigas =
+          typeof MATERIAS !== "undefined"
+            ? [...MATERIAS]
+            : [];
+
+        /* MATÉRIAS APROVADAS DO PAGES CMS */
+
+        let materiasNovas = [];
+
+        try {
+
+          const resposta = await fetch(
+            "/dados/materias.json",
+            {
+              cache: "no-cache"
+            }
+          );
+
+          if (resposta.ok) {
+
+            const dados = await resposta.json();
+
+            if (Array.isArray(dados)) {
+
+              materiasNovas = dados;
+
+            }
+
+          }
+
+        } catch (erro) {
+
+          console.warn(
+            "Arquivo editorial: catálogo indisponível.",
+            erro
+          );
+
+        }
+
+        /* UNIR CATÁLOGOS SEM REPETIÇÕES */
+
+        const unicas = new Map();
+
+        [
+          ...materiasAntigas,
+          ...materiasNovas
+        ].forEach(function (materia) {
+
+          if (
+            !materia ||
+            !materia.url ||
+            !materia.titulo
+          ) {
+            return;
+          }
+
+          const caminho = normalizarCaminho(
+            materia.url
+          );
+
+          if (caminho) {
+
+            unicas.set(
+              caminho,
+              materia
+            );
+
+          }
+
+        });
+
+        /* ORGANIZAR POR DATA */
+
+        const materias = [
+          ...unicas.values()
+        ].sort(function (a, b) {
+
+          const dataA = Date.parse(
+            a.data || a.dataPublicacao || ""
+          ) || 0;
+
+          const dataB = Date.parse(
+            b.data || b.dataPublicacao || ""
+          ) || 0;
+
+          return dataB - dataA;
+
+        });
+
+        /* GERAR LINKS AUTOMÁTICOS */
+
+        const fragmento =
+          document.createDocumentFragment();
+
+        materias.forEach(function (materia) {
+
+          const caminho = normalizarCaminho(
+            materia.url
+          );
+
+          if (
+            !caminho ||
+            linksExistentes.has(caminho)
+          ) {
+            return;
+          }
+
+          linksExistentes.add(caminho);
+
+          const item = document.createElement(
+            "li"
+          );
+
+          const link = document.createElement(
+            "a"
+          );
+
+          link.href = caminho;
+          link.textContent = materia.titulo;
+
+          item.appendChild(link);
+
+          /* CATEGORIA DA MATÉRIA */
+
+          const categoria =
+            materia.categoriaTexto ||
+            (
+              Array.isArray(materia.categorias)
+                ? materia.categorias.join(", ")
+                : ""
+            );
+
+          if (categoria) {
+
+            item.appendChild(
+              document.createTextNode(
+                " — " + categoria
+              )
+            );
+
+          }
+
+          fragmento.appendChild(item);
+
+        });
+
+        /* INSERIR ANTES DOS LINKS ANTIGOS */
+
+        lista.prepend(fragmento);
+
+      }
+    );
+
+  </script>
+
   <!-- MENU RESPONSIVO -->
   <script src="./js/script.js?v=104"></script>
 
 </body>
-
 </html>

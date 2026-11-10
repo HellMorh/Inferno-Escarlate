@@ -1,14 +1,13 @@
 
 /* ==========================================
-   LEIA TAMBÉM AUTOMÁTICO
    INFERNO ESCARLATE
+   LEIA TAMBÉM AUTOMÁTICO
+
+   Integra matérias antigas e novas
+   publicadas pelo Pages CMS e Eleventy.
 ========================================== */
 
-function iniciarLeiaTambem() {
-
-  /* ==========================================
-     LOCALIZA O CONTAINER
-  ========================================== */
+async function iniciarLeiaTambem() {
 
   const container = document.querySelector(
     "#leia-tambem-lista"
@@ -16,33 +15,14 @@ function iniciarLeiaTambem() {
 
   if (!container) return;
 
-  /* ==========================================
-     VERIFICA O CATÁLOGO
-  ========================================== */
-
-  if (typeof MATERIAS === "undefined") {
-
-    console.warn(
-      "Leia Também: catálogo de matérias não encontrado."
-    );
-
-    return;
-  }
+  const SITE = "https://infernoescarlate.com/";
 
   /* ==========================================
-     URL BASE DO SITE
+     FUNÇÕES AUXILIARES
   ========================================== */
 
-  const SITE_LEIA_TAMBEM =
-    "https://infernoescarlate.com/";
-
-  /* ==========================================
-     PROTEGE O CONTEÚDO INSERIDO NO HTML
-  ========================================== */
-
-  function escaparHTML(texto) {
-
-    return String(texto ?? "").replace(
+  function escaparHTML(valor) {
+    return String(valor ?? "").replace(
       /[&<>"']/g,
       (caractere) => ({
         "&": "&amp;",
@@ -52,133 +32,194 @@ function iniciarLeiaTambem() {
         "'": "&#39;"
       })[caractere]
     );
+  }
 
+  function obterURL(caminho) {
+    return new URL(
+      String(caminho || ""),
+      SITE
+    );
+  }
+
+  function obterCaminho(caminho) {
+    return obterURL(caminho).pathname;
   }
 
   /* ==========================================
-     NORMALIZA CAMINHOS
+     MATÉRIAS ANTIGAS
   ========================================== */
 
-  function obterURL(caminho) {
+  let lista = [];
 
-    return new URL(
-      caminho,
-      SITE_LEIA_TAMBEM
+  if (typeof MATERIAS !== "undefined") {
+    lista = [...MATERIAS];
+  }
+
+  /* ==========================================
+     MATÉRIAS DO PAGES CMS
+     AGUARDA O CATÁLOGO AUTOMÁTICO
+  ========================================== */
+
+  try {
+
+    const resposta = await fetch(
+      "/dados/materias.json",
+      { cache: "no-cache" }
+    );
+
+    if (resposta.ok) {
+
+      const automaticas = await resposta.json();
+
+      if (Array.isArray(automaticas)) {
+
+        const mapa = new Map();
+
+        lista.forEach((materia) => {
+          if (materia?.url) {
+            mapa.set(
+              obterCaminho(materia.url),
+              materia
+            );
+          }
+        });
+
+        automaticas.forEach((materia) => {
+
+          if (!materia?.url || !materia?.titulo) {
+            return;
+          }
+
+          mapa.set(
+            obterCaminho(materia.url),
+            materia
+          );
+
+        });
+
+        lista = [...mapa.values()];
+
+      }
+
+    }
+
+  } catch (erro) {
+
+    console.warn(
+      "Leia Também: catálogo automático indisponível.",
+      erro
     );
 
   }
 
   /* ==========================================
-     IDENTIFICA A MATÉRIA ATUAL
+     IDENTIFICAR MATÉRIA ATUAL
   ========================================== */
 
-  const caminhoAtual =
-    window.location.pathname;
+  const caminhoAtual = window.location.pathname;
 
-  const materiaAtual = MATERIAS.find(
+  const materiaAtual = lista.find(
     (materia) => {
-
-      return (
-        obterURL(materia.url).pathname ===
-        caminhoAtual
-      );
-
+      return obterCaminho(materia.url) === caminhoAtual;
     }
   );
 
   /* ==========================================
-     REMOVE A PRÓPRIA MATÉRIA
+     REMOVER MATÉRIA ATUAL
   ========================================== */
 
-  const outrasMaterias = MATERIAS.filter(
+  const outrasMaterias = lista.filter(
     (materia) => {
-
       return (
-        obterURL(materia.url).pathname !==
-        caminhoAtual
+        materia.url &&
+        obterCaminho(materia.url) !== caminhoAtual
       );
-
     }
   );
 
   /* ==========================================
-     CALCULA AFINIDADE ENTRE CATEGORIAS
+     AFINIDADE ENTRE CATEGORIAS
   ========================================== */
 
   function calcularAfinidade(materia) {
 
     if (!materiaAtual) return 0;
 
-    return materia.categorias.filter(
-      (categoria) => {
+    const categoriasAtuais = Array.isArray(
+      materiaAtual.categorias
+    ) ? materiaAtual.categorias : [];
 
-        return materiaAtual.categorias.includes(
-          categoria
-        );
+    const categorias = Array.isArray(
+      materia.categorias
+    ) ? materia.categorias : [];
 
-      }
+    return categorias.filter(
+      (categoria) => categoriasAtuais.includes(categoria)
     ).length;
 
   }
 
   /* ==========================================
-     ORGANIZA AS RECOMENDAÇÕES
+     PRIORIZAR ASSUNTOS RELACIONADOS
+     E MATÉRIAS RECENTES
   ========================================== */
 
-  const recomendadas = [...outrasMaterias]
+  const recomendadas = outrasMaterias
     .sort((a, b) => {
 
-      const afinidadeA =
+      const afinidade =
+        calcularAfinidade(b) -
         calcularAfinidade(a);
 
-      const afinidadeB =
-        calcularAfinidade(b);
-
-      if (afinidadeA !== afinidadeB) {
-
-        return afinidadeB - afinidadeA;
-
+      if (afinidade !== 0) {
+        return afinidade;
       }
 
       return (
-        new Date(b.data) -
-        new Date(a.data)
+        new Date(b.data || 0) -
+        new Date(a.data || 0)
       );
 
     })
     .slice(0, 3);
 
-  /* ==========================================
-     ESCONDE SE NÃO HOUVER RECOMENDAÇÕES
-  ========================================== */
+  const secao = container.closest(
+    ".leia-tambem-automatico"
+  );
 
-  if (recomendadas.length === 0) {
+  if (!recomendadas.length) {
 
-    const secao = container.closest(
-      ".leia-tambem-automatico"
-    );
-
-    if (secao) {
-
-      secao.hidden = true;
-
-    }
+    if (secao) secao.hidden = true;
 
     return;
   }
 
+  if (secao) secao.hidden = false;
+
   /* ==========================================
-     MONTA OS CARDS AUTOMATICAMENTE
+     GERAR RECOMENDAÇÕES
   ========================================== */
 
   container.innerHTML = recomendadas
     .map((materia) => {
 
-      const link =
-        obterURL(materia.url).pathname;
+      const link = obterCaminho(materia.url);
 
-      const imagem =
-        obterURL(materia.imagem).pathname;
+      const imagem = materia.imagem
+        ? obterCaminho(materia.imagem)
+        : "";
+
+      const titulo = escaparHTML(
+        materia.titulo
+      );
+
+      const categoria = escaparHTML(
+        materia.categoriaTexto || "Cultura pop"
+      );
+
+      const alt = escaparHTML(
+        materia.alt || materia.titulo
+      );
 
       return `
         <article class="leia-tambem-item">
@@ -186,29 +227,27 @@ function iniciarLeiaTambem() {
           <a
             href="${escaparHTML(link)}"
             class="leia-tambem-imagem"
-            aria-label="Ler: ${escaparHTML(materia.titulo)}"
+            aria-label="Ler: ${titulo}"
           >
-
-            <img
-              src="${escaparHTML(imagem)}"
-              alt="${escaparHTML(materia.alt)}"
-              loading="lazy"
-            >
-
+            ${imagem ? `
+              <img
+                src="${escaparHTML(imagem)}"
+                alt="${alt}"
+                loading="lazy"
+              >
+            ` : ""}
           </a>
 
           <div class="leia-tambem-conteudo">
 
             <span class="leia-tambem-categoria">
-              ${escaparHTML(materia.categoriaTexto)}
+              ${categoria}
             </span>
 
             <h3>
-
               <a href="${escaparHTML(link)}">
-                ${escaparHTML(materia.titulo)}
+                ${titulo}
               </a>
-
             </h3>
 
           </div>
@@ -229,7 +268,8 @@ if (document.readyState === "loading") {
 
   document.addEventListener(
     "DOMContentLoaded",
-    iniciarLeiaTambem
+    iniciarLeiaTambem,
+    { once: true }
   );
 
 } else {
