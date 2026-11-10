@@ -24,3 +24,7 @@ publicacao-eleventy/
 /js/materias-original-seguro.js
 
 !dados/materias.json
+
+# Saida automatica do gerador definitivo
+/gerador-eleventy/_site/
+/gerador-eleventy/node_modules/

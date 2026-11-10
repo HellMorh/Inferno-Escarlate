@@ -1,0 +1,137 @@
+name: Publicar materias do Inferno Escarlate
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "materias/**"
+      - "gerador-eleventy/**"
+      - ".github/workflows/publicar-materias.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publicacao-editorial
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    name: Gerar materias aprovadas
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar repositorio
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: gerador-eleventy/package-lock.json
+
+      - name: Instalar Eleventy
+        run: npm ci --prefix gerador-eleventy
+
+      - name: Gerar paginas e catalogo
+        run: |
+          ./gerador-eleventy/node_modules/.bin/eleventy \
+            --config=gerador-eleventy/eleventy.config.js
+
+      - name: Sincronizar apenas materias automaticas
+        shell: python
+        run: |
+          import json
+          import shutil
+          from pathlib import Path
+
+          raiz = Path(".")
+          saida = raiz / "gerador-eleventy" / "_site"
+
+          catalogo_destino = raiz / "dados" / "materias.json"
+          catalogo_gerado = saida / "dados" / "materias.json"
+
+          def ler_catalogo(caminho):
+              if not caminho.exists():
+                  return []
+              return json.loads(caminho.read_text(encoding="utf-8-sig"))
+
+          def caminho_seguro(url):
+              caminho = Path(url.lstrip("/"))
+              if (
+                  caminho.is_absolute()
+                  or ".." in caminho.parts
+                  or len(caminho.parts) != 2
+                  or caminho.parts[0] != "posts"
+                  or caminho.suffix != ".html"
+              ):
+                  raise ValueError(f"Caminho de materia invalido: {url}")
+              return caminho
+
+          anteriores = {
+              caminho_seguro(item["url"])
+              for item in ler_catalogo(catalogo_destino)
+          }
+
+          novos_dados = ler_catalogo(catalogo_gerado)
+
+          novos = {
+              caminho_seguro(item["url"])
+              for item in novos_dados
+          }
+
+          # Não sobrescrever matérias antigas criadas manualmente.
+          for caminho in novos:
+              destino = raiz / caminho
+              origem = saida / caminho
+
+              if not origem.is_file():
+                  raise FileNotFoundError(origem)
+
+              if destino.exists() and caminho not in anteriores:
+                  raise RuntimeError(
+                      f"Existe uma materia manual neste endereco: {destino}"
+                  )
+
+          # Remover páginas anteriormente automáticas
+          # que deixaram de ser aprovadas.
+          for caminho in anteriores - novos:
+              destino = raiz / caminho
+              if destino.is_file():
+                  destino.unlink()
+
+          # Criar ou atualizar somente páginas automáticas.
+          for caminho in novos:
+              origem = saida / caminho
+              destino = raiz / caminho
+
+              destino.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(origem, destino)
+
+          catalogo_destino.parent.mkdir(
+              parents=True,
+              exist_ok=True
+          )
+
+          shutil.copy2(catalogo_gerado, catalogo_destino)
+
+      - name: Salvar paginas geradas no GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A -- posts/ dados/materias.json
+
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteracao para publicar."
+            exit 0
+          fi
+
+          git commit -m "Atualizar materias aprovadas [skip ci]"
+          git push origin HEAD:main
