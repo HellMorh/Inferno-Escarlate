@@ -6,7 +6,7 @@ dataPublicacao: 2026-11-10
 categorias:
   - cinema
 coluna: Inferno Marfim
-publicado: false
+publicado: true
 destaque: false
 ---
 Esta é uma matéria de teste para verificar o funcionamento do painel editorial do Inferno Escarlate.
