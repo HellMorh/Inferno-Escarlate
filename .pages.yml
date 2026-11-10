@@ -1,0 +1,105 @@
+
+media:
+  input: imagem
+  output: /imagem
+
+content:
+  - name: materias
+    label: Matérias do Inferno Escarlate
+    type: collection
+    path: materias
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+
+    view:
+      primary: title
+      fields:
+        - title
+        - dataPublicacao
+        - coluna
+        - publicado
+
+    fields:
+      - name: title
+        label: Título da matéria
+        type: string
+        required: true
+
+      - name: description
+        label: Resumo
+        type: text
+        required: true
+
+      - name: imagem
+        label: Imagem de capa
+        type: image
+
+      - name: imagemAlt
+        label: Descrição da imagem
+        type: string
+
+      - name: autor
+        label: Autor
+        type: string
+
+      - name: dataPublicacao
+        label: Data de publicação
+        type: date
+        options:
+          format: yyyy-MM-dd
+
+      - name: categoriaTexto
+        label: Nome da categoria
+        type: string
+
+      - name: categorias
+        label: Categorias
+        type: select
+        options:
+          multiple: true
+          values:
+            - name: cinema
+              label: Cinema
+            - name: comedia
+              label: Comédia
+            - name: series
+              label: Séries
+            - name: musica
+              label: Música
+            - name: eventos
+              label: Eventos
+            - name: festivais
+              label: Festivais
+            - name: animes
+              label: Animes
+            - name: games
+              label: Games
+
+      - name: coluna
+        label: Coluna editorial
+        type: select
+        options:
+          values:
+            - Idol Archive
+            - Inferno Marfim
+            - Rock Scene Girls
+            - Inferno Sépia
+            - Inferno Púrpura
+            - Inferno Turquesa
+            - Backstage da Estagiária
+            - Arquivo Anime
+
+      - name: publicado
+        label: Aprovar publicação
+        type: boolean
+        default: false
+
+      - name: destaque
+        label: Destaque na página inicial
+        type: boolean
+        default: false
+
+      - name: body
+        label: Texto da matéria
+        type: rich-text
+        required: true
