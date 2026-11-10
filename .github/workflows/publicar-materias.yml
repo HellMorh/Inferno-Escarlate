@@ -1,3 +1,4 @@
+
 name: Publicar materias do Inferno Escarlate
 
 on:
@@ -13,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: publicacao-editorial
@@ -60,7 +62,9 @@ jobs:
           def ler_catalogo(caminho):
               if not caminho.exists():
                   return []
-              return json.loads(caminho.read_text(encoding="utf-8-sig"))
+              return json.loads(
+                  caminho.read_text(encoding="utf-8-sig")
+              )
 
           def caminho_seguro(url):
               caminho = Path(url.lstrip("/"))
@@ -71,7 +75,9 @@ jobs:
                   or caminho.parts[0] != "posts"
                   or caminho.suffix != ".html"
               ):
-                  raise ValueError(f"Caminho de materia invalido: {url}")
+                  raise ValueError(
+                      f"Caminho de materia invalido: {url}"
+                  )
               return caminho
 
           anteriores = {
@@ -86,7 +92,7 @@ jobs:
               for item in novos_dados
           }
 
-          # Não sobrescrever matérias antigas criadas manualmente.
+          # Proteger materias antigas criadas manualmente.
           for caminho in novos:
               destino = raiz / caminho
               origem = saida / caminho
@@ -99,19 +105,23 @@ jobs:
                       f"Existe uma materia manual neste endereco: {destino}"
                   )
 
-          # Remover páginas anteriormente automáticas
-          # que deixaram de ser aprovadas.
+          # Remover paginas automaticas que deixaram
+          # de estar aprovadas.
           for caminho in anteriores - novos:
               destino = raiz / caminho
               if destino.is_file():
                   destino.unlink()
 
-          # Criar ou atualizar somente páginas automáticas.
+          # Criar ou atualizar paginas automaticas.
           for caminho in novos:
               origem = saida / caminho
               destino = raiz / caminho
 
-              destino.parent.mkdir(parents=True, exist_ok=True)
+              destino.parent.mkdir(
+                  parents=True,
+                  exist_ok=True
+              )
+
               shutil.copy2(origem, destino)
 
           catalogo_destino.parent.mkdir(
@@ -119,9 +129,14 @@ jobs:
               exist_ok=True
           )
 
-          shutil.copy2(catalogo_gerado, catalogo_destino)
+          shutil.copy2(
+              catalogo_gerado,
+              catalogo_destino
+          )
 
       - name: Salvar paginas geradas no GitHub
+        id: salvar
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -130,8 +145,25 @@ jobs:
 
           if git diff --cached --quiet; then
             echo "Nenhuma alteracao para publicar."
+            echo "alterado=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
           git commit -m "Atualizar materias aprovadas [skip ci]"
           git push origin HEAD:main
+
+          echo "alterado=true" >> "$GITHUB_OUTPUT"
+
+      # Atualizar o GitHub Pages depois do envio.
+      # O push realizado com GITHUB_TOKEN nao dispara
+      # automaticamente uma nova compilacao do Pages.
+      - name: Solicitar atualizacao do GitHub Pages
+        if: steps.salvar.outputs.alterado == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+            --method POST \
+            "repos/${GITHUB_REPOSITORY}/pages/builds"
+
+          echo "Atualizacao do GitHub Pages solicitada."
