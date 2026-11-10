@@ -1,0 +1,26 @@
+﻿# Arquivos de teste
+materias-teste.html
+Categorias/cinema-teste.html
+js/materias-teste.js
+js/materias.backup.js
+posts/materia-teste.html
+
+# Projeto experimental Eleventy
+teste-eleventy/
+
+# Catálogo experimental
+dados/materias.json
+
+# Arquivos auxiliares
+estrutura-site.txt
+
+# Dependências
+node_modules/
+
+# Preparação da publicação Eleventy
+publicacao-eleventy/
+
+/js/materias-integracao.js
+/js/materias-original-seguro.js
+
+!dados/materias.json

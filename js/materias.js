@@ -2,20 +2,17 @@
 /* ==========================================
    INFERNO ESCARLATE
    SISTEMA CENTRAL DE MATÉRIAS
+   VERSÃO DE TESTES COM ELEVENTY
 ========================================== */
 
 
 /* ==========================================
-   CATÁLOGO DE MATÉRIAS
+   CATÁLOGO DE MATÉRIAS ANTIGAS
 ========================================== */
 
-const MATERIAS = [
+let MATERIAS = [
 
-  /* ==========================================
-     SE EU FOSSE VOCÊ 3
-     CINEMA NACIONAL / INFERNO MARFIM
-  ========================================== */
-
+  /* SE EU FOSSE VOCÊ 3 */
   {
     titulo: "Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia",
 
@@ -36,11 +33,7 @@ const MATERIAS = [
     destaque: false
   },
 
-  /* ==========================================
-     ROCK IN RIO 2026
-     MÚSICA / EVENTOS / FESTIVAIS
-  ========================================== */
-
+  /* ROCK IN RIO 2026 */
   {
     titulo: "Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?",
 
@@ -61,11 +54,7 @@ const MATERIAS = [
     destaque: true
   },
 
-  /* ==========================================
-     UNIVERSAL PICTURES
-     CINEMA / SÉRIES E TV
-  ========================================== */
-
+  /* UNIVERSAL PICTURES */
   {
     titulo: "Dona da Universal Pictures planeja separação em duas empresas",
 
@@ -97,6 +86,7 @@ const SITE_URL = "https://infernoescarlate.com/";
 
 const CATEGORIAS_VALIDAS = [
   "cinema",
+  "comedia",
   "series",
   "games",
   "musica",
@@ -112,11 +102,183 @@ const CATEGORIAS_VALIDAS = [
 
 
 /* ==========================================
+   LOCALIZAÇÃO DO CATÁLOGO AUTOMÁTICO
+
+   UTILIZA O CAMINHO DO PRÓPRIO SCRIPT,
+   FUNCIONANDO NA HOME E NAS CATEGORIAS.
+========================================== */
+
+const URL_CATALOGO_AUTOMATICO = document.currentScript
+  ? new URL(
+      "../dados/materias.json",
+      document.currentScript.src
+    ).href
+  : "/dados/materias.json";
+
+
+/* ==========================================
+   NORMALIZAR CAMINHOS
+========================================== */
+
+function normalizarCaminho(caminho) {
+
+  return String(caminho || "")
+    .replace(/^\/+/, "");
+
+}
+
+
+/* ==========================================
+   CARREGAR MATÉRIAS DO ELEVENTY
+========================================== */
+
+async function carregarMateriasAutomaticas() {
+
+  try {
+
+    const resposta = await fetch(
+      URL_CATALOGO_AUTOMATICO
+    );
+
+    if (!resposta.ok) {
+
+      throw new Error(
+        "Catálogo automático indisponível: " +
+        resposta.status
+      );
+
+    }
+
+    const dados = await resposta.json();
+
+    if (!Array.isArray(dados)) {
+
+      throw new Error(
+        "O catálogo precisa conter uma lista de matérias."
+      );
+
+    }
+
+    return dados
+      .filter((materia) => {
+
+        return (
+          materia &&
+          typeof materia.titulo === "string" &&
+          typeof materia.url === "string" &&
+          materia.url.trim() !== "" &&
+          typeof materia.data === "string" &&
+          !Number.isNaN(
+            new Date(materia.data).getTime()
+          ) &&
+          Array.isArray(materia.categorias)
+        );
+
+      })
+      .map((materia) => ({
+
+        titulo: materia.titulo,
+
+        resumo: materia.resumo || "",
+
+        imagem: normalizarCaminho(
+          materia.imagem
+        ),
+
+        alt: materia.alt || materia.titulo,
+
+        url: normalizarCaminho(
+          materia.url
+        ),
+
+        categorias: materia.categorias,
+
+        categoriaTexto: materia.categoriaTexto || "Matéria",
+
+        data: materia.data,
+
+        destaque: materia.destaque === true,
+
+        coluna: materia.coluna || "",
+
+        autor: materia.autor || "Inferno Escarlate"
+
+      }));
+
+  } catch (erro) {
+
+    console.warn(
+      "Inferno Escarlate: não foi possível carregar o Eleventy.",
+      erro
+    );
+
+    return [];
+
+  }
+
+}
+
+
+/* ==========================================
+   INTEGRAR MATÉRIAS AUTOMÁTICAS
+   COM AS MATÉRIAS ANTIGAS
+========================================== */
+
+async function integrarCatalogos() {
+
+  const materiasAutomaticas =
+    await carregarMateriasAutomaticas();
+
+  const catalogo = new Map();
+
+  MATERIAS.forEach((materia) => {
+
+    const chave = normalizarCaminho(
+      materia.url
+    );
+
+    if (chave) {
+      catalogo.set(chave, materia);
+    }
+
+  });
+
+  materiasAutomaticas.forEach((materia) => {
+
+    const chave = normalizarCaminho(
+      materia.url
+    );
+
+    if (chave) {
+      catalogo.set(chave, materia);
+    }
+
+  });
+
+  MATERIAS = ordenarMaterias(
+    [...catalogo.values()]
+  );
+
+  console.info(
+    "Inferno Escarlate: catálogo integrado.",
+    MATERIAS.length,
+    "matérias."
+  );
+
+}
+
+
+/* ==========================================
    URLs ABSOLUTAS
 ========================================== */
 
 function urlAbsoluta(caminho) {
-  return new URL(caminho, SITE_URL).href;
+
+  return new URL(
+    normalizarCaminho(caminho),
+    SITE_URL
+  ).href;
+
 }
 
 
@@ -126,7 +288,7 @@ function urlAbsoluta(caminho) {
 
 function dataFormatada(data) {
 
-  const apenasData = data.split("T")[0];
+  const apenasData = String(data).split("T")[0];
 
   const partes = apenasData.split("-");
 
@@ -141,7 +303,6 @@ function dataFormatada(data) {
 
 /* ==========================================
    ORDENAÇÃO DAS MATÉRIAS
-   MAIS RECENTES PRIMEIRO
 ========================================== */
 
 function ordenarMaterias(lista) {
@@ -157,23 +318,17 @@ function ordenarMaterias(lista) {
 
 /* ==========================================
    CAMINHOS RELATIVOS
-
-   HOME:
-   posts/materia.html
-
-   CATEGORIA:
-   ../posts/materia.html
 ========================================== */
 
 function caminhoComPrefixo(prefixo, caminho) {
 
-  return `${prefixo || ""}${caminho}`;
+  return `${prefixo || ""}${normalizarCaminho(caminho)}`;
 
 }
 
 
 /* ==========================================
-   VALIDAR CATEGORIAS CADASTRADAS
+   VALIDAR CATEGORIAS
 ========================================== */
 
 function validarCategorias() {
@@ -202,10 +357,6 @@ function validarCategorias() {
 
 /* ==========================================
    CRIAR CARD DE MATÉRIA
-
-   UTILIZADO NA HOME,
-   NA LISTAGEM GERAL
-   E NAS CATEGORIAS
 ========================================== */
 
 function criarCardMateria(materia, prefixo = "") {
@@ -326,9 +477,6 @@ function renderizarLista(
 
 /* ==========================================
    MENSAGEM PARA CATEGORIAS VAZIAS
-
-   A MENSAGEM É CRIADA APENAS
-   QUANDO NÃO HOUVER PUBLICAÇÕES.
 ========================================== */
 
 function mostrarCategoriaVazia(container) {
@@ -336,7 +484,9 @@ function mostrarCategoriaVazia(container) {
   if (!container) return;
 
   const avisoAnterior = container.parentElement
-    .querySelector(".categoria-vazia[data-aviso-automatico]");
+    .querySelector(
+      ".categoria-vazia[data-aviso-automatico]"
+    );
 
   if (avisoAnterior) {
     avisoAnterior.remove();
@@ -490,11 +640,6 @@ function renderizarTodasMaterias() {
 
 /* ==========================================
    PÁGINAS DE CATEGORIAS
-
-   EXEMPLO:
-   <body data-categoria-pagina="cinema">
-
-   <div id="categoria-materias"></div>
 ========================================== */
 
 function renderizarPaginaCategoria() {
@@ -649,10 +794,6 @@ function ativarFiltros() {
 /* ==========================================
    DADOS ESTRUTURADOS
    LISTAGEM DE MATÉRIAS
-
-   AJUDA MECANISMOS DE BUSCA
-   A IDENTIFICAR PUBLICAÇÕES
-   PRESENTES NAS LISTAGENS.
 ========================================== */
 
 function adicionarDadosEstruturados() {
@@ -705,11 +846,8 @@ function adicionarDadosEstruturados() {
 
   }
 
-  // Evita criar uma lista vazia.
   if (lista.length === 0) return;
 
-  // Evita duplicar o script se a função
-  // for executada novamente.
   const scriptAnterior = document.querySelector(
     'script[data-schema-materias="true"]'
   );
@@ -769,9 +907,6 @@ function adicionarDadosEstruturados() {
 
 /* ==========================================
    INICIALIZAÇÃO DO SISTEMA
-
-   EXECUTA QUANDO O HTML
-   TERMINA DE CARREGAR.
 ========================================== */
 
 function iniciarSistemaMaterias() {
@@ -790,15 +925,37 @@ function iniciarSistemaMaterias() {
 
 }
 
+
+/* ==========================================
+   INICIALIZAÇÃO AUTOMÁTICA
+
+   AGUARDA O CATÁLOGO DO ELEVENTY
+   ANTES DE RENDERIZAR AS MATÉRIAS.
+========================================== */
+
+async function iniciarSistemaIntegrado() {
+
+  await integrarCatalogos();
+
+  iniciarSistemaMaterias();
+
+}
+
+
+/* ==========================================
+   INICIAR APÓS O CARREGAMENTO DO HTML
+========================================== */
+
 if (document.readyState === "loading") {
 
   document.addEventListener(
     "DOMContentLoaded",
-    iniciarSistemaMaterias
+    iniciarSistemaIntegrado,
+    { once: true }
   );
 
 } else {
 
-  iniciarSistemaMaterias();
+  iniciarSistemaIntegrado();
 
 }
