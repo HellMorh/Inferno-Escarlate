@@ -7,7 +7,7 @@ categoriaTexto: Cinema
 categorias:
   - cinema
 coluna: Inferno Marfim
-publicado: true
+publicado: false
 destaque: false
 ---
 Esta é uma matéria de teste para verificar o funcionamento do painel editorial do Inferno Escarlate.
