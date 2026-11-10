@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Teste Painel Editorial  | Inferno Escarlate</title>
+
+  <meta
+    name="description"
+    content="Teste de funcionamento do Pages CMS."
+  >
+
+  <!-- INDEXAÇÃO DAS MATÉRIAS -->
+  
+  <meta name="robots" content="index, follow">
+  
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS ORIGINAL DO PORTAL -->
+  <link
+    rel="stylesheet"
+    href="../css/style.css?v=109"
+  >
+
+  <style>
+
+    /* AJUSTES DA MATÉRIA AUTOMÁTICA */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+    }
+
+    .capa-materia {
+      position: relative;
+      min-height: 550px;
+      background: #111;
+    }
+
+    .capa-materia > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .capa-materia-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.96),
+        rgba(0, 0, 0, 0.55) 55%,
+        rgba(0, 0, 0, 0.20)
+      );
+    }
+
+    .capa-materia-conteudo {
+      position: relative;
+      z-index: 1;
+    }
+
+    .capa-materia-conteudo h1 {
+      max-width: 1100px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(3.5rem, 7vw, 7rem);
+      font-weight: 400;
+      line-height: 0.95;
+      text-transform: uppercase;
+      overflow-wrap: anywhere;
+    }
+
+    .conteudo-materia {
+      min-width: 0;
+    }
+
+    .conteudo-materia > h1:first-child {
+      display: none;
+    }
+
+    .conteudo-materia figure {
+      width: 100%;
+      margin: 55px 0;
+    }
+
+    .conteudo-materia figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .conteudo-materia figcaption {
+      margin-top: 10px;
+      color: #999;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .conteudo-materia h2 {
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .barra-lateral .leia-tambem-automatico {
+      width: 100%;
+      margin: 0;
+      padding: 25px 20px;
+    }
+
+    .barra-lateral .leia-tambem-automatico > h2 {
+      margin: 0 0 25px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    /* COMPARTILHAMENTO */
+
+    .compartilhar {
+      margin-top: 55px;
+      padding-top: 25px;
+      border-top: 1px solid #333;
+    }
+
+    .compartilhar > span {
+      display: block;
+      margin-bottom: 18px;
+      color: #ddd;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .compartilhar > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .compartilhar a,
+    .compartilhar button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 43px;
+      padding: 12px 17px;
+      border: 1px solid #333;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .compartilhar a:hover,
+    .compartilhar button:hover {
+      background: #a91b29;
+      border-color: #a91b29;
+    }
+
+    .compartilhar-feedback {
+      display: block;
+      min-height: 18px;
+      margin-top: 12px;
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    .mais-materias[hidden] {
+      display: none !important;
+    }
+
+    /* ==========================================
+       COMENTÁRIOS — DISQUS
+    ========================================== */
+
+    .secao-comentarios {
+      width: min(850px, 90%);
+      margin: 50px auto 85px;
+      padding: 45px 0 20px;
+      border-top: 1px solid #333;
+    }
+
+    .secao-comentarios h2 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .secao-comentarios > p {
+      margin: 0 0 32px;
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    #disqus_thread {
+      width: 100%;
+      min-height: 250px;
+    }
+
+    .aviso-comentarios-teste {
+      padding: 26px;
+      border: 1px solid #333;
+      background: #111;
+      color: #bbb;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 700px) {
+
+      .capa-materia-conteudo h1 {
+        font-size: clamp(3rem, 10vw, 5rem);
+      }
+
+      .barra-lateral .leia-tambem-automatico {
+        padding: 22px;
+      }
+
+      .compartilhar a,
+      .compartilhar button {
+        padding: 11px 13px;
+        font-size: 11px;
+      }
+
+      .secao-comentarios {
+        width: 90%;
+        margin-top: 35px;
+        margin-bottom: 65px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- CABEÇALHO GLOBAL -->
+  <header class="topo">
+
+    <a href="../index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Navegação principal"
+    >
+
+      <a href="../index.html">Início</a>
+      <a href="../materias.html">Matérias</a>
+      <a href="../colunas.html">Colunas</a>
+      <a href="../index.html#categorias">Categorias</a>
+      <a href="../contato.html">Contato</a>
+
+      <a
+        href="../trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+
+    </nav>
+
+  </header>
+
+  <!-- MATÉRIA -->
+  <main class="pagina-materia">
+
+    <!-- CAPA -->
+    <section class="capa-materia">
+
+      
+
+      <div class="capa-materia-overlay"></div>
+
+      <div class="capa-materia-conteudo">
+
+        <a href="../materias.html" class="voltar">
+          ← Voltar para matérias
+        </a>
+
+        <span class="categoria">
+          Cultura pop
+        </span>
+
+        <h1>Teste Painel Editorial </h1>
+
+        
+        <p class="subtitulo-materia">
+          Teste de funcionamento do Pages CMS.
+        </p>
+        
+
+        <div class="informacoes-materia">
+
+          <span>
+            Inferno Escarlate
+          </span>
+
+          
+          <time datetime="Tue Nov 10 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">
+            Tue Nov 10 2026 00:00:00 GMT+0000 (Coordinated Universal Time)
+          </time>
+          
+
+          
+          <span>Inferno Marfim</span>
+          
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TEXTO E BARRA LATERAL -->
+    <div class="estrutura-materia">
+
+      <article class="conteudo-materia">
+
+        <p>Esta é uma matéria de teste para verificar o funcionamento do painel editorial do Inferno Escarlate.</p>
+
+
+        <!-- COMPARTILHAMENTO -->
+        <div
+          class="compartilhar"
+          aria-label="Compartilhar esta matéria"
+        >
+
+          <span>Compartilhe esta matéria:</span>
+
+          <div>
+
+            <a
+              id="compartilhar-x"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              X
+            </a>
+
+            <a
+              id="compartilhar-whatsapp"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+
+            <button
+              type="button"
+              id="copiar-link-materia"
+            >
+              Copiar link
+            </button>
+
+          </div>
+
+          <small
+            class="compartilhar-feedback"
+            id="compartilhar-feedback"
+            role="status"
+            aria-live="polite"
+          ></small>
+
+        </div>
+
+      </article>
+
+      <!-- BARRA LATERAL -->
+      <aside class="barra-lateral">
+
+        <div class="bloco-lateral">
+
+          <span class="categoria">
+            Inferno Escarlate
+          </span>
+
+          <h3>Entre no modo Geek</h3>
+
+          <p>
+            Notícias, eventos, música, cinema,
+            games, animes e cultura pop.
+          </p>
+
+        </div>
+
+        <!-- LEIA TAMBÉM -->
+        <section
+          class="leia-tambem-automatico"
+          aria-label="Leia também"
+        >
+
+          <h2>LEIA TAMBÉM</h2>
+
+          <div id="leia-tambem-lista"></div>
+
+        </section>
+
+        <!-- CATEGORIAS -->
+        <div class="bloco-lateral">
+
+          <h3>Categorias</h3>
+
+          <div class="categorias-laterais">
+
+            <a href="../Categorias/cinema.html">
+              Cinema
+            </a>
+
+            <a href="../Categorias/musica.html">
+              Música
+            </a>
+
+            <a href="../Categorias/games.html">
+              Games
+            </a>
+
+            <a href="../Categorias/animes.html">
+              Animes
+            </a>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- MAIS MATÉRIAS -->
+    <section class="mais-materias">
+
+      <div class="titulo-secao">
+
+        <span>Continue explorando</span>
+
+        <h2>Mais matérias</h2>
+
+      </div>
+
+      <div
+        id="mais-materias-automaticas"
+        class="grade-materias"
+      ></div>
+
+    </section>
+
+    <!-- ==========================================
+         COMENTÁRIOS — DISQUS
+         AUTOMÁTICO PARA CADA MATÉRIA
+    ========================================== -->
+
+    <section
+      class="secao-comentarios"
+      id="comentarios"
+      aria-labelledby="titulo-comentarios"
+    >
+
+      <h2 id="titulo-comentarios">
+        Comentários
+      </h2>
+
+      <p>
+        O que achou da matéria?
+        Participe da conversa!
+      </p>
+
+      <div id="disqus_thread"></div>
+
+      <noscript>
+        Ative o JavaScript para visualizar os comentários.
+      </noscript>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ GLOBAL -->
+  <div id="rodape-global"></div>
+
+  <!-- SCRIPTS DO PORTAL -->
+  <script src="../js/script.js?v=104"></script>
+  <script src="../js/rodape.js"></script>
+  <script src="../js/materias.js?v=7"></script>
+  <script src="../js/leia-tambem.js?v=1"></script>
+
+  <!-- MAIS MATÉRIAS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const container = document.getElementById(
+        "mais-materias-automaticas"
+      );
+
+      if (!container || typeof MATERIAS === "undefined") {
+        return;
+      }
+
+      const atual = window.location.pathname;
+
+      const outras = ordenarMaterias(
+        MATERIAS.filter(function (materia) {
+
+          const caminho = new URL(
+            materia.url,
+            window.location.origin + "/"
+          ).pathname;
+
+          return !atual.endsWith(caminho);
+
+        })
+      ).slice(0, 3);
+
+      if (!outras.length) {
+        container.closest(".mais-materias").hidden = true;
+        return;
+      }
+
+      renderizarLista(container, outras, "../");
+
+    });
+  </script>
+
+  <!-- COMPARTILHAMENTO -->
+  <script>
+    (function () {
+
+      const url = window.location.href;
+      const titulo = document.title;
+
+      const linkX = document.getElementById(
+        "compartilhar-x"
+      );
+
+      const linkWhatsApp = document.getElementById(
+        "compartilhar-whatsapp"
+      );
+
+      const botaoCopiar = document.getElementById(
+        "copiar-link-materia"
+      );
+
+      const feedback = document.getElementById(
+        "compartilhar-feedback"
+      );
+
+      if (linkX) {
+        linkX.href =
+          "https://twitter.com/intent/tweet?text=" +
+          encodeURIComponent(titulo) +
+          "&url=" +
+          encodeURIComponent(url);
+      }
+
+      if (linkWhatsApp) {
+        linkWhatsApp.href =
+          "https://api.whatsapp.com/send?text=" +
+          encodeURIComponent(titulo + " " + url);
+      }
+
+      if (botaoCopiar) {
+
+        botaoCopiar.addEventListener("click", async function () {
+
+          try {
+
+            await navigator.clipboard.writeText(url);
+
+            feedback.textContent =
+              "Link copiado com sucesso!";
+
+          } catch (erro) {
+
+            feedback.textContent =
+              "Não foi possível copiar o link.";
+
+          }
+
+        });
+
+      }
+
+    })();
+  </script>
+
+  <!-- ==========================================
+       CARREGAMENTO AUTOMÁTICO DO DISQUS
+
+       Cada matéria recebe uma URL e um
+       identificador próprios.
+
+       No Live Server, exibe uma mensagem
+       em vez de abrir os comentários reais.
+  ========================================== -->
+
+  <script>
+
+    var disqus_config = function () {
+
+      this.page.url =
+        "https://infernoescarlate.com/posts/teste-painel-editorial.html";
+
+      this.page.identifier =
+        "/posts/teste-painel-editorial.html";
+
+      this.page.title =
+        document.title.replace(" | Inferno Escarlate", "");
+
+    };
+
+    (function () {
+
+      const container = document.getElementById(
+        "disqus_thread"
+      );
+
+      if (!container) return;
+
+      const emTesteLocal =
+        window.location.hostname === "127.0.0.1" ||
+        window.location.hostname === "localhost" ||
+        window.location.protocol === "file:";
+
+      if (emTesteLocal) {
+
+        container.innerHTML = `
+          <div class="aviso-comentarios-teste">
+            <strong>Área de comentários</strong>
+            <p>
+              Os comentários do Disqus serão carregados
+              quando esta matéria estiver publicada
+              no domínio oficial do Inferno Escarlate.
+            </p>
+          </div>
+        `;
+
+        return;
+
+      }
+
+      const script = document.createElement("script");
+
+      script.src =
+        "https://inferno-escarlate.disqus.com/embed.js";
+
+      script.setAttribute(
+        "data-timestamp",
+        String(Date.now())
+      );
+
+      document.head.appendChild(script);
+
+    })();
+
+  </script>
+
+</body>
+</html>
