@@ -537,43 +537,169 @@
   <script src="../js/script.js?v=104"></script>
   <script src="../js/rodape.js"></script>
   <script src="../js/materias.js?v=7"></script>
-  <script src="../js/leia-tambem.js?v=1"></script>
+  <script src="../js/leia-tambem.js?v=2"></script>
 
-  <!-- MAIS MATÉRIAS -->
+  <!-- ==========================================
+       MAIS MATÉRIAS — SISTEMA AUTOMÁTICO
+
+       Inclui matérias antigas e novas
+       aprovadas pelo Pages CMS.
+  ========================================== -->
+
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener(
+      "DOMContentLoaded",
+      async function () {
 
-      const container = document.getElementById(
-        "mais-materias-automaticas"
-      );
+        const container = document.getElementById(
+          "mais-materias-automaticas"
+        );
 
-      if (!container || typeof MATERIAS === "undefined") {
-        return;
+        if (!container) return;
+
+        const secao = container.closest(
+          ".mais-materias"
+        );
+
+        const caminhoAtual =
+          window.location.pathname;
+
+        /* NORMALIZAR ENDEREÇOS */
+        function normalizarCaminho(url) {
+
+          try {
+
+            return new URL(
+              url,
+              window.location.origin + "/"
+            ).pathname;
+
+          } catch (erro) {
+
+            return "";
+
+          }
+
+        }
+
+        /* MATÉRIAS ANTIGAS */
+        const materiasAntigas =
+          typeof MATERIAS !== "undefined"
+            ? [...MATERIAS]
+            : [];
+
+        /* MATÉRIAS NOVAS DO PAGES CMS */
+        let materiasNovas = [];
+
+        try {
+
+          const resposta = await fetch(
+            "/dados/materias.json",
+            { cache: "no-cache" }
+          );
+
+          if (resposta.ok) {
+
+            const dados = await resposta.json();
+
+            if (Array.isArray(dados)) {
+
+              materiasNovas = dados;
+
+            }
+
+          }
+
+        } catch (erro) {
+
+          console.warn(
+            "Não foi possível carregar as matérias novas.",
+            erro
+          );
+
+        }
+
+        /* COMBINAR SEM DUPLICAR */
+        const mapaMaterias = new Map();
+
+        [
+          ...materiasAntigas,
+          ...materiasNovas
+        ].forEach(function (materia) {
+
+          if (!materia || !materia.url) return;
+
+          const caminho = normalizarCaminho(
+            materia.url
+          );
+
+          if (!caminho) return;
+
+          mapaMaterias.set(
+            caminho,
+            materia
+          );
+
+        });
+
+        /* NÃO RECOMENDAR A MATÉRIA ATUAL */
+        const outrasMaterias = [
+          ...mapaMaterias.values()
+        ].filter(function (materia) {
+
+          return (
+            normalizarCaminho(materia.url) !==
+            caminhoAtual
+          );
+
+        });
+
+        /* EXIBIR ATÉ TRÊS MATÉRIAS RECENTES */
+        const recomendadas =
+          typeof ordenarMaterias === "function"
+            ? ordenarMaterias(
+                outrasMaterias
+              ).slice(0, 3)
+            : outrasMaterias.sort(
+                function (a, b) {
+
+                  return (
+                    new Date(b.data || 0) -
+                    new Date(a.data || 0)
+                  );
+
+                }
+              ).slice(0, 3);
+
+        if (!recomendadas.length) {
+
+          if (secao) {
+            secao.hidden = true;
+          }
+
+          return;
+
+        }
+
+        if (secao) {
+          secao.hidden = false;
+        }
+
+        /* MANTER OS CARDS ORIGINAIS */
+        if (
+          typeof renderizarLista === "function"
+        ) {
+
+          renderizarLista(
+            container,
+            recomendadas,
+            "../"
+          );
+
+        }
+
       }
-
-      const atual = window.location.pathname;
-
-      const outras = ordenarMaterias(
-        MATERIAS.filter(function (materia) {
-
-          const caminho = new URL(
-            materia.url,
-            window.location.origin + "/"
-          ).pathname;
-
-          return !atual.endsWith(caminho);
-
-        })
-      ).slice(0, 3);
-
-      if (!outras.length) {
-        container.closest(".mais-materias").hidden = true;
-        return;
-      }
-
-      renderizarLista(container, outras, "../");
-
-    });
+    );
   </script>
 
   <!-- COMPARTILHAMENTO -->
@@ -615,23 +741,28 @@
 
       if (botaoCopiar) {
 
-        botaoCopiar.addEventListener("click", async function () {
+        botaoCopiar.addEventListener(
+          "click",
+          async function () {
 
-          try {
+            try {
 
-            await navigator.clipboard.writeText(url);
+              await navigator.clipboard.writeText(
+                url
+              );
 
-            feedback.textContent =
-              "Link copiado com sucesso!";
+              feedback.textContent =
+                "Link copiado com sucesso!";
 
-          } catch (erro) {
+            } catch (erro) {
 
-            feedback.textContent =
-              "Não foi possível copiar o link.";
+              feedback.textContent =
+                "Não foi possível copiar o link.";
+
+            }
 
           }
-
-        });
+        );
 
       }
 
@@ -659,7 +790,10 @@
         "/posts/nmixx-tera-show-de-estreia-mundial-exibido-nos-cinemas-do-brasil-em-novembro.html";
 
       this.page.title =
-        document.title.replace(" | Inferno Escarlate", "");
+        document.title.replace(
+          " | Inferno Escarlate",
+          ""
+        );
 
     };
 
@@ -693,7 +827,9 @@
 
       }
 
-      const script = document.createElement("script");
+      const script = document.createElement(
+        "script"
+      );
 
       script.src =
         "https://inferno-escarlate.disqus.com/embed.js";
@@ -703,7 +839,9 @@
         String(Date.now())
       );
 
-      document.head.appendChild(script);
+      document.head.appendChild(
+        script
+      );
 
     })();
 
