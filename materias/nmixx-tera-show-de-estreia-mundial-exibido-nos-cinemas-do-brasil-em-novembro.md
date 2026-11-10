@@ -24,6 +24,8 @@ Os ingressos começam a ser vendidos em 11 de novembro, por meio da plataforma [
 
 Formado por Lily, Haewon, Sullyoon, Bae, Jiwoo e Kyujin, o NMIXX conquistou espaço no cenário internacional do K-pop com músicas como *O.O*, *Love Me Like This*, *Heavy Serenade* e *Blue Valentine*.
 
+![A apresentação que encerra a primeira turnê mundial do NMIXX chegará às telonas brasileiras em uma sessão especial no dia 29 de novembro](</imagem/nmixx-all-members-hd-wallpaper-uhdpaper.com-133@1@g (1)-1.jpg>)
+
 A relação do grupo com o público brasileiro também ganhou destaque em 2026. As integrantes colaboraram com Pabllo Vittar nas faixas *MEXE* e *TIC TIC* e participaram do bloco de Carnaval da cantora, em São Paulo.
 
 A exibição nos cinemas representa uma oportunidade para os NSWERs, nome dado aos fãs do grupo, acompanharem em tela grande o encerramento de uma etapa importante da trajetória internacional do NMIXX.
