@@ -20,7 +20,7 @@ O espetáculo foi gravado na Inside Arena, em Incheon, na Coreia do Sul, cidade 
 
 Os ingressos começam a ser vendidos em 11 de novembro, por meio da plataforma [MovieID](https://movieid.com/nmixx?partnership=sato_nimxx_release). A exibição será realizada em sessão única, no dia 29.
 
-### NMIXX  e Pablo Vittar em colab bombástico?
+## NMIXX  e Pablo Vittar em colab bombástico?
 
 Formado por Lily, Haewon, Sullyoon, Bae, Jiwoo e Kyujin, o NMIXX conquistou espaço no cenário internacional do K-pop com músicas como *O.O*, *Love Me Like This*, *Heavy Serenade* e *Blue Valentine*.
 
