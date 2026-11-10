@@ -345,9 +345,10 @@
             {{ autor | default: "Inferno Escarlate" | escape }}
           </span>
 
+          <!-- DATA FORMATADA EM PORTUGUÊS -->
           {% if dataPublicacao %}
-          <time datetime="{{ dataPublicacao | escape }}">
-            {{ dataTexto | default: dataPublicacao | escape }}
+          <time datetime="{{ dataPublicacao | date: '%Y-%m-%d' }}">
+            {{ dataPublicacao | date: "%d/%m/%Y" }}
           </time>
           {% endif %}
 
