@@ -11,6 +11,11 @@ categoriaTexto: Música
 categorias:
   - cinema
   - musica
+seoTitle: NMIXX terá show de estreia mundial exibido nos cinemas do Brasil em novembro
+seoDescription: NMIXX terá show de estreia mundial exibido nos cinemas do Brasil
+  e apresentação gravada na Coreia do Sul terá sessão única no Brasil em 29 de
+  novembro; ingressos estarão disponíveis a partir do dia 11.
+seoKeyword: "NMIXX  "
 publicado: true
 destaque: true
 ---
