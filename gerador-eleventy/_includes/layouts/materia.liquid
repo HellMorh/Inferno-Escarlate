@@ -186,7 +186,8 @@
       font-size: 12px;
     }
 
-    .mais-materias[hidden] {
+    .mais-materias[hidden],
+    .leia-tambem-automatico[hidden] {
       display: none !important;
     }
 
@@ -478,7 +479,12 @@
 
     </div>
 
-    <!-- MAIS MATÉRIAS -->
+    <!-- ==========================================
+         MAIS MATÉRIAS
+         SOMENTE CINEMA
+         SEM REPETIR O LEIA TAMBÉM
+    ========================================== -->
+
     <section class="mais-materias">
 
       <div class="titulo-secao">
@@ -529,176 +535,33 @@
   <!-- RODAPÉ GLOBAL -->
   <div id="rodape-global"></div>
 
-  <!-- SCRIPTS DO PORTAL -->
+  <!-- ==========================================
+       SCRIPTS DO PORTAL
+  ========================================== -->
+
   <script src="../js/script.js?v=104"></script>
   <script src="../js/rodape.js"></script>
   <script src="../js/materias.js?v=7"></script>
-  <script src="../js/leia-tambem.js?v=2"></script>
 
   <!-- ==========================================
-       MAIS MATÉRIAS — SISTEMA AUTOMÁTICO
+       RECOMENDAÇÕES AUTOMÁTICAS
 
-       Inclui matérias antigas e novas
-       aprovadas pelo Pages CMS.
+       Substitui:
+       - leia-tambem.js
+       - Script antigo de Mais matérias
+
+       Leia também: assuntos relacionados
+       Mais matérias: somente Cinema
+
+       Evita repetições entre os dois blocos.
   ========================================== -->
 
-  <script>
-    document.addEventListener(
-      "DOMContentLoaded",
-      async function () {
+  <script src="../js/recomendacoes.js?v=1"></script>
 
-        const container = document.getElementById(
-          "mais-materias-automaticas"
-        );
+  <!-- ==========================================
+       COMPARTILHAMENTO
+  ========================================== -->
 
-        if (!container) return;
-
-        const secao = container.closest(
-          ".mais-materias"
-        );
-
-        const caminhoAtual =
-          window.location.pathname;
-
-        /* NORMALIZAR ENDEREÇOS */
-        function normalizarCaminho(url) {
-
-          try {
-
-            return new URL(
-              url,
-              window.location.origin + "/"
-            ).pathname;
-
-          } catch (erro) {
-
-            return "";
-
-          }
-
-        }
-
-        /* MATÉRIAS ANTIGAS */
-        const materiasAntigas =
-          typeof MATERIAS !== "undefined"
-            ? [...MATERIAS]
-            : [];
-
-        /* MATÉRIAS NOVAS DO PAGES CMS */
-        let materiasNovas = [];
-
-        try {
-
-          const resposta = await fetch(
-            "/dados/materias.json",
-            { cache: "no-cache" }
-          );
-
-          if (resposta.ok) {
-
-            const dados = await resposta.json();
-
-            if (Array.isArray(dados)) {
-
-              materiasNovas = dados;
-
-            }
-
-          }
-
-        } catch (erro) {
-
-          console.warn(
-            "Não foi possível carregar as matérias novas.",
-            erro
-          );
-
-        }
-
-        /* COMBINAR SEM DUPLICAR */
-        const mapaMaterias = new Map();
-
-        [
-          ...materiasAntigas,
-          ...materiasNovas
-        ].forEach(function (materia) {
-
-          if (!materia || !materia.url) return;
-
-          const caminho = normalizarCaminho(
-            materia.url
-          );
-
-          if (!caminho) return;
-
-          mapaMaterias.set(
-            caminho,
-            materia
-          );
-
-        });
-
-        /* NÃO RECOMENDAR A MATÉRIA ATUAL */
-        const outrasMaterias = [
-          ...mapaMaterias.values()
-        ].filter(function (materia) {
-
-          return (
-            normalizarCaminho(materia.url) !==
-            caminhoAtual
-          );
-
-        });
-
-        /* EXIBIR ATÉ TRÊS MATÉRIAS RECENTES */
-        const recomendadas =
-          typeof ordenarMaterias === "function"
-            ? ordenarMaterias(
-                outrasMaterias
-              ).slice(0, 3)
-            : outrasMaterias.sort(
-                function (a, b) {
-
-                  return (
-                    new Date(b.data || 0) -
-                    new Date(a.data || 0)
-                  );
-
-                }
-              ).slice(0, 3);
-
-        if (!recomendadas.length) {
-
-          if (secao) {
-            secao.hidden = true;
-          }
-
-          return;
-
-        }
-
-        if (secao) {
-          secao.hidden = false;
-        }
-
-        /* MANTER OS CARDS ORIGINAIS */
-        if (
-          typeof renderizarLista === "function"
-        ) {
-
-          renderizarLista(
-            container,
-            recomendadas,
-            "../"
-          );
-
-        }
-
-      }
-    );
-  </script>
-
-  <!-- COMPARTILHAMENTO -->
   <script>
     (function () {
 

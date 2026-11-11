@@ -765,61 +765,9 @@
 
   <script src="../js/materias.js?v=7"></script>
 
-  <script src="../js/leia-tambem.js?v=1"></script>
+  <script src="../js/recomendacoes.js?v=1"></script>
 
-  <!-- ==========================================
-       MAIS MATÉRIAS AUTOMÁTICO
-  ========================================== -->
 
-  <script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const container = document.querySelector(
-        "#mais-materias-automaticas"
-      );
-
-      if (!container) return;
-
-      if (typeof MATERIAS === "undefined") return;
-
-      const caminhoAtual = window.location.pathname;
-
-      const outrasMaterias = ordenarMaterias(
-
-        MATERIAS.filter(function (materia) {
-
-          const caminho = new URL(
-            materia.url,
-            "https://infernoescarlate.com/"
-          ).pathname;
-
-          return caminho !== caminhoAtual;
-
-        })
-
-      ).slice(0, 3);
-
-      if (outrasMaterias.length === 0) {
-
-        const secao = container.closest(".mais-materias");
-
-        if (secao) {
-          secao.hidden = true;
-        }
-
-        return;
-      }
-
-      renderizarLista(
-        container,
-        outrasMaterias,
-        "../"
-      );
-
-    });
-
-  </script>
 
   <!-- ==========================================
        COMPARTILHAMENTO FUNCIONAL
