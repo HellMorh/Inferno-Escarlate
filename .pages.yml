@@ -1,4 +1,10 @@
 
+# ==========================================
+# INFERNO ESCARLATE
+# CONFIGURAÇÃO DO PAGES CMS
+# COM CAMPOS DE OTIMIZAÇÃO SEO
+# ==========================================
+
 media:
   input: imagem
   output: /imagem
@@ -20,15 +26,22 @@ content:
         - publicado
 
     fields:
+
+      # ======================================
+      # INFORMAÇÕES DA MATÉRIA
+      # ======================================
+
       - name: title
         label: Título da matéria
         type: string
         required: true
+        description: Título principal que aparece na página da matéria.
 
       - name: description
         label: Resumo
         type: text
         required: true
+        description: Resumo editorial da matéria, utilizado também como descrição padrão quando não existir uma descrição SEO específica.
 
       - name: imagem
         label: Imagem de capa
@@ -37,6 +50,7 @@ content:
       - name: imagemAlt
         label: Descrição da imagem
         type: string
+        description: Descreva o conteúdo real da imagem de maneira objetiva. Evite repetir palavras-chave artificialmente.
 
       - name: autor
         label: Autor
@@ -47,6 +61,10 @@ content:
         type: date
         options:
           format: yyyy-MM-dd
+
+      # ======================================
+      # CATEGORIAS E COLUNAS
+      # ======================================
 
       - name: categoriaTexto
         label: Nome da categoria
@@ -89,6 +107,38 @@ content:
             - Backstage da Estagiária
             - Arquivo Anime
 
+      # ======================================
+      # OTIMIZAÇÃO SEO
+      # ======================================
+
+      - name: seoTitle
+        label: "SEO — Título para o Google"
+        type: string
+        description: Título exclusivo para os resultados de busca. Procure ser claro e descritivo. Se ficar vazio, utilizaremos o título da matéria.
+        options:
+          maxlength: 100
+
+      - name: seoDescription
+        label: "SEO — Meta descrição"
+        type: text
+        description: Escreva um resumo específico para buscadores. Aproximadamente 140 a 160 caracteres pode ser uma boa referência editorial, mas não é um limite exigido pelo Google.
+        options:
+          maxlength: 320
+
+      - name: seoKeyword
+        label: "SEO — Palavra-chave principal"
+        type: string
+        description: Assunto ou expressão que melhor representa a matéria. Será utilizado pelo nosso analisador editorial de SEO, não como meta keywords do Google.
+
+      - name: seoSocialImage
+        label: "SEO — Imagem para compartilhamento"
+        type: image
+        description: Imagem opcional para a prévia em redes sociais. Quando estiver vazia, será utilizada a imagem de capa.
+
+      # ======================================
+      # PUBLICAÇÃO
+      # ======================================
+
       - name: publicado
         label: Aprovar publicação
         type: boolean
@@ -98,6 +148,10 @@ content:
         label: Destaque na página inicial
         type: boolean
         default: false
+
+      # ======================================
+      # CONTEÚDO
+      # ======================================
 
       - name: body
         label: Texto da matéria
