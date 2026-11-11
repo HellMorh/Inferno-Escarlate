@@ -1,7 +1,8 @@
 ---
-title: NMIXX terá show de estreia mundial exibido nos cinemas do Brasil em novembro
-description: Apresentação gravada na Coreia do Sul terá sessão única no Brasil
-  em 29 de novembro; ingressos estarão disponíveis a partir do dia 11.
+title: NMIXX terá show exibido nos cinemas do Brasil em novembro
+description: NMIXX terá show da turnê mundial exibido nos cinemas brasileiros em
+  29 de novembro. Saiba quando começa a venda de ingressos para a sessão
+  especial.
 imagem: /imagem/NMIXX-all-members-young-dumb-stupid-hd-wallpaper-uhdpaper.com-719@0@i
   (2).jpg
 imagemAlt: "Integrantes do grupo NMIXX "
