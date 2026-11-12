@@ -17,6 +17,17 @@ content:
     format: yaml-frontmatter
     filename: "{primary}.md"
 
+    actions:
+      - name: analisar-seo
+        label: Analisar SEO
+        scope: entry
+        workflow: analisar-seo.yml
+        ref: current
+        confirm:
+          title: Analisar SEO da matéria?
+          message: O sistema verificará a versão salva desta matéria.
+          button: Iniciar análise
+
     view:
       primary: title
       fields:

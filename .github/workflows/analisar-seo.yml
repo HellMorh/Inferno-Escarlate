@@ -1,0 +1,315 @@
+
+name: Analisar SEO da matéria
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: Dados enviados pelo Pages CMS
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  analisar-seo:
+    name: Verificação editorial de SEO
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar arquivos do Inferno Escarlate
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar leitor YAML
+        run: python -m pip install PyYAML
+
+      - name: Analisar matéria selecionada
+        env:
+          PAGES_CMS_PAYLOAD: ${{ inputs.payload }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          import json
+          import html
+          from pathlib import Path
+          import yaml
+
+          def texto(valor):
+              return str(valor or "").strip()
+
+          def normalizar(valor):
+              import unicodedata
+              valor = unicodedata.normalize("NFD", texto(valor))
+              valor = "".join(
+                  letra for letra in valor
+                  if unicodedata.category(letra) != "Mn"
+              )
+              return valor.lower()
+
+          def verificar(nome, pontos, maximo, mensagem):
+              return {
+                  "nome": nome,
+                  "pontos": pontos,
+                  "maximo": maximo,
+                  "mensagem": mensagem
+              }
+
+          def publicar_relatorio(conteudo):
+              destino = os.environ["GITHUB_STEP_SUMMARY"]
+              with open(destino, "a", encoding="utf-8") as arquivo:
+                  arquivo.write(conteudo)
+
+          def escapar(valor):
+              return html.escape(texto(valor))
+
+          payload = json.loads(
+              os.environ["PAGES_CMS_PAYLOAD"]
+          )
+
+          contexto = payload.get("context") or {}
+          caminho = contexto.get("path") or ""
+
+          raiz = Path.cwd().resolve()
+          arquivo = (raiz / caminho).resolve()
+          pasta_materias = (raiz / "materias").resolve()
+
+          if (
+              contexto.get("type") != "entry"
+              or not arquivo.is_relative_to(pasta_materias)
+              or arquivo.suffix.lower() != ".md"
+              or not arquivo.is_file()
+          ):
+              raise SystemExit(
+                  "Erro: selecione uma matéria Markdown válida no Pages CMS."
+              )
+
+          bruto = arquivo.read_text(encoding="utf-8-sig")
+
+          partes = re.match(
+              r"\A---\s*\r?\n(.*?)\r?\n---\s*(?:\r?\n|$)",
+              bruto,
+              flags=re.S
+          )
+
+          if not partes:
+              raise SystemExit(
+                  "Erro: matéria sem front matter YAML válido."
+              )
+
+          campos = yaml.safe_load(partes.group(1)) or {}
+          corpo = bruto[partes.end():]
+
+          titulo = texto(campos.get("title"))
+          titulo_seo = texto(campos.get("seoTitle")) or titulo
+          descricao = (
+              texto(campos.get("seoDescription"))
+              or texto(campos.get("description"))
+          )
+          keyword = texto(campos.get("seoKeyword"))
+
+          palavras = len(
+              re.findall(r"\b[\wÀ-ÿ]+\b", corpo)
+          )
+
+          subtitulos = re.findall(
+              r"^#{2,6}\s+\S+",
+              corpo,
+              flags=re.M
+          )
+
+          links = re.findall(
+              r"(?<!!)\[[^\]]+\]\(([^)\n]+)\)",
+              corpo
+          )
+
+          internos = [
+              link for link in links
+              if link.startswith(("/", "../", "./"))
+              or "infernoescarlate.com" in link
+          ]
+
+          externos = [
+              link for link in links
+              if link.startswith(("http://", "https://"))
+              and "infernoescarlate.com" not in link
+          ]
+
+          imagens = re.findall(
+              r"!\[([^\]]*)\]\(",
+              corpo
+          )
+
+          verificacoes = []
+
+          # Título SEO — 15 pontos
+          tamanho = len(titulo_seo)
+          pontos = (
+              15 if 1 <= tamanho <= 65
+              else 11 if tamanho <= 80 and tamanho > 0
+              else 7 if tamanho > 80
+              else 0
+          )
+
+          verificacoes.append(verificar(
+              "Título SEO", pontos, 15,
+              f"{tamanho} caracteres. Verifique clareza e concisão."
+          ))
+
+          # Meta descrição — 15 pontos
+          tamanho = len(descricao)
+          pontos = (
+              15 if 110 <= tamanho <= 165
+              else 11 if 70 <= tamanho <= 200
+              else 6 if tamanho > 0
+              else 0
+          )
+
+          verificacoes.append(verificar(
+              "Meta descrição", pontos, 15,
+              f"{tamanho} caracteres. A descrição deve resumir o conteúdo."
+          ))
+
+          # Assunto principal — 10 pontos
+          pontos = 0
+          termo = normalizar(keyword)
+
+          if termo:
+              pontos += 4
+              if termo in normalizar(titulo_seo):
+                  pontos += 3
+              if (
+                  termo in normalizar(descricao)
+                  or termo in normalizar(corpo)
+              ):
+                  pontos += 3
+
+          verificacoes.append(verificar(
+              "Assunto principal", pontos, 10,
+              "A palavra-chave deve representar o tema naturalmente."
+          ))
+
+          # Conteúdo — 15 pontos
+          pontos = (
+              15 if palavras >= 150
+              else 13 if palavras >= 70
+              else 10 if palavras >= 30
+              else 5
+          )
+
+          verificacoes.append(verificar(
+              "Desenvolvimento do conteúdo", pontos, 15,
+              f"{palavras} palavras. Notícias curtas podem ser completas."
+          ))
+
+          # Subtítulos — 10 pontos
+          quantidade = len(subtitulos)
+          pontos = 10 if quantidade >= 2 else 9 if quantidade else 7
+
+          verificacoes.append(verificar(
+              "Organização por subtítulos", pontos, 10,
+              f"{quantidade} subtítulo(s) identificado(s)."
+          ))
+
+          # Imagens — 10 pontos
+          pontos = 0
+          if campos.get("imagem"):
+              pontos += 5
+          if campos.get("imagemAlt"):
+              pontos += 3
+          if all(alt.strip() for alt in imagens):
+              pontos += 2
+
+          verificacoes.append(verificar(
+              "Imagens e acessibilidade", pontos, 10,
+              "Confira a imagem de capa e os textos alternativos."
+          ))
+
+          # Links internos — 10 pontos
+          verificacoes.append(verificar(
+              "Links internos",
+              10 if internos else 6,
+              10,
+              f"{len(internos)} link(s) interno(s)."
+          ))
+
+          # Referências — 5 pontos
+          verificacoes.append(verificar(
+              "Referências externas",
+              5 if externos else 4,
+              5,
+              f"{len(externos)} link(s) externo(s)."
+          ))
+
+          # Dados editoriais — 10 pontos
+          pontos = 0
+          if campos.get("autor"):
+              pontos += 3
+          if campos.get("dataPublicacao"):
+              pontos += 3
+          if campos.get("categorias"):
+              pontos += 4
+
+          verificacoes.append(verificar(
+              "Informações editoriais", pontos, 10,
+              "Verifique autor, data de publicação e categorias."
+          ))
+
+          nota = sum(
+              item["pontos"] for item in verificacoes
+          )
+
+          if nota >= 80:
+              classificacao = "Pronto para revisão final"
+          elif nota >= 60:
+              classificacao = "Bom, com ajustes"
+          else:
+              classificacao = "Precisa melhorar"
+
+          linhas = [
+              "# Análise SEO — Inferno Escarlate",
+              "",
+              f"**Matéria:** {escapar(titulo)}",
+              "",
+              f"## Pontuação: {nota}/100",
+              "",
+              f"**Classificação:** {classificacao}",
+              "",
+              "| Critério | Pontuação | Recomendação |",
+              "|---|---:|---|"
+          ]
+
+          for item in verificacoes:
+              nome = escapar(item["nome"])
+              mensagem = escapar(item["mensagem"])
+              pontos = item["pontos"]
+              maximo = item["maximo"]
+
+              linhas.append(
+                  f"| {nome} | {pontos}/{maximo} | {mensagem} |"
+              )
+
+          linhas.extend([
+              "",
+              "### Observações",
+              "",
+              "- Esta análise é editorial e automatizada.",
+              "- Revise fatos, fontes e originalidade antes de publicar.",
+              "- A pontuação não garante indexação ou posição no Google.",
+              "- Nenhum conteúdo foi alterado ou publicado."
+          ])
+
+          publicar_relatorio("\n".join(linhas) + "\n")
+
+          print(f"Matéria: {titulo}")
+          print(f"Pontuação SEO: {nota}/100")
+          print(f"Classificação: {classificacao}")
+          print("Relatório disponível no resumo da execução.")
+          PY

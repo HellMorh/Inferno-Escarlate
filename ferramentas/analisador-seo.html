@@ -1,0 +1,1141 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Analisador SEO | Inferno Escarlate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --fundo: #090909;
+      --painel: #151515;
+      --borda: #303030;
+      --texto: #f5f5f5;
+      --cinza: #aaa;
+      --vermelho: #ff4356;
+      --verde: #42b983;
+      --amarelo: #f2bd58;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--fundo);
+      color: var(--texto);
+      font-family: "Inter", sans-serif;
+    }
+
+    .topo {
+      padding: 25px 6%;
+      border-bottom: 1px solid var(--borda);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: var(--vermelho);
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 32px;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+
+    .topo span {
+      color: var(--cinza);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    main {
+      width: min(1100px, 90%);
+      margin: 55px auto 90px;
+    }
+
+    .introducao { margin-bottom: 35px; }
+
+    .introducao h1 {
+      margin: 0 0 15px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(45px, 7vw, 75px);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .introducao h1 span { color: var(--vermelho); }
+
+    .introducao p {
+      max-width: 750px;
+      color: var(--cinza);
+      line-height: 1.7;
+    }
+
+    .painel {
+      background: var(--painel);
+      border: 1px solid var(--borda);
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .painel h2 {
+      margin: 0 0 20px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .campo {
+      display: block;
+      margin-bottom: 10px;
+      color: #ddd;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    input[type="file"],
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 16px;
+      border: 1px solid #454545;
+      background: #0b0b0b;
+      color: #fff;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--vermelho);
+    }
+
+    textarea {
+      min-height: 115px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    .grupo-campo { margin-bottom: 24px; }
+
+    .contador {
+      display: block;
+      margin-top: 8px;
+      color: var(--cinza);
+      font-size: 12px;
+    }
+
+    .acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .botao {
+      min-height: 45px;
+      padding: 12px 24px;
+      border: 0;
+      background: var(--vermelho);
+      color: #fff;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .botao:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .botao-secundario { background: #303030; }
+
+    .informacao {
+      margin: 15px 0 0;
+      color: var(--cinza);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    [hidden] { display: none !important; }
+
+    .resumo {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+
+    .circulo {
+      width: 140px;
+      height: 140px;
+      border: 9px solid var(--vermelho);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .circulo strong {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 62px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .circulo small { color: var(--cinza); }
+
+    .resumo-conteudo {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .resumo-conteudo h2 { margin-bottom: 8px; }
+
+    .resumo-conteudo p {
+      color: var(--cinza);
+      line-height: 1.6;
+    }
+
+    .barra {
+      height: 9px;
+      margin: 20px 0;
+      overflow: hidden;
+      background: #343434;
+      border-radius: 20px;
+    }
+
+    .barra span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: var(--vermelho);
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .item:last-child { border-bottom: 0; }
+
+    .item h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--cinza);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .pontos {
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .positivo { color: var(--verde); }
+    .atencao { color: var(--amarelo); }
+    .problema { color: var(--vermelho); }
+
+    .previa-google {
+      padding: 23px;
+      background: #101010;
+      border: 1px solid var(--borda);
+      overflow-wrap: anywhere;
+    }
+
+    .previa-url {
+      color: #b8c5b9;
+      font-size: 12px;
+    }
+
+    .previa-titulo {
+      color: #8ab4f8;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .previa-descricao {
+      color: #b9bdc6;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .detalhes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .detalhes span {
+      padding: 10px 14px;
+      border: 1px solid var(--borda);
+      color: var(--cinza);
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 30px 6%;
+      border-top: 1px solid var(--borda);
+      color: var(--cinza);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .painel { padding: 20px; }
+
+      .resumo {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .item { gap: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a class="logo" href="../index.html">
+      INFERNO ESCARLATE
+    </a>
+
+    <span>Ferramenta editorial • SEO</span>
+  </header>
+
+  <main>
+
+    <section class="introducao">
+      <h1>ANALISADOR <span>SEO</span></h1>
+
+      <p>
+        Avalie e simule melhorias na otimização das suas matérias
+        antes de publicá-las no Inferno Escarlate.
+      </p>
+    </section>
+
+    <!-- CARREGAMENTO DO ARQUIVO -->
+
+    <section class="painel">
+
+      <h2>SELECIONE UMA MATÉRIA</h2>
+
+      <label class="campo" for="arquivo">
+        Arquivo Markdown do Pages CMS (.md)
+      </label>
+
+      <input
+        type="file"
+        id="arquivo"
+        accept=".md,.markdown,text/markdown,text/plain"
+      >
+
+      <div class="acoes">
+        <button class="botao" id="analisar" disabled>
+          Analisar SEO
+        </button>
+
+        <button
+          class="botao botao-secundario"
+          id="limpar"
+          type="button"
+        >
+          Limpar
+        </button>
+      </div>
+
+      <p class="informacao" id="mensagem" role="status">
+        Selecione um arquivo da pasta materias do projeto.
+        A análise é realizada localmente no navegador.
+      </p>
+
+    </section>
+
+    <!-- CAMPOS EDITÁVEIS -->
+
+    <section class="painel" id="editor-seo" hidden>
+
+      <h2>OTIMIZAÇÃO SEO EM TEMPO REAL</h2>
+
+      <p class="informacao" style="margin-bottom:25px">
+        Experimente alterações nos campos abaixo.
+        A pontuação será atualizada automaticamente.
+        Nada será salvo na matéria original.
+      </p>
+
+      <div class="grupo-campo">
+        <label class="campo" for="seo-titulo">
+          Título para o Google
+        </label>
+
+        <input
+          type="text"
+          id="seo-titulo"
+          placeholder="Digite o título SEO"
+        >
+
+        <small class="contador" id="contador-titulo"></small>
+      </div>
+
+      <div class="grupo-campo">
+        <label class="campo" for="seo-descricao">
+          Meta descrição
+        </label>
+
+        <textarea
+          id="seo-descricao"
+          placeholder="Escreva a descrição para mecanismos de busca"
+        ></textarea>
+
+        <small class="contador" id="contador-descricao"></small>
+      </div>
+
+      <div class="grupo-campo">
+        <label class="campo" for="seo-palavra">
+          Palavra-chave principal
+        </label>
+
+        <input
+          type="text"
+          id="seo-palavra"
+          placeholder="Ex.: NMIXX"
+        >
+      </div>
+
+      <div class="acoes">
+        <button
+          class="botao"
+          id="reanalisar"
+          type="button"
+        >
+          Reanalisar SEO
+        </button>
+
+        <button
+          class="botao botao-secundario"
+          id="restaurar"
+          type="button"
+        >
+          Restaurar valores do arquivo
+        </button>
+      </div>
+
+    </section>
+
+    <!-- RESULTADO -->
+
+    <div id="resultado" hidden>
+
+      <section class="painel">
+
+        <div class="resumo">
+
+          <div class="circulo" id="circulo">
+            <strong id="nota">0</strong>
+            <small>de 100</small>
+          </div>
+
+          <div class="resumo-conteudo">
+
+            <h2 id="classificacao">
+              ANÁLISE SEO
+            </h2>
+
+            <p id="titulo-materia"></p>
+
+            <div class="barra">
+              <span id="progresso"></span>
+            </div>
+
+            <p id="resumo-analise"></p>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="painel">
+        <h2>DIAGNÓSTICO COMPLETO</h2>
+        <div id="lista-verificacoes"></div>
+      </section>
+
+      <section class="painel">
+
+        <h2>PRÉVIA NOS RESULTADOS DE BUSCA</h2>
+
+        <div class="previa-google">
+          <p class="previa-url" id="previa-url"></p>
+          <h3 class="previa-titulo" id="previa-titulo"></h3>
+          <p class="previa-descricao" id="previa-descricao"></p>
+        </div>
+
+        <div class="detalhes">
+          <span id="total-palavras"></span>
+          <span id="total-subtitulos"></span>
+          <span id="total-links"></span>
+          <span id="total-imagens"></span>
+        </div>
+
+        <p class="informacao">
+          A prévia é ilustrativa. O Google pode exibir
+          títulos e descrições diferentes.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    Inferno Escarlate — Ferramenta interna de análise editorial.
+    A pontuação não garante indexação ou posicionamento.
+  </footer>
+
+  <script>
+    "use strict";
+
+    const $ = id => document.getElementById(id);
+
+    const campoArquivo = $("arquivo");
+    const botaoAnalisar = $("analisar");
+    const botaoLimpar = $("limpar");
+    const mensagem = $("mensagem");
+
+    let materiaOriginal = null;
+
+    function normalizar(valor) {
+      return String(valor || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function texto(valor) {
+      return String(valor == null ? "" : valor).trim();
+    }
+
+    function contarPalavras(conteudo) {
+      const limpo = conteudo
+        .replace(/!\[[^\]]*\]\([^\n]+\)/g, " ")
+        .replace(/\[([^\]]*)\]\([^\n]+\)/g, "$1")
+        .replace(/<[^>]*>/g, " ")
+        .replace(/[#*_`>~]/g, " ");
+
+      return (limpo.match(/[\p{L}\p{N}]+/gu) || []).length;
+    }
+
+    // Lê os campos principais do front matter criado
+    // pelo Pages CMS, incluindo valores com várias linhas.
+    function extrairFrontmatter(arquivo) {
+      const conteudo = arquivo.replace(/^\uFEFF/, "");
+
+      const partes = conteudo.match(
+        /^---\s*\r?\n([\s\S]*?)\r?\n---\s*(?:\r?\n|$)/
+      );
+
+      if (!partes) {
+        throw new Error(
+          "Não foi encontrado front matter YAML no arquivo."
+        );
+      }
+
+      const campos = {};
+      const linhas = partes[1].split(/\r?\n/);
+
+      let chave = null;
+      let tipoBloco = "";
+
+      for (const linha of linhas) {
+        const campo = linha.match(
+          /^([A-Za-z][A-Za-z0-9_]*):(?:\s*(.*))?$/
+        );
+
+        if (campo) {
+          chave = campo[1];
+          let valor = (campo[2] || "").trim();
+
+          tipoBloco = valor === ">" || valor === "|"
+            ? "texto"
+            : "";
+
+          if (valor === "true") {
+            campos[chave] = true;
+          } else if (valor === "false") {
+            campos[chave] = false;
+          } else if (!valor || tipoBloco) {
+            campos[chave] = "";
+          } else {
+            if (
+              (valor.startsWith('"') && valor.endsWith('"')) ||
+              (valor.startsWith("'") && valor.endsWith("'"))
+            ) {
+              valor = valor.slice(1, -1);
+            }
+
+            campos[chave] = valor;
+          }
+
+          continue;
+        }
+
+        if (!chave) continue;
+
+        const lista = linha.match(/^\s+-\s+(.+)$/);
+
+        if (lista && !tipoBloco) {
+          if (!Array.isArray(campos[chave])) {
+            campos[chave] = [];
+          }
+
+          campos[chave].push(lista[1].trim());
+          continue;
+        }
+
+        if (
+          /^\s+\S/.test(linha) &&
+          !Array.isArray(campos[chave])
+        ) {
+          campos[chave] =
+            texto(campos[chave] + " " + linha.trim());
+        }
+      }
+
+      return {
+        campos,
+        corpo: conteudo.slice(partes[0].length).trim()
+      };
+    }
+
+    function extrairLinks(corpo) {
+      const links = [];
+
+      // Identifica links Markdown, sem contar imagens.
+      const regex =
+        /(?<!!)\[[^\]]+\]\((<[^>]+>|[^\n]+?)\)/g;
+
+      for (const item of corpo.matchAll(regex)) {
+        let destino = item[1].trim();
+
+        if (destino.startsWith("<")) {
+          destino = destino.slice(1).split(">")[0];
+        } else {
+          destino = destino.split(/\s+"/)[0];
+        }
+
+        links.push(destino);
+      }
+
+      return links;
+    }
+
+    function extrairImagens(corpo) {
+      const imagens = [];
+
+      const regex = /!\[([^\]]*)\]\((<[^>]+>|[^\n]+?)\)/g;
+
+      for (const item of corpo.matchAll(regex)) {
+        imagens.push({
+          alt: item[1].trim()
+        });
+      }
+
+      return imagens;
+    }
+
+    function verificar(titulo, pontos, maximo, explicacao) {
+      return {
+        titulo,
+        pontos: Math.max(0, Math.min(pontos, maximo)),
+        maximo,
+        explicacao
+      };
+    }
+
+    function analisar(dados) {
+      const campos = dados.campos;
+      const corpo = dados.corpo;
+
+      const titulo = texto(campos.title);
+      const tituloSEO = texto(
+        campos.seoTitle || campos.title
+      );
+
+      const descricaoSEO = texto(
+        campos.seoDescription || campos.description
+      );
+
+      const keyword = texto(campos.seoKeyword);
+      const palavraChave = normalizar(keyword);
+
+      const textoMateria = normalizar(corpo);
+      const tituloNormalizado = normalizar(tituloSEO);
+      const descricaoNormalizada = normalizar(descricaoSEO);
+
+      const palavras = contarPalavras(corpo);
+      const subtitulos = (
+        corpo.match(/^#{2,6}\s+\S.+$/gm) || []
+      );
+
+      const links = extrairLinks(corpo);
+      const imagens = extrairImagens(corpo);
+
+      const internos = links.filter(url =>
+        url.startsWith("/") ||
+        url.startsWith("../") ||
+        url.startsWith("./") ||
+        /^https?:\/\/(?:www\.)?infernoescarlate\.com(?:\/|$)/i.test(url)
+      );
+
+      const externos = links.filter(url =>
+        /^https?:\/\//i.test(url) &&
+        !/^https?:\/\/(?:www\.)?infernoescarlate\.com(?:\/|$)/i.test(url)
+      );
+
+      const verificacoes = [];
+
+      // TÍTULO — 15
+      let pontosTitulo = 0;
+      let dicaTitulo = "";
+
+      if (!tituloSEO) {
+        dicaTitulo = "Informe um título SEO.";
+      } else if (tituloSEO.length <= 65) {
+        pontosTitulo = 15;
+        dicaTitulo = "Título conciso e descritivo.";
+      } else if (tituloSEO.length <= 80) {
+        pontosTitulo = 11;
+        dicaTitulo = "Considere reduzir o título sem perder informação.";
+      } else {
+        pontosTitulo = 7;
+        dicaTitulo = "Título longo. Avalie uma versão mais objetiva.";
+      }
+
+      verificacoes.push(verificar(
+        "Título SEO",
+        pontosTitulo,
+        15,
+        dicaTitulo + " (" + tituloSEO.length + " caracteres)"
+      ));
+
+      // DESCRIÇÃO — 15
+      let pontosDescricao = 0;
+      let dicaDescricao = "";
+
+      if (!descricaoSEO) {
+        dicaDescricao = "Preencha a meta descrição.";
+      } else if (
+        descricaoSEO.length >= 110 &&
+        descricaoSEO.length <= 165
+      ) {
+        pontosDescricao = 15;
+        dicaDescricao = "Descrição clara e concisa.";
+      } else if (
+        descricaoSEO.length >= 70 &&
+        descricaoSEO.length <= 200
+      ) {
+        pontosDescricao = 11;
+        dicaDescricao = "Boa descrição. Considere ajustar a extensão.";
+      } else {
+        pontosDescricao = 6;
+        dicaDescricao = "Revise a objetividade e a extensão.";
+      }
+
+      verificacoes.push(verificar(
+        "Meta descrição",
+        pontosDescricao,
+        15,
+        dicaDescricao + " (" + descricaoSEO.length + " caracteres)"
+      ));
+
+      // ASSUNTO PRINCIPAL — 10
+      let pontosKeyword = 0;
+
+      if (palavraChave) {
+        pontosKeyword += 4;
+
+        if (tituloNormalizado.includes(palavraChave)) {
+          pontosKeyword += 3;
+        }
+
+        if (
+          descricaoNormalizada.includes(palavraChave) ||
+          textoMateria.includes(palavraChave)
+        ) {
+          pontosKeyword += 3;
+        }
+      }
+
+      verificacoes.push(verificar(
+        "Assunto principal",
+        pontosKeyword,
+        10,
+        palavraChave
+          ? "Verifique se o termo representa naturalmente o tema da matéria."
+          : "Informe uma palavra-chave que represente o assunto principal."
+      ));
+
+      // CONTEÚDO — 15
+      // Não exige um mínimo rígido para notícias.
+      let pontosConteudo = 0;
+
+      if (palavras >= 150) {
+        pontosConteudo = 15;
+      } else if (palavras >= 70) {
+        pontosConteudo = 13;
+      } else if (palavras >= 30) {
+        pontosConteudo = 10;
+      } else {
+        pontosConteudo = 5;
+      }
+
+      verificacoes.push(verificar(
+        "Desenvolvimento do conteúdo",
+        pontosConteudo,
+        15,
+        palavras + " palavras. A completude da notícia é mais importante que o tamanho."
+      ));
+
+      // SUBTÍTULOS — 10
+      const pontosSubtitulos =
+        subtitulos.length >= 2 ? 10 :
+        subtitulos.length === 1 ? 9 : 7;
+
+      verificacoes.push(verificar(
+        "Organização por subtítulos",
+        pontosSubtitulos,
+        10,
+        subtitulos.length
+          ? subtitulos.length + " subtítulo(s) identificado(s)."
+          : "Use subtítulos quando ajudarem a organizar a leitura."
+      ));
+
+      // IMAGENS — 10
+      let pontosImagens = 0;
+
+      if (campos.imagem) pontosImagens += 5;
+      if (campos.imagemAlt) pontosImagens += 3;
+
+      if (imagens.every(imagem => imagem.alt)) {
+        pontosImagens += 2;
+      }
+
+      verificacoes.push(verificar(
+        "Imagens e acessibilidade",
+        pontosImagens,
+        10,
+        pontosImagens === 10
+          ? "Capa e textos alternativos identificados."
+          : "Verifique a capa e as descrições das imagens."
+      ));
+
+      // LINKS INTERNOS — 10
+      verificacoes.push(verificar(
+        "Links internos",
+        internos.length ? 10 : 6,
+        10,
+        internos.length
+          ? internos.length + " link(s) interno(s) identificado(s)."
+          : "Adicione links relacionados quando forem úteis ao leitor."
+      ));
+
+      // FONTES EXTERNAS — 5
+      verificacoes.push(verificar(
+        "Referências externas",
+        externos.length ? 5 : 4,
+        5,
+        externos.length
+          ? externos.length + " referência(s) externa(s) identificada(s)."
+          : "Inclua fontes externas quando forem relevantes."
+      ));
+
+      // INFORMAÇÕES EDITORIAIS — 10
+      let pontosEditorial = 0;
+
+      if (campos.autor) pontosEditorial += 3;
+      if (campos.dataPublicacao) pontosEditorial += 3;
+
+      if (
+        Array.isArray(campos.categorias)
+          ? campos.categorias.length
+          : campos.categorias
+      ) {
+        pontosEditorial += 4;
+      }
+
+      verificacoes.push(verificar(
+        "Informações editoriais",
+        pontosEditorial,
+        10,
+        pontosEditorial === 10
+          ? "Autor, data e categorias identificados."
+          : "Confira autor, data e categorias da matéria."
+      ));
+
+      const nota = verificacoes.reduce(
+        (soma, item) => soma + item.pontos,
+        0
+      );
+
+      return {
+        nota,
+        titulo,
+        tituloSEO,
+        descricaoSEO,
+        palavras,
+        subtitulos: subtitulos.length,
+        links: links.length,
+        imagens: imagens.length + (campos.imagem ? 1 : 0),
+        verificacoes
+      };
+    }
+
+    function corDaNota(nota) {
+      if (nota >= 80) return "#42b983";
+      if (nota >= 60) return "#f2bd58";
+      return "#ff4356";
+    }
+
+    function exibir(relatorio) {
+      $("resultado").hidden = false;
+
+      const cor = corDaNota(relatorio.nota);
+
+      $("nota").textContent = relatorio.nota;
+      $("circulo").style.borderColor = cor;
+      $("progresso").style.width = relatorio.nota + "%";
+      $("progresso").style.background = cor;
+
+      if (relatorio.nota >= 80) {
+        $("classificacao").textContent =
+          "PRONTO PARA REVISÃO FINAL";
+
+        $("resumo-analise").textContent =
+          "Boa preparação editorial. Confira as informações, fontes e imagens antes de publicar.";
+      } else if (relatorio.nota >= 60) {
+        $("classificacao").textContent =
+          "BOM, COM AJUSTES";
+
+        $("resumo-analise").textContent =
+          "Existem oportunidades para melhorar a apresentação da matéria.";
+      } else {
+        $("classificacao").textContent =
+          "PRECISA MELHORAR";
+
+        $("resumo-analise").textContent =
+          "Revise os critérios indicados no diagnóstico.";
+      }
+
+      $("titulo-materia").textContent =
+        relatorio.titulo || "Matéria sem título";
+
+      const lista = $("lista-verificacoes");
+      lista.replaceChildren();
+
+      for (const item of relatorio.verificacoes) {
+        const elemento = document.createElement("div");
+        elemento.className = "item";
+
+        const conteudo = document.createElement("div");
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = item.titulo;
+
+        const descricao = document.createElement("p");
+        descricao.textContent = item.explicacao;
+
+        const pontos = document.createElement("span");
+        pontos.className = "pontos";
+        pontos.textContent = item.pontos + "/" + item.maximo;
+
+        const percentual = item.pontos / item.maximo;
+
+        pontos.classList.add(
+          percentual >= 0.85
+            ? "positivo"
+            : percentual >= 0.55
+              ? "atencao"
+              : "problema"
+        );
+
+        conteudo.append(titulo, descricao);
+        elemento.append(conteudo, pontos);
+        lista.appendChild(elemento);
+      }
+
+      $("previa-url").textContent =
+        "infernoescarlate.com › posts › ...";
+
+      $("previa-titulo").textContent =
+        relatorio.tituloSEO + " | Inferno Escarlate";
+
+      $("previa-descricao").textContent =
+        relatorio.descricaoSEO || "Sem descrição disponível.";
+
+      $("total-palavras").textContent =
+        relatorio.palavras + " palavras";
+
+      $("total-subtitulos").textContent =
+        relatorio.subtitulos + " subtítulos";
+
+      $("total-links").textContent =
+        relatorio.links + " links";
+
+      $("total-imagens").textContent =
+        relatorio.imagens + " imagens";
+    }
+
+    function atualizarContadores() {
+      const titulo = $("seo-titulo").value.length;
+      const descricao = $("seo-descricao").value.length;
+
+      $("contador-titulo").textContent =
+        titulo + " caracteres — referência editorial: até 65";
+
+      $("contador-descricao").textContent =
+        descricao + " caracteres — referência editorial: 110 a 165";
+    }
+
+    function preencherCampos() {
+      if (!materiaOriginal) return;
+
+      const campos = materiaOriginal.campos;
+
+      $("seo-titulo").value =
+        texto(campos.seoTitle || campos.title);
+
+      $("seo-descricao").value =
+        texto(campos.seoDescription || campos.description);
+
+      $("seo-palavra").value =
+        texto(campos.seoKeyword);
+
+      atualizarContadores();
+    }
+
+    function reanalisar() {
+      if (!materiaOriginal) return;
+
+      const dadosSimulados = {
+        campos: {
+          ...materiaOriginal.campos,
+          seoTitle: $("seo-titulo").value,
+          seoDescription: $("seo-descricao").value,
+          seoKeyword: $("seo-palavra").value
+        },
+        corpo: materiaOriginal.corpo
+      };
+
+      // Campos em branco continuam usando os valores
+      // padrão, tal como acontece no template Liquid.
+      const relatorio = analisar(dadosSimulados);
+      exibir(relatorio);
+    }
+
+    campoArquivo.addEventListener("change", function () {
+      botaoAnalisar.disabled = !campoArquivo.files.length;
+
+      materiaOriginal = null;
+      $("editor-seo").hidden = true;
+      $("resultado").hidden = true;
+
+      mensagem.textContent = campoArquivo.files.length
+        ? "Arquivo selecionado: " + campoArquivo.files[0].name
+        : "Selecione uma matéria para analisar.";
+    });
+
+    botaoAnalisar.addEventListener("click", async function () {
+      const arquivo = campoArquivo.files[0];
+      if (!arquivo) return;
+
+      botaoAnalisar.disabled = true;
+
+      try {
+        const conteudo = await arquivo.text();
+
+        materiaOriginal = extrairFrontmatter(conteudo);
+
+        preencherCampos();
+
+        $("editor-seo").hidden = false;
+
+        reanalisar();
+
+        mensagem.textContent =
+          "Análise concluída: " + arquivo.name;
+
+      } catch (erro) {
+        materiaOriginal = null;
+
+        $("editor-seo").hidden = true;
+        $("resultado").hidden = true;
+
+        mensagem.textContent =
+          "Erro ao analisar: " + erro.message;
+
+        console.error(erro);
+      } finally {
+        botaoAnalisar.disabled = false;
+      }
+    });
+
+    $("reanalisar").addEventListener("click", reanalisar);
+
+    $("restaurar").addEventListener("click", function () {
+      preencherCampos();
+      reanalisar();
+    });
+
+    ["seo-titulo", "seo-descricao", "seo-palavra"].forEach(
+      function (id) {
+        $(id).addEventListener("input", function () {
+          atualizarContadores();
+          reanalisar();
+        });
+      }
+    );
+
+    botaoLimpar.addEventListener("click", function () {
+      campoArquivo.value = "";
+      materiaOriginal = null;
+
+      botaoAnalisar.disabled = true;
+      $("editor-seo").hidden = true;
+      $("resultado").hidden = true;
+
+      mensagem.textContent =
+        "Selecione uma matéria para analisar.";
+    });
+  </script>
+
+</body>
+</html>
