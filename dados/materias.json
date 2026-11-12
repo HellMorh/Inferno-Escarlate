@@ -21,8 +21,10 @@
     "imagem": "/imagem/WhatsApp Image 2026-11-11 at 00.27.11.jpeg",
     "alt": "",
     "url": "/posts/ia-na-escola-e-na-faculdade-o-que-mudou-para-voce-e-para-o-seu-professor.html",
-    "categoriaTexto": "Tecnologia ",
-    "categorias": [],
+    "categoriaTexto": "Tecnologia",
+    "categorias": [
+      "tecnologia"
+    ],
     "coluna": "",
     "autor": "Joel Freitas",
     "data": "2026-11-12T00:00:00.000Z",
