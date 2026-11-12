@@ -44,10 +44,10 @@ Isso tende a transformar o formato das tarefas. Em vez do clássico “faça um 
 
 ## Faculdade e pesquisa: a autoria continua sendo sua
 
-Se você está no ensino superior, atenção redobrada. As instituições vão criar suas próprias políticas internas, mas uma regra já é clara: na pesquisa científica, a IA não é autora. Quem responde por qualquer resultado, dado ou conclusão é você, sempre com total transparência metodológica.
+Se você está no ensino superior, atenção redobrada. [As instituições vão criar suas próprias políticas internas, mas uma regra já é clara: na pesquisa científica, a IA não é autora.](https://www.mattosfilho.com.br/unico/cne-ia-educacao-brasileira/) Quem responde por qualquer resultado, dado ou conclusão é você, sempre com total transparência metodológica.
 
 Resumindo: dá para usar como apoio na pesquisa, mas você assina embaixo de tudo, inclusive dos erros conceituais e das fontes inventadas (as famosas alucinações) que a IA às vezes entrega com a maior segurança do mundo. A responsabilidade ética e acadêmica é 100% sua; a ferramenta não leva a culpa por falhas no seu projeto.
 
 ![](</imagem/WhatsApp Image 2026-11-11 at 00.27.47.jpeg>)
 
-Vale lembrar que o texto base foi aprovado no CNE em 1º de setembro e homologado pelo ministro em novembro. Como cada instituição terá autonomia para regulamentar suas rotinas, vale consultar as regras da sua faculdade e alinhar com cada professor o que é ou não permitido em cada disciplina.
+Vale lembrar que o texto base foi aprovado no CNE em 1º de setembro e homologado pelo ministro em novembro. Como cada instituição terá autonomia para regulamentar suas rotinas, vale consultar as regras da sua faculdade e [alinhar com cada professor o que é ou não permitido em cada disciplina.](https://fastcompanybrasil.com/)
