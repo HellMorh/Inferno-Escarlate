@@ -81,6 +81,7 @@ content:
         label: Nome da categoria
         type: string
 
+
       - name: categorias
         label: Categorias
         type: select
@@ -103,6 +104,9 @@ content:
               label: Animes
             - name: games
               label: Games
+            - name: tecnologia
+              label: Tecnologia
+
 
       - name: coluna
         label: Coluna editorial

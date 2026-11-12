@@ -5,7 +5,6 @@
    VERSÃO DE TESTES COM ELEVENTY
 ========================================== */
 
-
 /* ==========================================
    CATÁLOGO DE MATÉRIAS ANTIGAS
 ========================================== */
@@ -15,66 +14,42 @@ let MATERIAS = [
   /* SE EU FOSSE VOCÊ 3 */
   {
     titulo: "Se Eu Fosse Você 3 aposta na mesma fórmula e garante nostalgia",
-
     resumo: "Cleo Pires e Rafael Infante assumem o protagonismo da franquia e dão uma nova cara à comédia marcada por Glória Pires e Tony Ramos.",
-
     imagem: "imagem/se-eu-fosse-voce-3-capa.jpg",
-
     alt: "Filme Se Eu Fosse Você 3, com Cleo Pires e Rafael Infante",
-
     url: "posts/se-eu-fosse-voce-3.html",
     autor: "Helena Morh",
-
     categorias: ["cinema"],
-
     categoriaTexto: "Cinema nacional • Coluna",
-
     data: "2026-10-10T15:00:00",
-
     destaque: false
   },
 
   /* ROCK IN RIO 2026 */
   {
     titulo: "Faltou rock mais uma vez quando o assunto é Rock In Rio 2026?",
-
     resumo: "Foo Fighters, Rise Against, Detonautas, Capital Inicial e outros abrem uma edição que reacende o debate sobre o espaço do rock.",
-
     imagem: "imagem/rock-in-rio-foo-fighters.jpg",
-
     alt: "Foo Fighters no Rock in Rio 2026",
-
     url: "posts/materia-rock-in-rio-2026.html",
     autor: "Helena Morh",
-
     categorias: ["musica", "eventos", "festivais"],
-
     categoriaTexto: "Música • Festivais",
-
     data: "2026-09-05T12:00:00",
-
     destaque: true
   },
 
   /* UNIVERSAL PICTURES */
   {
     titulo: "Dona da Universal Pictures planeja separação em duas empresas",
-
     resumo: "A Comcast anunciou um plano de reestruturação envolvendo a NBCUniversal e a Sky.",
-
     imagem: "imagem/universal.jpg",
-
     alt: "Universal Pictures e mercado audiovisual",
-
     url: "posts/universal.html",
     autor: "Helena Morh",
-
     categorias: ["cinema", "series"],
-
     categoriaTexto: "Cinema e televisão",
-
     data: "2026-06-27T12:00:00",
-
     destaque: false
   }
 
@@ -93,6 +68,7 @@ const CATEGORIAS_VALIDAS = [
   "series",
   "games",
   "musica",
+  "tecnologia",
   "animes",
   "mangas",
   "eventos",
@@ -106,7 +82,6 @@ const CATEGORIAS_VALIDAS = [
 
 /* ==========================================
    LOCALIZAÇÃO DO CATÁLOGO AUTOMÁTICO
-
    UTILIZA O CAMINHO DO PRÓPRIO SCRIPT,
    FUNCIONANDO NA HOME E NAS CATEGORIAS.
 ========================================== */
@@ -124,10 +99,8 @@ const URL_CATALOGO_AUTOMATICO = document.currentScript
 ========================================== */
 
 function normalizarCaminho(caminho) {
-
   return String(caminho || "")
     .replace(/^\/+/, "");
-
 }
 
 
@@ -144,27 +117,22 @@ async function carregarMateriasAutomaticas() {
     );
 
     if (!resposta.ok) {
-
       throw new Error(
         "Catálogo automático indisponível: " +
         resposta.status
       );
-
     }
 
     const dados = await resposta.json();
 
     if (!Array.isArray(dados)) {
-
       throw new Error(
         "O catálogo precisa conter uma lista de matérias."
       );
-
     }
 
     return dados
       .filter((materia) => {
-
         return (
           materia &&
           typeof materia.titulo === "string" &&
@@ -176,36 +144,23 @@ async function carregarMateriasAutomaticas() {
           ) &&
           Array.isArray(materia.categorias)
         );
-
       })
       .map((materia) => ({
-
         titulo: materia.titulo,
-
         resumo: materia.resumo || "",
-
         imagem: normalizarCaminho(
           materia.imagem
         ),
-
         alt: materia.alt || materia.titulo,
-
         url: normalizarCaminho(
           materia.url
         ),
-
         categorias: materia.categorias,
-
         categoriaTexto: materia.categoriaTexto || "Matéria",
-
         data: materia.data,
-
         destaque: materia.destaque === true,
-
         coluna: materia.coluna || "",
-
         autor: materia.autor || "Inferno Escarlate"
-
       }));
 
   } catch (erro) {
@@ -311,9 +266,7 @@ function dataFormatada(data) {
 function ordenarMaterias(lista) {
 
   return [...lista].sort((a, b) => {
-
     return new Date(b.data) - new Date(a.data);
-
   });
 
 }
@@ -385,7 +338,6 @@ function criarCardMateria(materia, prefixo = "") {
       itemscope
       itemtype="https://schema.org/Article"
     >
-
       <meta
         itemprop="mainEntityOfPage"
         content="${urlAbsoluta(materia.url)}"
@@ -397,7 +349,6 @@ function criarCardMateria(materia, prefixo = "") {
         aria-label="Ler: ${materia.titulo}"
         itemprop="url"
       >
-
         <img
           src="${imagem}"
           alt="${materia.alt}"
@@ -405,7 +356,6 @@ function criarCardMateria(materia, prefixo = "") {
           decoding="async"
           itemprop="image"
         >
-
       </a>
 
       <div class="card-conteudo">
@@ -415,14 +365,12 @@ function criarCardMateria(materia, prefixo = "") {
         </span>
 
         <h3 itemprop="headline">
-
           <a
             href="${url}"
             class="link-titulo-materia"
           >
             ${materia.titulo}
           </a>
-
         </h3>
 
         <p itemprop="description">
@@ -466,12 +414,10 @@ function renderizarLista(
 
   container.innerHTML = lista
     .map((materia) => {
-
       return criarCardMateria(
         materia,
         prefixo
       );
-
     })
     .join("");
 
@@ -550,13 +496,11 @@ function renderizarDestaquePrincipal() {
         href="${materia.url}"
         aria-label="Ler: ${materia.titulo}"
       >
-
         <img
           src="${materia.imagem}"
           alt="${materia.alt}"
           fetchpriority="high"
         >
-
       </a>
 
     </div>
@@ -568,14 +512,12 @@ function renderizarDestaquePrincipal() {
       </span>
 
       <h2>
-
         <a
           href="${materia.url}"
           class="link-titulo-materia"
         >
           ${materia.titulo}
         </a>
-
       </h2>
 
       <p>
@@ -660,11 +602,9 @@ function renderizarPaginaCategoria() {
 
   const lista = ordenarMaterias(MATERIAS)
     .filter((materia) => {
-
       return materia.categorias.includes(
         categoria
       );
-
     });
 
   renderizarLista(
@@ -695,6 +635,7 @@ function renderizarPaginaCategoria() {
 
 /* ==========================================
    FILTROS DA PÁGINA DE MATÉRIAS
+   E PAGINAÇÃO DE 9 MATÉRIAS
 ========================================== */
 
 function ativarFiltros() {
@@ -709,42 +650,218 @@ function ativarFiltros() {
 
   if (!container || !botoes.length) return;
 
-  const cards = [
-    ...container.querySelectorAll(
-      "[data-categoria]"
-    )
-  ];
-
   const aviso = document.querySelector(
     "#sem-materias"
   );
 
-  function aplicarFiltro(filtro) {
+  const materiasPorPagina = 9;
 
-    let quantidadeVisivel = 0;
+  let paginaAtual = 1;
 
-    cards.forEach((card) => {
+  let filtroAtual = document.querySelector(
+    ".filtros-materias .ativo"
+  )?.dataset.filtro || "todas";
 
-      const categorias = card.dataset.categoria
+  // CRIAR ÁREA DA PAGINAÇÃO
+
+  let paginacao = document.querySelector(
+    "#paginacao-materias"
+  );
+
+  if (!paginacao) {
+
+    paginacao = document.createElement("nav");
+
+    paginacao.id = "paginacao-materias";
+
+    paginacao.className = "paginacao-materias";
+
+    paginacao.setAttribute(
+      "aria-label",
+      "Paginação das matérias"
+    );
+
+    const referencia = aviso || container;
+
+    referencia.insertAdjacentElement(
+      "afterend",
+      paginacao
+    );
+
+  }
+
+  // ATUALIZAR BOTÕES DA PAGINAÇÃO
+
+  function atualizarPaginacao(totalPaginas) {
+
+    paginacao.innerHTML = "";
+
+    paginacao.hidden = totalPaginas <= 1;
+
+    if (totalPaginas <= 1) return;
+
+    function criarBotao(
+      texto,
+      pagina,
+      desativado = false,
+      ativo = false
+    ) {
+
+      const botao = document.createElement("button");
+
+      botao.type = "button";
+
+      botao.className = "botao-paginacao";
+
+      botao.textContent = texto;
+
+      botao.disabled = desativado;
+
+      if (ativo) {
+
+        botao.classList.add("ativo");
+
+        botao.setAttribute(
+          "aria-current",
+          "page"
+        );
+
+      }
+
+      botao.setAttribute(
+        "aria-label",
+        texto === "Anterior"
+          ? "Página anterior"
+          : texto === "Próxima"
+            ? "Próxima página"
+            : "Página " + pagina
+      );
+
+      botao.addEventListener("click", () => {
+
+        if (botao.disabled || pagina === paginaAtual) {
+          return;
+        }
+
+        paginaAtual = pagina;
+
+        aplicarFiltro();
+
+        container.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      });
+
+      paginacao.appendChild(botao);
+
+    }
+
+    criarBotao(
+      "Anterior",
+      Math.max(1, paginaAtual - 1),
+      paginaAtual === 1
+    );
+
+    // EXIBIR ATÉ 5 NÚMEROS DE PÁGINAS
+
+    let inicio = Math.max(1, paginaAtual - 2);
+
+    const fim = Math.min(
+      totalPaginas,
+      inicio + 4
+    );
+
+    inicio = Math.max(1, fim - 4);
+
+    for (
+      let pagina = inicio;
+      pagina <= fim;
+      pagina++
+    ) {
+
+      criarBotao(
+        String(pagina),
+        pagina,
+        false,
+        pagina === paginaAtual
+      );
+
+    }
+
+    criarBotao(
+      "Próxima",
+      Math.min(totalPaginas, paginaAtual + 1),
+      paginaAtual === totalPaginas
+    );
+
+  }
+
+  // APLICAR FILTRO E PAGINAÇÃO
+
+  function aplicarFiltro(reiniciarPagina = false) {
+
+    if (reiniciarPagina) {
+      paginaAtual = 1;
+    }
+
+    const cards = [
+      ...container.querySelectorAll(
+        "[data-categoria]"
+      )
+    ];
+
+    const cardsFiltrados = cards.filter((card) => {
+
+      const categorias = (
+        card.dataset.categoria || ""
+      )
         .trim()
         .split(/\s+/);
 
-      const mostrar =
-        filtro === "todas" ||
-        categorias.includes(filtro);
+      return (
+        filtroAtual === "todas" ||
+        categorias.includes(filtroAtual)
+      );
 
-      card.style.display = mostrar ? "" : "none";
+    });
 
-      if (mostrar) {
-        quantidadeVisivel++;
-      }
+    const totalPaginas = Math.ceil(
+      cardsFiltrados.length / materiasPorPagina
+    );
+
+    paginaAtual = Math.max(
+      1,
+      Math.min(
+        paginaAtual,
+        totalPaginas || 1
+      )
+    );
+
+    const inicio = (
+      paginaAtual - 1
+    ) * materiasPorPagina;
+
+    const visiveis = new Set(
+      cardsFiltrados.slice(
+        inicio,
+        inicio + materiasPorPagina
+      )
+    );
+
+    cards.forEach((card) => {
+
+      card.style.display = visiveis.has(card)
+        ? ""
+        : "none";
 
     });
 
     botoes.forEach((botao) => {
 
       const ativo =
-        botao.dataset.filtro === filtro;
+        botao.dataset.filtro === filtroAtual;
 
       botao.classList.toggle(
         "ativo",
@@ -762,34 +879,45 @@ function ativarFiltros() {
 
       aviso.classList.toggle(
         "visivel",
-        quantidadeVisivel === 0
+        cardsFiltrados.length === 0
       );
 
     }
 
+    atualizarPaginacao(totalPaginas);
+
   }
+
+  // EVENTOS DOS FILTROS
 
   botoes.forEach((botao) => {
 
-    botao.addEventListener(
-      "click",
-      () => {
+    botao.addEventListener("click", () => {
 
-        aplicarFiltro(
-          botao.dataset.filtro
-        );
+      filtroAtual = botao.dataset.filtro;
 
-      }
-    );
+      aplicarFiltro(true);
+
+    });
 
   });
 
-  const filtroInicial =
-    document.querySelector(
-      ".filtros-materias .ativo"
-    )?.dataset.filtro || "todas";
+  // ATUALIZAR QUANDO NOVAS MATÉRIAS FOREM
+  // ADICIONADAS AO CONTAINER
 
-  aplicarFiltro(filtroInicial);
+  const observador = new MutationObserver(() => {
+
+    aplicarFiltro();
+
+  });
+
+  observador.observe(container, {
+    childList: true
+  });
+
+  // INICIALIZAÇÃO
+
+  aplicarFiltro(true);
 
 }
 
@@ -931,7 +1059,6 @@ function iniciarSistemaMaterias() {
 
 /* ==========================================
    INICIALIZAÇÃO AUTOMÁTICA
-
    AGUARDA O CATÁLOGO DO ELEVENTY
    ANTES DE RENDERIZAR AS MATÉRIAS.
 ========================================== */

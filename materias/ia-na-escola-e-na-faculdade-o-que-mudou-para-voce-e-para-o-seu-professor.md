@@ -7,7 +7,9 @@ description: "Na última terça-feira, 10 de novembro, mudanças importantes par
 imagem: /imagem/WhatsApp Image 2026-11-11 at 00.27.11.jpeg
 autor: Joel Freitas
 dataPublicacao: 2026-11-12
-categoriaTexto: "Tecnologia "
+categoriaTexto: Tecnologia
+categorias:
+  - tecnologia
 seoTitle: IA na escola e na faculdade
 seoDescription: Entenda o que mudou nas regras para o uso de inteligência
   artificial nas escolas e faculdades, como ficam provas, trabalhos e detectores

@@ -453,9 +453,8 @@
 
     }
 
-
     /* ==========================================
-       LUPA DE BUSCA â€” INFERNO ESCARLATE
+       LUPA DE BUSCA — INFERNO ESCARLATE
     ========================================== */
 
     .topo .menu a.link-busca {
@@ -478,7 +477,88 @@
       width: 21px;
       height: 21px;
     }
-</style>
+
+    /* ==========================================
+       PAGINAÇÃO DAS MATÉRIAS
+       INFERNO ESCARLATE
+    ========================================== */
+
+    .paginacao-materias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 45px 0 65px;
+      padding: 0 15px;
+    }
+
+    .paginacao-materias[hidden] {
+      display: none !important;
+    }
+
+    .paginacao-materias .botao-paginacao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 44px;
+      padding: 0 15px;
+      background: #101010;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .paginacao-materias .botao-paginacao:hover:not(:disabled) {
+      background: rgba(237, 24, 52, 0.15);
+      border-color: #ed1834;
+      color: #fff;
+    }
+
+    .paginacao-materias .botao-paginacao.ativo {
+      background: #ed1834;
+      border-color: #ed1834;
+      color: #fff;
+      cursor: default;
+    }
+
+    .paginacao-materias .botao-paginacao:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .paginacao-materias .botao-paginacao:focus-visible {
+      outline: 2px solid #ed1834;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 600px) {
+
+      .paginacao-materias {
+        gap: 6px;
+        margin: 35px 0 45px;
+        padding: 0 5px;
+      }
+
+      .paginacao-materias .botao-paginacao {
+        min-width: 38px;
+        height: 40px;
+        padding: 0 10px;
+        font-size: 0.75rem;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -541,13 +621,12 @@
         Trabalhe comigo
       </a>
 
-
       <!-- LUPA DE PESQUISA -->
       <a
         href="busca.html"
         class="link-busca"
-        aria-label="Buscar matÃ©rias"
-        title="Buscar matÃ©rias"
+        aria-label="Buscar matérias"
+        title="Buscar matérias"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -565,7 +644,8 @@
           <path d="m21 21-4.35-4.35"></path>
         </svg>
       </a>
-</nav>
+
+    </nav>
 
   </header>
 
@@ -684,6 +764,13 @@
         <button
           type="button"
           data-filtro="musica"
+          <button
+  type="button"
+  data-filtro="tecnologia"
+  aria-pressed="false"
+>
+  Tecnologia
+</button>
           aria-pressed="false"
         >
           Música
@@ -791,7 +878,6 @@
 
       <!-- ==========================================
            ARQUIVO EDITORIAL
-
            PRESERVA OS LINKS ANTIGOS
            NOVAS MATÉRIAS ENTRAM VIA JAVASCRIPT
       ========================================== -->
@@ -867,7 +953,7 @@
   <script src="./js/rodape.js" defer></script>
 
   <!-- SISTEMA CENTRAL DE MATÉRIAS -->
-  <script src="./js/materias.js?v=7"></script>
+  <script src="./js/materias.js?v=10"></script>
 
   <!-- ==========================================
        ARQUIVO DE PUBLICAÇÕES AUTOMÁTICO
