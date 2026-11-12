@@ -1,5 +1,5 @@
 ---
-title: "IA na escola e na faculdade: o que mudou para você (e para o seu professor)"
+title: "IA na escola e na faculdade: o que mudou para você e para o seu professor"
 description: "Na última terça-feira, 10 de novembro, mudanças importantes para o
   uso da IA chegaram à educação. Veja o que aconteceu e o que isso muda na
   prática para quem estuda e para quem dá aula: trabalhos, provas, detectores de
