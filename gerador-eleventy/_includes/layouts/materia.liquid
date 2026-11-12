@@ -304,6 +304,23 @@
     }
 
     /* ==========================================
+       LINK DO AUTOR / REDATOR
+    ========================================== */
+
+    .nome-autor-materia a {
+      color: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid #ed1834;
+      transition: color 0.2s ease;
+    }
+
+    .nome-autor-materia a:hover,
+    .nome-autor-materia a:focus-visible {
+      color: #ed1834;
+    }
+
+    /* ==========================================
        COMENTÁRIOS — DISQUS
     ========================================== */
 
@@ -408,6 +425,7 @@
       <a href="../index.html">Início</a>
       <a href="../materias.html">Matérias</a>
       <a href="../colunas.html">Colunas</a>
+      <a href="../redatores.html">Redatores</a>
       <a href="../index.html#categorias">Categorias</a>
       <a href="../contato.html">Contato</a>
 
@@ -472,7 +490,11 @@
 
         <div class="informacoes-materia">
 
-          <span>
+          <!-- ==========================================
+               AUTOR COM LINK PARA PERFIL
+          ========================================== -->
+
+          <span class="nome-autor-materia">
             {{ autor | default: "Inferno Escarlate" | escape }}
           </span>
 
@@ -711,6 +733,90 @@
   <script src="../js/script.js?v=104"></script>
   <script src="../js/rodape.js"></script>
   <script src="../js/materias.js?v=7"></script>
+
+  <!-- ==========================================
+       LINK AUTOMÁTICO DO AUTOR
+
+       Consulta os redatores cadastrados
+       no Pages CMS.
+
+       Se o nome do autor corresponder ao nome
+       cadastrado, transforma em link.
+
+       Se não houver correspondência, mantém
+       o nome original sem link.
+  ========================================== -->
+
+  <script>
+
+    (function () {
+
+      "use strict";
+
+      const elemento = document.querySelector(
+        ".nome-autor-materia"
+      );
+
+      if (!elemento) return;
+
+      const nomeAutor = elemento.textContent.trim();
+
+      function normalizar(valor) {
+        return String(valor || "")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, " ");
+      }
+
+      fetch("/dados/redatores.json")
+        .then(function (resposta) {
+
+          if (!resposta.ok) {
+            throw new Error("Cadastro indisponível.");
+          }
+
+          return resposta.json();
+
+        })
+        .then(function (redatores) {
+
+          if (!Array.isArray(redatores)) return;
+
+          const redator = redatores.find(function (pessoa) {
+            return normalizar(pessoa.nome) === normalizar(nomeAutor);
+          });
+
+          if (!redator || !redator.slug) return;
+
+          const link = document.createElement("a");
+
+          link.href =
+            "/redator.html?slug=" +
+            encodeURIComponent(redator.slug);
+
+          link.textContent = nomeAutor;
+
+          link.title = "Ver perfil de " + nomeAutor;
+
+          elemento.replaceChildren(link);
+
+        })
+        .catch(function (erro) {
+
+          // Se o cadastro estiver indisponível,
+          // mantém o nome original da matéria.
+          console.info(
+            "Perfil do autor não carregado:",
+            erro.message
+          );
+
+        });
+
+    })();
+
+  </script>
 
   <!-- ==========================================
        RECOMENDAÇÕES AUTOMÁTICAS
