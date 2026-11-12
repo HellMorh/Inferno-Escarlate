@@ -39,6 +39,8 @@ Superman é o extraordinário bom. 
 
 Grant Morrison, em *Supergods*, compreendeu a importância dessa relação ao apresentar Clark Kent como a alma do Superman, aquilo que permite que nos reconheçamos em alguém capaz de feitos impossíveis. Já em *Kill Bill: Volume 2*, Quentin Tarantino apresenta, pela voz de Bill, uma interpretação oposta. Para o personagem, Clark Kent é a maneira como Superman enxerga a humanidade: fraca, insegura e covarde. 
 
+![](</imagem/557180 (2).jpg>)
+
 Mas será que Clark representa aquilo que Superman despreza em nós? Se a humanidade fosse tão inferior aos seus olhos, por que escolheria viver entre pessoas que nada poderiam oferecer em troca? Por que alguém capaz de enfrentar exércitos se preocuparia com o sofrimento de uma única pessoa? 
 
 A resposta talvez esteja menos em Krypton do que no Kansas. Antes de compreender seus poderes, Clark aprendeu com uma família humana a importância de cuidar dos outros. Sua força explica como consegue salvar o mundo, mas não explica por que deseja fazê-lo. 
