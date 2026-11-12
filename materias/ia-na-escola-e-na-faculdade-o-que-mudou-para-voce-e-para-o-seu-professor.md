@@ -66,4 +66,3 @@ Foi acusado injustamente? Mantenha a calma, apresente seu histórico de produç�
 
 **Fonte dupla consultada:** [Mattos Filho, “CNE aprova diretrizes para utilização da inteligência artificial na educação brasileira”](https://www.mattosfilho.com.br/unico/cne-ia-educacao-brasileira/) e  [fastcompanybrasil](https://fastcompanybrasil.com/news/cne-veta-ia-correcao-redacoes-provas/)
 
- 
