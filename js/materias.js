@@ -23,6 +23,7 @@ let MATERIAS = [
     alt: "Filme Se Eu Fosse Você 3, com Cleo Pires e Rafael Infante",
 
     url: "posts/se-eu-fosse-voce-3.html",
+    autor: "Helena Morh",
 
     categorias: ["cinema"],
 
@@ -44,6 +45,7 @@ let MATERIAS = [
     alt: "Foo Fighters no Rock in Rio 2026",
 
     url: "posts/materia-rock-in-rio-2026.html",
+    autor: "Helena Morh",
 
     categorias: ["musica", "eventos", "festivais"],
 
@@ -65,6 +67,7 @@ let MATERIAS = [
     alt: "Universal Pictures e mercado audiovisual",
 
     url: "posts/universal.html",
+    autor: "Helena Morh",
 
     categorias: ["cinema", "series"],
 

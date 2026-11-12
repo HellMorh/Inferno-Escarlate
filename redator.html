@@ -6,17 +6,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <title>Perfil do redator | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Conheça os redatores do Inferno Escarlate e descubra suas matérias sobre cultura pop, cinema, música, games e entretenimento."
+    content="Conheça os redatores do Inferno Escarlate, suas histórias, redes sociais e matérias publicadas."
   >
 
   <meta name="robots" content="index, follow">
 
-  <link rel="stylesheet" href="css/style.css?v=109">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
 
+  <meta
+    property="og:title"
+    content="Redatores | Inferno Escarlate"
+  >
+
+  <meta
+    property="og:description"
+    content="Conheça os autores e suas publicações no Inferno Escarlate."
+  >
+
+  <!-- FONTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -25,14 +39,22 @@
     rel="stylesheet"
   >
 
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="css/style.css?v=109">
+
   <style>
+    /* ==========================================
+       PERFIL DO REDATOR
+       INFERNO ESCARLATE
+    ========================================== */
+
     .topo .menu a.link-trabalhe-comigo {
       color: #ff4356;
       font-weight: 700;
     }
 
     .pagina-perfil {
-      min-height: 70vh;
+      min-height: 75vh;
       background: #090909;
       color: #fff;
     }
@@ -42,18 +64,24 @@
       margin: 0 auto;
     }
 
+    /* VOLTAR */
+
     .perfil-voltar {
       display: inline-block;
       margin: 55px 0 35px;
       color: #aaa;
+      font-family: "Inter", sans-serif;
       font-size: 12px;
       font-weight: 700;
       text-decoration: none;
+      transition: color 0.2s;
     }
 
     .perfil-voltar:hover {
       color: #ff4356;
     }
+
+    /* CABEÇALHO DO PERFIL */
 
     .perfil-cabecalho {
       display: grid;
@@ -69,6 +97,7 @@
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: cover;
+      object-position: center;
       background: #181818;
     }
 
@@ -76,6 +105,7 @@
       display: block;
       margin-bottom: 15px;
       color: #ff4356;
+      font-family: "Inter", sans-serif;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -84,6 +114,7 @@
 
     .perfil-nome {
       margin: 0 0 25px;
+      color: #fff;
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(4rem, 8vw, 7rem);
       font-weight: 400;
@@ -93,10 +124,13 @@
 
     .perfil-biografia {
       color: #bbb;
+      font-family: "Inter", sans-serif;
       font-size: 15px;
       line-height: 1.9;
       white-space: pre-line;
     }
+
+    /* REDES SOCIAIS */
 
     .perfil-redes {
       display: flex;
@@ -108,17 +142,23 @@
     .perfil-redes a {
       display: inline-block;
       padding: 12px 17px;
-      border: 1px solid #444;
       color: #fff;
+      border: 1px solid #444;
+      font-family: "Inter", sans-serif;
       font-size: 12px;
       font-weight: 700;
       text-decoration: none;
+      transition:
+        background 0.2s,
+        border-color 0.2s;
     }
 
     .perfil-redes a:hover {
       background: #a91b29;
       border-color: #a91b29;
     }
+
+    /* PUBLICAÇÕES */
 
     .perfil-publicacoes {
       padding: 80px 0 110px;
@@ -132,6 +172,7 @@
       display: block;
       margin-bottom: 12px;
       color: #ff4356;
+      font-family: "Inter", sans-serif;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -140,11 +181,21 @@
 
     .perfil-publicacoes-titulo h2 {
       margin: 0;
+      color: #fff;
       font-family: "Bebas Neue", sans-serif;
       font-size: clamp(2.8rem, 5vw, 4.5rem);
       font-weight: 400;
       line-height: 1;
     }
+
+    .perfil-contagem {
+      margin-top: 15px;
+      color: #999;
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+    }
+
+    /* GRADE */
 
     .perfil-grade {
       display: grid;
@@ -152,19 +203,26 @@
       gap: 25px;
     }
 
+    /* CARD DE MATÉRIA */
+
     .perfil-card {
       min-width: 0;
+      overflow: hidden;
       background: #131313;
       border: 1px solid #303030;
-      overflow: hidden;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
     }
 
     .perfil-card:hover {
+      transform: translateY(-4px);
       border-color: #ff4356;
     }
 
     .perfil-card a {
-      display: block;
+      display: flex;
+      flex-direction: column;
       height: 100%;
       color: inherit;
       text-decoration: none;
@@ -175,9 +233,13 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
+      background: #222;
     }
 
     .perfil-card-conteudo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       padding: 23px;
     }
 
@@ -185,13 +247,16 @@
       display: block;
       margin-bottom: 12px;
       color: #ff4356;
+      font-family: "Inter", sans-serif;
       font-size: 11px;
       font-weight: 800;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .perfil-card h3 {
       margin: 0 0 13px;
+      color: #fff;
       font-family: "Bebas Neue", sans-serif;
       font-size: 2rem;
       font-weight: 400;
@@ -199,23 +264,41 @@
     }
 
     .perfil-card p {
-      margin: 0;
+      margin: 0 0 20px;
       color: #aaa;
+      font-family: "Inter", sans-serif;
       font-size: 13px;
       line-height: 1.7;
+      flex: 1;
     }
+
+    .perfil-card-data {
+      display: block;
+      margin-top: auto;
+      padding-top: 15px;
+      color: #777;
+      border-top: 1px solid #292929;
+      font-family: "Inter", sans-serif;
+      font-size: 11px;
+    }
+
+    /* AVISOS */
 
     .perfil-aviso {
       padding: 30px;
       border: 1px solid #333;
-      color: #aaa;
       background: #111;
+      color: #aaa;
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
       line-height: 1.7;
     }
 
     [hidden] {
       display: none !important;
     }
+
+    /* RESPONSIVIDADE */
 
     @media (max-width: 900px) {
       .perfil-cabecalho {
@@ -229,8 +312,14 @@
     }
 
     @media (max-width: 650px) {
+      .perfil-voltar {
+        margin-top: 35px;
+      }
+
       .perfil-cabecalho {
         grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 55px;
       }
 
       .perfil-foto {
@@ -244,13 +333,30 @@
       .perfil-publicacoes {
         padding: 55px 0 80px;
       }
+
+      .perfil-card h3 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .perfil-card {
+        transition: none;
+      }
+
+      .perfil-card:hover {
+        transform: none;
+      }
     }
   </style>
+
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- ==========================================
+       CABEÇALHO GLOBAL
+  ========================================== -->
 
   <header class="topo">
 
@@ -273,6 +379,7 @@
       id="menu-principal"
       aria-label="Menu principal"
     >
+
       <a href="index.html">Início</a>
       <a href="materias.html">Matérias</a>
       <a href="colunas.html">Colunas</a>
@@ -286,9 +393,14 @@
       >
         Trabalhe comigo
       </a>
+
     </nav>
 
   </header>
+
+  <!-- ==========================================
+       PERFIL INDIVIDUAL
+  ========================================== -->
 
   <main class="pagina-perfil">
 
@@ -298,13 +410,18 @@
         ← Voltar para redatores
       </a>
 
-      <!-- PERFIL INDIVIDUAL -->
+      <!-- DADOS DO REDATOR -->
 
-      <section id="perfil-cabecalho" class="perfil-cabecalho" hidden>
+      <section
+        id="perfil-cabecalho"
+        class="perfil-cabecalho"
+        hidden
+      >
 
         <div id="perfil-foto-container"></div>
 
         <div>
+
           <span
             class="perfil-etiqueta"
             id="perfil-funcao"
@@ -324,17 +441,21 @@
             class="perfil-redes"
             id="perfil-redes"
           ></div>
+
         </div>
 
       </section>
 
+      <!-- ERROS DO PERFIL -->
+
       <div
         id="perfil-erro"
         class="perfil-aviso"
+        role="status"
         hidden
       ></div>
 
-      <!-- MATÉRIAS DO AUTOR -->
+      <!-- PUBLICAÇÕES -->
 
       <section
         id="perfil-publicacoes"
@@ -343,8 +464,21 @@
       >
 
         <div class="perfil-publicacoes-titulo">
-          <span>Produção editorial</span>
-          <h2>MATÉRIAS PUBLICADAS</h2>
+
+          <span>
+            Produção editorial
+          </span>
+
+          <h2>
+            MATÉRIAS PUBLICADAS
+          </h2>
+
+          <p
+            id="perfil-contagem"
+            class="perfil-contagem"
+            aria-live="polite"
+          ></p>
+
         </div>
 
         <div
@@ -358,7 +492,7 @@
           hidden
         >
           Este redator ainda não possui matérias
-          cadastradas no catálogo automático.
+          cadastradas.
         </p>
 
       </section>
@@ -367,18 +501,45 @@
 
   </main>
 
-  <!-- RODAPÉ GLOBAL -->
+  <!-- ==========================================
+       RODAPÉ GLOBAL
+  ========================================== -->
 
   <div id="rodape-global"></div>
+
+  <!-- ==========================================
+       SCRIPTS DO PORTAL
+  ========================================== -->
 
   <script src="js/rodape.js" defer></script>
   <script src="js/script.js?v=104"></script>
 
+  <!-- ==========================================
+       CATÁLOGO ORIGINAL DO SITE
+
+       Esse arquivo contém as matérias antigas
+       e também é usado pela página inicial.
+
+       Não modificamos as funções originais.
+
+       Lemos apenas a variável MATERIAS.
+  ========================================== -->
+
+  <script src="js/materias.js?v=8"></script>
+
+  <!-- ==========================================
+       INTEGRAÇÃO DOS REDATORES
+       MATÉRIAS ANTIGAS + ELEVENTY
+  ========================================== -->
+
   <script>
     (async function () {
+
       "use strict";
 
-      const $ = id => document.getElementById(id);
+      const $ = function (id) {
+        return document.getElementById(id);
+      };
 
       const parametros = new URLSearchParams(
         window.location.search
@@ -386,8 +547,12 @@
 
       const slug = parametros.get("slug");
 
+      /* ==========================================
+         FUNÇÕES DE TEXTO
+      ========================================== */
+
       function texto(valor) {
-        return String(valor || "").trim();
+        return String(valor ?? "").trim();
       }
 
       function normalizar(valor) {
@@ -398,35 +563,82 @@
           .replace(/\s+/g, " ");
       }
 
+      /* ==========================================
+         URLS INTERNAS
+      ========================================== */
+
       function urlInterna(valor) {
-        if (!texto(valor)) return "";
+
+        if (!texto(valor)) {
+          return "";
+        }
 
         try {
+
           const url = new URL(
-            valor,
-            window.location.origin
+            texto(valor),
+            window.location.origin + "/"
           );
 
-          return url.origin === window.location.origin
-            ? url.href
-            : "";
-        } catch (_) {
+          if (
+            url.origin !== window.location.origin ||
+            !["http:", "https:"].includes(url.protocol)
+          ) {
+            return "";
+          }
+
+          return url.href;
+
+        } catch (erro) {
           return "";
         }
       }
 
+      function chaveURL(valor) {
+
+        const url = urlInterna(valor);
+
+        if (!url) return "";
+
+        try {
+          const objeto = new URL(url);
+
+          return objeto.pathname
+            .replace(/\/+/g, "/")
+            .replace(/\/$/, "")
+            .toLowerCase();
+
+        } catch (erro) {
+          return "";
+        }
+      }
+
+      /* ==========================================
+         MENSAGENS
+      ========================================== */
+
       function mostrarErro(mensagem) {
+
         $("perfil-erro").textContent = mensagem;
         $("perfil-erro").hidden = false;
       }
 
+      /* ==========================================
+         REDES SOCIAIS
+      ========================================== */
+
       function adicionarRede(rotulo, endereco) {
+
         if (!texto(endereco)) return;
 
         try {
+
           const url = new URL(endereco);
 
-          if (!["https:", "http:"].includes(url.protocol)) {
+          if (
+            url.protocol !== "https:" &&
+            url.protocol !== "http:"
+          ) {
             return;
           }
 
@@ -437,13 +649,24 @@
           link.rel = "noopener noreferrer";
           link.textContent = rotulo;
 
+          link.setAttribute(
+            "aria-label",
+            rotulo + " do redator"
+          );
+
           $("perfil-redes").appendChild(link);
-        } catch (_) {
-          // Ignora links inválidos.
+
+        } catch (erro) {
+          // Ignora endereços inválidos.
         }
       }
 
+      /* ==========================================
+         EXIBIR PERFIL
+      ========================================== */
+
       function apresentarRedator(redator) {
+
         const nome = texto(redator.nome);
 
         document.title =
@@ -458,34 +681,101 @@
           texto(redator.biografia) ||
           texto(redator.biografiaCurta);
 
-        const imagemURL = urlInterna(redator.foto);
+        const imagemURL = urlInterna(
+          redator.foto
+        );
 
         if (imagemURL) {
+
           const imagem = document.createElement("img");
 
           imagem.className = "perfil-foto";
           imagem.src = imagemURL;
           imagem.alt = "Foto de " + nome;
+          imagem.loading = "eager";
 
-          $("perfil-foto-container").appendChild(imagem);
+          $("perfil-foto-container").appendChild(
+            imagem
+          );
+
         } else {
+
           $("perfil-foto-container").hidden = true;
+
         }
 
-        adicionarRede("Instagram", redator.instagram);
-        adicionarRede("LinkedIn", redator.linkedin);
-        adicionarRede("X", redator.twitter);
-        adicionarRede("Site", redator.site);
+        adicionarRede(
+          "Instagram",
+          redator.instagram
+        );
+
+        adicionarRede(
+          "LinkedIn",
+          redator.linkedin
+        );
+
+        adicionarRede(
+          "X",
+          redator.twitter
+        );
+
+        adicionarRede(
+          "Site",
+          redator.site
+        );
 
         $("perfil-cabecalho").hidden = false;
         $("perfil-publicacoes").hidden = false;
+
+        /* SEO DINÂMICO */
+
+        const descricao =
+          texto(redator.biografiaCurta) ||
+          "Conheça " + nome +
+          " e suas matérias no Inferno Escarlate.";
+
+        const metaDescricao = document.querySelector(
+          'meta[name="description"]'
+        );
+
+        if (metaDescricao) {
+          metaDescricao.content = descricao.slice(
+            0,
+            160
+          );
+        }
+
+        let canonical = document.querySelector(
+          'link[rel="canonical"]'
+        );
+
+        if (!canonical) {
+          canonical = document.createElement("link");
+          canonical.rel = "canonical";
+          document.head.appendChild(canonical);
+        }
+
+        canonical.href =
+          window.location.origin +
+          "/redator.html?slug=" +
+          encodeURIComponent(texto(redator.slug));
       }
 
-      function criarCard(materia) {
-        const url = urlInterna(materia.url);
-        const titulo = texto(materia.titulo || materia.title);
+      /* ==========================================
+         CARDS DAS MATÉRIAS
+      ========================================== */
 
-        if (!url || !titulo) return null;
+      function criarCard(materia) {
+
+        const url = urlInterna(materia.url);
+
+        const titulo = texto(
+          materia.titulo || materia.title
+        );
+
+        if (!url || !titulo) {
+          return null;
+        }
 
         const card = document.createElement("article");
         card.className = "perfil-card";
@@ -493,37 +783,96 @@
         const link = document.createElement("a");
         link.href = url;
 
-        const imagemURL = urlInterna(materia.imagem);
+        /* IMAGEM */
+
+        const imagemURL = urlInterna(
+          materia.imagem
+        );
 
         if (imagemURL) {
+
           const imagem = document.createElement("img");
 
           imagem.src = imagemURL;
-          imagem.alt = texto(materia.alt || materia.imagemAlt) ||
-            titulo;
+          imagem.alt = texto(
+            materia.alt || materia.imagemAlt
+          ) || titulo;
+
           imagem.loading = "lazy";
 
           link.appendChild(imagem);
         }
 
+        /* CONTEÚDO */
+
         const conteudo = document.createElement("div");
-        conteudo.className = "perfil-card-conteudo";
+
+        conteudo.className =
+          "perfil-card-conteudo";
 
         const categoria = document.createElement("span");
-        categoria.className = "perfil-card-categoria";
-        categoria.textContent =
-          texto(materia.categoriaTexto) || "Matéria";
 
-        const tituloElemento = document.createElement("h3");
+        categoria.className =
+          "perfil-card-categoria";
+
+        categoria.textContent =
+          texto(materia.categoriaTexto) ||
+          "Cultura pop";
+
+        const tituloElemento =
+          document.createElement("h3");
+
         tituloElemento.textContent = titulo;
 
         const resumo = document.createElement("p");
-        resumo.textContent =
-          texto(materia.resumo || materia.description);
+
+        resumo.textContent = texto(
+          materia.resumo || materia.description
+        );
 
         conteudo.appendChild(categoria);
         conteudo.appendChild(tituloElemento);
         conteudo.appendChild(resumo);
+
+        /* DATA */
+
+        const dataOriginal = texto(
+          materia.data || materia.dataPublicacao
+        );
+
+        if (dataOriginal) {
+
+          const dataObjeto = new Date(
+            dataOriginal
+          );
+
+          if (!Number.isNaN(dataObjeto.getTime())) {
+
+            const dataElemento =
+              document.createElement("time");
+
+            dataElemento.className =
+              "perfil-card-data";
+
+            dataElemento.dateTime =
+              dataOriginal;
+
+            dataElemento.textContent =
+              dataObjeto.toLocaleDateString(
+                "pt-BR",
+                {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                  timeZone: "UTC"
+                }
+              );
+
+            conteudo.appendChild(
+              dataElemento
+            );
+          }
+        }
 
         link.appendChild(conteudo);
         card.appendChild(link);
@@ -531,12 +880,19 @@
         return card;
       }
 
+      /* ==========================================
+         CARREGAR JSON
+      ========================================== */
+
       async function carregarJSON(caminho) {
-        const resposta = await fetch(caminho, {
-          cache: "no-cache"
-        });
+
+        const resposta = await fetch(
+          caminho,
+          { cache: "no-cache" }
+        );
 
         if (!resposta.ok) {
+
           throw new Error(
             "Não foi possível carregar " + caminho
           );
@@ -545,80 +901,252 @@
         return resposta.json();
       }
 
+      /* ==========================================
+         CATÁLOGO DE MATÉRIAS ANTIGAS
+
+         O materias.js declara:
+         let MATERIAS = [...]
+
+         Essa variável fica disponível para
+         os scripts clássicos da mesma página.
+
+         Fazemos uma cópia para trabalhar
+         somente com os registros existentes.
+      ========================================== */
+
+      function obterMateriasAntigas() {
+
+        if (
+          typeof MATERIAS !== "undefined" &&
+          Array.isArray(MATERIAS)
+        ) {
+
+          return [...MATERIAS];
+
+        }
+
+        return [];
+      }
+
+      /* ==========================================
+         UNIR OS DOIS CATÁLOGOS
+
+         - Filtra por autor
+         - Elimina URLs repetidas
+         - Organiza por data decrescente
+      ========================================== */
+
+      function reunirMaterias(
+        antigas,
+        automaticas,
+        nomeAutor
+      ) {
+
+        const listaAntiga = Array.isArray(antigas)
+          ? antigas
+          : [];
+
+        const listaAutomatica = Array.isArray(automaticas)
+          ? automaticas
+          : [];
+
+        const todas = [
+          ...listaAntiga,
+          ...listaAutomatica
+        ];
+
+        const nomeNormalizado =
+          normalizar(nomeAutor);
+
+        const materiasDoAutor = todas.filter(
+          function (materia) {
+
+            return (
+              normalizar(materia.autor) ===
+              nomeNormalizado
+            );
+          }
+        );
+
+        /* EVITAR DUPLICAÇÕES */
+
+        const urlsEncontradas = new Set();
+
+        const semDuplicacoes = materiasDoAutor.filter(
+          function (materia) {
+
+            const chave = chaveURL(
+              materia.url
+            );
+
+            if (!chave) return false;
+
+            if (urlsEncontradas.has(chave)) {
+              return false;
+            }
+
+            urlsEncontradas.add(chave);
+
+            return true;
+          }
+        );
+
+        /* MAIS RECENTES PRIMEIRO */
+
+        semDuplicacoes.sort(
+          function (a, b) {
+
+            const dataA = Date.parse(
+              a.data || a.dataPublicacao || ""
+            ) || 0;
+
+            const dataB = Date.parse(
+              b.data || b.dataPublicacao || ""
+            ) || 0;
+
+            return dataB - dataA;
+          }
+        );
+
+        return semDuplicacoes;
+      }
+
+      /* ==========================================
+         RENDERIZAR PUBLICAÇÕES
+      ========================================== */
+
+      function apresentarMaterias(materias) {
+
+        const grade = $("perfil-grade");
+
+        const fragmento =
+          document.createDocumentFragment();
+
+        let quantidade = 0;
+
+        materias.forEach(
+          function (materia) {
+
+            const card = criarCard(materia);
+
+            if (!card) return;
+
+            fragmento.appendChild(card);
+
+            quantidade++;
+          }
+        );
+
+        grade.replaceChildren(fragmento);
+
+        $("perfil-sem-materias").hidden =
+          quantidade > 0;
+
+        $("perfil-contagem").textContent =
+          quantidade === 1
+            ? "1 matéria publicada"
+            : quantidade + " matérias publicadas";
+      }
+
+      /* ==========================================
+         INICIALIZAÇÃO
+      ========================================== */
+
       try {
+
         if (!slug) {
-          mostrarErro("Nenhum redator foi selecionado.");
+
+          mostrarErro(
+            "Nenhum redator foi selecionado."
+          );
+
           return;
         }
+
+        /* CARREGAR O CADASTRO DE REDATORES */
 
         const redatores = await carregarJSON(
           "dados/redatores.json"
         );
 
         if (!Array.isArray(redatores)) {
-          throw new Error("Cadastro de redatores inválido.");
+
+          throw new Error(
+            "Cadastro de redatores inválido."
+          );
         }
 
         const redator = redatores.find(
-          pessoa => texto(pessoa.slug) === slug
+          function (pessoa) {
+
+            return texto(pessoa.slug) === slug;
+
+          }
         );
 
         if (!redator) {
-          mostrarErro("Redator não encontrado.");
+
+          mostrarErro(
+            "Redator não encontrado."
+          );
+
           return;
         }
 
         apresentarRedator(redator);
 
+        /* MATÉRIAS ANTIGAS */
+
+        const antigas = obterMateriasAntigas();
+
+        /* MATÉRIAS AUTOMÁTICAS DO ELEVENTY */
+
+        let automaticas = [];
+        let catalogoAutomaticoDisponivel = true;
+
         try {
-          const catalogo = await carregarJSON(
+
+          automaticas = await carregarJSON(
             "dados/materias.json"
           );
 
-          if (!Array.isArray(catalogo)) {
-            throw new Error("Catálogo de matérias inválido.");
+          if (!Array.isArray(automaticas)) {
+
+            throw new Error(
+              "Formato do catálogo inválido."
+            );
           }
 
-          const nomeRedator = normalizar(redator.nome);
-
-          const materias = catalogo
-            .filter(materia =>
-              normalizar(materia.autor) === nomeRedator
-            )
-            .sort((a, b) => {
-              const dataA = Date.parse(a.data || "") || 0;
-              const dataB = Date.parse(b.data || "") || 0;
-
-              return dataB - dataA;
-            });
-
-          const fragmento = document.createDocumentFragment();
-          let quantidade = 0;
-
-          materias.forEach(materia => {
-            const card = criarCard(materia);
-
-            if (card) {
-              fragmento.appendChild(card);
-              quantidade++;
-            }
-          });
-
-          $("perfil-grade").replaceChildren(fragmento);
-
-          $("perfil-sem-materias").hidden =
-            quantidade > 0;
-
         } catch (erro) {
-          $("perfil-sem-materias").textContent =
-            "Não foi possível carregar as matérias deste redator.";
 
-          $("perfil-sem-materias").hidden = false;
+          catalogoAutomaticoDisponivel = false;
+          automaticas = [];
 
-          console.error(erro);
+          console.error(
+            "Catálogo Eleventy indisponível:",
+            erro
+          );
+        }
+
+        /* UNIFICAR E EXIBIR */
+
+        const materias = reunirMaterias(
+          antigas,
+          automaticas,
+          redator.nome
+        );
+
+        apresentarMaterias(materias);
+
+        if (!catalogoAutomaticoDisponivel) {
+          const contagem = $("perfil-contagem");
+
+          contagem.textContent +=
+            " — catálogo automático indisponível";
         }
 
       } catch (erro) {
+
         mostrarErro(
           "Não foi possível carregar o perfil do redator."
         );
