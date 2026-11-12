@@ -69,4 +69,3 @@ No final, a família da Marvel parece mais com a nossa do que queremos admitir. 
 
 E talvez tenha chegado o momento de perdoar. E de nos perdoarmos.
 
-  
