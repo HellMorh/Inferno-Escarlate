@@ -453,7 +453,32 @@
 
     }
 
-  </style>
+
+    /* ==========================================
+       LUPA DE BUSCA â€” INFERNO ESCARLATE
+    ========================================== */
+
+    .topo .menu a.link-busca {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .topo .menu a.link-busca:hover,
+    .topo .menu a.link-busca:focus-visible {
+      color: #ff4356;
+    }
+
+    .topo .menu a.link-busca svg {
+      display: block;
+      width: 21px;
+      height: 21px;
+    }
+</style>
 
 </head>
 
@@ -516,7 +541,31 @@
         Trabalhe comigo
       </a>
 
-    </nav>
+
+      <!-- LUPA DE PESQUISA -->
+      <a
+        href="busca.html"
+        class="link-busca"
+        aria-label="Buscar matÃ©rias"
+        title="Buscar matÃ©rias"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </a>
+</nav>
 
   </header>
 
