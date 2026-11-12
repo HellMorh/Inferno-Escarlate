@@ -168,3 +168,60 @@ content:
         label: Texto da matéria
         type: rich-text
         required: true
+
+  # ==========================================
+  # EQUIPE EDITORIAL — REDATORES
+  # ==========================================
+
+  - name: redatores
+    label: Redatores
+    type: file
+    path: dados/redatores.json
+    format: json
+    list: true
+
+    fields:
+      - name: nome
+        label: Nome do redator
+        type: string
+        required: true
+
+      - name: slug
+        label: Identificador do perfil
+        type: string
+        required: true
+        description: Use letras minusculas e hifens. Exemplo helena-morh.
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+
+      - name: funcao
+        label: Funcao na equipe
+        type: string
+        description: Exemplo Redatora, Colunista, Editora.
+
+      - name: foto
+        label: Foto do redator
+        type: image
+
+      - name: biografiaCurta
+        label: Biografia resumida
+        type: text
+
+      - name: biografia
+        label: Biografia completa
+        type: text
+
+      - name: instagram
+        label: Instagram
+        type: string
+
+      - name: linkedin
+        label: LinkedIn
+        type: string
+
+      - name: twitter
+        label: X (Twitter)
+        type: string
+
+      - name: site
+        label: Site ou portfolio
+        type: string

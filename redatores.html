@@ -1,0 +1,718 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Redatores | Inferno Escarlate</title>
+
+  <meta
+    name="description"
+    content="Conheça os redatores do Inferno Escarlate. Descubra suas histórias, redes sociais e matérias sobre cinema, música, séries, games, animes e cultura pop."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://infernoescarlate.com/redatores.html"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Inferno Escarlate">
+  <meta property="og:title" content="Redatores | Inferno Escarlate">
+
+  <meta
+    property="og:description"
+    content="Conheça a equipe editorial e os colaboradores do Inferno Escarlate."
+  >
+
+  <meta
+    property="og:url"
+    content="https://infernoescarlate.com/redatores.html"
+  >
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS GLOBAL DO SITE -->
+  <link rel="stylesheet" href="css/style.css?v=109">
+
+  <style>
+    /* ==========================================
+       REDATORES — INFERNO ESCARLATE
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+    }
+
+    .pagina-redatores {
+      min-height: 75vh;
+      background: #090909;
+      color: #fff;
+    }
+
+    /* APRESENTAÇÃO */
+
+    .redatores-abertura {
+      padding: 100px 6% 75px;
+      border-bottom: 1px solid #292929;
+      background:
+        radial-gradient(
+          circle at 88% 15%,
+          rgba(180, 20, 40, 0.14),
+          transparent 40%
+        ),
+        #0b0b0b;
+    }
+
+    .redatores-abertura-conteudo {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+    }
+
+    .redatores-etiqueta {
+      display: block;
+      margin-bottom: 20px;
+      color: #ff4356;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .redatores-abertura h1 {
+      margin: 0 0 23px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4.5rem, 9vw, 8rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .redatores-abertura h1 span {
+      color: #ff4356;
+    }
+
+    .redatores-abertura p {
+      max-width: 740px;
+      margin: 0;
+      color: #aaa;
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    /* CONTEÚDO */
+
+    .redatores-conteudo {
+      width: min(1200px, 88%);
+      margin: 0 auto;
+      padding: 80px 0 110px;
+    }
+
+    .redatores-titulo {
+      margin-bottom: 42px;
+    }
+
+    .redatores-titulo span {
+      display: block;
+      margin-bottom: 12px;
+      color: #ff4356;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .redatores-titulo h2 {
+      margin: 0;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.3rem);
+      font-weight: 400;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    /* GRADE DOS PERFIS */
+
+    .grade-redatores {
+      display: grid;
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    /* CARD */
+
+    .card-redator {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #303030;
+      background: #121212;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .card-redator:hover {
+      transform: translateY(-5px);
+      border-color: #ff4356;
+    }
+
+    .redator-foto-link {
+      display: block;
+      overflow: hidden;
+      background: #1c1c1c;
+    }
+
+    .redator-foto {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 4;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.35s ease;
+    }
+
+    .card-redator:hover .redator-foto {
+      transform: scale(1.035);
+    }
+
+    .redator-conteudo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 27px;
+    }
+
+    .redator-funcao {
+      display: block;
+      margin-bottom: 12px;
+      color: #ff4356;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .redator-nome {
+      margin: 0 0 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.5px;
+    }
+
+    .redator-nome a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .redator-nome a:hover {
+      color: #ff4356;
+    }
+
+    .redator-biografia {
+      margin: 0 0 25px;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.85;
+      flex: 1;
+    }
+
+    /* REDES SOCIAIS */
+
+    .redator-redes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .redator-redes a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 35px;
+      padding: 8px 11px;
+      color: #ddd;
+      border: 1px solid #3a3a3a;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        background 0.2s,
+        border-color 0.2s;
+    }
+
+    .redator-redes a:hover {
+      background: #a91b29;
+      border-color: #a91b29;
+      color: #fff;
+    }
+
+    /* VER PERFIL */
+
+    .redator-ver-materias {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: auto;
+      padding-bottom: 8px;
+      color: #fff;
+      border-bottom: 2px solid #ff4356;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .redator-ver-materias:hover {
+      color: #ff4356;
+    }
+
+    /* ESTADO SEM REDATORES */
+
+    .redatores-vazio {
+      padding: 55px 30px;
+      border: 1px solid #333;
+      background: #111;
+      text-align: center;
+    }
+
+    .redatores-vazio h3 {
+      margin: 0 0 15px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    .redatores-vazio p {
+      margin: 0;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .redatores-vazio[hidden] {
+      display: none !important;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 1000px) {
+      .grade-redatores {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .redatores-abertura {
+        padding: 70px 6% 55px;
+      }
+
+      .redatores-abertura p {
+        font-size: 14px;
+      }
+
+      .redatores-conteudo {
+        padding: 60px 0 80px;
+      }
+
+      .grade-redatores {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .redator-foto {
+        aspect-ratio: 4 / 3;
+      }
+
+      .redator-conteudo {
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card-redator,
+      .redator-foto {
+        transition: none;
+      }
+
+      .card-redator:hover,
+      .card-redator:hover .redator-foto {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================
+       CABEÇALHO GLOBAL
+  ========================================== -->
+
+  <header class="topo">
+
+    <a href="index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+      <a href="index.html">Início</a>
+      <a href="materias.html">Matérias</a>
+      <a href="colunas.html">Colunas</a>
+      <a href="redatores.html" aria-current="page">Redatores</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="contato.html">Contato</a>
+
+      <a
+        href="trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+    </nav>
+
+  </header>
+
+  <!-- ==========================================
+       PÁGINA DE REDATORES
+  ========================================== -->
+
+  <main class="pagina-redatores">
+
+    <section class="redatores-abertura">
+
+      <div class="redatores-abertura-conteudo">
+
+        <span class="redatores-etiqueta">
+          Quem faz o Inferno Escarlate
+        </span>
+
+        <h1>
+          NOSSOS <span>REDATORES</span>
+        </h1>
+
+        <p>
+          Por trás de cada matéria, existem pessoas
+          apaixonadas por contar histórias, explorar
+          diferentes perspectivas e compartilhar o
+          universo da cultura pop.
+
+          Conheça quem escreve no Inferno Escarlate.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section
+      class="redatores-conteudo"
+      aria-labelledby="titulo-equipe"
+    >
+
+      <div class="redatores-titulo">
+
+        <span>
+          Equipe editorial
+        </span>
+
+        <h2 id="titulo-equipe">
+          CONHEÇA NOSSOS REDATORES
+        </h2>
+
+      </div>
+
+      <!-- OS PERFIS SERÃO INSERIDOS AQUI -->
+
+      <div
+        id="grade-redatores"
+        class="grade-redatores"
+      ></div>
+
+      <!-- AVISO ENQUANTO NÃO HOUVER CADASTROS -->
+
+      <div
+        id="redatores-vazio"
+        class="redatores-vazio"
+      >
+        <h3>
+          Nossa equipe está chegando!
+        </h3>
+
+        <p>
+          Em breve você poderá conhecer os redatores,
+          suas histórias e todas as matérias
+          publicadas no Inferno Escarlate.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       RODAPÉ GLOBAL
+  ========================================== -->
+
+  <div id="rodape-global"></div>
+
+  <script src="js/rodape.js" defer></script>
+  <script src="js/script.js?v=104"></script>
+
+  <!-- ==========================================
+       CARREGAMENTO AUTOMÁTICO DOS REDATORES
+
+       Futuramente alimentado pelo Pages CMS.
+       Fonte prevista: dados/redatores.json
+  ========================================== -->
+
+  <script>
+    (async function () {
+      "use strict";
+
+      const grade = document.getElementById(
+        "grade-redatores"
+      );
+
+      const aviso = document.getElementById(
+        "redatores-vazio"
+      );
+
+      function texto(valor) {
+        return String(valor || "").trim();
+      }
+
+      function urlInterna(valor) {
+        try {
+          const url = new URL(
+            texto(valor),
+            window.location.href
+          );
+
+          if (url.origin !== window.location.origin) {
+            return "";
+          }
+
+          return url.href;
+        } catch (_) {
+          return "";
+        }
+      }
+
+      function criarLinkRedes(rotulo, url) {
+        if (!texto(url)) return null;
+
+        let destino;
+
+        try {
+          destino = new URL(url);
+
+          if (!["https:", "http:"].includes(destino.protocol)) {
+            return null;
+          }
+        } catch (_) {
+          return null;
+        }
+
+        const link = document.createElement("a");
+
+        link.href = destino.href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = rotulo;
+        link.setAttribute(
+          "aria-label",
+          rotulo + " do redator"
+        );
+
+        return link;
+      }
+
+      function criarCard(redator) {
+        const nome = texto(redator.nome);
+
+        if (!nome) return null;
+
+        const slug = texto(redator.slug);
+
+        // O perfil individual será criado na próxima etapa.
+        const pagina = slug
+          ? "redator.html?slug=" + encodeURIComponent(slug)
+          : "";
+
+        const artigo = document.createElement("article");
+        artigo.className = "card-redator";
+
+        const fotoURL = urlInterna(redator.foto);
+
+        if (fotoURL) {
+          const linkFoto = document.createElement(
+            pagina ? "a" : "div"
+          );
+
+          linkFoto.className = "redator-foto-link";
+
+          if (pagina) {
+            linkFoto.href = pagina;
+          }
+
+          const imagem = document.createElement("img");
+          imagem.className = "redator-foto";
+          imagem.src = fotoURL;
+          imagem.alt = "Foto de " + nome;
+          imagem.loading = "lazy";
+
+          linkFoto.appendChild(imagem);
+          artigo.appendChild(linkFoto);
+        }
+
+        const conteudo = document.createElement("div");
+        conteudo.className = "redator-conteudo";
+
+        const funcao = document.createElement("span");
+        funcao.className = "redator-funcao";
+        funcao.textContent = texto(redator.funcao) || "Redator";
+
+        const titulo = document.createElement("h2");
+        titulo.className = "redator-nome";
+
+        if (pagina) {
+          const linkNome = document.createElement("a");
+          linkNome.href = pagina;
+          linkNome.textContent = nome;
+          titulo.appendChild(linkNome);
+        } else {
+          titulo.textContent = nome;
+        }
+
+        const bio = document.createElement("p");
+        bio.className = "redator-biografia";
+        bio.textContent = texto(redator.biografiaCurta) ||
+          texto(redator.biografia);
+
+        const redes = document.createElement("div");
+        redes.className = "redator-redes";
+
+        const redesDisponiveis = [
+          ["Instagram", redator.instagram],
+          ["LinkedIn", redator.linkedin],
+          ["X", redator.twitter],
+          ["Site", redator.site]
+        ];
+
+        redesDisponiveis.forEach(function (item) {
+          const link = criarLinkRedes(
+            item[0],
+            item[1]
+          );
+
+          if (link) {
+            redes.appendChild(link);
+          }
+        });
+
+        conteudo.appendChild(funcao);
+        conteudo.appendChild(titulo);
+        conteudo.appendChild(bio);
+
+        if (redes.children.length) {
+          conteudo.appendChild(redes);
+        }
+
+        if (pagina) {
+          const linkMaterias = document.createElement("a");
+          linkMaterias.className = "redator-ver-materias";
+          linkMaterias.href = pagina;
+          linkMaterias.textContent = "Ver perfil e matérias →";
+
+          conteudo.appendChild(linkMaterias);
+        }
+
+        artigo.appendChild(conteudo);
+
+        return artigo;
+      }
+
+      try {
+        const resposta = await fetch(
+          "dados/redatores.json",
+          { cache: "no-cache" }
+        );
+
+        if (!resposta.ok) {
+          throw new Error("Cadastro ainda não disponível.");
+        }
+
+        const redatores = await resposta.json();
+
+        if (!Array.isArray(redatores)) {
+          throw new Error("Formato inválido.");
+        }
+
+        const fragmento = document.createDocumentFragment();
+        let quantidade = 0;
+
+        redatores.forEach(function (redator) {
+          const card = criarCard(redator);
+
+          if (card) {
+            fragmento.appendChild(card);
+            quantidade++;
+          }
+        });
+
+        if (quantidade > 0) {
+          grade.replaceChildren(fragmento);
+          aviso.hidden = true;
+        }
+
+      } catch (erro) {
+        // O aviso inicial permanece visível
+        // até cadastrarmos os redatores no CMS.
+        console.info(
+          "Redatores: aguardando cadastro.",
+          erro.message
+        );
+      }
+    })();
+  </script>
+
+</body>
+</html>

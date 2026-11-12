@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Perfil do redator | Inferno Escarlate</title>
+
+  <meta
+    name="description"
+    content="Conheça os redatores do Inferno Escarlate e descubra suas matérias sobre cultura pop, cinema, música, games e entretenimento."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="css/style.css?v=109">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+    }
+
+    .pagina-perfil {
+      min-height: 70vh;
+      background: #090909;
+      color: #fff;
+    }
+
+    .perfil-container {
+      width: min(1200px, 88%);
+      margin: 0 auto;
+    }
+
+    .perfil-voltar {
+      display: inline-block;
+      margin: 55px 0 35px;
+      color: #aaa;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .perfil-voltar:hover {
+      color: #ff4356;
+    }
+
+    .perfil-cabecalho {
+      display: grid;
+      grid-template-columns: minmax(220px, 340px) 1fr;
+      gap: 55px;
+      align-items: center;
+      padding-bottom: 75px;
+      border-bottom: 1px solid #303030;
+    }
+
+    .perfil-foto {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #181818;
+    }
+
+    .perfil-etiqueta {
+      display: block;
+      margin-bottom: 15px;
+      color: #ff4356;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .perfil-nome {
+      margin: 0 0 25px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 8vw, 7rem);
+      font-weight: 400;
+      line-height: 0.95;
+      overflow-wrap: anywhere;
+    }
+
+    .perfil-biografia {
+      color: #bbb;
+      font-size: 15px;
+      line-height: 1.9;
+      white-space: pre-line;
+    }
+
+    .perfil-redes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .perfil-redes a {
+      display: inline-block;
+      padding: 12px 17px;
+      border: 1px solid #444;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .perfil-redes a:hover {
+      background: #a91b29;
+      border-color: #a91b29;
+    }
+
+    .perfil-publicacoes {
+      padding: 80px 0 110px;
+    }
+
+    .perfil-publicacoes-titulo {
+      margin-bottom: 40px;
+    }
+
+    .perfil-publicacoes-titulo span {
+      display: block;
+      margin-bottom: 12px;
+      color: #ff4356;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .perfil-publicacoes-titulo h2 {
+      margin: 0;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .perfil-grade {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .perfil-card {
+      min-width: 0;
+      background: #131313;
+      border: 1px solid #303030;
+      overflow: hidden;
+    }
+
+    .perfil-card:hover {
+      border-color: #ff4356;
+    }
+
+    .perfil-card a {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .perfil-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .perfil-card-conteudo {
+      padding: 23px;
+    }
+
+    .perfil-card-categoria {
+      display: block;
+      margin-bottom: 12px;
+      color: #ff4356;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .perfil-card h3 {
+      margin: 0 0 13px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .perfil-card p {
+      margin: 0;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .perfil-aviso {
+      padding: 30px;
+      border: 1px solid #333;
+      color: #aaa;
+      background: #111;
+      line-height: 1.7;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (max-width: 900px) {
+      .perfil-cabecalho {
+        grid-template-columns: minmax(180px, 280px) 1fr;
+        gap: 30px;
+      }
+
+      .perfil-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .perfil-cabecalho {
+        grid-template-columns: 1fr;
+      }
+
+      .perfil-foto {
+        max-width: 340px;
+      }
+
+      .perfil-grade {
+        grid-template-columns: 1fr;
+      }
+
+      .perfil-publicacoes {
+        padding: 55px 0 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topo">
+
+    <a href="index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+      <a href="index.html">Início</a>
+      <a href="materias.html">Matérias</a>
+      <a href="colunas.html">Colunas</a>
+      <a href="redatores.html">Redatores</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="contato.html">Contato</a>
+
+      <a
+        href="trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+    </nav>
+
+  </header>
+
+  <main class="pagina-perfil">
+
+    <div class="perfil-container">
+
+      <a href="redatores.html" class="perfil-voltar">
+        ← Voltar para redatores
+      </a>
+
+      <!-- PERFIL INDIVIDUAL -->
+
+      <section id="perfil-cabecalho" class="perfil-cabecalho" hidden>
+
+        <div id="perfil-foto-container"></div>
+
+        <div>
+          <span
+            class="perfil-etiqueta"
+            id="perfil-funcao"
+          ></span>
+
+          <h1
+            class="perfil-nome"
+            id="perfil-nome"
+          ></h1>
+
+          <div
+            class="perfil-biografia"
+            id="perfil-biografia"
+          ></div>
+
+          <div
+            class="perfil-redes"
+            id="perfil-redes"
+          ></div>
+        </div>
+
+      </section>
+
+      <div
+        id="perfil-erro"
+        class="perfil-aviso"
+        hidden
+      ></div>
+
+      <!-- MATÉRIAS DO AUTOR -->
+
+      <section
+        id="perfil-publicacoes"
+        class="perfil-publicacoes"
+        hidden
+      >
+
+        <div class="perfil-publicacoes-titulo">
+          <span>Produção editorial</span>
+          <h2>MATÉRIAS PUBLICADAS</h2>
+        </div>
+
+        <div
+          id="perfil-grade"
+          class="perfil-grade"
+        ></div>
+
+        <p
+          id="perfil-sem-materias"
+          class="perfil-aviso"
+          hidden
+        >
+          Este redator ainda não possui matérias
+          cadastradas no catálogo automático.
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- RODAPÉ GLOBAL -->
+
+  <div id="rodape-global"></div>
+
+  <script src="js/rodape.js" defer></script>
+  <script src="js/script.js?v=104"></script>
+
+  <script>
+    (async function () {
+      "use strict";
+
+      const $ = id => document.getElementById(id);
+
+      const parametros = new URLSearchParams(
+        window.location.search
+      );
+
+      const slug = parametros.get("slug");
+
+      function texto(valor) {
+        return String(valor || "").trim();
+      }
+
+      function normalizar(valor) {
+        return texto(valor)
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/\s+/g, " ");
+      }
+
+      function urlInterna(valor) {
+        if (!texto(valor)) return "";
+
+        try {
+          const url = new URL(
+            valor,
+            window.location.origin
+          );
+
+          return url.origin === window.location.origin
+            ? url.href
+            : "";
+        } catch (_) {
+          return "";
+        }
+      }
+
+      function mostrarErro(mensagem) {
+        $("perfil-erro").textContent = mensagem;
+        $("perfil-erro").hidden = false;
+      }
+
+      function adicionarRede(rotulo, endereco) {
+        if (!texto(endereco)) return;
+
+        try {
+          const url = new URL(endereco);
+
+          if (!["https:", "http:"].includes(url.protocol)) {
+            return;
+          }
+
+          const link = document.createElement("a");
+
+          link.href = url.href;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = rotulo;
+
+          $("perfil-redes").appendChild(link);
+        } catch (_) {
+          // Ignora links inválidos.
+        }
+      }
+
+      function apresentarRedator(redator) {
+        const nome = texto(redator.nome);
+
+        document.title =
+          nome + " | Redatores | Inferno Escarlate";
+
+        $("perfil-nome").textContent = nome;
+
+        $("perfil-funcao").textContent =
+          texto(redator.funcao) || "Redator";
+
+        $("perfil-biografia").textContent =
+          texto(redator.biografia) ||
+          texto(redator.biografiaCurta);
+
+        const imagemURL = urlInterna(redator.foto);
+
+        if (imagemURL) {
+          const imagem = document.createElement("img");
+
+          imagem.className = "perfil-foto";
+          imagem.src = imagemURL;
+          imagem.alt = "Foto de " + nome;
+
+          $("perfil-foto-container").appendChild(imagem);
+        } else {
+          $("perfil-foto-container").hidden = true;
+        }
+
+        adicionarRede("Instagram", redator.instagram);
+        adicionarRede("LinkedIn", redator.linkedin);
+        adicionarRede("X", redator.twitter);
+        adicionarRede("Site", redator.site);
+
+        $("perfil-cabecalho").hidden = false;
+        $("perfil-publicacoes").hidden = false;
+      }
+
+      function criarCard(materia) {
+        const url = urlInterna(materia.url);
+        const titulo = texto(materia.titulo || materia.title);
+
+        if (!url || !titulo) return null;
+
+        const card = document.createElement("article");
+        card.className = "perfil-card";
+
+        const link = document.createElement("a");
+        link.href = url;
+
+        const imagemURL = urlInterna(materia.imagem);
+
+        if (imagemURL) {
+          const imagem = document.createElement("img");
+
+          imagem.src = imagemURL;
+          imagem.alt = texto(materia.alt || materia.imagemAlt) ||
+            titulo;
+          imagem.loading = "lazy";
+
+          link.appendChild(imagem);
+        }
+
+        const conteudo = document.createElement("div");
+        conteudo.className = "perfil-card-conteudo";
+
+        const categoria = document.createElement("span");
+        categoria.className = "perfil-card-categoria";
+        categoria.textContent =
+          texto(materia.categoriaTexto) || "Matéria";
+
+        const tituloElemento = document.createElement("h3");
+        tituloElemento.textContent = titulo;
+
+        const resumo = document.createElement("p");
+        resumo.textContent =
+          texto(materia.resumo || materia.description);
+
+        conteudo.appendChild(categoria);
+        conteudo.appendChild(tituloElemento);
+        conteudo.appendChild(resumo);
+
+        link.appendChild(conteudo);
+        card.appendChild(link);
+
+        return card;
+      }
+
+      async function carregarJSON(caminho) {
+        const resposta = await fetch(caminho, {
+          cache: "no-cache"
+        });
+
+        if (!resposta.ok) {
+          throw new Error(
+            "Não foi possível carregar " + caminho
+          );
+        }
+
+        return resposta.json();
+      }
+
+      try {
+        if (!slug) {
+          mostrarErro("Nenhum redator foi selecionado.");
+          return;
+        }
+
+        const redatores = await carregarJSON(
+          "dados/redatores.json"
+        );
+
+        if (!Array.isArray(redatores)) {
+          throw new Error("Cadastro de redatores inválido.");
+        }
+
+        const redator = redatores.find(
+          pessoa => texto(pessoa.slug) === slug
+        );
+
+        if (!redator) {
+          mostrarErro("Redator não encontrado.");
+          return;
+        }
+
+        apresentarRedator(redator);
+
+        try {
+          const catalogo = await carregarJSON(
+            "dados/materias.json"
+          );
+
+          if (!Array.isArray(catalogo)) {
+            throw new Error("Catálogo de matérias inválido.");
+          }
+
+          const nomeRedator = normalizar(redator.nome);
+
+          const materias = catalogo
+            .filter(materia =>
+              normalizar(materia.autor) === nomeRedator
+            )
+            .sort((a, b) => {
+              const dataA = Date.parse(a.data || "") || 0;
+              const dataB = Date.parse(b.data || "") || 0;
+
+              return dataB - dataA;
+            });
+
+          const fragmento = document.createDocumentFragment();
+          let quantidade = 0;
+
+          materias.forEach(materia => {
+            const card = criarCard(materia);
+
+            if (card) {
+              fragmento.appendChild(card);
+              quantidade++;
+            }
+          });
+
+          $("perfil-grade").replaceChildren(fragmento);
+
+          $("perfil-sem-materias").hidden =
+            quantidade > 0;
+
+        } catch (erro) {
+          $("perfil-sem-materias").textContent =
+            "Não foi possível carregar as matérias deste redator.";
+
+          $("perfil-sem-materias").hidden = false;
+
+          console.error(erro);
+        }
+
+      } catch (erro) {
+        mostrarErro(
+          "Não foi possível carregar o perfil do redator."
+        );
+
+        console.error(erro);
+      }
+
+    })();
+  </script>
+
+</body>
+</html>
