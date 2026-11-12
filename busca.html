@@ -1,0 +1,801 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Buscar matérias | Inferno Escarlate</title>
+
+  <meta
+    name="description"
+    content="Pesquise matérias sobre cinema, séries, games, música, animes e cultura pop no Inferno Escarlate."
+  >
+
+  <meta name="robots" content="noindex, follow">
+
+  <!-- FONTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="css/style.css?v=109">
+
+  <style>
+    /* ==========================================
+       BUSCA — INFERNO ESCARLATE
+    ========================================== */
+
+    .topo .menu a.link-trabalhe-comigo {
+      color: #ff4356;
+      font-weight: 700;
+    }
+
+    .pagina-busca {
+      min-height: 75vh;
+      background: #090909;
+      color: #fff;
+    }
+
+    .busca-container {
+      width: min(1200px, 88%);
+      margin: 0 auto;
+    }
+
+    /* APRESENTAÇÃO */
+
+    .busca-abertura {
+      padding: 85px 0 65px;
+      border-bottom: 1px solid #292929;
+      background: #0c0c0c;
+    }
+
+    .busca-etiqueta {
+      display: block;
+      margin-bottom: 15px;
+      color: #ff4356;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .busca-abertura h1 {
+      margin: 0 0 18px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(4rem, 8vw, 7rem);
+      font-weight: 400;
+      line-height: 0.95;
+    }
+
+    .busca-abertura h1 span {
+      color: #ff4356;
+    }
+
+    .busca-descricao {
+      max-width: 720px;
+      margin: 0 0 35px;
+      color: #aaa;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* FORMULÁRIO */
+
+    .busca-formulario {
+      display: flex;
+      align-items: stretch;
+      width: 100%;
+      max-width: 900px;
+      border: 1px solid #444;
+      background: #161616;
+    }
+
+    .busca-formulario:focus-within {
+      border-color: #ff4356;
+    }
+
+    .busca-input {
+      flex: 1;
+      min-width: 0;
+      padding: 21px 24px;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: #fff;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+    }
+
+    .busca-input::placeholder {
+      color: #777;
+    }
+
+    .busca-botao {
+      padding: 16px 30px;
+      border: 0;
+      background: #d71936;
+      color: #fff;
+      font-family: "Inter", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .busca-botao:hover {
+      background: #f02b47;
+    }
+
+    .busca-sugestoes {
+      margin: 18px 0 0;
+      color: #888;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* RESULTADOS */
+
+    .busca-resultados {
+      padding: 70px 0 110px;
+    }
+
+    .busca-cabecalho-resultados {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .busca-cabecalho-resultados h2 {
+      margin: 0;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .busca-quantidade {
+      color: #999;
+      font-size: 13px;
+    }
+
+    .busca-grade {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    /* CARDS */
+
+    .busca-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #303030;
+      background: #131313;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .busca-card:hover {
+      transform: translateY(-4px);
+      border-color: #ed1834;
+    }
+
+    .busca-card a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .busca-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #222;
+    }
+
+    .busca-card-corpo {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 23px;
+    }
+
+    .busca-card-categoria {
+      display: block;
+      margin-bottom: 13px;
+      color: #ff4356;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .busca-card h3 {
+      margin: 0 0 13px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.1;
+      overflow-wrap: anywhere;
+    }
+
+    .busca-card p {
+      margin: 0 0 22px;
+      color: #aaa;
+      font-size: 13px;
+      line-height: 1.75;
+      flex: 1;
+    }
+
+    .busca-card-autor {
+      display: block;
+      padding-top: 15px;
+      border-top: 1px solid #2c2c2c;
+      color: #888;
+      font-size: 11px;
+    }
+
+    /* AVISOS */
+
+    .busca-aviso {
+      padding: 40px 25px;
+      border: 1px solid #333;
+      background: #111;
+      color: #aaa;
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .busca-aviso strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 1000px) {
+      .busca-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .busca-abertura {
+        padding: 60px 0 50px;
+      }
+
+      .busca-formulario {
+        flex-direction: column;
+      }
+
+      .busca-input {
+        width: 100%;
+        padding: 18px;
+      }
+
+      .busca-botao {
+        width: 100%;
+      }
+
+      .busca-resultados {
+        padding: 50px 0 80px;
+      }
+
+      .busca-cabecalho-resultados {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .busca-grade {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .busca-card {
+        transition: none;
+      }
+
+      .busca-card:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topo">
+
+    <a href="index.html" class="logo">
+      Inferno Escarlate
+    </a>
+
+    <button
+      class="menu-botao"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="menu"
+      id="menu-principal"
+      aria-label="Menu principal"
+    >
+      <a href="index.html">Início</a>
+      <a href="materias.html">Matérias</a>
+      <a href="colunas.html">Colunas</a>
+      <a href="redatores.html">Redatores</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="busca.html" aria-current="page">Buscar</a>
+      <a href="contato.html">Contato</a>
+
+      <a
+        href="trabalhe-comigo/index.html"
+        class="link-trabalhe-comigo"
+      >
+        Trabalhe comigo
+      </a>
+    </nav>
+
+  </header>
+
+  <!-- PÁGINA DE BUSCA -->
+
+  <main class="pagina-busca">
+
+    <section class="busca-abertura">
+
+      <div class="busca-container">
+
+        <span class="busca-etiqueta">
+          Explore o Inferno Escarlate
+        </span>
+
+        <h1>
+          BUSCAR <span>MATÉRIAS</span>
+        </h1>
+
+        <p class="busca-descricao">
+          Procure notícias, críticas e conteúdos sobre cinema,
+          séries, música, games, animes e cultura pop.
+        </p>
+
+        <form
+          id="formulario-busca"
+          class="busca-formulario"
+          role="search"
+        >
+
+          <input
+            type="search"
+            id="campo-busca"
+            class="busca-input"
+            placeholder="Digite um filme, artista, série ou assunto..."
+            aria-label="Pesquisar matérias"
+            autocomplete="off"
+          >
+
+          <button class="busca-botao" type="submit">
+            Pesquisar
+          </button>
+
+        </form>
+
+        <p class="busca-sugestoes">
+          Pesquise por título, categoria, assunto ou autor.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- RESULTADOS -->
+
+    <section
+      class="busca-resultados"
+      aria-labelledby="titulo-resultados"
+    >
+
+      <div class="busca-container">
+
+        <div class="busca-cabecalho-resultados">
+
+          <h2 id="titulo-resultados">
+            RESULTADOS
+          </h2>
+
+          <span
+            id="busca-quantidade"
+            class="busca-quantidade"
+            role="status"
+            aria-live="polite"
+          >
+            Carregando matérias...
+          </span>
+
+        </div>
+
+        <div
+          id="busca-grade"
+          class="busca-grade"
+        ></div>
+
+        <div
+          id="busca-aviso"
+          class="busca-aviso"
+          hidden
+        ></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ GLOBAL -->
+
+  <div id="rodape-global"></div>
+
+  <script src="js/rodape.js" defer></script>
+  <script src="js/script.js?v=104"></script>
+
+  <!-- CATÁLOGO DAS MATÉRIAS ANTIGAS -->
+  <script src="js/materias.js?v=9"></script>
+
+  <!-- SISTEMA DE BUSCA -->
+
+  <script>
+    (async function () {
+      "use strict";
+
+      const campo = document.getElementById("campo-busca");
+      const formulario = document.getElementById("formulario-busca");
+      const grade = document.getElementById("busca-grade");
+      const quantidade = document.getElementById("busca-quantidade");
+      const aviso = document.getElementById("busca-aviso");
+
+      let catalogo = [];
+      let catalogoAutomaticoDisponivel = true;
+
+      function texto(valor) {
+        return String(valor ?? "").trim();
+      }
+
+      function normalizar(valor) {
+        return texto(valor)
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+          .replace(/\s+/g, " ");
+      }
+
+      function urlInterna(valor) {
+        if (!texto(valor)) return "";
+
+        try {
+          const url = new URL(
+            texto(valor),
+            window.location.origin + "/"
+          );
+
+          if (url.origin !== window.location.origin) {
+            return "";
+          }
+
+          if (!["http:", "https:"].includes(url.protocol)) {
+            return "";
+          }
+
+          return url.href;
+        } catch (_) {
+          return "";
+        }
+      }
+
+      function obterAntigas() {
+        if (
+          typeof MATERIAS !== "undefined" &&
+          Array.isArray(MATERIAS)
+        ) {
+          return [...MATERIAS];
+        }
+
+        return [];
+      }
+
+      async function obterAutomaticas() {
+        const resposta = await fetch(
+          "dados/materias.json",
+          { cache: "no-cache" }
+        );
+
+        if (!resposta.ok) {
+          throw new Error("Catálogo automático indisponível.");
+        }
+
+        const dados = await resposta.json();
+
+        if (!Array.isArray(dados)) {
+          throw new Error("Catálogo automático inválido.");
+        }
+
+        return dados;
+      }
+
+      function unirCatalogos(antigas, automaticas) {
+        const registros = [
+          ...antigas,
+          ...automaticas
+        ];
+
+        const urls = new Set();
+
+        return registros
+          .filter(function (materia) {
+            const url = urlInterna(materia.url);
+
+            if (!url) return false;
+
+            const chave = new URL(url).pathname.toLowerCase();
+
+            if (urls.has(chave)) return false;
+
+            urls.add(chave);
+
+            return true;
+          })
+          .sort(function (a, b) {
+            const dataA = Date.parse(
+              a.data || a.dataPublicacao || ""
+            ) || 0;
+
+            const dataB = Date.parse(
+              b.data || b.dataPublicacao || ""
+            ) || 0;
+
+            return dataB - dataA;
+          });
+      }
+
+      function criarCard(materia) {
+        const titulo = texto(materia.titulo || materia.title);
+        const endereco = urlInterna(materia.url);
+
+        if (!titulo || !endereco) return null;
+
+        const card = document.createElement("article");
+        card.className = "busca-card";
+
+        const link = document.createElement("a");
+        link.href = endereco;
+
+        const imagemURL = urlInterna(materia.imagem);
+
+        if (imagemURL) {
+          const imagem = document.createElement("img");
+
+          imagem.src = imagemURL;
+          imagem.alt =
+            texto(materia.alt || materia.imagemAlt) || titulo;
+          imagem.loading = "lazy";
+
+          link.appendChild(imagem);
+        }
+
+        const corpo = document.createElement("div");
+        corpo.className = "busca-card-corpo";
+
+        const categoria = document.createElement("span");
+        categoria.className = "busca-card-categoria";
+        categoria.textContent =
+          texto(materia.categoriaTexto) || "Cultura pop";
+
+        const nome = document.createElement("h3");
+        nome.textContent = titulo;
+
+        const resumo = document.createElement("p");
+        resumo.textContent =
+          texto(materia.resumo || materia.description);
+
+        const autor = document.createElement("span");
+        autor.className = "busca-card-autor";
+        autor.textContent = texto(materia.autor)
+          ? "Por " + texto(materia.autor)
+          : "Inferno Escarlate";
+
+        corpo.appendChild(categoria);
+        corpo.appendChild(nome);
+        corpo.appendChild(resumo);
+        corpo.appendChild(autor);
+
+        link.appendChild(corpo);
+        card.appendChild(link);
+
+        return card;
+      }
+
+      function mostrarAviso(titulo, mensagem) {
+        aviso.replaceChildren();
+
+        const destaque = document.createElement("strong");
+        destaque.textContent = titulo;
+
+        const descricao = document.createElement("span");
+        descricao.textContent = mensagem;
+
+        aviso.appendChild(destaque);
+        aviso.appendChild(descricao);
+
+        aviso.hidden = false;
+      }
+
+      function pesquisar(termo) {
+        const consulta = normalizar(termo);
+        grade.replaceChildren();
+        aviso.hidden = true;
+
+        if (!consulta) {
+          quantidade.textContent = "";
+          mostrarAviso(
+            "O que você procura?",
+            "Digite um título, artista, assunto ou autor para começar."
+          );
+          return;
+        }
+
+        const palavras = consulta.split(" ").filter(Boolean);
+
+        const resultados = catalogo.filter(function (materia) {
+          const categorias = Array.isArray(materia.categorias)
+            ? materia.categorias.join(" ")
+            : texto(materia.categorias);
+
+          const conteudo = normalizar([
+            materia.titulo || materia.title,
+            materia.resumo || materia.description,
+            materia.categoriaTexto,
+            categorias,
+            materia.autor,
+            materia.coluna
+          ].map(texto).join(" "));
+
+          return palavras.every(function (palavra) {
+            return conteudo.includes(palavra);
+          });
+        });
+
+        quantidade.textContent =
+          resultados.length === 1
+            ? "1 matéria encontrada"
+            : resultados.length + " matérias encontradas";
+
+        if (resultados.length === 0) {
+          mostrarAviso(
+            "Nenhum resultado encontrado",
+            "Tente pesquisar outro termo ou uma palavra mais curta."
+          );
+          return;
+        }
+
+        const fragmento = document.createDocumentFragment();
+
+        resultados.forEach(function (materia) {
+          const card = criarCard(materia);
+
+          if (card) {
+            fragmento.appendChild(card);
+          }
+        });
+
+        grade.replaceChildren(fragmento);
+      }
+
+      function atualizarBusca() {
+        const termo = campo.value.trim();
+
+        const url = new URL(window.location.href);
+
+        if (termo) {
+          url.searchParams.set("q", termo);
+        } else {
+          url.searchParams.delete("q");
+        }
+
+        window.history.replaceState(
+          null,
+          "",
+          url.pathname + url.search + url.hash
+        );
+
+        pesquisar(termo);
+      }
+
+      formulario.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+        atualizarBusca();
+      });
+
+      let debounce;
+
+      campo.addEventListener("input", function () {
+        clearTimeout(debounce);
+
+        debounce = setTimeout(function () {
+          atualizarBusca();
+        }, 250);
+      });
+
+      const parametros = new URLSearchParams(
+        window.location.search
+      );
+
+      campo.value = parametros.get("q") || "";
+
+      try {
+        const antigas = obterAntigas();
+
+        let automaticas = [];
+
+        try {
+          automaticas = await obterAutomaticas();
+        } catch (erro) {
+          catalogoAutomaticoDisponivel = false;
+          console.warn(erro.message);
+        }
+
+        catalogo = unirCatalogos(antigas, automaticas);
+
+        pesquisar(campo.value);
+
+        if (!catalogoAutomaticoDisponivel) {
+          quantidade.textContent +=
+            " — catálogo automático indisponível";
+        }
+
+      } catch (erro) {
+        quantidade.textContent = "Erro ao carregar matérias";
+
+        mostrarAviso(
+          "Não foi possível carregar a busca",
+          "Tente atualizar a página."
+        );
+
+        console.error(erro);
+      }
+    })();
+  </script>
+
+</body>
+</html>
