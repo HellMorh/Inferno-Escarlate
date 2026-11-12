@@ -51,18 +51,3 @@ Resumindo: dá para usar como apoio na pesquisa, mas você assina embaixo de tud
 ![](</imagem/WhatsApp Image 2026-11-11 at 00.27.47.jpeg>)
 
 Vale lembrar que o texto base foi aprovado no CNE em 1º de setembro e homologado pelo ministro em novembro. Como cada instituição terá autonomia para regulamentar suas rotinas, vale consultar as regras da sua faculdade e alinhar com cada professor o que é ou não permitido em cada disciplina.
-
-## O que fazer a partir de hoje: checklist rápido
-
-Use IA para entender, não para terceirizar a entrega.
-
-Guarde o histórico de versões e rascunhos dos seus trabalhos mais importantes.
-
-Transparência sempre: pergunte antes ao professor se a disciplina autoriza o suporte de IA e como citar o uso.
-
-Cheque tudo o que a IA responder. Ela erra fontes e fatos com frequência — e quem leva o zero é você.
-
-Foi acusado injustamente? Mantenha a calma, apresente seu histórico de produção e converse com o professor ou com a coordenação.
-
-**Fonte dupla consultada:** [Mattos Filho, “CNE aprova diretrizes para utilização da inteligência artificial na educação brasileira”](https://www.mattosfilho.com.br/unico/cne-ia-educacao-brasileira/) e  [fastcompanybrasil](https://fastcompanybrasil.com/news/cne-veta-ia-correcao-redacoes-provas/)
-
