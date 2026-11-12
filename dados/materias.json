@@ -14,5 +14,20 @@
     "autor": "Helena Morh",
     "data": "2026-11-10T00:00:00.000Z",
     "destaque": true
+  },
+  {
+    "titulo": "Superman ou $uperman? O preço de um símbolo",
+    "resumo": "A saída de James Gunn da DC Studios levanta uma questão que ultrapassa as bilheterias: quanto vale um símbolo que representa a esperança?",
+    "imagem": "/imagem/1408514-1.jpg",
+    "alt": "Superman em quadrinho",
+    "url": "/posts/superman-ou-dollaruperman-o-preco-de-um-simbolo.html",
+    "categoriaTexto": "Artigo de opinião ",
+    "categorias": [
+      "cinema"
+    ],
+    "coluna": "",
+    "autor": "Antônio de Oliveira",
+    "data": "2026-11-12T00:00:00.000Z",
+    "destaque": true
   }
 ]
