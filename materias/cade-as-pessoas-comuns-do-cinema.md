@@ -37,9 +37,7 @@ Havia também os rapazes de *Loucademia de Polícia*, os três solteirões que p
 
 ![george-r-robertson-loucademia-de-policia-foto-reproducao (1).jpg](</imagem/george-r-robertson-loucademia-de-policia-foto-reproducao (1).jpg>)
 
-Em *Kramer versus Kramer*, por exemplo, acompanhamos a separação de um casal e a difícil adaptação de um pai à vida com o filho. Não há necessidade de salvar o planeta, descobrir uma conspiração ou enfrentar um vilão. Existe uma família tentando descobrir como continuar vivendo depois que tudo muda.
-
-E talvez seja justamente isso que me faça sentir falta desse tipo de cinema.
+Em *Kramer versus Kramer*, por exemplo, acompanhamos a separação de um casal e a difícil adaptação de um pai à vida com o filho. Não há necessidade de salvar o planeta, descobrir uma conspiração ou enfrentar um vilão. Existe uma família tentando descobrir como continuar vivendo depois que tudo muda. E talvez seja justamente isso que me faça sentir falta desse tipo de cinema.
 
 ## Curtindo a Vida Adoidado e a beleza das histórias simples
 
@@ -49,17 +47,13 @@ Quando assisti ao filme pela primeira vez, a ideia de faltar à aula e sair por 
 
 ![YRBADREGRBIX3HOIHOODIDFJL4 (1).jpg](</imagem/YRBADREGRBIX3HOIHOODIDFJL4 (1).jpg>)
 
-Rever o filme hoje é curioso. Talvez eu não me prenda tanto às aventuras de Ferris, mas à sensação que elas provocam. A liberdade de não fazer nada. De não ter compromissos. De não precisar responder a ninguém, cumprir uma tarefa ou justificar como você está usando seu tempo.
-
-Simplesmente aproveitar o dia.
+Rever o filme hoje é curioso. Talvez eu não me prenda tanto às aventuras de Ferris, mas à sensação que elas provocam. A liberdade de não fazer nada. De não ter compromissos. De não precisar responder a ninguém, cumprir uma tarefa ou justificar como você está usando seu tempo. Simplesmente aproveitar o dia.
 
 E acho que existe algo muito bonito nessa experiência de assistir a um filme e não precisar de mais nada além dele.
 
 ## O que estamos perdendo no cinema contemporâneo?
 
-Talvez tenhamos complicado um pouco as coisas. Hoje, parece que todo filme precisa apresentar um universo próprio, estabelecer regras, preparar continuações, criar conexões com outras histórias e, de preferência, deixar uma mensagem importante para o espectador. Os efeitos especiais precisam impressionar, as cenas precisam ser grandiosas e os personagens parecem obrigados a carregar algum destino extraordinário.
-
-Mas uma história bem contada não precisa de tudo isso.
+Talvez tenhamos complicado um pouco as coisas. Hoje, parece que todo filme precisa apresentar um universo próprio, estabelecer regras, preparar continuações, criar conexões com outras histórias e, de preferência, deixar uma mensagem importante para o espectador. Os efeitos especiais precisam impressionar, as cenas precisam ser grandiosas e os personagens parecem obrigados a carregar algum destino extraordinário. Mas uma história bem contada não precisa de tudo isso.
 
 Não precisa de centenas de milhões de dólares em efeitos visuais. Não precisa preparar uma franquia de dez filmes. Não precisa explicar cada detalhe do universo em que acontece. E, principalmente, não precisa transformar todo personagem em alguém especial.
 
@@ -67,9 +61,7 @@ Não precisa de centenas de milhões de dólares em efeitos visuais. Não precis
 
 ![802591 (1).jpg](</imagem/802591 (1).jpg>)
 
-Não precisamos que todo filme tenha uma grande mensagem. Nem que cada personagem represente alguma coisa. Nem que a história seja o primeiro capítulo de um universo cinematográfico.
-
-Podemos simplesmente assistir.
+Não precisamos que todo filme tenha uma grande mensagem. Nem que cada personagem represente alguma coisa. Nem que a história seja o primeiro capítulo de um universo cinematográfico. Podemos simplesmente assistir.
 
 Ligar a televisão, encontrar um filme por acaso, sentar no sofá e deixar a história acontecer. Sem pesquisar o que vem depois, sem precisar conhecer outros dez filmes antes de começar e sem a obrigação de encontrar alguma grande reflexão ao final.
 
