@@ -31,7 +31,7 @@ E não estou falando necessariamente de dramas sobre grandes tragédias humanas.
 
 Pense em Roger Thornhill, personagem de Cary Grant em *Intriga Internacional*, de Alfred Hitchcock. Um executivo de publicidade que, por uma confusão, é tomado por um agente secreto. De repente, está sendo perseguido por criminosos, envolvido numa trama de espionagem e tentando entender como foi parar naquela situação.
 
-Ele não era James Bond. Não tinha treinamento especial, não era um agente secreto disfarçado. Era apenas um sujeito que estava no lugar errado, na hora errada. E isso era suficiente para colocar uma aventura inteira em movimento.
+Ele não era [James Bond](https://www.instagram.com/reel/DfzpqxFtLUP/). Não tinha treinamento especial, não era um agente secreto disfarçado. Era apenas um sujeito que estava no lugar errado, na hora errada. E isso era suficiente para colocar uma aventura inteira em movimento.
 
 Havia também os rapazes de *Loucademia de Polícia*, os três solteirões que precisam aprender a cuidar de um bebê e tantas outras histórias em que os protagonistas não precisavam ter habilidades extraordinárias. Eram pessoas comuns vivendo situações que, de alguma maneira, conseguiam nos envolver.
 
