@@ -59,5 +59,21 @@
     "autor": "Antônio de Oliveira",
     "data": "2026-11-12T00:00:00.000Z",
     "destaque": true
+  },
+  {
+    "titulo": "Cadê as pessoas comuns do cinema?",
+    "resumo": "Uma reflexão sobre a falta de histórias cotidianas no cinema e o encanto de acompanhar personagens comuns em situações extraordinárias, a partir de clássicos como Curtindo a Vida Adoidado, Intriga Internacional e Kramer versus Kramer.",
+    "imagem": "/imagem/images (3) (1).jpg",
+    "alt": "Curtindo a vida adoidado",
+    "url": "/posts/cade-as-pessoas-comuns-do-cinema.html",
+    "categoriaTexto": "Coluna",
+    "categorias": [
+      "cinema",
+      "series"
+    ],
+    "coluna": "Inferno Sépia",
+    "autor": "Cássio Racy Corrêa",
+    "data": "2026-11-16T00:00:00.000Z",
+    "destaque": false
   }
 ]
