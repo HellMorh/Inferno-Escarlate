@@ -29,29 +29,28 @@ seoKeyword: pessoas comuns
 publicado: true
 destaque: true
 imagensInternas:
-  - imagem: /imagem/Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King
-      (3).jpg
+  - imagem: /imagem/Vida .jpg
     legenda: Tom Hiddleston em cena de A Vida de Chuck (2024), adaptação
       cinematográfica da obra de Stephen King
     credito: Divulgação/Reprodução
-  - imagem: /imagem/george-r-robertson-loucademia-de-policia-foto-reproducao (2).jpg
+  - imagem: /imagem/Loucademia.jpg
     legenda: >+
       George R. Robertson como o comandante Henry Hurst em cena do filme
       Loucademia de Polícia (1984)
 
     credito: Divulgação/Reprodução
-  - imagem: /imagem/YRBADREGRBIX3HOIHOODIDFJL4 (1)-1.jpg
+  - imagem: /imagem/Adoidado.jpg
     legenda: Matthew Broderick como Ferris Bueller em Curtindo a Vida Adoidado
       (1986), clássico dirigido por John Hughes
     credito: Divulgação/Reprodução
-  - imagem: /imagem/802591 (1)-1.jpg
+  - imagem: /imagem/Forest.jpg
     legenda: "Tom Hanks como Forrest Gump em cena de Forrest Gump: O Contador de
       Histórias (1994), filme dirigido por Robert Zemeckis"
     credito: Divulgação/Reprodução
 ---
 Tenho sentido falta de pessoas comuns no cinema. Não estou falando da falta de super-heróis, monstros, alienígenas ou grandes aventuras. Gosto de tudo isso. Gosto de um bom filme de super-herói, de uma história fantástica e de mundos que só existem na imaginação de alguém. Mas, de uns tempos para cá, tenho a impressão de que ficou mais difícil encontrar filmes interessados em contar histórias sobre gente comum.
 
-![Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King (1).jpg](</imagem/Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King (1).jpg>)
+![](</imagem/Vida .jpg>)
 
 E não estou falando necessariamente de dramas sobre grandes tragédias humanas. Estou falando de pessoas que simplesmente vivem. Que se metem em confusão por acaso, que se apaixonam, se separam, têm problemas no trabalho, precisam cuidar de uma criança ou resolvem matar aula numa sexta-feira.
 
@@ -63,7 +62,7 @@ Ele não era [James Bond](https://www.instagram.com/reel/DfzpqxFtLUP/). Não tin
 
 Havia também os rapazes de *Loucademia de Polícia*, os três solteirões que precisam aprender a cuidar de um bebê e tantas outras histórias em que os protagonistas não precisavam ter habilidades extraordinárias. Eram pessoas comuns vivendo situações que, de alguma maneira, conseguiam nos envolver.
 
-![george-r-robertson-loucademia-de-policia-foto-reproducao (1).jpg](</imagem/george-r-robertson-loucademia-de-policia-foto-reproducao (1).jpg>)
+![](/imagem/Loucademia.jpg)
 
 Em *Kramer versus Kramer*, por exemplo, acompanhamos a separação de um casal e a difícil adaptação de um pai à vida com o filho. Não há necessidade de salvar o planeta, descobrir uma conspiração ou enfrentar um vilão. Existe uma família tentando descobrir como continuar vivendo depois que tudo muda. E talvez seja justamente isso que me faça sentir falta desse tipo de cinema.
 
@@ -73,7 +72,7 @@ Mas existe um filme que me provoca uma sensação particularmente interessante q
 
 Quando assisti ao filme pela primeira vez, a ideia de faltar à aula e sair por aí vivendo uma aventura parecia um dos maiores sonhos possíveis. Ferris Bueller transformava um dia comum numa experiência extraordinária. Um passeio pela cidade, uma visita a um museu, um restaurante, uma partida de beisebol. Nada disso parecia grande coisa, mas, nas mãos daquele filme, tudo ganhava um encanto especial.
 
-![YRBADREGRBIX3HOIHOODIDFJL4 (1).jpg](</imagem/YRBADREGRBIX3HOIHOODIDFJL4 (1).jpg>)
+![](/imagem/Adoidado.jpg)
 
 Rever o filme hoje é curioso. Talvez eu não me prenda tanto às aventuras de Ferris, mas à sensação que elas provocam. A liberdade de não fazer nada. De não ter compromissos. De não precisar responder a ninguém, cumprir uma tarefa ou justificar como você está usando seu tempo. Simplesmente aproveitar o dia.
 
@@ -87,7 +86,7 @@ Não precisa de centenas de milhões de dólares em efeitos visuais. Não precis
 
 Às vezes, queremos apenas acompanhar a vida de algumas pessoas durante duas horas. Rir de uma situação absurda, torcer por um casal, acompanhar uma confusão ou descobrir como um sujeito vai sair de uma enrascada na qual entrou sem querer.
 
-![802591 (1).jpg](</imagem/802591 (1).jpg>)
+![](/imagem/Forest.jpg)
 
 Não precisamos que todo filme tenha uma grande mensagem. Nem que cada personagem represente alguma coisa. Nem que a história seja o primeiro capítulo de um universo cinematográfico. Podemos simplesmente assistir.
 
