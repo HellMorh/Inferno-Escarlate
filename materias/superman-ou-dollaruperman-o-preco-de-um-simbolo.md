@@ -1,4 +1,3 @@
-
 ---
 title: Superman ou $uperman? O preço de um símbolo
 description: "A saída de James Gunn da DC Studios levanta uma questão que ultrapassa as bilheterias: quanto vale um símbolo que representa a esperança?"

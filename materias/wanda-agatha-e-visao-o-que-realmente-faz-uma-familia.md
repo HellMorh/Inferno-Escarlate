@@ -1,4 +1,3 @@
-
 ---
 title: "Wanda, Agatha e Visão: o que realmente faz uma família?"
 description: "Com o encerramento de VisionQuest, a trilogia iniciada em 2021 deixa uma reflexão que ultrapassa os superpoderes: até onde somos capazes de ir por aqueles que amamos?"
