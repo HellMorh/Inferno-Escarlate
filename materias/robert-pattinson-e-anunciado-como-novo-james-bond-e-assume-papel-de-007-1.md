@@ -84,6 +84,6 @@ Com a confirmação, Robert Pattinson passa a integrar a lista de atores que der
 
 **Fontes:**
 
-- DUNN, Jack; SHAFER, Ellise. *Robert Pattinson Is Officially James Bond: Meet the New 007 Actor*. Variety, 17 nov. 2026.
+- [DUNN, Jack; SHAFER, Ellise. *Robert Pattinson Is Officially James Bond: Meet the New 007 Actor*. Variety, 17 nov. 2026.](https://variety.com/2026/film/global/robert-pattinson-new-james-bond-007-1236946655/)
 - MURRAY, Emily. *Robert Pattinson is the new James Bond*. Amazon MGM Studios, 16 nov. 2026.
 
