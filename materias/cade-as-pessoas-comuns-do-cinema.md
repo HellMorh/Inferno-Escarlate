@@ -6,22 +6,23 @@ description: Uma reflexão sobre a falta de histórias cotidianas no cinema e o
   Kramer versus Kramer.
 imagem: /imagem/images (3) (1).jpg
 imagemAlt: Curtindo a vida adoidado
+imagemLegenda: Cena do filme Curtindo a Vida Adoidado (1986)
+imagemCredito: Divulgação/Reprodução
 autor: Cássio Racy Corrêa
 dataPublicacao: 2026-11-16
 categoriaTexto: Coluna
 categorias:
   - cinema
   - series
-coluna: inferno-sepia
+coluna: Inferno Sépia
 seoTitle: "Nem toda aventura precisa salvar o mundo: a falta de histórias
   simples no cinema"
 seoDescription: Uma reflexão sobre a falta de filmes sobre pessoas comuns e o
   encanto das histórias cotidianas que marcaram o cinema.
 seoKeyword: pessoas comuns
 publicado: true
-destaque: false
+destaque: true
 ---
-
 Tenho sentido falta de pessoas comuns no cinema. Não estou falando da falta de super-heróis, monstros, alienígenas ou grandes aventuras. Gosto de tudo isso. Gosto de um bom filme de super-herói, de uma história fantástica e de mundos que só existem na imaginação de alguém. Mas, de uns tempos para cá, tenho a impressão de que ficou mais difícil encontrar filmes interessados em contar histórias sobre gente comum.
 
 ![Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King (1).jpg](</imagem/Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King (1).jpg>)
