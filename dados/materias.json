@@ -31,6 +31,38 @@
     "destaque": false
   },
   {
+    "titulo": "Superman ou $uperman? O preço de um símbolo",
+    "resumo": "A saída de James Gunn da DC Studios levanta uma questão que ultrapassa as bilheterias: quanto vale um símbolo que representa a esperança?",
+    "imagem": "/imagem/1408514-1.jpg",
+    "alt": "Superman em quadrinho",
+    "url": "/posts/superman-ou-dollaruperman-o-preco-de-um-simbolo.html",
+    "categoriaTexto": "Artigo de Opinião",
+    "categorias": [
+      "cinema",
+      "artigos-de-opiniao"
+    ],
+    "coluna": "",
+    "autor": "Antônio de Oliveira",
+    "data": "2026-11-12T00:00:00.000Z",
+    "destaque": true
+  },
+  {
+    "titulo": "Wanda, Agatha e Visão: o que realmente faz uma família?",
+    "resumo": "Com o encerramento de VisionQuest, a trilogia iniciada em 2021 deixa uma reflexão que ultrapassa os superpoderes: até onde somos capazes de ir por aqueles que amamos?",
+    "imagem": "/imagem/WandaVision-Agatha-Desde-Sempre-ou-VisionQuest-qual-e-a-melhor-serie-da-trilogia-da-Marvel-DivulgacaoMarvel-Television-800x450 (1).jpg",
+    "alt": "Séries Wandavision, Agatha para sempre e Visionquest",
+    "url": "/posts/wanda-agatha-e-visao-o-que-realmente-faz-uma-familia.html",
+    "categoriaTexto": "Artigo de Opinião",
+    "categorias": [
+      "series",
+      "artigos-de-opiniao"
+    ],
+    "coluna": "",
+    "autor": "Antônio de Oliveira",
+    "data": "2026-11-12T00:00:00.000Z",
+    "destaque": true
+  },
+  {
     "titulo": "Cadê as pessoas comuns do cinema?",
     "resumo": "Uma reflexão sobre a falta de histórias cotidianas no cinema e o encanto de acompanhar personagens comuns em situações extraordinárias, a partir de clássicos como Curtindo a Vida Adoidado, Intriga Internacional e Kramer versus Kramer.",
     "imagem": "/imagem/images (3) (1).jpg",

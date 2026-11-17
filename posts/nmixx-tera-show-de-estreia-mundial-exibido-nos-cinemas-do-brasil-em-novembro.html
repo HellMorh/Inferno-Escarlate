@@ -408,6 +408,61 @@
       height: 21px;
     }
 
+    /* ==========================================
+       LEGENDAS E CRÉDITOS DAS FOTOGRAFIAS
+    ========================================== */
+
+    .credito-capa-materia {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px 24px;
+      padding: 14px 6%;
+      background: #111111;
+      border-bottom: 1px solid #292929;
+      font-family: "Inter", sans-serif;
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+
+    .credito-capa-materia .legenda-capa {
+      color: #cccccc;
+    }
+
+    .credito-capa-materia .fonte-capa {
+      color: #999999;
+      font-size: 0.72rem;
+    }
+
+    /* ==========================================
+       LEGENDAS DAS IMAGENS INTERNAS
+    ========================================== */
+
+    .conteudo-materia figure.imagem-materia figcaption {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 12px;
+      color: #bdbdbd;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .conteudo-materia .credito-imagem {
+      color: #888888;
+      font-size: 0.72rem;
+    }
+
+    @media (max-width: 700px) {
+
+      .credito-capa-materia {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -562,6 +617,14 @@
       </div>
 
     </section>
+
+    <!-- ==========================================
+         LEGENDA E CRÉDITO DA CAPA
+    ========================================== -->
+
+    
+      
+    
 
     <!-- ==========================================
          TEXTO E BARRA LATERAL
