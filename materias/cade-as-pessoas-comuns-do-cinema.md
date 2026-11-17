@@ -21,6 +21,7 @@ seoKeyword: pessoas comuns
 publicado: true
 destaque: false
 ---
+
 Tenho sentido falta de pessoas comuns no cinema. Não estou falando da falta de super-heróis, monstros, alienígenas ou grandes aventuras. Gosto de tudo isso. Gosto de um bom filme de super-herói, de uma história fantástica e de mundos que só existem na imaginação de alguém. Mas, de uns tempos para cá, tenho a impressão de que ficou mais difícil encontrar filmes interessados em contar histórias sobre gente comum.
 
 ![Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King (1).jpg](</imagem/Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King (1).jpg>)

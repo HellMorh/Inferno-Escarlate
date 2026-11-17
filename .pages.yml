@@ -183,6 +183,35 @@ content:
         default: false
 
       # ======================================
+      # IMAGENS INTERNAS DA MATÉRIA
+      # ======================================
+
+      - name: imagensInternas
+        label: Legendas e créditos das imagens internas
+        type: object
+        description: Cadastre uma entrada para cada imagem do corpo da matéria. Escolha exatamente a mesma imagem inserida no editor de texto.
+        list:
+          collapsible:
+            collapsed: true
+            summary: "Imagem {index} - {legenda}"
+        fields:
+          - name: imagem
+            label: Imagem correspondente
+            type: image
+            required: true
+            description: Selecione a mesma imagem que aparece no texto da matéria.
+
+          - name: legenda
+            label: Legenda da imagem
+            type: text
+            description: Descreva a cena, pessoa ou acontecimento retratado.
+
+          - name: credito
+            label: Crédito da imagem
+            type: string
+            description: Informe o fotógrafo, estúdio, agência ou fonte responsável pela imagem.
+
+      # ======================================
       # CONTEÚDO
       # ======================================
 
