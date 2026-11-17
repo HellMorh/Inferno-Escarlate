@@ -54,14 +54,32 @@ content:
         required: true
         description: Resumo editorial da matéria, utilizado também como descrição padrão quando não existir uma descrição SEO específica.
 
+      # ======================================
+      # IMAGEM DE CAPA
+      # ======================================
+
       - name: imagem
         label: Imagem de capa
         type: image
 
       - name: imagemAlt
-        label: Descrição da imagem
+        label: Descrição da imagem (acessibilidade)
         type: string
         description: Descreva o conteúdo real da imagem de maneira objetiva. Evite repetir palavras-chave artificialmente.
+
+      - name: imagemLegenda
+        label: Legenda da imagem de capa
+        type: string
+        description: Texto que será exibido abaixo da imagem de capa. Exemplo - Cena do filme Curtindo a Vida Adoidado (1986).
+
+      - name: imagemCredito
+        label: Crédito da imagem de capa
+        type: string
+        description: Informe o fotógrafo, estúdio, agência ou fonte responsável pela imagem. Exemplo - Divulgação / Paramount Pictures.
+
+      # ======================================
+      # AUTORIA E PUBLICAÇÃO
+      # ======================================
 
       - name: autor
         label: Autor
@@ -80,8 +98,6 @@ content:
       - name: categoriaTexto
         label: Nome da categoria
         type: string
-
-
 
       - name: categorias
         label: Categorias
@@ -109,8 +125,6 @@ content:
               label: Tecnologia
             - name: artigos-de-opiniao
               label: Artigos de Opinião
-
-
 
       - name: coluna
         label: Coluna editorial
