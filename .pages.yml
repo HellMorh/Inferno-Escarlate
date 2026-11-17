@@ -82,6 +82,7 @@ content:
         type: string
 
 
+
       - name: categorias
         label: Categorias
         type: select
@@ -93,7 +94,7 @@ content:
             - name: comedia
               label: Comédia
             - name: series
-              label: Séries
+              label: Séries e TV
             - name: musica
               label: Música
             - name: eventos
@@ -106,6 +107,9 @@ content:
               label: Games
             - name: tecnologia
               label: Tecnologia
+            - name: artigos-de-opiniao
+              label: Artigos de Opinião
+
 
 
       - name: coluna

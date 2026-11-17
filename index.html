@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +12,18 @@
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
-    gtag('config', 'G-LDXXNBNL8K');
+    gtag("js", new Date());
+    gtag("config", "G-LDXXNBNL8K");
   </script>
 
   <!-- SEO GOOGLE -->
   <title>Inferno Escarlate | Notícias, Críticas e Cultura Geek</title>
-
-  <meta name="description" content="Inferno Escarlate — Entre no modo Geek. Notícias, cinema, séries, games, música, animes, cultura pop e críticas.">
-
+  <meta
+    name="description"
+    content="Inferno Escarlate — Entre no modo Geek. Notícias, cinema, séries, games, música, animes, cultura pop, análises e artigos de opinião."
+  >
   <meta name="author" content="Inferno Escarlate">
   <meta name="robots" content="index, follow, max-image-preview:large">
-
   <link rel="canonical" href="https://infernoescarlate.com/">
 
   <!-- COMPARTILHAMENTO -->
@@ -32,12 +31,15 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Inferno Escarlate">
   <meta property="og:title" content="Inferno Escarlate | Entre no modo Geek">
-
-  <meta property="og:description" content="Notícias, críticas e análises de cinema, séries, games, música e cultura geek.">
-
+  <meta
+    property="og:description"
+    content="Notícias, críticas, artigos de opinião e análises de cinema, séries, games, música e cultura geek."
+  >
   <meta property="og:url" content="https://infernoescarlate.com/">
-  <meta property="og:image" content="https://infernoescarlate.com/imagem/banner.png">
-
+  <meta
+    property="og:image"
+    content="https://infernoescarlate.com/imagem/banner.png"
+  >
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- DADOS ESTRUTURADOS -->
@@ -47,7 +49,7 @@
     "@type": "WebSite",
     "name": "Inferno Escarlate",
     "url": "https://infernoescarlate.com/",
-    "description": "Entre no modo Geek. Notícias e críticas de cinema, séries, games, música e cultura pop.",
+    "description": "Entre no modo Geek. Notícias, críticas, artigos de opinião e análises de cinema, séries, games, música e cultura pop.",
     "inLanguage": "pt-BR",
     "publisher": {
       "@type": "Organization",
@@ -105,6 +107,31 @@
     .topo .menu a.link-trabalhe-comigo:hover,
     .topo .menu a.link-trabalhe-comigo:focus-visible {
       color: #ffffff;
+    }
+
+    /* ==========================================
+       LUPA DE PESQUISA
+    ========================================== */
+
+    .topo .menu a.link-busca {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .topo .menu a.link-busca:hover,
+    .topo .menu a.link-busca:focus-visible {
+      color: #ff4356;
+    }
+
+    .topo .menu a.link-busca svg {
+      display: block;
+      width: 21px;
+      height: 21px;
     }
 
     /* ==========================================
@@ -458,7 +485,10 @@
 
 <body>
 
-  <!-- CABEÇALHO -->
+  <!-- ==========================================
+       CABEÇALHO
+  ========================================== -->
+
   <header class="topo">
 
     <a href="index.html" class="logo">
@@ -483,7 +513,7 @@
       <a href="index.html">Início</a>
       <a href="materias.html">Matérias</a>
       <a href="#colunas">Colunas</a>
-        <a href="redatores.html">Redatores</a>
+      <a href="redatores.html">Redatores</a>
       <a href="#categorias">Categorias</a>
       <a href="contato.html">Contato</a>
 
@@ -494,37 +524,39 @@
         Trabalhe comigo
       </a>
 
-<!-- LUPA DE PESQUISA -->
-<a
-  href="busca.html"
-  class="link-busca"
-  aria-label="Buscar matérias"
-  title="Buscar matérias"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="21"
-    height="21"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    aria-hidden="true"
-  >
-    <circle cx="11" cy="11" r="8"></circle>
-    <path d="m21 21-4.35-4.35"></path>
-  </svg>
-</a>
-
+      <!-- LUPA DE PESQUISA -->
+      <a
+        href="busca.html"
+        class="link-busca"
+        aria-label="Buscar matérias"
+        title="Buscar matérias"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="21"
+          height="21"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </a>
     </nav>
 
   </header>
 
   <main>
 
-    <!-- BANNER PRINCIPAL -->
+    <!-- ==========================================
+         BANNER PRINCIPAL
+    ========================================== -->
+
     <section class="hero" id="inicio">
 
       <img
@@ -555,7 +587,6 @@
 
     <!-- ==========================================
          CATEGORIAS
-         A CATEGORIA CRÍTICAS FOI REMOVIDA
     ========================================== -->
 
     <section
@@ -568,42 +599,30 @@
         <h2>Categorias</h2>
       </div>
 
+      <div class="categorias">
 
-<div class="categorias">
+        <a href="Categorias/esports.html">Esports</a>
+        <a href="Categorias/cinema.html">Cinema</a>
+        <a href="Categorias/series-tv.html">Séries e TV</a>
+        <a href="Categorias/games.html">Games</a>
+        <a href="Categorias/tecnologia.html">Tecnologia</a>
+        <a href="Categorias/artigos-de-opiniao.html">Artigos de Opinião</a>
+        <a href="Categorias/musica.html">Música</a>
+        <a href="Categorias/animes.html">Animes</a>
+        <a href="Categorias/mangas.html">Mangás</a>
+        <a href="Categorias/eventos.html">Eventos</a>
+        <a href="Categorias/festivais.html">Festivais</a>
+        <a href="Categorias/doramas-novelas.html">Doramas e novelas</a>
+        <a href="Categorias/livros.html">Livros</a>
+        <a href="Categorias/hqs.html">HQs</a>
 
-  <a href="Categorias/esports.html">Esports</a>
-
-  <a href="Categorias/cinema.html">Cinema</a>
-
-  <a href="Categorias/series-tv.html">Séries e TV</a>
-
-  <a href="Categorias/games.html">Games</a>
-
-  <a href="Categorias/tecnologia.html">Tecnologia</a>
-
-  <a href="Categorias/musica.html">Música</a>
-
-  <a href="Categorias/animes.html">Animes</a>
-
-  <a href="Categorias/mangas.html">Mangás</a>
-
-  <a href="Categorias/eventos.html">Eventos</a>
-
-  <a href="Categorias/festivais.html">Festivais</a>
-
-  <a href="Categorias/doramas-novelas.html">Doramas e novelas</a>
-
-  <a href="Categorias/livros.html">Livros</a>
-
-  <a href="Categorias/hqs.html">HQs</a>
-
-</div>
-
+      </div>
 
     </section>
 
-    <!-- DESTAQUE PRINCIPAL AUTOMÁTICO -->
-    <!-- Preenchido por js/materias.js -->
+    <!-- ==========================================
+         DESTAQUE PRINCIPAL AUTOMÁTICO
+    ========================================== -->
 
     <section
       class="secao destaque"
@@ -653,7 +672,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Arquivo Idol"
           >
-
             <span class="coluna-editorial-numero">01 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -663,7 +681,6 @@
             <span class="coluna-editorial-assinatura">
               Cultura pop asiática
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -704,7 +721,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Inferno Marfim"
           >
-
             <span class="coluna-editorial-numero">02 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -714,7 +730,6 @@
             <span class="coluna-editorial-assinatura">
               Cinema e entretenimento
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -755,7 +770,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Rock Scene Girls"
           >
-
             <span class="coluna-editorial-numero">03 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -765,7 +779,6 @@
             <span class="coluna-editorial-assinatura">
               Rock e suas cenas
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -806,7 +819,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Inferno Sépia"
           >
-
             <span class="coluna-editorial-numero">04 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -816,7 +828,6 @@
             <span class="coluna-editorial-assinatura">
               Memória audiovisual
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -857,7 +868,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Inferno Púrpura"
           >
-
             <span class="coluna-editorial-numero">05 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -867,7 +877,6 @@
             <span class="coluna-editorial-assinatura">
               Horror e terror
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -908,7 +917,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Inferno Turquesa"
           >
-
             <span class="coluna-editorial-numero">06 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -918,7 +926,6 @@
             <span class="coluna-editorial-assinatura">
               Universo vampírico
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -959,7 +966,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Backstage da Estagiária"
           >
-
             <span class="coluna-editorial-numero">07 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -969,7 +975,6 @@
             <span class="coluna-editorial-assinatura">
               Cinema e Ciências Sociais
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -1010,7 +1015,6 @@
             class="coluna-editorial-capa"
             aria-label="Acessar Arquivo Anime"
           >
-
             <span class="coluna-editorial-numero">08 / 08</span>
 
             <span class="coluna-editorial-titulo">
@@ -1020,7 +1024,6 @@
             <span class="coluna-editorial-assinatura">
               Animação e mangás
             </span>
-
           </a>
 
           <div class="coluna-editorial-conteudo">
@@ -1076,7 +1079,7 @@
   <script src="js/rodape.js" defer></script>
 
   <!-- CATÁLOGO AUTOMÁTICO DAS MATÉRIAS -->
-  <script src="js/materias.js?v=7"></script>
+  <script src="js/materias.js?v=11"></script>
 
   <!-- MENU RESPONSIVO -->
   <script src="js/script.js?v=104"></script>

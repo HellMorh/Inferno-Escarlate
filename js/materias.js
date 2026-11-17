@@ -2,7 +2,7 @@
 /* ==========================================
    INFERNO ESCARLATE
    SISTEMA CENTRAL DE MATÉRIAS
-   VERSÃO DE TESTES COM ELEVENTY
+   INTEGRAÇÃO COM ELEVENTY
 ========================================== */
 
 /* ==========================================
@@ -33,8 +33,13 @@ let MATERIAS = [
     alt: "Foo Fighters no Rock in Rio 2026",
     url: "posts/materia-rock-in-rio-2026.html",
     autor: "Helena Morh",
-    categorias: ["musica", "eventos", "festivais"],
-    categoriaTexto: "Música • Festivais",
+    categorias: [
+      "musica",
+      "eventos",
+      "festivais",
+      "artigos-de-opiniao"
+    ],
+    categoriaTexto: "Artigo de Opinião",
     data: "2026-09-05T12:00:00",
     destaque: true
   },
@@ -54,7 +59,6 @@ let MATERIAS = [
   }
 
 ];
-
 
 /* ==========================================
    CONFIGURAÇÕES GERAIS
@@ -76,12 +80,13 @@ const CATEGORIAS_VALIDAS = [
   "doramas-novelas",
   "livros",
   "esports",
-  "hqs"
+  "hqs",
+  "artigos-de-opiniao"
 ];
-
 
 /* ==========================================
    LOCALIZAÇÃO DO CATÁLOGO AUTOMÁTICO
+
    UTILIZA O CAMINHO DO PRÓPRIO SCRIPT,
    FUNCIONANDO NA HOME E NAS CATEGORIAS.
 ========================================== */
@@ -93,7 +98,6 @@ const URL_CATALOGO_AUTOMATICO = document.currentScript
     ).href
   : "/dados/materias.json";
 
-
 /* ==========================================
    NORMALIZAR CAMINHOS
 ========================================== */
@@ -102,7 +106,6 @@ function normalizarCaminho(caminho) {
   return String(caminho || "")
     .replace(/^\/+/, "");
 }
-
 
 /* ==========================================
    CARREGAR MATÉRIAS DO ELEVENTY
@@ -146,21 +149,33 @@ async function carregarMateriasAutomaticas() {
         );
       })
       .map((materia) => ({
+
         titulo: materia.titulo,
+
         resumo: materia.resumo || "",
+
         imagem: normalizarCaminho(
           materia.imagem
         ),
+
         alt: materia.alt || materia.titulo,
+
         url: normalizarCaminho(
           materia.url
         ),
+
         categorias: materia.categorias,
+
         categoriaTexto: materia.categoriaTexto || "Matéria",
+
         data: materia.data,
+
         destaque: materia.destaque === true,
+
         coluna: materia.coluna || "",
+
         autor: materia.autor || "Inferno Escarlate"
+
       }));
 
   } catch (erro) {
@@ -175,7 +190,6 @@ async function carregarMateriasAutomaticas() {
   }
 
 }
-
 
 /* ==========================================
    INTEGRAR MATÉRIAS AUTOMÁTICAS
@@ -225,7 +239,6 @@ async function integrarCatalogos() {
 
 }
 
-
 /* ==========================================
    URLs ABSOLUTAS
 ========================================== */
@@ -238,7 +251,6 @@ function urlAbsoluta(caminho) {
   ).href;
 
 }
-
 
 /* ==========================================
    FORMATAÇÃO DAS DATAS
@@ -258,7 +270,6 @@ function dataFormatada(data) {
 
 }
 
-
 /* ==========================================
    ORDENAÇÃO DAS MATÉRIAS
 ========================================== */
@@ -271,7 +282,6 @@ function ordenarMaterias(lista) {
 
 }
 
-
 /* ==========================================
    CAMINHOS RELATIVOS
 ========================================== */
@@ -281,7 +291,6 @@ function caminhoComPrefixo(prefixo, caminho) {
   return `${prefixo || ""}${normalizarCaminho(caminho)}`;
 
 }
-
 
 /* ==========================================
    VALIDAR CATEGORIAS
@@ -310,7 +319,6 @@ function validarCategorias() {
 
 }
 
-
 /* ==========================================
    CRIAR CARD DE MATÉRIA
 ========================================== */
@@ -338,6 +346,7 @@ function criarCardMateria(materia, prefixo = "") {
       itemscope
       itemtype="https://schema.org/Article"
     >
+
       <meta
         itemprop="mainEntityOfPage"
         content="${urlAbsoluta(materia.url)}"
@@ -349,6 +358,7 @@ function criarCardMateria(materia, prefixo = "") {
         aria-label="Ler: ${materia.titulo}"
         itemprop="url"
       >
+
         <img
           src="${imagem}"
           alt="${materia.alt}"
@@ -356,6 +366,7 @@ function criarCardMateria(materia, prefixo = "") {
           decoding="async"
           itemprop="image"
         >
+
       </a>
 
       <div class="card-conteudo">
@@ -399,7 +410,6 @@ function criarCardMateria(materia, prefixo = "") {
 
 }
 
-
 /* ==========================================
    RENDERIZAR LISTA DE MATÉRIAS
 ========================================== */
@@ -414,15 +424,16 @@ function renderizarLista(
 
   container.innerHTML = lista
     .map((materia) => {
+
       return criarCardMateria(
         materia,
         prefixo
       );
+
     })
     .join("");
 
 }
-
 
 /* ==========================================
    MENSAGEM PARA CATEGORIAS VAZIAS
@@ -465,7 +476,6 @@ function mostrarCategoriaVazia(container) {
 
 }
 
-
 /* ==========================================
    DESTAQUE PRINCIPAL DA HOME
 ========================================== */
@@ -496,11 +506,13 @@ function renderizarDestaquePrincipal() {
         href="${materia.url}"
         aria-label="Ler: ${materia.titulo}"
       >
+
         <img
           src="${materia.imagem}"
           alt="${materia.alt}"
           fetchpriority="high"
         >
+
       </a>
 
     </div>
@@ -536,7 +548,6 @@ function renderizarDestaquePrincipal() {
 
 }
 
-
 /* ==========================================
    ÚLTIMAS MATÉRIAS DA HOME
 ========================================== */
@@ -560,7 +571,6 @@ function renderizarUltimasMaterias() {
 
 }
 
-
 /* ==========================================
    PÁGINA GERAL DE MATÉRIAS
 ========================================== */
@@ -582,7 +592,6 @@ function renderizarTodasMaterias() {
 
 }
 
-
 /* ==========================================
    PÁGINAS DE CATEGORIAS
 ========================================== */
@@ -602,9 +611,11 @@ function renderizarPaginaCategoria() {
 
   const lista = ordenarMaterias(MATERIAS)
     .filter((materia) => {
+
       return materia.categorias.includes(
         categoria
       );
+
     });
 
   renderizarLista(
@@ -631,7 +642,6 @@ function renderizarPaginaCategoria() {
   }
 
 }
-
 
 /* ==========================================
    FILTROS DA PÁGINA DE MATÉRIAS
@@ -662,7 +672,7 @@ function ativarFiltros() {
     ".filtros-materias .ativo"
   )?.dataset.filtro || "todas";
 
-  // CRIAR ÁREA DA PAGINAÇÃO
+  /* CRIAR ÁREA DA PAGINAÇÃO */
 
   let paginacao = document.querySelector(
     "#paginacao-materias"
@@ -690,7 +700,7 @@ function ativarFiltros() {
 
   }
 
-  // ATUALIZAR BOTÕES DA PAGINAÇÃO
+  /* ATUALIZAR BOTÕES DA PAGINAÇÃO */
 
   function atualizarPaginacao(totalPaginas) {
 
@@ -764,7 +774,7 @@ function ativarFiltros() {
       paginaAtual === 1
     );
 
-    // EXIBIR ATÉ 5 NÚMEROS DE PÁGINAS
+    /* EXIBIR ATÉ 5 NÚMEROS DE PÁGINAS */
 
     let inicio = Math.max(1, paginaAtual - 2);
 
@@ -798,7 +808,7 @@ function ativarFiltros() {
 
   }
 
-  // APLICAR FILTRO E PAGINAÇÃO
+  /* APLICAR FILTRO E PAGINAÇÃO */
 
   function aplicarFiltro(reiniciarPagina = false) {
 
@@ -888,7 +898,7 @@ function ativarFiltros() {
 
   }
 
-  // EVENTOS DOS FILTROS
+  /* EVENTOS DOS FILTROS */
 
   botoes.forEach((botao) => {
 
@@ -902,8 +912,7 @@ function ativarFiltros() {
 
   });
 
-  // ATUALIZAR QUANDO NOVAS MATÉRIAS FOREM
-  // ADICIONADAS AO CONTAINER
+  /* ATUALIZAR QUANDO A LISTA FOR RECRIADA */
 
   const observador = new MutationObserver(() => {
 
@@ -915,12 +924,9 @@ function ativarFiltros() {
     childList: true
   });
 
-  // INICIALIZAÇÃO
-
   aplicarFiltro(true);
 
 }
-
 
 /* ==========================================
    DADOS ESTRUTURADOS
@@ -957,9 +963,7 @@ function adicionarDadosEstruturados() {
   );
 
   if (paginaInicial) {
-
     lista = lista.slice(0, 3);
-
   }
 
   if (paginaCategoria) {
@@ -1035,7 +1039,6 @@ function adicionarDadosEstruturados() {
 
 }
 
-
 /* ==========================================
    INICIALIZAÇÃO DO SISTEMA
 ========================================== */
@@ -1056,11 +1059,9 @@ function iniciarSistemaMaterias() {
 
 }
 
-
 /* ==========================================
    INICIALIZAÇÃO AUTOMÁTICA
    AGUARDA O CATÁLOGO DO ELEVENTY
-   ANTES DE RENDERIZAR AS MATÉRIAS.
 ========================================== */
 
 async function iniciarSistemaIntegrado() {
@@ -1070,7 +1071,6 @@ async function iniciarSistemaIntegrado() {
   iniciarSistemaMaterias();
 
 }
-
 
 /* ==========================================
    INICIAR APÓS O CARREGAMENTO DO HTML

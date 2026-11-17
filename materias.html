@@ -9,10 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <!-- ==========================================
-       GOOGLE ANALYTICS 4
-       INFERNO ESCARLATE
-  ========================================== -->
+  <!-- GOOGLE ANALYTICS 4 -->
 
   <script
     async
@@ -30,15 +27,13 @@
     gtag("config", "G-LDXXNBNL8K");
   </script>
 
-  <!-- ==========================================
-       SEO — ARQUIVO EDITORIAL
-  ========================================== -->
+  <!-- SEO -->
 
   <title>Matérias e Notícias de Cultura Pop | Inferno Escarlate</title>
 
   <meta
     name="description"
-    content="Explore as matérias do Inferno Escarlate sobre cinema, séries, games, música, festivais, animes, quadrinhos e cultura pop. Notícias, análises e conteúdos autorais."
+    content="Explore as matérias do Inferno Escarlate sobre cinema, séries, games, música, tecnologia, festivais, animes e cultura pop. Notícias, artigos de opinião, análises e conteúdos autorais."
   >
 
   <meta name="author" content="Inferno Escarlate">
@@ -53,9 +48,7 @@
     href="https://infernoescarlate.com/materias.html"
   >
 
-  <!-- ==========================================
-       OPEN GRAPH E REDES SOCIAIS
-  ========================================== -->
+  <!-- OPEN GRAPH -->
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
@@ -68,7 +61,7 @@
 
   <meta
     property="og:description"
-    content="Notícias, análises e conteúdos autorais sobre cinema, séries, games, música e cultura pop."
+    content="Notícias, artigos de opinião e análises sobre cinema, séries, games, música, tecnologia e cultura pop."
   >
 
   <meta
@@ -86,6 +79,8 @@
     content="Inferno Escarlate — Entre no modo Geek"
   >
 
+  <!-- TWITTER -->
+
   <meta name="twitter:card" content="summary_large_image">
 
   <meta
@@ -95,13 +90,10 @@
 
   <meta
     name="twitter:description"
-    content="Explore todas as matérias de cultura pop do Inferno Escarlate."
+    content="Explore notícias, análises e artigos de opinião sobre cultura pop no Inferno Escarlate."
   >
 
-  <!-- ==========================================
-       DADOS ESTRUTURADOS
-       COLLECTION PAGE + BREADCRUMBS
-  ========================================== -->
+  <!-- DADOS ESTRUTURADOS -->
 
   <script type="application/ld+json">
   {
@@ -112,7 +104,7 @@
         "@id": "https://infernoescarlate.com/materias.html#webpage",
         "url": "https://infernoescarlate.com/materias.html",
         "name": "Matérias e Notícias de Cultura Pop | Inferno Escarlate",
-        "description": "Arquivo editorial de notícias, análises e matérias sobre cinema, televisão, games, música, animes e cultura pop.",
+        "description": "Arquivo editorial de notícias, artigos de opinião e análises sobre cinema, televisão, games, música, tecnologia, animes e cultura pop.",
         "inLanguage": "pt-BR",
         "isPartOf": {
           "@type": "WebSite",
@@ -151,9 +143,7 @@
   }
   </script>
 
-  <!-- ==========================================
-       FONTES
-  ========================================== -->
+  <!-- FONTES -->
 
   <link
     rel="preconnect"
@@ -172,13 +162,14 @@
   >
 
   <!-- CSS PRINCIPAL -->
+
   <link
     rel="stylesheet"
     href="./css/style.css?v=109"
   >
 
   <!-- ==========================================
-       CSS EXCLUSIVO DE MATÉRIAS
+       CSS EXCLUSIVO DA PÁGINA DE MATÉRIAS
   ========================================== -->
 
   <style>
@@ -268,6 +259,11 @@
       color: #ffffff;
     }
 
+    .navegacao-materias a:focus-visible {
+      outline: 2px solid #ed1834;
+      outline-offset: 3px;
+    }
+
     .navegacao-materias span[aria-hidden="true"] {
       margin: 0 8px;
     }
@@ -292,11 +288,15 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       cursor: pointer;
-      transition: 0.3s;
+      transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
     }
 
     .filtros-materias button:hover,
-    .filtros-materias button.ativo {
+    .filtros-materias button.ativo,
+    .filtros-materias button[aria-pressed="true"] {
       color: var(--branco, #fff);
       border-color: var(--vermelho-vivo, #ed1834);
       background: rgba(165, 0, 26, 0.18);
@@ -417,6 +417,92 @@
       outline-offset: 4px;
     }
 
+    /* LUPA DE BUSCA */
+
+    .topo .menu a.link-busca {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .topo .menu a.link-busca:hover,
+    .topo .menu a.link-busca:focus-visible {
+      color: #ff4356;
+    }
+
+    .topo .menu a.link-busca svg {
+      display: block;
+      width: 21px;
+      height: 21px;
+    }
+
+    /* ==========================================
+       PAGINAÇÃO DAS MATÉRIAS
+    ========================================== */
+
+    .paginacao-materias {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 45px 0 65px;
+      padding: 0 15px;
+    }
+
+    .paginacao-materias[hidden] {
+      display: none !important;
+    }
+
+    .paginacao-materias .botao-paginacao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      height: 44px;
+      padding: 0 15px;
+      background: #101010;
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .paginacao-materias .botao-paginacao:hover:not(:disabled) {
+      background: rgba(237, 24, 52, 0.15);
+      border-color: #ed1834;
+      color: #fff;
+    }
+
+    .paginacao-materias .botao-paginacao.ativo {
+      background: #ed1834;
+      border-color: #ed1834;
+      color: #fff;
+      cursor: default;
+    }
+
+    .paginacao-materias .botao-paginacao:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .paginacao-materias .botao-paginacao:focus-visible {
+      outline: 2px solid #ed1834;
+      outline-offset: 3px;
+    }
+
     /* RESPONSIVIDADE */
 
     @media screen and (max-width: 700px) {
@@ -451,94 +537,6 @@
         margin-top: 45px;
       }
 
-    }
-
-    /* ==========================================
-       LUPA DE BUSCA — INFERNO ESCARLATE
-    ========================================== */
-
-    .topo .menu a.link-busca {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: #ffffff;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .topo .menu a.link-busca:hover,
-    .topo .menu a.link-busca:focus-visible {
-      color: #ff4356;
-    }
-
-    .topo .menu a.link-busca svg {
-      display: block;
-      width: 21px;
-      height: 21px;
-    }
-
-    /* ==========================================
-       PAGINAÇÃO DAS MATÉRIAS
-       INFERNO ESCARLATE
-    ========================================== */
-
-    .paginacao-materias {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 45px 0 65px;
-      padding: 0 15px;
-    }
-
-    .paginacao-materias[hidden] {
-      display: none !important;
-    }
-
-    .paginacao-materias .botao-paginacao {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 44px;
-      height: 44px;
-      padding: 0 15px;
-      background: #101010;
-      border: 1px solid #333;
-      border-radius: 4px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        color 0.2s ease;
-    }
-
-    .paginacao-materias .botao-paginacao:hover:not(:disabled) {
-      background: rgba(237, 24, 52, 0.15);
-      border-color: #ed1834;
-      color: #fff;
-    }
-
-    .paginacao-materias .botao-paginacao.ativo {
-      background: #ed1834;
-      border-color: #ed1834;
-      color: #fff;
-      cursor: default;
-    }
-
-    .paginacao-materias .botao-paginacao:disabled {
-      opacity: 0.35;
-      cursor: not-allowed;
-    }
-
-    .paginacao-materias .botao-paginacao:focus-visible {
-      outline: 2px solid #ed1834;
-      outline-offset: 3px;
     }
 
     @media (max-width: 600px) {
@@ -622,6 +620,7 @@
       </a>
 
       <!-- LUPA DE PESQUISA -->
+
       <a
         href="busca.html"
         class="link-busca"
@@ -687,9 +686,10 @@
         </h1>
 
         <p>
-          Notícias, análises, eventos e conteúdos
-          sobre cinema nacional e internacional,
-          séries, games, música, animes e cultura geek.
+          Notícias, análises, artigos de opinião,
+          eventos e conteúdos sobre cinema,
+          séries, games, música, tecnologia,
+          animes e cultura geek.
         </p>
 
       </div>
@@ -719,7 +719,7 @@
       </div>
 
       <!-- ==========================================
-           FILTROS DAS 12 CATEGORIAS
+           FILTROS DE CATEGORIAS
       ========================================== -->
 
       <div
@@ -764,16 +764,29 @@
         <button
           type="button"
           data-filtro="musica"
-          <button
-  type="button"
-  data-filtro="tecnologia"
-  aria-pressed="false"
->
-  Tecnologia
-</button>
           aria-pressed="false"
         >
           Música
+        </button>
+
+        <!-- FILTRO TECNOLOGIA -->
+
+        <button
+          type="button"
+          data-filtro="tecnologia"
+          aria-pressed="false"
+        >
+          Tecnologia
+        </button>
+
+        <!-- FILTRO ARTIGOS DE OPINIÃO -->
+
+        <button
+          type="button"
+          data-filtro="artigos-de-opiniao"
+          aria-pressed="false"
+        >
+          Artigos de Opinião
         </button>
 
         <button
@@ -843,9 +856,11 @@
       </div>
 
       <!-- ==========================================
-           MATÉRIAS AUTOMÁTICAS
-           O materias.js CRIA OS CARDS
-           E CONTROLA OS FILTROS
+           CARDS AUTOMÁTICOS DAS MATÉRIAS
+
+           O ARQUIVO js/materias.js
+           CARREGA OS CARDS,
+           FILTROS E A PAGINAÇÃO.
       ========================================== -->
 
       <div
@@ -878,8 +893,9 @@
 
       <!-- ==========================================
            ARQUIVO EDITORIAL
+
            PRESERVA OS LINKS ANTIGOS
-           NOVAS MATÉRIAS ENTRAM VIA JAVASCRIPT
+           E ADICIONA OS NOVOS AUTOMATICAMENTE.
       ========================================== -->
 
       <nav
@@ -926,7 +942,9 @@
           Para navegar por temas, conheça as categorias de
           <a href="Categorias/cinema.html">Cinema</a>,
           <a href="Categorias/musica.html">Música</a>,
-          <a href="Categorias/series-tv.html">Séries e TV</a>
+          <a href="Categorias/series-tv.html">Séries e TV</a>,
+          <a href="Categorias/tecnologia.html">Tecnologia</a>,
+          <a href="Categorias/artigos-de-opiniao.html">Artigos de Opinião</a>
           e
           <a href="Categorias/festivais.html">Festivais</a>.
           Conheça também nossas
@@ -950,14 +968,15 @@
   ========================================== -->
 
   <!-- RODAPÉ COMPARTILHADO -->
+
   <script src="./js/rodape.js" defer></script>
 
   <!-- SISTEMA CENTRAL DE MATÉRIAS -->
-  <script src="./js/materias.js?v=10"></script>
+
+  <script src="./js/materias.js?v=11"></script>
 
   <!-- ==========================================
        ARQUIVO DE PUBLICAÇÕES AUTOMÁTICO
-       INFERNO ESCARLATE
 
        Inclui matérias antigas e novas,
        sem duplicar os links existentes.
@@ -1013,9 +1032,7 @@
           );
 
           if (caminho) {
-
             linksExistentes.add(caminho);
-
           }
 
         });
@@ -1045,9 +1062,7 @@
             const dados = await resposta.json();
 
             if (Array.isArray(dados)) {
-
               materiasNovas = dados;
-
             }
 
           }
@@ -1083,12 +1098,7 @@
           );
 
           if (caminho) {
-
-            unicas.set(
-              caminho,
-              materia
-            );
-
+            unicas.set(caminho, materia);
           }
 
         });
@@ -1178,6 +1188,7 @@
   </script>
 
   <!-- MENU RESPONSIVO -->
+
   <script src="./js/script.js?v=104"></script>
 
 </body>
