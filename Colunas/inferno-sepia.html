@@ -754,7 +754,7 @@
 
         const materias = catalogo
           .filter((m) => {
-            return texto(m.coluna).toLowerCase() === "inferno-sepia";
+            return ["inferno-sepia", "inferno sépia"].includes(texto(m.coluna).toLowerCase());
           })
           .sort((a, b) => {
             return texto(b.data).localeCompare(texto(a.data));
@@ -807,7 +807,7 @@
             criar(
               "span",
               "card-sepia-categoria",
-              materia.categoriaTexto || "Inferno Sépia"
+              "Inferno Sépia"
             )
           );
 
