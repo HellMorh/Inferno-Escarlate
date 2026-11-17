@@ -4,9 +4,15 @@ description: Uma reflexão sobre a falta de histórias cotidianas no cinema e o
   encanto de acompanhar personagens comuns em situações extraordinárias, a
   partir de clássicos como Curtindo a Vida Adoidado, Intriga Internacional e
   Kramer versus Kramer.
-imagem: /imagem/images (3) (1).jpg
-imagemAlt: Curtindo a vida adoidado
-imagemLegenda: Cena do filme Curtindo a Vida Adoidado (1986)
+imagem: /imagem/Conversível Vermelho em Clima Retrô.png
+imagemAlt: Ferris Bueller (Matthew Broderick) está sentado em um conversível
+  vermelho, usando óculos escuros, boina preta e jaqueta de couro. Ao seu lado
+  está Sloane Peterson (Mia Sara), enquanto Cameron Frye (Alan Ruck) aparece no
+  banco traseiro, vestindo uma camisa vermelha e boné xadrez, em cena do filme
+  Curtindo a Vida Adoidado (1986).
+imagemLegenda: Matthew Broderick como Ferris Bueller, ao lado de Mia Sara e Alan
+  Ruck, em cena do filme Curtindo a Vida Adoidado (1986), dirigido por John
+  Hughes
 imagemCredito: Divulgação/Reprodução
 autor: Cássio Racy Corrêa
 dataPublicacao: 2026-11-16
