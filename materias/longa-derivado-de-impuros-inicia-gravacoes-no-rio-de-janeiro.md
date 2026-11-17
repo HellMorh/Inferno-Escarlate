@@ -42,24 +42,15 @@ A produção amplia o universo de Impuros, série original do Disney+ que tem Gi
 
 ## Ficha técnica
 
-* Título: Cadê o Gilmar?
-
-* Direção: René Sampaio e Tomás Portella
-
-* Roteiro: Tomás Portella, L.G. Bayão e Lusa Silvestre
-
-* Produção: Juliana Funaro e Rômulo Marinho
-
-* Produção executiva delegada: Angelo Gastal
-
-* Fotografia: André Modugno
-
-* Direção de arte: Marcos Carvalheiro
-
-* Figurino: Joanna Ribas
-
-* Elenco: Leandro Firmino, Samantha Schmütz, Bruno Gagliasso, MC Carol, George Sauma, Antônio Tabet, Dudu Azevedo e Aramis Trindade
-
-* Gênero: Ação e comédia
+- Título: Cadê o Gilmar?
+- Direção: René Sampaio e Tomás Portella
+- Roteiro: Tomás Portella, L.G. Bayão e Lusa Silvestre
+- Produção: Juliana Funaro e Rômulo Marinho
+- Produção executiva delegada: Angelo Gastal
+- Fotografia: André Modugno
+- Direção de arte: Marcos Carvalheiro
+- Figurino: Joanna Ribas
+- Elenco: Leandro Firmino, Samantha Schmütz, Bruno Gagliasso, MC Carol, George Sauma, Antônio Tabet, Dudu Azevedo e Aramis Trindade
+- Gênero: Ação e comédia
 
 *Fonte: Bcbiz Comunicação.*
