@@ -1,5 +1,21 @@
 [
   {
+    "titulo": "NMIXX terá show exibido nos cinemas do Brasil em novembro",
+    "resumo": "NMIXX terá show da turnê mundial exibido nos cinemas brasileiros em 29 de novembro. Saiba quando começa a venda de ingressos para a sessão especial.",
+    "imagem": "/imagem/NMIXX-all-members-young-dumb-stupid-hd-wallpaper-uhdpaper.com-719@0@i (2).jpg",
+    "alt": "Integrantes do grupo NMIXX ",
+    "url": "/posts/nmixx-tera-show-de-estreia-mundial-exibido-nos-cinemas-do-brasil-em-novembro.html",
+    "categoriaTexto": "Música",
+    "categorias": [
+      "cinema",
+      "musica"
+    ],
+    "coluna": "",
+    "autor": "Helena Morh",
+    "data": "2026-11-10T00:00:00.000Z",
+    "destaque": true
+  },
+  {
     "titulo": "IA na escola e na faculdade: o que mudou para você e para o seu professor",
     "resumo": "Na última terça-feira, 10 de novembro, mudanças importantes para o uso da IA chegaram à educação. Veja o que aconteceu e o que isso muda na prática para quem estuda e para quem dá aula: trabalhos, provas, detectores de IA e o que continua liberado.",
     "imagem": "/imagem/WhatsApp Image 2026-11-11 at 00.27.11.jpeg",
@@ -13,6 +29,36 @@
     "autor": "Joel Freitas",
     "data": "2026-11-12T00:00:00.000Z",
     "destaque": false
+  },
+  {
+    "titulo": "Superman ou $uperman? O preço de um símbolo",
+    "resumo": "A saída de James Gunn da DC Studios levanta uma questão que ultrapassa as bilheterias: quanto vale um símbolo que representa a esperança?",
+    "imagem": "/imagem/1408514-1.jpg",
+    "alt": "Superman em quadrinho",
+    "url": "/posts/superman-ou-dollaruperman-o-preco-de-um-simbolo.html",
+    "categoriaTexto": "Artigo de opinião ",
+    "categorias": [
+      "cinema"
+    ],
+    "coluna": "",
+    "autor": "Antônio de Oliveira",
+    "data": "2026-11-12T00:00:00.000Z",
+    "destaque": true
+  },
+  {
+    "titulo": "Wanda, Agatha e Visão: o que realmente faz uma família?",
+    "resumo": "Com o encerramento de VisionQuest, a trilogia iniciada em 2021 deixa uma reflexão que ultrapassa os superpoderes: até onde somos capazes de ir por aqueles que amamos?",
+    "imagem": "/imagem/WandaVision-Agatha-Desde-Sempre-ou-VisionQuest-qual-e-a-melhor-serie-da-trilogia-da-Marvel-DivulgacaoMarvel-Television-800x450 (1).jpg",
+    "alt": "Séries Wandavision, Agatha para sempre e Visionquest",
+    "url": "/posts/wanda-agatha-e-visao-o-que-realmente-faz-uma-familia.html",
+    "categoriaTexto": "Artigo de opinião ",
+    "categorias": [
+      "series"
+    ],
+    "coluna": "",
+    "autor": "Antônio de Oliveira",
+    "data": "2026-11-12T00:00:00.000Z",
+    "destaque": true
   },
   {
     "titulo": "Cadê as pessoas comuns do cinema?",
@@ -29,21 +75,5 @@
     "autor": "Cássio Racy Corrêa",
     "data": "2026-11-16T00:00:00.000Z",
     "destaque": false
-  },
-  {
-    "titulo": "NMIXX terá show exibido nos cinemas do Brasil em novembro",
-    "resumo": "NMIXX terá show da turnê mundial exibido nos cinemas brasileiros em 29 de novembro. Saiba quando começa a venda de ingressos para a sessão especial.",
-    "imagem": "/imagem/NMIXX-all-members-young-dumb-stupid-hd-wallpaper-uhdpaper.com-719@0@i (2).jpg",
-    "alt": "Integrantes do grupo NMIXX ",
-    "url": "/posts/nmixx-tera-show-de-estreia-mundial-exibido-nos-cinemas-do-brasil-em-novembro.html",
-    "categoriaTexto": "Música",
-    "categorias": [
-      "cinema",
-      "musica"
-    ],
-    "coluna": "",
-    "autor": "Helena Morh",
-    "data": "2026-11-10T00:00:00.000Z",
-    "destaque": true
   }
 ]
