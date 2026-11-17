@@ -22,6 +22,26 @@ seoDescription: Uma reflexão sobre a falta de filmes sobre pessoas comuns e o
 seoKeyword: pessoas comuns
 publicado: true
 destaque: true
+imagensInternas:
+  - imagem: /imagem/Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King
+      (3).jpg
+    legenda: Tom Hiddleston em cena de A Vida de Chuck (2024), adaptação
+      cinematográfica da obra de Stephen King
+    credito: Divulgação/Reprodução
+  - imagem: /imagem/george-r-robertson-loucademia-de-policia-foto-reproducao (2).jpg
+    legenda: >+
+      George R. Robertson como o comandante Henry Hurst em cena do filme
+      Loucademia de Polícia (1984)
+
+    credito: Divulgação/Reprodução
+  - imagem: /imagem/YRBADREGRBIX3HOIHOODIDFJL4 (1)-1.jpg
+    legenda: Matthew Broderick como Ferris Bueller em Curtindo a Vida Adoidado
+      (1986), clássico dirigido por John Hughes
+    credito: Divulgação/Reprodução
+  - imagem: /imagem/802591 (1)-1.jpg
+    legenda: "Tom Hanks como Forrest Gump em cena de Forrest Gump: O Contador de
+      Histórias (1994), filme dirigido por Robert Zemeckis"
+    credito: Divulgação/Reprodução
 ---
 Tenho sentido falta de pessoas comuns no cinema. Não estou falando da falta de super-heróis, monstros, alienígenas ou grandes aventuras. Gosto de tudo isso. Gosto de um bom filme de super-herói, de uma história fantástica e de mundos que só existem na imaginação de alguém. Mas, de uns tempos para cá, tenho a impressão de que ficou mais difícil encontrar filmes interessados em contar histórias sobre gente comum.
 
