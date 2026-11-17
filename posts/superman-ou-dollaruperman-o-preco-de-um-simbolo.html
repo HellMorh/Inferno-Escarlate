@@ -15,16 +15,13 @@
   
   
 
-  <!-- TÍTULO PARA MECANISMOS DE BUSCA -->
   <title>Superman | Inferno Escarlate</title>
 
-  <!-- META DESCRIÇÃO -->
   <meta
     name="description"
     content="A saída de James Gunn da DC Studios reacende o debate sobre o valor do Superman como símbolo de esperança em uma indústria cada vez mais orientada pelo lucro."
   >
 
-  <!-- URL CANÔNICA -->
   <link
     rel="canonical"
     href="https://infernoescarlate.com/posts/superman-ou-dollaruperman-o-preco-de-um-simbolo.html"
@@ -32,15 +29,10 @@
 
   <!-- ==========================================
        OPEN GRAPH
-       FACEBOOK, WHATSAPP E OUTRAS REDES
   ========================================== -->
 
   <meta property="og:type" content="article">
-
-  <meta
-    property="og:site_name"
-    content="Inferno Escarlate"
-  >
+  <meta property="og:site_name" content="Inferno Escarlate">
 
   <meta
     property="og:title"
@@ -57,13 +49,9 @@
     content="https://infernoescarlate.com/posts/superman-ou-dollaruperman-o-preco-de-um-simbolo.html"
   >
 
-  <meta
-    property="og:locale"
-    content="pt_BR"
-  >
+  <meta property="og:locale" content="pt_BR">
 
   
-
     
 
     <meta
@@ -75,17 +63,13 @@
       name="twitter:image"
       content="https://infernoescarlate.com/imagem/1408514-1.jpg"
     >
-
   
 
   <!-- ==========================================
        TWITTER / X
   ========================================== -->
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta
     name="twitter:title"
@@ -98,32 +82,19 @@
   >
 
   <!-- ==========================================
-       INDEXAÇÃO DAS MATÉRIAS
+       INDEXAÇÃO
   ========================================== -->
 
   
-
-    <meta
-      name="robots"
-      content="index, follow"
-    >
-
+    <meta name="robots" content="index, follow">
   
 
   <!-- ==========================================
        FONTES
   ========================================== -->
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
@@ -132,10 +103,7 @@
 
   <!-- CSS ORIGINAL DO PORTAL -->
 
-  <link
-    rel="stylesheet"
-    href="../css/style.css?v=109"
-  >
+  <link rel="stylesheet" href="../css/style.css?v=109">
 
   <style>
 
@@ -297,7 +265,7 @@
     }
 
     /* ==========================================
-       LINK DO AUTOR / REDATOR
+       LINK DO AUTOR
     ========================================== */
 
     .nome-autor-materia a {
@@ -409,7 +377,7 @@
     }
 
     /* ==========================================
-       LEGENDAS E CRÉDITOS DAS FOTOGRAFIAS
+       LEGENDA E CRÉDITO DA CAPA
     ========================================== */
 
     .credito-capa-materia {
@@ -418,8 +386,10 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 8px 24px;
+      margin: 0;
       padding: 14px 6%;
       background: #111111;
+      border: 0;
       border-bottom: 1px solid #292929;
       font-family: "Inter", sans-serif;
       font-size: 0.78rem;
@@ -437,28 +407,91 @@
 
     /* ==========================================
        LEGENDAS DAS IMAGENS INTERNAS
+       FOTO E LEGENDA SEM FAIXA BRANCA
     ========================================== */
+
+    .conteudo-materia figure.imagem-materia {
+      display: block;
+      width: 100%;
+      margin: 55px 0;
+      padding: 0;
+      overflow: hidden;
+      background: #111111;
+      border: 0;
+      border-radius: 0;
+    }
+
+    .conteudo-materia figure.imagem-materia img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      vertical-align: bottom;
+      object-fit: cover;
+    }
 
     .conteudo-materia figure.imagem-materia figcaption {
       display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-top: 12px;
-      color: #bdbdbd;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px 24px;
+      margin: 0;
+      padding: 12px 16px;
+      border: 0;
+      background: #111111;
+      color: #cccccc;
+      font-family: "Inter", sans-serif;
       font-size: 0.8rem;
       line-height: 1.6;
     }
 
-    .conteudo-materia .credito-imagem {
-      color: #888888;
-      font-size: 0.72rem;
+    .conteudo-materia figure.imagem-materia .legenda-imagem {
+      flex: 1 1 240px;
+      color: #cccccc;
+      text-align: left;
     }
+
+    .conteudo-materia figure.imagem-materia .credito-imagem {
+      flex: 0 1 auto;
+      color: #999999;
+      font-size: 0.72rem;
+      text-align: right;
+    }
+
+    /* ==========================================
+       RESPONSIVIDADE DAS LEGENDAS
+    ========================================== */
 
     @media (max-width: 700px) {
 
       .credito-capa-materia {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .conteudo-materia figure.imagem-materia figcaption {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 12px 14px;
+      }
+
+      .conteudo-materia figure.imagem-materia .legenda-imagem {
+        flex: 0 1 auto;
+        width: 100%;
+        text-align: left;
+      }
+
+      .conteudo-materia figure.imagem-materia .credito-imagem {
+        flex: 0 1 auto;
+        width: 100%;
+        text-align: left;
       }
 
     }
@@ -509,9 +542,7 @@
         Trabalhe comigo
       </a>
 
-      <!-- ==========================================
-           LUPA DE PESQUISA
-      ========================================== -->
+      <!-- LUPA DE PESQUISA -->
 
       <a
         href="../busca.html"
@@ -567,10 +598,7 @@
 
       <div class="capa-materia-conteudo">
 
-        <a
-          href="../materias.html"
-          class="voltar"
-        >
+        <a href="../materias.html" class="voltar">
           ← Voltar para matérias
         </a>
 
@@ -590,21 +618,13 @@
 
         <div class="informacoes-materia">
 
-          <!-- ==========================================
-               AUTOR COM LINK PARA PERFIL
-          ========================================== -->
-
           <span class="nome-autor-materia">
             Antônio de Oliveira
           </span>
 
-          <!-- DATA FORMATADA EM PORTUGUÊS -->
-
           
 
-            <time
-              datetime="2026-11-12"
-            >
+            <time datetime="2026-11-12">
               12/11/2026
             </time>
 
@@ -729,9 +749,7 @@
 
         </div>
 
-        <!-- ==========================================
-             LEIA TAMBÉM
-        ========================================== -->
+        <!-- LEIA TAMBÉM -->
 
         <section
           class="leia-tambem-automatico"
@@ -746,9 +764,7 @@
 
         </section>
 
-        <!-- ==========================================
-             CATEGORIAS
-        ========================================== -->
+        <!-- CATEGORIAS -->
 
         <div class="bloco-lateral">
 
@@ -784,8 +800,6 @@
 
     <!-- ==========================================
          MAIS MATÉRIAS
-         SOMENTE CINEMA
-         SEM REPETIR O LEIA TAMBÉM
     ========================================== -->
 
     <section class="mais-materias">
@@ -811,7 +825,6 @@
 
     <!-- ==========================================
          COMENTÁRIOS — DISQUS
-         AUTOMÁTICO PARA CADA MATÉRIA
     ========================================== -->
 
     <section
@@ -855,15 +868,6 @@
 
   <!-- ==========================================
        LINK AUTOMÁTICO DO AUTOR
-
-       Consulta os redatores cadastrados
-       no Pages CMS.
-
-       Se o nome do autor corresponder ao nome
-       cadastrado, transforma em link.
-
-       Se não houver correspondência, mantém
-       o nome original sem link.
   ========================================== -->
 
   <script>
@@ -924,8 +928,6 @@
         })
         .catch(function (erro) {
 
-          // Se o cadastro estiver indisponível,
-          // mantém o nome original da matéria.
           console.info(
             "Perfil do autor não carregado:",
             erro.message
@@ -939,12 +941,7 @@
 
   <!-- ==========================================
        RECOMENDAÇÕES AUTOMÁTICAS
-
-       Leia também: assuntos relacionados
-       Mais matérias: somente Cinema
-
-       Evita repetições entre os dois blocos.
-  ========================================== -->
+    ========================================== -->
 
   <script src="../js/recomendacoes.js?v=1"></script>
 
@@ -1001,9 +998,7 @@
 
             try {
 
-              await navigator.clipboard.writeText(
-                url
-              );
+              await navigator.clipboard.writeText(url);
 
               feedback.textContent =
                 "Link copiado com sucesso!";
@@ -1026,12 +1021,6 @@
 
   <!-- ==========================================
        CARREGAMENTO AUTOMÁTICO DO DISQUS
-
-       Cada matéria recebe uma URL e um
-       identificador próprios.
-
-       No Live Server, exibe uma mensagem
-       em vez de abrir os comentários reais.
   ========================================== -->
 
   <script>
@@ -1094,9 +1083,7 @@
         String(Date.now())
       );
 
-      document.head.appendChild(
-        script
-      );
+      document.head.appendChild(script);
 
     })();
 
