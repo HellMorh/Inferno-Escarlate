@@ -26,7 +26,7 @@ imagensInternas:
   - imagem: /imagem/Onde-assistir-a-A-Vida-de-Chuck-nova-adaptacao-da-obra-de-Stephen-King
       (3).jpg
     legenda: Tom Hiddleston em cena de A Vida de Chuck (2024), adaptação
-      cinematográfica da obra de Stephen King.
+      cinematográfica da obra de Stephen King
     credito: Divulgação/Reprodução
   - imagem: /imagem/george-r-robertson-loucademia-de-policia-foto-reproducao (2).jpg
     legenda: >+
