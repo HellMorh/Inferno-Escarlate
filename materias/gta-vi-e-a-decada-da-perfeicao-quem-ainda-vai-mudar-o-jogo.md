@@ -35,6 +35,8 @@ A IGN chamou Grand Theft Auto VI de obra-prima. Nota dez, o selo Masterpiece e u
 
 Eu acredito nisso. Acompanhei essa filosofia de criação desde San Andreas, com sua liberdade de exploração, até Red Dead Redemption 2, cuja atenção aos detalhes beira a obsessão. A cada lançamento, a Rockstar aperfeiçoa sua maneira de construir mundos. O resultado pode ser extraordinário. Há um mérito imenso em fazer o arroz com feijão tão bem que ninguém mais consegue fazer igual. Só que treze anos é muito tempo esperando o prato perfeito.
 
+![](</imagem/596248 (1).jpg>)
+
 Minha inquietação não é exatamente com GTA. É com o que passamos a esperar de uma das maiores indústrias de entretenimento do planeta. Será que estamos colocando nossa ambição no lugar certo?
 
 ## **O melhor de algo que conhecemos**
@@ -50,6 +52,8 @@ A coincidência diz muito: GTA aperfeiçoa uma linguagem cultivada por décadas;
 Já ouvi dizer que o videogame é a maior das artes porque reúne literatura, música, teatro, cinema e participação direta de quem joga. Não sei se precisamos hierarquizar as artes, mas compreendo o argumento. O jogador entra na história, decide, erra, aprende. Essa característica permite experiências que outras linguagens dificilmente reproduzem.
 
 Passei seis anos correndo atrás de Pokémon em Pokémon GO. Fiz amigos, inimigos, vivi situações que nunca teria vivido sem aquele jogo. Saí de casa, encontrei pessoas e construí lembranças. Quando penso nele, lembro de tudo isso antes de lembrar de qualquer mecânica.
+
+![](</imagem/unnamed (1).png>)
 
 Também me lembro da primeira vez que entrei em World of Warcraft. Até hoje consigo ouvir a música de Stormwind na minha cabeça. Lembro da primeira partida de Mario. Lembro de jogar Enduro. São lembranças de momentos em que alguma coisa parecia inteiramente nova, diferente, quase impossível de explicar antes de experimentar.
 
@@ -69,6 +73,8 @@ Tento lembrar os vencedores recentes do The Game Awards: It Takes Two, Elden Rin
 
 Mas minha memória de uma premiação não corresponde necessariamente à memória de uma geração. O troféu responde à pergunta sobre qual foi o melhor jogo de um ano. O impacto cultural exige tempo. Às vezes, só percebemos sua dimensão quando vemos as obras que vieram depois, as amizades que nasceram e os hábitos que se transformaram.
 
+![](</imagem/1395944 (1).jpg>)
+
 Há jogos que permanecem na memória porque eram excelentes. Outros ficam porque mudaram a maneira como passávamos o tempo. Algumas obras fazem as duas coisas. Eu não espero que toda premiação adivinhe quais serão lembradas daqui a vinte anos. Gostaria apenas que a conversa sobre grandeza tivesse espaço para essa pergunta.
 
 ## **Quando o videogame atravessa a tela**
@@ -87,6 +93,8 @@ Não estou reclamando de uma suposta falta de criatividade. Existem ideias excel
 
 Penso em Diablo, Path of Exile, Pokémon, Zelda, Stardew Valley. Conheço o prazer de voltar a esses universos. Quero continuar jogando continuações, expansões e remakes. Mas também gostaria de encontrar uma experiência tão diferente que, no primeiro momento, eu nem soubesse a qual gênero pertence.
 
+![](</imagem/wallpaper_diablo_immortal_01_1920x1080 (1).jpg>)
+
 Se eu conseguir descrever perfeitamente o próximo jogo que desejo, provavelmente alguma versão dele já existe.
 
 ## **O jogo que ainda não sabemos imaginar**
@@ -97,4 +105,4 @@ Não acredito que a Rockstar tenha obrigação de redefinir a indústria a cada 
 
 Quero lembrar, daqui a vinte anos, de um jogo que mudou minha maneira de entender o que significa jogar. Quero ouvir uma música e voltar imediatamente ao lugar onde estava. Quero conhecer pessoas por causa dele. Quero olhar para trás e reconhecer que alguma coisa mudou na minha vida.
 
-Treze anos de espera podem nos entregar o GTA definitivo. Eu ainda estou esperando o jogo que me faça sentir, novamente, que descobri um mundo.
+[Treze anos de espera podem nos entregar o GTA definitivo. Eu ainda estou esperando o jogo que me faça sentir, novamente, que descobri um mundo.](https://www.rockstargames.com/VI/media/artwork-wallpapers)
