@@ -12,10 +12,9 @@ imagemAlt: Ilustração promocional de Grand Theft Auto VI (GTA VI), composta po
   lancha, um flamingo, um carro esportivo amarelo, um jacaré, uma mulher na
   praia e um motociclista empinando uma moto diante de viaturas policiais. A
   composição remete ao universo urbano, tropical e criminoso de Vice City.
-imagemLegenda: "me de a legenda e créditos para essa imagem Legenda: Arte
-  promocional de Grand Theft Auto VI (GTA VI), que apresenta personagens,
-  veículos e cenários inspirados no universo de Vice City, ambientação do novo
-  jogo da Rockstar Games.  "
+imagemLegenda: "Arte promocional de Grand Theft Auto VI (GTA VI), que apresenta
+  personagens, veículos e cenários inspirados no universo de Vice City,
+  ambientação do novo jogo da Rockstar Games.  "
 imagemCredito: "Créditos: Divulgação/Rockstar Games."
 autor: " Antônio de Oliveira"
 dataPublicacao: 2026-11-18
